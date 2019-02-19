@@ -586,7 +586,7 @@ CONFIGEND
         cd ~
         wget https://raw.githubusercontent.com/xCommunicado/Searchit/feature/AutoUpdate/Version
         AvailableVersion=\$(cat Version)
-        if [ "\$AvailableVersion" == "\$Version" ]
+        if [ "\$AvailableVersion" == "\$version" ]
         then {
             echo "You Are Uptodate"
         }
