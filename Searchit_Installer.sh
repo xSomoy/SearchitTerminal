@@ -9,7 +9,7 @@
 #                                                    #
 ######################################################
 
-version=1.0-beta0
+version=1.0-beta-1
 
 #   Creating Command File For Searchit
 
