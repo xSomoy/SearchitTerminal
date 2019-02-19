@@ -7,7 +7,7 @@
 #
 ###################################################
 
-version=1.0-alpha04
+version=1.0-alpha05
 
 #   Creating Command File For Seatchit
 
@@ -20,11 +20,16 @@ function createSearchit() {
     parameter="\$1"
     tmpquery="\$@"
 
+    # Defaul Configuration
+
+    browser="\$var1"
+    engine="\$var2"
+
     #   Default Search function
 
     function defaultSearch() {
         query=\${tmpquery//\ /+}
-        $var1 $var2\$query
+        \$browser \$engine\$query
     }
 
     #   DuckDuckGo Search Fucntion
@@ -33,7 +38,7 @@ function createSearchit() {
         query=\${tmpquery//\ /+}
         query=\${query/-ddg+}
         query=\${query/-duckduckgo+}
-        $var1 www.duckduckgo.com/?q=\$query
+        \$broser www.duckduckgo.com/?q=\$query
     }
 
     #   Google Search Fucntion
@@ -42,7 +47,7 @@ function createSearchit() {
         query=\${tmpquery//\ /+}
         query=\${query/-ggl+}
         query=\${query/-google+}
-        $var1 www.google.com/search?q=\$query
+        \$browser www.google.com/search?q=\$query
     }
 
     #   Yahoo Search Function
@@ -51,7 +56,7 @@ function createSearchit() {
         query=\${tmpquery//\ /+}
         query=\${query/-yah+}
         query=\${query/-yahoo+}
-        $var1 search.yahoo.com/search?p=\$query
+        \$browser search.yahoo.com/search?p=\$query
     }
 
     #   Bing Search function
@@ -60,7 +65,7 @@ function createSearchit() {
         query=\${tmpquery//\ /+}
         query=\${query/-bng+}
         query=\${query/-bing+}
-        $var1 www.bing.com/search?q=\$query
+        \$browser www.bing.com/search?q=\$query
     }
 
     #   Yandex Search function
@@ -69,7 +74,7 @@ function createSearchit() {
         query=\${tmpquery//\ /+}
         query=\${query/-ydx+}
         query=\${query/-yandex+}
-        $var1 yandex.com/search/?text=\$query
+        \$browser yandex.com/search/?text=\$query
     }
 
     #   Baidu Search function
@@ -78,7 +83,7 @@ function createSearchit() {
         query=\${tmpquery//\ /+}
         query=\${query/-bdu+}
         query=\${query/-baidu+}
-        $var1 www.baidu.com/s?wd=\$query
+        \$browser www.baidu.com/s?wd=\$query
     }
 
     #   Searx Search function
@@ -87,7 +92,7 @@ function createSearchit() {
         query=\${tmpquery//\ /+}
         query=\${query/-srx+}
         query=\${query/-searx+}
-        $var1 searx.me/?q=\$query
+        \$browser searx.me/?q=\$query
     }
 
     #   Shodan Search function
@@ -96,7 +101,7 @@ function createSearchit() {
         query=\${tmpquery//\ /+}
         query=\${query/-sdn+}
         query=\${query/-shodan+}
-        $var1 www.shodan.io/search?query=\$query
+        \$browser www.shodan.io/search?query=\$query
     }
 
     #   Startpage Search function
@@ -105,7 +110,7 @@ function createSearchit() {
         query=\${tmpquery//\ /+}
         query=\${query/-spg+}
         query=\${query/-startpage+}
-        $var1 www.startpage.com/do/search?q=\$query
+        \$browser www.startpage.com/do/search?q=\$query
     }
 
     #   Facebook Search function
@@ -114,7 +119,7 @@ function createSearchit() {
         query=\${tmpquery//\ /+}
         query=\${query/-fb+}
         query=\${query/-facebook+}
-        $var1 www.facebook.com/search?q=\$query
+        \$browser www.facebook.com/search?q=\$query
     }
 
     #   Twitter Search function
@@ -123,7 +128,7 @@ function createSearchit() {
         query=\${tmpquery//\ /+}
         query=\${query/-ttr+}
         query=\${query/-twitter+}
-        $var1 www.twitter.com/search?q=\$query
+        \$browser www.twitter.com/search?q=\$query
     }
 
     #   Reddit Search function
@@ -132,7 +137,7 @@ function createSearchit() {
         query=\${tmpquery//\ /+}
         query=\${query/-rddt+}
         query=\${query/-reddit+}
-        $var1 www.reddit.com/search?q=\$query
+        \$browser www.reddit.com/search?q=\$query
     }
 
     #   LinkedIn Search function
@@ -141,7 +146,7 @@ function createSearchit() {
         query=\${tmpquery//\ /+}
         query=\${query/-lnkdn+}
         query=\${query/-linkedin+}
-        $var1 www.linkedin.com/search?q=\$query
+        \$browser www.linkedin.com/search?q=\$query
     }
 
     #   Youtube Search function
@@ -150,7 +155,7 @@ function createSearchit() {
         query=\${tmpquery//\ /+}
         query=\${query/-ytb+}
         query=\${query/-youtube+}
-        $var1 www.youtube.com/results?q=\$query
+        \$browser www.youtube.com/results?q=\$query
     }
 
     #   Google+ Search function
@@ -159,7 +164,7 @@ function createSearchit() {
         query=\${tmpquery//\ /%20}
         query=\${query/-ggl+%20}
         query=\${query/-googleplus%20}
-        $var1 plus.google.com/s/\$query
+        \$browser plus.google.com/s/\$query
     }
 
     #   Pinterest Search function
@@ -168,7 +173,7 @@ function createSearchit() {
         query=\${tmpquery//\ /+}
         query=\${query/-pntr+}
         query=\${query/-pinterest+}
-        $var1 www.pinterest.com/search?q=\$query
+        \$browser www.pinterest.com/search?q=\$query
     }
 
     #   Tumblr Search function
@@ -177,7 +182,7 @@ function createSearchit() {
         query=\${tmpquery//\ /+}
         query=\${query/-tmblr+}
         query=\${query/-tumblr+}
-        $var1 www.tumblr.com/search/\$query
+        \$browser www.tumblr.com/search/\$query
     }
 
     #   Quora Search function
@@ -186,7 +191,7 @@ function createSearchit() {
         query=\${tmpquery//\ /+}
         query=\${query/-qra+}
         query=\${query/-quora+}
-        $var1 www.quora.com/search?q=\$query
+        \$browser www.quora.com/search?q=\$query
     }
 
     #   Wikipedia Search function
@@ -195,7 +200,7 @@ function createSearchit() {
         query=\${tmpquery//\ /+}
         query=\${query/-wiki+}
         query=\${query/-wikipedia+}
-        $var1 www.wikipedia.org/wiki/?search=\$query
+        \$browser www.wikipedia.org/wiki/?search=\$query
     }
 
     #   Stack Overflow Search function
@@ -204,7 +209,7 @@ function createSearchit() {
         query=\${tmpquery//\ /+}
         query=\${query/-stkof+}
         query=\${query/-stackoverflow+}
-        $var1 www.stackoverflow.com/search?q=\$query
+        \$browser www.stackoverflow.com/search?q=\$query
     }
 
     #   Amazon Search function
@@ -213,7 +218,7 @@ function createSearchit() {
         query=\${tmpquery//\ /+}
         query=\${query/-amzn+}
         query=\${query/-amazon+}
-        $var1 www.amazon.com/s/?keywords=\$query
+        \$browser www.amazon.com/s/?keywords=\$query
     }
 
     #   Ebay Search function
@@ -222,7 +227,80 @@ function createSearchit() {
         query=\${tmpquery//\ /+}
         query=\${query/-eby+}
         query=\${query/-ebay+}
-        $var1 www.ebay.com/sch/i.html?_nkw=\$query
+        \$browser www.ebay.com/sch/i.html?_nkw=\$query
+    }
+
+    #   Github Search function
+
+    function github() {
+        query=\${tmpquery//\ /+}
+        query=\${query/-gthb+}
+        query=\${query/-github+}
+        \$browser www.github.com/search/?q=\$query
+    }
+
+    #   Taking User Input For Browser Specification
+
+    function browserCheck() {
+        echo "Please Select Your Browser:"
+        echo " 1 - Firefox"
+        echo " 2 - Chrome "
+        echo " 3 - Chromium"
+        echo " 4 - Opera"
+        echo " 5 - Brave"
+        echo " 6 - Vivaldi"
+        echo " 7 - Links (Text Based)"
+        echo " 8 - W3m (Text Based)"
+        echo " 9 - Lynx (Text Based)"
+        read browser;
+        case \$browser in
+                1) var1="firefox" ;;
+                2) var1="google-chrome" ;;
+                3) var1="chromium-browser" ;;
+                4) var1="opera";;
+                5) var1="brave-browser";;
+                6) var1="vivaldi";;
+                7) var1="links";;
+                8) var1="w3m" ;;
+                9) var1="lynx" ;;
+                *) echo "Please Choose One Of Them"
+                        browserCheck ;;
+        esac
+    }
+
+    #   Taking Input For Default Search Engine Selection
+
+    function defaultEngine() {
+        echo "Please Select Your Default Search Engine:"
+        echo " 1 - DuckDuckGo"
+        echo " 2 - Google"
+        echo " 3 - Yahoo"
+        echo " 4 - Bing"
+        echo " 5 - Yandex"
+        echo " 6 - Baidu"
+        echo " 7 - Startpage"
+        echo " 8 - Searx"
+        echo " 9 - Shodan"
+        read engine;
+        case \$engine in
+            1) var2="www.duckduckgo.com/?q=" ;;
+            2) var2="www.google.com/search?q=" ;;
+            3) var2="search.yahoo.com/search?p=";;
+            4) var2="www.bing.com/search?q=";;
+            5) var2="yandex.com/search/?text=";;
+            6) var2="www.baidu.com/s?wd=";;
+            7) var2="www.startpage.com/do/search?q=";;
+            8) var2="searx.me/?q=";;
+            9) var2="www.shodan.io/search?query=";;
+            *) echo "Please Choose One OF Them"
+                    defaultEngine ;;
+        esac
+    }
+
+    # Default Config Fucntion
+
+    function config() {
+
     }
 
     #   Help Function
@@ -237,6 +315,7 @@ function createSearchit() {
                 --uninstall -un         For Uninstall
                 --update    -u          For Update
                 --Version   -v          For Version
+                --config    -c          For Configuration
 
                                     Ex: \"searchit --help\"
 
@@ -252,7 +331,7 @@ function createSearchit() {
                         -srx    -searx          For Searx
                         -sdn    -shodan         For Shodan
 
-                Social Media
+                Social Media & Others
                         -fb     -facebook       For Facebook
                         -ttr    -twitter        For Twitter
                         -rddt   -reddit         For Reddit
@@ -266,6 +345,7 @@ function createSearchit() {
                         -stkof  -stackoverflow  For Stack Overflow
                         -amzn   -amazon         For Amazon
                         -eby    -ebay           For Ebay
+                        -gthn   -github         For Github
 
                                     Ex: \"searchit -ddg casino royal\"
 
@@ -356,6 +436,10 @@ function createSearchit() {
                 then {
                     echo "Seachit Version:$version"
                 }
+            elif [ "\$parameter" == '-config' ] || [ "\$parameter" == '-c' ]
+                then {
+                    configure
+                }
             elif [ "\$parameter" == '-duckduckgo' ] || [ "\$parameter" == '-ddg' ]
                 then {
                     duckduckgo
@@ -443,6 +527,10 @@ function createSearchit() {
             elif [ "\$parameter" == '-ebay' ] || [ "\$parameter" == '-eby' ]
                 then {
                     ebay
+                }
+            elif [ "\$parameter" == '-github' ] || [ "\$parameter" == '-gthb' ]
+                then {
+                    github
                 }
             else {
                 defaultSearch
@@ -546,7 +634,7 @@ function createDuckit() {
         #!/usr/bin/env bash
         input="\$@"
         query=\${input//\ /+}
-        $var1 www.duckduckgo.com/?q=\$query
+        \$browser www.duckduckgo.com/?q=\$query
 DUCKITEND
 }
 
@@ -558,7 +646,7 @@ function createGoogleit() {
         #!/usr/bin/env bash
         input="\$@"
         query=\${input//\ /+}
-        $var1  https://www.google.com/search?q=\$query
+        \$browser  https://www.google.com/search?q=\$query
 GOOGLEITEND
 }
 
