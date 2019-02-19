@@ -583,10 +583,34 @@ CONFIGEND
     #   Update Function
 
     function update(){
-        echo "
-        This Feature Is Not Available Right Now.
-        A Tech Savvy Tortoise Currently Working On It.
-        "
+        cd ~
+        wget https://raw.githubusercontent.com/xCommunicado/Searchit/feature/AutoUpdate/Version
+        AvailableVersion=\$(cat Version)
+        if [ "\$AvailableVersion" == "\$version" ]
+        then {
+            echo "You Are Uptodate"
+        }
+        else
+            {
+            echo "Version \$AvailableVersion Is Available. Do You Want To Update?"
+            read decision;
+            if [ "\$decision" == "Y" ] || [ "\$decision" == "y" ]
+            then {
+                sudo rm /usr/bin/searchit /usr/bin/googleit /usr/bin/duckit ~/.searchit.cfg
+                wget https://github.com/xCommunicado/Searchit/archive/master.zip
+                unzip master.zip
+                cd Searchit-master
+                ./Searchit_Installer.sh
+                rm ~/master.zip
+                rm -r ~/Searchit-master
+            }
+            else {
+                    echo " Maybe Later "
+            }
+            fi
+            }
+        fi
+    rm ~/Version
     }
 
     # Parameter Checking Function
