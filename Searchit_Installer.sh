@@ -9,7 +9,7 @@
 #                                                    #
 ######################################################
 
-version=1.0-alpha08
+version=1.0-beta0
 
 #   Creating Command File For Searchit
 
@@ -390,6 +390,7 @@ function createSearchit() {
                 --uninstall -un         For Uninstall
                 --update    -u          For Update
                 --Version   -v          For Version
+                --config    -cfg        For Configuration
 
                                     Ex: \"searchit --help\"
 
@@ -554,8 +555,8 @@ CONFIGEND
             Sorry To See You Go. You Can Help Me To Improve This.
             You Can Report Any Issue On Github
             Or Directly Contact Me Via Twitter
-            Github:     ------
-            Twitter:    ------
+            Github:  https://github.com/xCommunicado/Searchit
+            Twitter: https://twitter.com/xCommunicado
             "
             }
         fi
@@ -573,8 +574,8 @@ CONFIGEND
                A Terminal Based Internet Search Customizer
                For Linux Based Operating System
                Author: Mushphyque Tanveer
-               Github:  -----
-               Twitter: -----
+               Github:  https://github.com/xCommunicado/Searchit
+               Twitter: https://twitter.com/xCommunicado
                © 2019
         "
     }
