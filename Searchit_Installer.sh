@@ -532,6 +532,23 @@ CONFIGEND
             cd ~
             sudo rm .searchit.cfg
             echo "Removing Searchit Related Files"
+            uninstallCheck
+        }
+        else {
+                echo " Good Decision :) "
+        }
+        fi
+    }
+
+#   Double Check Uninstall
+
+    function uninstallCheck() {
+        if [ -f /usr/bin/searchit ] && [ -f /usr/bin/googleit ] && [ -f /usr/bin/duckit ] && [ -f ~/.searchit.cfg];
+        then {
+            echo "Uninstalation Failed"
+            echo "Report Problem : https://github.com/xCommunicado/Searchit/issues "
+        }
+        else {
             echo "Done :("
             echo "
             Sorry To See You Go. You Can Help Me To Improve This.
@@ -540,12 +557,13 @@ CONFIGEND
             Github:     ------
             Twitter:    ------
             "
-        }
-        else {
-                echo " Good Decision :) "
-        }
+            }
         fi
+
+
+
     }
+
 
     #   About Function
 
@@ -574,8 +592,7 @@ CONFIGEND
 
     function paramCheck() {
         if [ -z \$parameter ];
-        then
-            {
+        then {
             echo "Please Provide A Parameter Or A Search Query"
             echo "Ex: \"searchit --help\" Or \"searchit john wick\""
         }
@@ -724,20 +741,11 @@ function installer() {
     createGoogleit
     echo "Making Command Files Executable"
     chmod 755 duckit googleit searchit
-    echo "Done!!!"
-    echo "
-        If You Like This Tool. You Can Help Me To Improve This.
-        Report Any Issue On Github Or Directly Contact Me Via Twitter.
-        Or You Can Just Let Me Know If You Liked It.
-        It Will Also Helps A lot
-        Thank You. :D
-            Github:     -----
-            Twitter:    -----
-    "
 }
 
 #   Config File Generator
-    function configFile() {
+
+function configFile() {
         cd ~
         cat  >> .searchit.cfg <<CONFIGEND
 Searchit Configuration File
@@ -749,6 +757,29 @@ Default Browser: Firefox
 Default Search Engine: DuckDuckGo
 CONFIGEND
     }
+
+#   Double Check Install
+
+function installCheck() {
+    if [ -f /usr/bin/searchit ] && [ -f /usr/bin/googleit ] && [ -f /usr/bin/duckit ] && [ -f ~/.searchit.cfg ];
+    then {
+        echo "Done!!!"
+        echo "
+            If You Like This Tool. You Can Help Me To Improve This.
+            Report Any Issue On Github Or Directly Contact Me Via Twitter.
+            Or You Can Just Let Me Know If You Liked It.
+            It Will Also Helps A lot
+            Thank You. :D
+                Github:     -----
+                Twitter:    -----
+            "
+    }
+    else {
+        echo "Instalation Failed"
+        echo "Report Problem : https://github.com/xCommunicado/Searchit/issues "
+        }
+    fi
+}
 
 #   Creating Command File For DuckDuckGo
 
@@ -782,10 +813,11 @@ function checkPermission() {
         then {
             installer
             configFile
+            installCheck
             searchit --config
         }
     else {
-        sudo ./searchit_$version.sh
+        sudo ./Searchit_Installer.sh
         var0=root
     }
     fi
