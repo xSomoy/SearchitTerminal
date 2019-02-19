@@ -7,7 +7,7 @@
 #
 ###################################################
 
-version=1.0-alpha01
+version=1.0-alpha02
 
 #   Creating Command File For Seatchit
 
@@ -56,6 +56,7 @@ function createSearchit() {
                 --help      -h    -?    For Help section
                 --uninstall -un         For Uninstall
                 --update    -u          For Update
+                --Version   -v          For Version
 
                                     Ex: \"searchit --help\"
 
@@ -149,6 +150,10 @@ function createSearchit() {
                 then {
                     update
                 }
+            elif [ "\$parameter" == '--version' ] || [ "\$parameter" == '-v' ]
+                then {
+                    echo "Seachit_$version"
+                }
             elif [ "\$parameter" == '-duckduckgo' ] || [ "\$parameter" == '-ddg' ]
                 then {
                     duckduckgo
@@ -180,12 +185,22 @@ function browserCheck() {
     echo " 2 - Chrome "
     echo " 3 - Chromium"
     echo " 4 - Opera"
+    echo " 5 - Brave"
+    echo " 6 - Vivaldi"
+    echo " 7 - Links (Text Based)"
+    echo " 8 - W3m (Text Based)"
+    echo " 9 - Lynx (Text Based)"
     read browser;
     case $browser in
             1) var1="firefox" ;;
             2) var1="google-chrome" ;;
             3) var1="chromium-browser" ;;
             4) var1="opera";;
+            5) var1="brave-browser";;
+            6) var1="vivaldi";;
+            7) var1="links";;
+            8) var1="w3m" ;;
+            9) var1="lynx" ;;
             *) echo "Please Choose One Of Them"
                     browserCheck ;;
     esac
