@@ -583,10 +583,7 @@ CONFIGEND
     #   Update Function
 
     function update(){
-        echo "
-        This Feature Is Not Available Right Now.
-        A Tech Savvy Tortoise Currently Working On It.
-        "
+        wget
     }
 
     # Parameter Checking Function
