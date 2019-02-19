@@ -7,7 +7,7 @@
 #
 ###################################################
 
-version=1.0-alpha03
+version=1.0-alpha04
 
 #   Creating Command File For Seatchit
 
@@ -27,7 +27,7 @@ function createSearchit() {
         $var1 $var2\$query
     }
 
-    # DuckDuckGo Search Fucntion
+    #   DuckDuckGo Search Fucntion
 
     function duckduckgo() {
         query=\${tmpquery//\ /+}
@@ -36,7 +36,7 @@ function createSearchit() {
         $var1 www.duckduckgo.com/?q=\$query
     }
 
-    # Google Search Fucntion
+    #   Google Search Fucntion
 
     function google() {
         query=\${tmpquery//\ /+}
@@ -54,7 +54,7 @@ function createSearchit() {
         $var1 search.yahoo.com/search?p=\$query
     }
 
-    # Bing Search function
+    #   Bing Search function
 
     function bing() {
         query=\${tmpquery//\ /+}
@@ -63,7 +63,7 @@ function createSearchit() {
         $var1 www.bing.com/search?q=\$query
     }
 
-    # Yandex Search function
+    #   Yandex Search function
 
     function yandex() {
         query=\${tmpquery//\ /+}
@@ -72,7 +72,7 @@ function createSearchit() {
         $var1 yandex.com/search/?text=\$query
     }
 
-    # Baidu Search function
+    #   Baidu Search function
 
     function baidu() {
         query=\${tmpquery//\ /+}
@@ -81,7 +81,7 @@ function createSearchit() {
         $var1 www.baidu.com/s?wd=\$query
     }
 
-    # Searx Search function
+    #   Searx Search function
 
     function searx() {
         query=\${tmpquery//\ /+}
@@ -90,7 +90,7 @@ function createSearchit() {
         $var1 searx.me/?q=\$query
     }
 
-    # Shodan Search function
+    #   Shodan Search function
 
     function shodan() {
         query=\${tmpquery//\ /+}
@@ -99,13 +99,130 @@ function createSearchit() {
         $var1 www.shodan.io/search?query=\$query
     }
 
-    # Startpage Search function
+    #   Startpage Search function
 
     function startpage() {
         query=\${tmpquery//\ /+}
         query=\${query/-spg+}
         query=\${query/-startpage+}
         $var1 www.startpage.com/do/search?q=\$query
+    }
+
+    #   Facebook Search function
+
+    function facebook() {
+        query=\${tmpquery//\ /+}
+        query=\${query/-fb+}
+        query=\${query/-facebook+}
+        $var1 www.facebook.com/search?q=\$query
+    }
+
+    #   Twitter Search function
+
+    function twitter() {
+        query=\${tmpquery//\ /+}
+        query=\${query/-ttr+}
+        query=\${query/-twitter+}
+        $var1 www.twitter.com/search?q=\$query
+    }
+
+    #   Reddit Search function
+
+    function reddit() {
+        query=\${tmpquery//\ /+}
+        query=\${query/-rddt+}
+        query=\${query/-reddit+}
+        $var1 www.reddit.com/search?q=\$query
+    }
+
+    #   LinkedIn Search function
+
+    function linkedin() {
+        query=\${tmpquery//\ /+}
+        query=\${query/-lnkdn+}
+        query=\${query/-linkedin+}
+        $var1 www.linkedin.com/search?q=\$query
+    }
+
+    #   Youtube Search function
+
+    function youtube() {
+        query=\${tmpquery//\ /+}
+        query=\${query/-ytb+}
+        query=\${query/-youtube+}
+        $var1 www.youtube.com/results?q=\$query
+    }
+
+    #   Google+ Search function
+
+    function googleplus() {
+        query=\${tmpquery//\ /%20}
+        query=\${query/-ggl+%20}
+        query=\${query/-googleplus%20}
+        $var1 plus.google.com/s/\$query
+    }
+
+    #   Pinterest Search function
+
+    function pinterest() {
+        query=\${tmpquery//\ /+}
+        query=\${query/-pntr+}
+        query=\${query/-pinterest+}
+        $var1 www.pinterest.com/search?q=\$query
+    }
+
+    #   Tumblr Search function
+
+    function tumblr() {
+        query=\${tmpquery//\ /+}
+        query=\${query/-tmblr+}
+        query=\${query/-tumblr+}
+        $var1 www.tumblr.com/search/\$query
+    }
+
+    #   Quora Search function
+
+    function quora() {
+        query=\${tmpquery//\ /+}
+        query=\${query/-qra+}
+        query=\${query/-quora+}
+        $var1 www.quora.com/search?q=\$query
+    }
+
+    #   Wikipedia Search function
+
+    function wikipedia() {
+        query=\${tmpquery//\ /+}
+        query=\${query/-wiki+}
+        query=\${query/-wikipedia+}
+        $var1 www.wikipedia.org/wiki/?search=\$query
+    }
+
+    #   Stack Overflow Search function
+
+    function stackoverflow() {
+        query=\${tmpquery//\ /+}
+        query=\${query/-stkof+}
+        query=\${query/-stackoverflow+}
+        $var1 www.stackoverflow.com/search?q=\$query
+    }
+
+    #   Amazon Search function
+
+    function amazon() {
+        query=\${tmpquery//\ /+}
+        query=\${query/-amzn+}
+        query=\${query/-amazon+}
+        $var1 www.amazon.com/s/?keywords=\$query
+    }
+
+    #   Ebay Search function
+
+    function ebay() {
+        query=\${tmpquery//\ /+}
+        query=\${query/-eby+}
+        query=\${query/-ebay+}
+        $var1 www.ebay.com/sch/i.html?_nkw=\$query
     }
 
     #   Help Function
@@ -124,7 +241,7 @@ function createSearchit() {
                                     Ex: \"searchit --help\"
 
             Options For Search
-                Search Engines
+                Search Engine
                         -ddg    -duckduckgo     For DuckDuckGo
                         -ggl    -google         For Google
                         -yah    -Yahoo          For Yahoo
@@ -134,6 +251,21 @@ function createSearchit() {
                         -spg    -startpage      For Startpage
                         -srx    -searx          For Searx
                         -sdn    -shodan         For Shodan
+
+                Social Media
+                        -fb     -facebook       For Facebook
+                        -ttr    -twitter        For Twitter
+                        -rddt   -reddit         For Reddit
+                        -lkndn  -linkedin       For LinkedIn
+                        -ytb    -youtube        For Youtube
+                        -ggl+   -googleplus     For Google+
+                        -pntr   -pinterest      For Pinterest
+                        -tmblr  -tumblr         For Tumblr
+                        -qra    -quora          For Quora
+                        -wiki   -wikipedia      For Wikipedia
+                        -stkof  -stackoverflow  For Stack Overflow
+                        -amzn   -amazon         For Amazon
+                        -eby    -ebay           For Ebay
 
                                     Ex: \"searchit -ddg casino royal\"
 
@@ -259,6 +391,58 @@ function createSearchit() {
             elif [ "\$parameter" == '-startpage' ] || [ "\$parameter" == '-spg' ]
                 then {
                     startpage
+                }
+            elif [ "\$parameter" == '-facebook' ] || [ "\$parameter" == '-fb' ]
+                then {
+                    facebook
+                }
+            elif [ "\$parameter" == '-twitter' ] || [ "\$parameter" == '-ttr' ]
+                then {
+                    twitter
+                }
+            elif [ "\$parameter" == '-reddit' ] || [ "\$parameter" == '-rddt' ]
+                then {
+                    reddit
+                }
+            elif [ "\$parameter" == '-linkedin' ] || [ "\$parameter" == '-lnkdn' ]
+                then {
+                    linkedin
+                }
+            elif [ "\$parameter" == '-youtube' ] || [ "\$parameter" == '-ytb' ]
+                then {
+                    youtube
+                }
+            elif [ "\$parameter" == '-googleplus' ] || [ "\$parameter" == '-ggl+' ]
+                then {
+                    googleplus
+                }
+            elif [ "\$parameter" == '-pinterest' ] || [ "\$parameter" == '-pntr' ]
+                then {
+                    pinterest
+                }
+            elif [ "\$parameter" == '-tumblr' ] || [ "\$parameter" == '-tmblr' ]
+                then {
+                    tumblr
+                }
+            elif [ "\$parameter" == '-quora' ] || [ "\$parameter" == '-qra' ]
+                then {
+                    quora
+                }
+            elif [ "\$parameter" == '-wikipedia' ] || [ "\$parameter" == '-wiki' ]
+                then {
+                    wikipedia
+                }
+            elif [ "\$parameter" == '-stackoverflow' ] || [ "\$parameter" == '-stkof' ]
+                then {
+                    stackoverflow
+                }
+            elif [ "\$parameter" == '-amazon' ] || [ "\$parameter" == '-amzn' ]
+                then {
+                    amazon
+                }
+            elif [ "\$parameter" == '-ebay' ] || [ "\$parameter" == '-eby' ]
+                then {
+                    ebay
                 }
             else {
                 defaultSearch
