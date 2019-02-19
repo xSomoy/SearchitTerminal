@@ -4,10 +4,11 @@
 #       A Terminal Based Internet Seach Customizer
 #       For Linux Based Operating System
 #       Author: Mushphyque Tanveer
+#       Twitter: www.twitter.com/0xTanveer
 #
 ###################################################
 
-version=1.0-alpha06
+version=1.0-alpha07
 
 #   Creating Command File For Seatchit
 
@@ -234,6 +235,14 @@ function createSearchit() {
         $var1 www.github.com/search/?q=\$query
     }
 
+    #   Gitlab Search fucntion
+
+    function gitlab() {
+        query=\${tmpquery//\ /+}
+        query=\${query/-gtlb+}
+        query=\${query/-gitlab+}
+        $var1 www.gitlab.com/search?\&search=\$query
+    }
 
     #   Help Function
 
@@ -262,7 +271,7 @@ function createSearchit() {
                         -srx    -searx          For Searx
                         -sdn    -shodan         For Shodan
 
-                Social Media
+                Social Media & Others
                         -fb     -facebook       For Facebook
                         -ttr    -twitter        For Twitter
                         -rddt   -reddit         For Reddit
@@ -276,7 +285,8 @@ function createSearchit() {
                         -stkof  -stackoverflow  For Stack Overflow
                         -amzn   -amazon         For Amazon
                         -eby    -ebay           For Ebay
-                        -gthh   -github         For Github
+                        -gthb   -github         For Github
+                        -gtlb   -gitlb          For Gitlab
 
                                     Ex: \"searchit -ddg casino royal\"
 
@@ -458,6 +468,10 @@ function createSearchit() {
             elif [ "\$parameter" == '-github' ] || [ "\$parameter" == '-gthb' ]
                 then {
                     github
+                }
+            elif [ "\$parameter" == '-gitlab' ] || [ "\$parameter" == '-gtlb' ]
+                then {
+                    gitlab
                 }
             else {
                 defaultSearch
