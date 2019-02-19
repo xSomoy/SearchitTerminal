@@ -9,7 +9,7 @@
 #                                                    #
 ######################################################
 
-version=1.0-beta0
+version=1.0-beta-1
 
 #   Creating Command File For Searchit
 
@@ -584,7 +584,7 @@ CONFIGEND
 
     function update(){
         cd ~
-        wget https://raw.githubusercontent.com/xCommunicado/Searchit/feature/AutoUpdate/Version
+        wget https://raw.githubusercontent.com/xCommunicado/Searchit/master/Version
         AvailableVersion=\$(cat Version)
         if [ "\$AvailableVersion" == "\$version" ]
         then {
