@@ -1,247 +1,381 @@
 #!/usr/bin/env bash
-#
-#       Searchit
-#       A Terminal Based Internet Seach Customizer
-#       For Linux Based Operating System
-#       Author: Mushphyque Tanveer
-#       Twitter: www.twitter.com/0xTanveer
-#
-###################################################
+######################################################
+#                                                    #
+#       Searchit                                     #
+#       A Terminal Based Internet Seach Customizer   #
+#       For Linux Based Operating System             #
+#       Author: Mushphyque Tanveer                   #
+#       Twitter: www.twitter.com/0xTanveer           #
+#                                                    #
+######################################################
 
-version=1.0-alpha07
+version=1.0-alpha08
 
-#   Creating Command File For Seatchit
+#   Creating Command File For Searchit
 
 function createSearchit() {
     echo "Creating Searchit Command File "
     cat  >> searchit <<SEARCHITEND
     #!/usr/bin/env bash
+    ######################################################
+    #                                                    #
+    #       Searchit                                     #
+    #       A Terminal Based Internet Seach Customizer   #
+    #       For Linux Based Operating System             #
+    #       Author: Mushphyque Tanveer                   #
+    #       Twitter: www.twitter.com/0xTanveer           #
+    #                                                    #
+    ######################################################
+
+    version=$version
 
     #   Assigning Parameter And Query
+
     parameter="\$1"
     tmpquery="\$@"
+
+    #   Default Browser Read
+
+    function dbCheck() {
+        tmpBrowser=\$(cat ~/.searchit.cfg | grep "Browser")
+        tmpBrowser=\${tmpBrowser/Default\ Browser:\ }
+        tmpBrowser=\${tmpBrowser//\ /+}
+        if [ "\$tmpBrowser" == "Firefox" ]
+            then {
+                browser=firefox
+            }
+        elif [ "\$tmpBrowser" == "Google+Chrome" ]
+            then {
+                browser=google-chrome
+            }
+        elif [ "\$tmpBrowser" == "Opera" ]
+            then {
+                browser=opera
+            }
+        elif [ "\$tmpBrowser" == "Chromium" ]
+            then {
+                browser=chromium-browser
+            }
+        elif [ "\$tmpBrowser" == "Brave" ]
+            then {
+                browser=brave-browser
+            }
+        elif [ "\$tmpBrowser" == "Vivaldi" ]
+            then {
+                browser=vivaldi
+            }
+        elif [ "\$tmpBrowser" == "Links" ]
+            then {
+                browser=links
+            }
+        elif [ "\$tmpBrowser" == "W3m" ]
+            then {
+                browser=w3m
+            }
+        elif [ "\$tmpBrowser" == "Lynx" ]
+            then {
+                browser=lynx
+            }
+        else {
+            echo " Can't Read Default Settings"
+        }
+        fi
+    }
+
+    #   Default Search Engine Read
+
+    function deCheck() {
+        tmpSEngine=\$(cat ~/.searchit.cfg | grep "Default Search")
+        tmpSEngine=\${tmpSEngine/Default\ Search\ Engine:\ }
+        if [ "\$tmpSEngine" == "DuckDuckGo" ]
+            then {
+                SEngine="www.duckduckgo.com/?q="
+            }
+        elif [ "\$tmpSEngine" == "Google" ]
+            then {
+                SEngine="www.google.com/search?q="
+            }
+        elif [ "\$tmpSEngine" == "Yahoo" ]
+            then {
+                SEngine="search.yahoo.com/search?p="
+            }
+        elif [ "\$tmpSEngine" == "Bing" ]
+            then {
+                SEngine="www.bing.com/search?q="
+            }
+        elif [ "\$tmpSEngine" == "Yandex" ]
+            then {
+                SEngine="yandex.com/search/?text="
+            }
+        elif [ "\$tmpSEngine" == "Baidu" ]
+            then {
+                SEngine="www.baidu.com/s?wd="
+            }
+        elif [ "\$tmpSEngine" == "Startpage" ]
+            then {
+                SEngine="www.startpage.com/do/search?q="
+            }
+        elif [ "\$tmpSEngine" == "Searx" ]
+            then {
+                SEngine="searx.me/?q="
+            }
+        elif [ "\$tmpSEngine" == "Shodan" ]
+            then {
+                SEngine="www.shodan.io/search?query="
+            }
+        else {
+            echo " Can't Read Default Settings"
+        }
+        fi
+    }
 
     #   Default Search function
 
     function defaultSearch() {
+        dbCheck
+        deCheck
         query=\${tmpquery//\ /+}
-        $var1 $var2\$query
+        \$browser \$SEngine\$query
     }
 
     #   DuckDuckGo Search Fucntion
 
     function duckduckgo() {
+        dbCheck
         query=\${tmpquery//\ /+}
         query=\${query/-ddg+}
         query=\${query/-duckduckgo+}
-        $var1 www.duckduckgo.com/?q=\$query
+        \$browser www.duckduckgo.com/?q=\$query
     }
 
     #   Google Search Fucntion
 
     function google() {
+        dbCheck
         query=\${tmpquery//\ /+}
         query=\${query/-ggl+}
         query=\${query/-google+}
-        $var1 www.google.com/search?q=\$query
+        \$browser www.google.com/search?q=\$query
     }
 
     #   Yahoo Search Function
 
     function yahoo() {
+        dbCheck
         query=\${tmpquery//\ /+}
         query=\${query/-yah+}
         query=\${query/-yahoo+}
-        $var1 search.yahoo.com/search?p=\$query
+        \$browser search.yahoo.com/search?p=\$query
     }
 
     #   Bing Search function
 
     function bing() {
+        dbCheck
         query=\${tmpquery//\ /+}
         query=\${query/-bng+}
         query=\${query/-bing+}
-        $var1 www.bing.com/search?q=\$query
+        \$browser www.bing.com/search?q=\$query
     }
 
     #   Yandex Search function
 
     function yandex() {
+        dbCheck
         query=\${tmpquery//\ /+}
         query=\${query/-ydx+}
         query=\${query/-yandex+}
-        $var1 yandex.com/search/?text=\$query
+        \$browser yandex.com/search/?text=\$query
     }
 
     #   Baidu Search function
 
     function baidu() {
+        dbCheck
         query=\${tmpquery//\ /+}
         query=\${query/-bdu+}
         query=\${query/-baidu+}
-        $var1 www.baidu.com/s?wd=\$query
+        \$browser www.baidu.com/s?wd=\$query
     }
 
     #   Searx Search function
 
     function searx() {
+        dbCheck
         query=\${tmpquery//\ /+}
         query=\${query/-srx+}
         query=\${query/-searx+}
-        $var1 searx.me/?q=\$query
+        \$browser searx.me/?q=\$query
     }
 
     #   Shodan Search function
 
     function shodan() {
+        dbCheck
         query=\${tmpquery//\ /+}
         query=\${query/-sdn+}
         query=\${query/-shodan+}
-        $var1 www.shodan.io/search?query=\$query
+        \$browser www.shodan.io/search?query=\$query
     }
 
     #   Startpage Search function
 
     function startpage() {
+        dbCheck
         query=\${tmpquery//\ /+}
         query=\${query/-spg+}
         query=\${query/-startpage+}
-        $var1 www.startpage.com/do/search?q=\$query
+        \$browser www.startpage.com/do/search?q=\$query
     }
 
     #   Facebook Search function
 
     function facebook() {
+        dbCheck
         query=\${tmpquery//\ /+}
         query=\${query/-fb+}
         query=\${query/-facebook+}
-        $var1 www.facebook.com/search?q=\$query
+        \$browser www.facebook.com/search?q=\$query
     }
 
     #   Twitter Search function
 
     function twitter() {
+        dbCheck
         query=\${tmpquery//\ /+}
         query=\${query/-ttr+}
         query=\${query/-twitter+}
-        $var1 www.twitter.com/search?q=\$query
+        \$browser www.twitter.com/search?q=\$query
     }
 
     #   Reddit Search function
 
     function reddit() {
+        dbCheck
         query=\${tmpquery//\ /+}
         query=\${query/-rddt+}
         query=\${query/-reddit+}
-        $var1 www.reddit.com/search?q=\$query
+        \$browser www.reddit.com/search?q=\$query
     }
 
     #   LinkedIn Search function
 
     function linkedin() {
+        dbCheck
         query=\${tmpquery//\ /+}
         query=\${query/-lnkdn+}
         query=\${query/-linkedin+}
-        $var1 www.linkedin.com/search?q=\$query
+        \$browser www.linkedin.com/search?q=\$query
     }
 
     #   Youtube Search function
 
     function youtube() {
+        dbCheck
         query=\${tmpquery//\ /+}
         query=\${query/-ytb+}
         query=\${query/-youtube+}
-        $var1 www.youtube.com/results?q=\$query
+        \$browser www.youtube.com/results?q=\$query
     }
 
     #   Google+ Search function
 
     function googleplus() {
+        dbCheck
         query=\${tmpquery//\ /%20}
         query=\${query/-ggl+%20}
         query=\${query/-googleplus%20}
-        $var1 plus.google.com/s/\$query
+        \$browser plus.google.com/s/\$query
     }
 
     #   Pinterest Search function
 
     function pinterest() {
+        dbCheck
         query=\${tmpquery//\ /+}
         query=\${query/-pntr+}
         query=\${query/-pinterest+}
-        $var1 www.pinterest.com/search?q=\$query
+        \$browser www.pinterest.com/search?q=\$query
     }
 
     #   Tumblr Search function
 
     function tumblr() {
+        dbCheck
         query=\${tmpquery//\ /+}
         query=\${query/-tmblr+}
         query=\${query/-tumblr+}
-        $var1 www.tumblr.com/search/\$query
+        \$browser www.tumblr.com/search/\$query
     }
 
     #   Quora Search function
 
     function quora() {
+        dbCheck
         query=\${tmpquery//\ /+}
         query=\${query/-qra+}
         query=\${query/-quora+}
-        $var1 www.quora.com/search?q=\$query
+        \$browser www.quora.com/search?q=\$query
     }
 
     #   Wikipedia Search function
 
     function wikipedia() {
+        dbCheck
         query=\${tmpquery//\ /+}
         query=\${query/-wiki+}
         query=\${query/-wikipedia+}
-        $var1 www.wikipedia.org/wiki/?search=\$query
+        \$browser www.wikipedia.org/wiki/?search=\$query
     }
 
     #   Stack Overflow Search function
 
     function stackoverflow() {
+        dbCheck
         query=\${tmpquery//\ /+}
         query=\${query/-stkof+}
         query=\${query/-stackoverflow+}
-        $var1 www.stackoverflow.com/search?q=\$query
+        \$browser www.stackoverflow.com/search?q=\$query
     }
 
     #   Amazon Search function
 
     function amazon() {
+        dbCheck
         query=\${tmpquery//\ /+}
         query=\${query/-amzn+}
         query=\${query/-amazon+}
-        $var1 www.amazon.com/s/?keywords=\$query
+        \$browser www.amazon.com/s/?keywords=\$query
     }
 
     #   Ebay Search function
 
     function ebay() {
+        dbCheck
         query=\${tmpquery//\ /+}
         query=\${query/-eby+}
         query=\${query/-ebay+}
-        $var1 www.ebay.com/sch/i.html?_nkw=\$query
+        \$browser www.ebay.com/sch/i.html?_nkw=\$query
     }
 
     #   Github Search function
 
     function github() {
+        dbCheck
         query=\${tmpquery//\ /+}
         query=\${query/-gthb+}
         query=\${query/-github+}
-        $var1 www.github.com/search/?q=\$query
+        \$browser www.github.com/search/?q=\$query
     }
 
     #   Gitlab Search fucntion
 
     function gitlab() {
+        dbCheck
         query=\${tmpquery//\ /+}
         query=\${query/-gtlb+}
         query=\${query/-gitlab+}
-        $var1 www.gitlab.com/search?\&search=\$query
+        \$browser www.gitlab.com/search?\&search=\$query
     }
 
     #   Help Function
@@ -298,6 +432,93 @@ function createSearchit() {
         "
     }
 
+    #   Taking User Input For Browser Specification
+
+    function browserCheck() {
+        echo "Please Select Your Browser:"
+        echo " 1 - Firefox"
+        echo " 2 - Chrome "
+        echo " 3 - Chromium"
+        echo " 4 - Opera"
+        echo " 5 - Brave"
+        echo " 6 - Vivaldi"
+        echo " 7 - Links (Text Based)"
+        echo " 8 - W3m (Text Based)"
+        echo " 9 - Lynx (Text Based)"
+        read input;
+        case \$input in
+                1) var1="Firefox" ;;
+                2) var1="Google Chrome" ;;
+                3) var1="Chromium" ;;
+                4) var1="Opera";;
+                5) var1="Brave";;
+                6) var1="Vivaldi";;
+                7) var1="Links";;
+                8) var1="W3m" ;;
+                9) var1="Lynx" ;;
+                *) echo "Please Choose One Of Them"
+                        browserCheck ;;
+        esac
+    }
+
+    #   Taking Input For Default Search Engine Selection
+
+    function defaultEngine() {
+        echo "Please Select Your Default Search Engine:"
+        echo " 1 - DuckDuckGo"
+        echo " 2 - Google"
+        echo " 3 - Yahoo"
+        echo " 4 - Bing"
+        echo " 5 - Yandex"
+        echo " 6 - Baidu"
+        echo " 7 - Startpage"
+        echo " 8 - Searx"
+        echo " 9 - Shodan"
+        read input;
+        case \$input in
+            1) var2="DuckDuckGo" ;;
+            2) var2="Google" ;;
+            3) var2="Yahoo";;
+            4) var2="Bing";;
+            5) var2="Yandex";;
+            6) var2="Baidu";;
+            7) var2="Startpage";;
+            8) var2="Searx";;
+            9) var2="Shodan";;
+            *) echo "Please Choose One OF Them"
+                    defaultEngine ;;
+        esac
+    }
+
+    #   Config File Generator
+
+        function config() {
+            cat ~/.searchit.cfg | grep "Default"
+            echo ""
+            echo "Do You Want To Change? (Y/N):"
+            read decision;
+            if [ "\$decision" == "Y" ] || [ "\$decision" == "y" ]
+            then {
+                cd ~
+                sudo rm .searchit.cfg
+                browserCheck
+                defaultEngine
+                cat  >> .searchit.cfg <<CONFIGEND
+Searchit Configuration File
+Please Do Not Edit This File
+Use Command "searchit -cfg "
+To Change Any Settings
+
+Default Browser: \$var1
+Default Search Engine: \$var2
+CONFIGEND
+            }
+            else {
+                echo "No Chnage Has Been Made"
+            }
+            fi
+        }
+
     #   Uninstaller function
 
     function uninstaller(){
@@ -308,6 +529,8 @@ function createSearchit() {
             echo "Chainging Directory"
             cd /usr/bin
             sudo rm duckit googleit searchit
+            cd ~
+            sudo rm .searchit.cfg
             echo "Removing Searchit Related Files"
             echo "Done :("
             echo "
@@ -373,9 +596,13 @@ function createSearchit() {
                 then {
                     update
                 }
+            elif [ "\$parameter" == '--config' ] || [ "\$parameter" == '-cfg' ]
+                then {
+                    config
+                }
             elif [ "\$parameter" == '--version' ] || [ "\$parameter" == '-v' ]
                 then {
-                    echo "Seachit Version:$version"
+                    echo "Seachit Version:\$version"
                 }
             elif [ "\$parameter" == '-duckduckgo' ] || [ "\$parameter" == '-ddg' ]
                 then {
@@ -488,64 +715,6 @@ function createSearchit() {
 SEARCHITEND
 }
 
-#   Taking User Input For Browser Specification
-
-function browserCheck() {
-    echo "Please Select Your Browser:"
-    echo " 1 - Firefox"
-    echo " 2 - Chrome "
-    echo " 3 - Chromium"
-    echo " 4 - Opera"
-    echo " 5 - Brave"
-    echo " 6 - Vivaldi"
-    echo " 7 - Links (Text Based)"
-    echo " 8 - W3m (Text Based)"
-    echo " 9 - Lynx (Text Based)"
-    read browser;
-    case $browser in
-            1) var1="firefox" ;;
-            2) var1="google-chrome" ;;
-            3) var1="chromium-browser" ;;
-            4) var1="opera";;
-            5) var1="brave-browser";;
-            6) var1="vivaldi";;
-            7) var1="links";;
-            8) var1="w3m" ;;
-            9) var1="lynx" ;;
-            *) echo "Please Choose One Of Them"
-                    browserCheck ;;
-    esac
-}
-
-#   Taking Input For Default Search Engine Selection
-
-function defaultEngine() {
-    echo "Please Select Your Default Search Engine:"
-    echo " 1 - DuckDuckGo"
-    echo " 2 - Google"
-    echo " 3 - Yahoo"
-    echo " 4 - Bing"
-    echo " 5 - Yandex"
-    echo " 6 - Baidu"
-    echo " 7 - Startpage"
-    echo " 8 - Searx"
-    echo " 9 - Shodan"
-    read engine;
-    case $engine in
-        1) var2="www.duckduckgo.com/?q=" ;;
-        2) var2="www.google.com/search?q=" ;;
-        3) var2="search.yahoo.com/search?p=";;
-        4) var2="www.bing.com/search?q=";;
-        5) var2="yandex.com/search/?text=";;
-        6) var2="www.baidu.com/s?wd=";;
-        7) var2="www.startpage.com/do/search?q=";;
-        8) var2="searx.me/?q=";;
-        9) var2="www.shodan.io/search?query=";;
-        *) echo "Please Choose One OF Them"
-                defaultEngine ;;
-    esac
-}
-
 #   Installer Function
 
 function installer() {
@@ -559,13 +728,27 @@ function installer() {
     echo "
         If You Like This Tool. You Can Help Me To Improve This.
         Report Any Issue On Github Or Directly Contact Me Via Twitter.
-        Or You Can Just Let Me Know That You Liked It.
-        It Will Also Help A lot
+        Or You Can Just Let Me Know If You Liked It.
+        It Will Also Helps A lot
         Thank You. :D
             Github:     -----
             Twitter:    -----
     "
 }
+
+#   Config File Generator
+    function configFile() {
+        cd ~
+        cat  >> .searchit.cfg <<CONFIGEND
+Searchit Configuration File
+Please Do Not Edit This File
+Use Command "searchit -cfg "
+To Change Any Settings
+
+Default Browser: Firefox
+Default Search Engine: DuckDuckGo
+CONFIGEND
+    }
 
 #   Creating Command File For DuckDuckGo
 
@@ -597,9 +780,9 @@ function checkPermission() {
     var0=$(whoami)
     if [  "root" == "$var0"  ]
         then {
-            browserCheck
-            defaultEngine
             installer
+            configFile
+            searchit --config
         }
     else {
         sudo ./searchit_$version.sh
