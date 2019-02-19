@@ -1,2 +1,2 @@
-Searchit is Termina Based Search Customizer For linux Users.
+Searchit is Terminal Based Search Customizer For linux Users.
 Details Are Coming. test
