@@ -2,42 +2,43 @@
 ######################################################
 #                                                    #
 #       Searchit                                     #
-#       A Terminal Based Internet Seach Customizer   #
-#       For Linux Based Operating System             #
-#       Author: Mushphyque Tanveer                   #
-#       Twitter: www.twitter.com/0xTanveer           #
+#       Terminal Based Search Customizer             #             #
+#                                                    #
+#       Author:     Mushphyque Tanveer               #
+#       Twitter:    www.twitter.com/0xTanveer        #
+#       License:    GNU General Public License v3.0  #
 #                                                    #
 ######################################################
 
-version=1.0-beta-1
+version=1.0-beta-2
 
-#   Creating Command File For Searchit
+#   Creating Searchit Command
 
 function createSearchit() {
-    echo "Creating Searchit Command File "
     cat  >> searchit <<SEARCHITEND
     #!/usr/bin/env bash
     ######################################################
     #                                                    #
     #       Searchit                                     #
-    #       A Terminal Based Internet Seach Customizer   #
-    #       For Linux Based Operating System             #
-    #       Author: Mushphyque Tanveer                   #
-    #       Twitter: www.twitter.com/0xTanveer           #
+    #       Terminal Based Search Customizer             #
+    #                                                    #
+    #       Author:     Mushphyque Tanveer               #
+    #       Twitter:    www.twitter.com/0xTanveer        #
+    #       License:    GNU General Public License v3.0  #
     #                                                    #
     ######################################################
 
     version=$version
 
-    #   Assigning Parameter And Query
+    #   Assigning Parameter And Search Query
 
     parameter="\$1"
     tmpquery="\$@"
 
-    #   Default Browser Read
+    #   Default Browser Check
 
     function dbCheck() {
-        tmpBrowser=\$(cat ~/.searchit.cfg | grep "Browser")
+        tmpBrowser=\$(cat ~/.searchit/searchit.cfg | grep "Browser")
         tmpBrowser=\${tmpBrowser/Default\ Browser:\ }
         tmpBrowser=\${tmpBrowser//\ /+}
         if [ "\$tmpBrowser" == "Firefox" ]
@@ -77,15 +78,15 @@ function createSearchit() {
                 browser=lynx
             }
         else {
-            echo " Can't Read Default Settings"
+            echo "ERROR: Unable to read configuration file"
         }
         fi
     }
 
-    #   Default Search Engine Read
+    #   Default Search Engine Check
 
     function deCheck() {
-        tmpSEngine=\$(cat ~/.searchit.cfg | grep "Default Search")
+        tmpSEngine=\$(cat ~/.searchit/searchit.cfg | grep "Default Search")
         tmpSEngine=\${tmpSEngine/Default\ Search\ Engine:\ }
         if [ "\$tmpSEngine" == "DuckDuckGo" ]
             then {
@@ -129,7 +130,7 @@ function createSearchit() {
         fi
     }
 
-    #   Default Search function
+    #   Default Search Function
 
     function defaultSearch() {
         dbCheck
@@ -168,7 +169,7 @@ function createSearchit() {
         \$browser search.yahoo.com/search?p=\$query
     }
 
-    #   Bing Search function
+    #   Bing Search Function
 
     function bing() {
         dbCheck
@@ -178,7 +179,7 @@ function createSearchit() {
         \$browser www.bing.com/search?q=\$query
     }
 
-    #   Yandex Search function
+    #   Yandex Search Function
 
     function yandex() {
         dbCheck
@@ -188,7 +189,7 @@ function createSearchit() {
         \$browser yandex.com/search/?text=\$query
     }
 
-    #   Baidu Search function
+    #   Baidu Search Function
 
     function baidu() {
         dbCheck
@@ -198,7 +199,7 @@ function createSearchit() {
         \$browser www.baidu.com/s?wd=\$query
     }
 
-    #   Searx Search function
+    #   Searx Search Function
 
     function searx() {
         dbCheck
@@ -208,7 +209,7 @@ function createSearchit() {
         \$browser searx.me/?q=\$query
     }
 
-    #   Shodan Search function
+    #   Shodan Search Function
 
     function shodan() {
         dbCheck
@@ -218,7 +219,7 @@ function createSearchit() {
         \$browser www.shodan.io/search?query=\$query
     }
 
-    #   Startpage Search function
+    #   Startpage Search Function
 
     function startpage() {
         dbCheck
@@ -228,7 +229,7 @@ function createSearchit() {
         \$browser www.startpage.com/do/search?q=\$query
     }
 
-    #   Facebook Search function
+    #   Facebook Search Function
 
     function facebook() {
         dbCheck
@@ -238,7 +239,7 @@ function createSearchit() {
         \$browser www.facebook.com/search?q=\$query
     }
 
-    #   Twitter Search function
+    #   Twitter Search Function
 
     function twitter() {
         dbCheck
@@ -248,7 +249,7 @@ function createSearchit() {
         \$browser www.twitter.com/search?q=\$query
     }
 
-    #   Reddit Search function
+    #   Reddit Search Function
 
     function reddit() {
         dbCheck
@@ -258,7 +259,7 @@ function createSearchit() {
         \$browser www.reddit.com/search?q=\$query
     }
 
-    #   LinkedIn Search function
+    #   LinkedIn Search Function
 
     function linkedin() {
         dbCheck
@@ -268,7 +269,7 @@ function createSearchit() {
         \$browser www.linkedin.com/search?q=\$query
     }
 
-    #   Youtube Search function
+    #   Youtube Search Function
 
     function youtube() {
         dbCheck
@@ -278,7 +279,7 @@ function createSearchit() {
         \$browser www.youtube.com/results?q=\$query
     }
 
-    #   Google+ Search function
+    #   Google+ Search Function
 
     function googleplus() {
         dbCheck
@@ -288,7 +289,7 @@ function createSearchit() {
         \$browser plus.google.com/s/\$query
     }
 
-    #   Pinterest Search function
+    #   Pinterest Search Function
 
     function pinterest() {
         dbCheck
@@ -298,7 +299,7 @@ function createSearchit() {
         \$browser www.pinterest.com/search?q=\$query
     }
 
-    #   Tumblr Search function
+    #   Tumblr Search Function
 
     function tumblr() {
         dbCheck
@@ -308,7 +309,7 @@ function createSearchit() {
         \$browser www.tumblr.com/search/\$query
     }
 
-    #   Quora Search function
+    #   Quora Search Function
 
     function quora() {
         dbCheck
@@ -318,7 +319,7 @@ function createSearchit() {
         \$browser www.quora.com/search?q=\$query
     }
 
-    #   Wikipedia Search function
+    #   Wikipedia Search Function
 
     function wikipedia() {
         dbCheck
@@ -328,7 +329,7 @@ function createSearchit() {
         \$browser www.wikipedia.org/wiki/?search=\$query
     }
 
-    #   Stack Overflow Search function
+    #   Stack Overflow Search Function
 
     function stackoverflow() {
         dbCheck
@@ -338,7 +339,7 @@ function createSearchit() {
         \$browser www.stackoverflow.com/search?q=\$query
     }
 
-    #   Amazon Search function
+    #   Amazon Search Function
 
     function amazon() {
         dbCheck
@@ -348,7 +349,7 @@ function createSearchit() {
         \$browser www.amazon.com/s/?keywords=\$query
     }
 
-    #   Ebay Search function
+    #   Ebay Search Function
 
     function ebay() {
         dbCheck
@@ -358,7 +359,7 @@ function createSearchit() {
         \$browser www.ebay.com/sch/i.html?_nkw=\$query
     }
 
-    #   Github Search function
+    #   Github Search Function
 
     function github() {
         dbCheck
@@ -368,7 +369,7 @@ function createSearchit() {
         \$browser www.github.com/search/?q=\$query
     }
 
-    #   Gitlab Search fucntion
+    #   Gitlab Search Fucntion
 
     function gitlab() {
         dbCheck
@@ -384,17 +385,20 @@ function createSearchit() {
         echo "
                     \"Searchit Help Section\"
 
-            Options For Seachit Functionality
+            Options For Seachit's Functionality
+
                 --about     -a          For About Section
                 --help      -h    -?    For Help section
                 --uninstall -un         For Uninstall
                 --update    -u          For Update
                 --Version   -v          For Version
                 --config    -cfg        For Configuration
+                --release   -rn         For Release Note
 
                                     Ex: \"searchit --help\"
 
-            Options For Search
+            Search Options:
+
                 Search Engine
                         -ddg    -duckduckgo     For DuckDuckGo
                         -ggl    -google         For Google
@@ -425,7 +429,7 @@ function createSearchit() {
 
                                     Ex: \"searchit -ddg casino royal\"
 
-            Shortcuts For Searchit
+            Shortcuts For Instant Search
                 duckit      For DuckDuckGo
                 googleit    For Google
 
@@ -433,10 +437,10 @@ function createSearchit() {
         "
     }
 
-    #   Taking User Input For Browser Specification
+    #   Default Browser Specifier
 
     function browserCheck() {
-        echo "Please Select Your Browser:"
+        echo "Please Select Your Default Browser:"
         echo " 1 - Firefox"
         echo " 2 - Chrome "
         echo " 3 - Chromium"
@@ -462,7 +466,7 @@ function createSearchit() {
         esac
     }
 
-    #   Taking Input For Default Search Engine Selection
+    #   Default Search Engine Specifier
 
     function defaultEngine() {
         echo "Please Select Your Default Search Engine:"
@@ -493,29 +497,29 @@ function createSearchit() {
 
     #   Config File Generator
 
-        function config() {
-            cat ~/.searchit.cfg | grep "Default"
-            echo ""
-            echo "Do You Want To Change? (Y/N):"
-            read decision;
-            if [ "\$decision" == "Y" ] || [ "\$decision" == "y" ]
-            then {
-                cd ~
-                sudo rm .searchit.cfg
-                browserCheck
-                defaultEngine
-                cat  >> .searchit.cfg <<CONFIGEND
-Searchit Configuration File
-Please Do Not Edit This File
-Use Command "searchit -cfg "
-To Change Any Settings
+    function config() {
+        cat ~/.searchit/searchit.cfg | grep "Default"
+        echo ""
+        echo "Do You Want To Change This? (Y/N):"
+        read decision;
+        if [ "\$decision" == "Y" ] || [ "\$decision" == "y" ]
+        then {
+            cd ~/.searchit
+            sudo rm searchit.cfg
+            browserCheck
+            defaultEngine
+            cat  >> searchit.cfg <<CONFIGEND
+Searchit Configuration File.
+Please Do Not Make Any Change To This File.
+Use Command "searchit -cfg" To Make Any Changes
+----------------------------------
 
 Default Browser: \$var1
 Default Search Engine: \$var2
 CONFIGEND
             }
             else {
-                echo "No Chnage Has Been Made"
+                echo "No Change Has Been Made For Default Configuration"
             }
             fi
         }
@@ -527,12 +531,10 @@ CONFIGEND
         read decision;
         if [ "\$decision" == "Y" ] || [ "\$decision" == "y" ]
         then {
-            echo "Chainging Directory"
             cd /usr/bin
             sudo rm duckit googleit searchit
             cd ~
-            sudo rm .searchit.cfg
-            echo "Removing Searchit Related Files"
+            sudo rm -r .searchit
             uninstallCheck
         }
         else {
@@ -544,39 +546,38 @@ CONFIGEND
 #   Double Check Uninstall
 
     function uninstallCheck() {
-        if [ -f /usr/bin/searchit ] && [ -f /usr/bin/googleit ] && [ -f /usr/bin/duckit ] && [ -f ~/.searchit.cfg];
+        if [ -f /usr/bin/searchit ] && [ -f /usr/bin/googleit ] && [ -f /usr/bin/duckit ] && [ -f ~/.searchit/searchit.cfg ] && [ -f ~/.searchit/Release-Note ];
         then {
             echo "Uninstalation Failed"
             echo "Report Problem : https://github.com/xCommunicado/Searchit/issues "
         }
         else {
-            echo "Done :("
             echo "
-            Sorry To See You Go. You Can Help Me To Improve This.
+            Uninstallation Complete!! :(
+
+            Sorry To See You Go. You Can Help Me To Improve Searchit.
             You Can Report Any Issue On Github
             Or Directly Contact Me Via Twitter
+
             Github:  https://github.com/xCommunicado/Searchit
             Twitter: https://twitter.com/xCommunicado
             "
             }
         fi
-
-
-
     }
-
 
     #   About Function
 
     function about(){
         echo "
                Searchit
-               A Terminal Based Internet Search Customizer
-               For Linux Based Operating System
-               Author: Mushphyque Tanveer
-               Github:  https://github.com/xCommunicado/Searchit
+               Terminal Based Search Customizer
+
+               Author:  Mushphyque Tanveer
                Twitter: https://twitter.com/xCommunicado
-               © 2019
+               Github:  https://github.com/xCommunicado/Searchit
+               License: GNU General Public License v3.0
+
         "
     }
 
@@ -588,7 +589,7 @@ CONFIGEND
         AvailableVersion=\$(cat Version)
         if [ "\$AvailableVersion" == "\$version" ]
         then {
-            echo "You Are Uptodate"
+            echo "You Are Up-To-Date"
         }
         else
             {
@@ -596,16 +597,18 @@ CONFIGEND
             read decision;
             if [ "\$decision" == "Y" ] || [ "\$decision" == "y" ]
             then {
-                sudo rm /usr/bin/searchit /usr/bin/googleit /usr/bin/duckit ~/.searchit.cfg
+                sudo rm /usr/bin/searchit /usr/bin/googleit /usr/bin/duckit
+                sudo rm -r ~/.searchit
                 wget https://github.com/xCommunicado/Searchit/archive/master.zip
                 unzip master.zip
                 cd Searchit-master
                 ./Searchit_Installer.sh
                 rm ~/master.zip
                 rm -r ~/Searchit-master
+                echo "Update Complete !!"
             }
             else {
-                    echo " Maybe Later "
+                    echo " Maybe Later -_- "
             }
             fi
             }
@@ -618,8 +621,8 @@ CONFIGEND
     function paramCheck() {
         if [ -z \$parameter ];
         then {
-            echo "Please Provide A Parameter Or A Search Query"
-            echo "Ex: \"searchit --help\" Or \"searchit john wick\""
+            echo "Please Provide A Option Or A Search Query"
+            echo "Ex: \" searchit --help \" Or \" searchit john wick \""
         }
         else {
             if [ "\$parameter" == '--help' ]  || [ "\$parameter" == '-h' ] || [ "\$parameter" == '-?' ]
@@ -641,6 +644,11 @@ CONFIGEND
             elif [ "\$parameter" == '--config' ] || [ "\$parameter" == '-cfg' ]
                 then {
                     config
+                }
+            elif [ "\$parameter" == '--release' ] || [ "\$parameter" == '-rn' ]
+                then {
+                    clear
+                    cat ~/.searchit/Release-Note
                 }
             elif [ "\$parameter" == '--version' ] || [ "\$parameter" == '-v' ]
                 then {
@@ -750,7 +758,7 @@ CONFIGEND
     fi
     }
 
-    # Calling Parameter Check Functin For Initialization
+    # Calling Parameter Check Function For Initialization
 
     paramCheck
 
@@ -764,19 +772,20 @@ function installer() {
     createSearchit
     createDuckit
     createGoogleit
-    echo "Making Command Files Executable"
     chmod 755 duckit googleit searchit
 }
 
-#   Config File Generator
+#   Searchit Folder And Files Genrator
 
-function configFile() {
-        cd ~
-        cat  >> .searchit.cfg <<CONFIGEND
-Searchit Configuration File
-Please Do Not Edit This File
-Use Command "searchit -cfg "
-To Change Any Settings
+function dataGen() {
+        mkdir ~/.searchit/
+        cp Release-Note ~/.searchit/
+        cd ~/.searchit
+        cat  >> searchit.cfg <<CONFIGEND
+Searchit Configuration File.
+Please Do Not Make Any Change To This File.
+Use Command "searchit -cfg" To Make Any Changes
+----------------------------------
 
 Default Browser: Firefox
 Default Search Engine: DuckDuckGo
@@ -786,17 +795,17 @@ CONFIGEND
 #   Double Check Install
 
 function installCheck() {
-    if [ -f /usr/bin/searchit ] && [ -f /usr/bin/googleit ] && [ -f /usr/bin/duckit ] && [ -f ~/.searchit.cfg ];
+    if [ -f /usr/bin/searchit ] && [ -f /usr/bin/googleit ] && [ -f /usr/bin/duckit ] && [ -f ~/.searchit/searchit.cfg ] && [ -f ~/.searchit/Release-Note ];
     then {
-        echo "Done!!!"
         echo "
-            If You Like This Tool. You Can Help Me To Improve This.
+            Instalation Complete!!
+
+            If You Like This Software. You Can Help Me To Improve This.
             Report Any Issue On Github Or Directly Contact Me Via Twitter.
-            Or You Can Just Let Me Know If You Liked It.
-            It Will Also Helps A lot
+            Or You Can Just Let Me Know If You Liked It. That Also Helps A lot.
             Thank You. :D
-                Github:     -----
-                Twitter:    -----
+                Github:     https://github.com/xCommunicado
+                Twitter:    https://twitter.com/xCommunicado
             "
     }
     else {
@@ -809,24 +818,108 @@ function installCheck() {
 #   Creating Command File For DuckDuckGo
 
 function createDuckit() {
-        echo "Creating DuckDuckGo Command File"
         cat  >> duckit <<DUCKITEND
         #!/usr/bin/env bash
+        tmpBrowser=\$(cat ~/.searchit/searchit.cfg | grep "Browser")
+        tmpBrowser=\${tmpBrowser/Default\ Browser:\ }
+        tmpBrowser=\${tmpBrowser//\ /+}
+        if [ "\$tmpBrowser" == "Firefox" ]
+            then {
+                browser=firefox
+            }
+        elif [ "\$tmpBrowser" == "Google+Chrome" ]
+            then {
+                browser=google-chrome
+            }
+        elif [ "\$tmpBrowser" == "Opera" ]
+            then {
+                browser=opera
+            }
+        elif [ "\$tmpBrowser" == "Chromium" ]
+            then {
+                browser=chromium-browser
+            }
+        elif [ "\$tmpBrowser" == "Brave" ]
+            then {
+                browser=brave-browser
+            }
+        elif [ "\$tmpBrowser" == "Vivaldi" ]
+            then {
+                browser=vivaldi
+            }
+        elif [ "\$tmpBrowser" == "Links" ]
+            then {
+                browser=links
+            }
+        elif [ "\$tmpBrowser" == "W3m" ]
+            then {
+                browser=w3m
+            }
+        elif [ "\$tmpBrowser" == "Lynx" ]
+            then {
+                browser=lynx
+            }
+        else {
+            echo "ERROR: Unable to read configuration file"
+        }
+        fi
         input="\$@"
         query=\${input//\ /+}
-        $var1 www.duckduckgo.com/?q=\$query
+        \$browser www.duckduckgo.com/?q=\$query
 DUCKITEND
 }
 
 #   Creating Command File For Google
 
 function createGoogleit() {
-        echo "Creating Google Command File"
         cat >> googleit <<GOOGLEITEND
         #!/usr/bin/env bash
+        tmpBrowser=\$(cat ~/.searchit/searchit.cfg | grep "Browser")
+        tmpBrowser=\${tmpBrowser/Default\ Browser:\ }
+        tmpBrowser=\${tmpBrowser//\ /+}
+        if [ "\$tmpBrowser" == "Firefox" ]
+            then {
+                browser=firefox
+            }
+        elif [ "\$tmpBrowser" == "Google+Chrome" ]
+            then {
+                browser=google-chrome
+            }
+        elif [ "\$tmpBrowser" == "Opera" ]
+            then {
+                browser=opera
+            }
+        elif [ "\$tmpBrowser" == "Chromium" ]
+            then {
+                browser=chromium-browser
+            }
+        elif [ "\$tmpBrowser" == "Brave" ]
+            then {
+                browser=brave-browser
+            }
+        elif [ "\$tmpBrowser" == "Vivaldi" ]
+            then {
+                browser=vivaldi
+            }
+        elif [ "\$tmpBrowser" == "Links" ]
+            then {
+                browser=links
+            }
+        elif [ "\$tmpBrowser" == "W3m" ]
+            then {
+                browser=w3m
+            }
+        elif [ "\$tmpBrowser" == "Lynx" ]
+            then {
+                browser=lynx
+            }
+        else {
+            echo "ERROR: Unable to read configuration file"
+        }
+        fi
         input="\$@"
         query=\${input//\ /+}
-        $var1  https://www.google.com/search?q=\$query
+        \$browser www.google.com/search?q=\$query
 GOOGLEITEND
 }
 
@@ -836,8 +929,8 @@ function checkPermission() {
     var0=$(whoami)
     if [  "root" == "$var0"  ]
         then {
+            dataGen
             installer
-            configFile
             installCheck
             searchit --config
         }
