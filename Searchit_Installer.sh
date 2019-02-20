@@ -6,13 +6,13 @@
 #                                                    #
 #       Author:     Mushphyque Tanveer               #
 #       Twitter:    www.twitter.com/0xTanveer        #
-#       License: GNU General Public License v3.0     #
+#       License:    GNU General Public License v3.0  #
 #                                                    #
 ######################################################
 
 version=1.0-beta-2
 
-#   Creating Command File For Searchit
+#   Creating Searchit Command
 
 function createSearchit() {
     cat  >> searchit <<SEARCHITEND
@@ -24,13 +24,13 @@ function createSearchit() {
     #                                                    #
     #       Author:     Mushphyque Tanveer               #
     #       Twitter:    www.twitter.com/0xTanveer        #
-    #       License: GNU General Public License v3.0     #
+    #       License:    GNU General Public License v3.0  #
     #                                                    #
     ######################################################
 
     version=$version
 
-    #   Assigning Parameter And Query
+    #   Assigning Parameter And Search Query
 
     parameter="\$1"
     tmpquery="\$@"
@@ -78,7 +78,7 @@ function createSearchit() {
                 browser=lynx
             }
         else {
-            echo " Can't Read Default Settings"
+            echo "ERROR: Unable to read configuration file"
         }
         fi
     }
@@ -130,7 +130,7 @@ function createSearchit() {
         fi
     }
 
-    #   Default Search function
+    #   Default Search Function
 
     function defaultSearch() {
         dbCheck
@@ -169,7 +169,7 @@ function createSearchit() {
         \$browser search.yahoo.com/search?p=\$query
     }
 
-    #   Bing Search function
+    #   Bing Search Function
 
     function bing() {
         dbCheck
@@ -179,7 +179,7 @@ function createSearchit() {
         \$browser www.bing.com/search?q=\$query
     }
 
-    #   Yandex Search function
+    #   Yandex Search Function
 
     function yandex() {
         dbCheck
@@ -189,7 +189,7 @@ function createSearchit() {
         \$browser yandex.com/search/?text=\$query
     }
 
-    #   Baidu Search function
+    #   Baidu Search Function
 
     function baidu() {
         dbCheck
@@ -199,7 +199,7 @@ function createSearchit() {
         \$browser www.baidu.com/s?wd=\$query
     }
 
-    #   Searx Search function
+    #   Searx Search Function
 
     function searx() {
         dbCheck
@@ -209,7 +209,7 @@ function createSearchit() {
         \$browser searx.me/?q=\$query
     }
 
-    #   Shodan Search function
+    #   Shodan Search Function
 
     function shodan() {
         dbCheck
@@ -219,7 +219,7 @@ function createSearchit() {
         \$browser www.shodan.io/search?query=\$query
     }
 
-    #   Startpage Search function
+    #   Startpage Search Function
 
     function startpage() {
         dbCheck
@@ -229,7 +229,7 @@ function createSearchit() {
         \$browser www.startpage.com/do/search?q=\$query
     }
 
-    #   Facebook Search function
+    #   Facebook Search Function
 
     function facebook() {
         dbCheck
@@ -239,7 +239,7 @@ function createSearchit() {
         \$browser www.facebook.com/search?q=\$query
     }
 
-    #   Twitter Search function
+    #   Twitter Search Function
 
     function twitter() {
         dbCheck
@@ -249,7 +249,7 @@ function createSearchit() {
         \$browser www.twitter.com/search?q=\$query
     }
 
-    #   Reddit Search function
+    #   Reddit Search Function
 
     function reddit() {
         dbCheck
@@ -259,7 +259,7 @@ function createSearchit() {
         \$browser www.reddit.com/search?q=\$query
     }
 
-    #   LinkedIn Search function
+    #   LinkedIn Search Function
 
     function linkedin() {
         dbCheck
@@ -269,7 +269,7 @@ function createSearchit() {
         \$browser www.linkedin.com/search?q=\$query
     }
 
-    #   Youtube Search function
+    #   Youtube Search Function
 
     function youtube() {
         dbCheck
@@ -279,7 +279,7 @@ function createSearchit() {
         \$browser www.youtube.com/results?q=\$query
     }
 
-    #   Google+ Search function
+    #   Google+ Search Function
 
     function googleplus() {
         dbCheck
@@ -289,7 +289,7 @@ function createSearchit() {
         \$browser plus.google.com/s/\$query
     }
 
-    #   Pinterest Search function
+    #   Pinterest Search Function
 
     function pinterest() {
         dbCheck
@@ -299,7 +299,7 @@ function createSearchit() {
         \$browser www.pinterest.com/search?q=\$query
     }
 
-    #   Tumblr Search function
+    #   Tumblr Search Function
 
     function tumblr() {
         dbCheck
@@ -309,7 +309,7 @@ function createSearchit() {
         \$browser www.tumblr.com/search/\$query
     }
 
-    #   Quora Search function
+    #   Quora Search Function
 
     function quora() {
         dbCheck
@@ -319,7 +319,7 @@ function createSearchit() {
         \$browser www.quora.com/search?q=\$query
     }
 
-    #   Wikipedia Search function
+    #   Wikipedia Search Function
 
     function wikipedia() {
         dbCheck
@@ -329,7 +329,7 @@ function createSearchit() {
         \$browser www.wikipedia.org/wiki/?search=\$query
     }
 
-    #   Stack Overflow Search function
+    #   Stack Overflow Search Function
 
     function stackoverflow() {
         dbCheck
@@ -339,7 +339,7 @@ function createSearchit() {
         \$browser www.stackoverflow.com/search?q=\$query
     }
 
-    #   Amazon Search function
+    #   Amazon Search Function
 
     function amazon() {
         dbCheck
@@ -349,7 +349,7 @@ function createSearchit() {
         \$browser www.amazon.com/s/?keywords=\$query
     }
 
-    #   Ebay Search function
+    #   Ebay Search Function
 
     function ebay() {
         dbCheck
@@ -359,7 +359,7 @@ function createSearchit() {
         \$browser www.ebay.com/sch/i.html?_nkw=\$query
     }
 
-    #   Github Search function
+    #   Github Search Function
 
     function github() {
         dbCheck
@@ -369,7 +369,7 @@ function createSearchit() {
         \$browser www.github.com/search/?q=\$query
     }
 
-    #   Gitlab Search fucntion
+    #   Gitlab Search Fucntion
 
     function gitlab() {
         dbCheck
@@ -385,7 +385,7 @@ function createSearchit() {
         echo "
                     \"Searchit Help Section\"
 
-            Options For Seachit Functionality:
+            Options For Seachit's Functionality
 
                 --about     -a          For About Section
                 --help      -h    -?    For Help section
@@ -440,7 +440,7 @@ function createSearchit() {
     #   Default Browser Specifier
 
     function browserCheck() {
-        echo "Please Select Your Browser:"
+        echo "Please Select Your Default Browser:"
         echo " 1 - Firefox"
         echo " 2 - Chrome "
         echo " 3 - Chromium"
@@ -500,7 +500,7 @@ function createSearchit() {
     function config() {
         cat ~/.searchit/searchit.cfg | grep "Default"
         echo ""
-        echo "Do You Want To Change? (Y/N):"
+        echo "Do You Want To Change This? (Y/N):"
         read decision;
         if [ "\$decision" == "Y" ] || [ "\$decision" == "y" ]
         then {
@@ -509,10 +509,10 @@ function createSearchit() {
             browserCheck
             defaultEngine
             cat  >> searchit.cfg <<CONFIGEND
-Searchit Configuration File
-Please Do Not Edit This File
-Use Command "searchit -cfg "
-To Make Any Changes
+Searchit Configuration File.
+Please Do Not Make Any Change To This File.
+Use Command "searchit -cfg" To Make Any Changes
+----------------------------------
 
 Default Browser: \$var1
 Default Search Engine: \$var2
@@ -531,12 +531,10 @@ CONFIGEND
         read decision;
         if [ "\$decision" == "Y" ] || [ "\$decision" == "y" ]
         then {
-            echo "Chainging Directory"
             cd /usr/bin
             sudo rm duckit googleit searchit
             cd ~
             sudo rm -r .searchit
-            echo "Removing Searchit Related Files"
             uninstallCheck
         }
         else {
@@ -555,7 +553,7 @@ CONFIGEND
         }
         else {
             echo "
-            Uninstallation Complete!!
+            Uninstallation Complete!! :(
 
             Sorry To See You Go. You Can Help Me To Improve Searchit.
             You Can Report Any Issue On Github
@@ -573,12 +571,11 @@ CONFIGEND
     function about(){
         echo "
                Searchit
-               A Terminal Based Internet Search Customizer
-               For Linux Based Operating System
+               Terminal Based Search Customizer
 
-               Author: Mushphyque Tanveer
-               Github:  https://github.com/xCommunicado/Searchit
+               Author:  Mushphyque Tanveer
                Twitter: https://twitter.com/xCommunicado
+               Github:  https://github.com/xCommunicado/Searchit
                License: GNU General Public License v3.0
 
         "
@@ -592,7 +589,7 @@ CONFIGEND
         AvailableVersion=\$(cat Version)
         if [ "\$AvailableVersion" == "\$version" ]
         then {
-            echo "You Are Uptodate"
+            echo "You Are Up-To-Date"
         }
         else
             {
@@ -608,9 +605,10 @@ CONFIGEND
                 ./Searchit_Installer.sh
                 rm ~/master.zip
                 rm -r ~/Searchit-master
+                echo "Update Complete !!"
             }
             else {
-                    echo " Maybe Later "
+                    echo " Maybe Later -_- "
             }
             fi
             }
@@ -623,8 +621,8 @@ CONFIGEND
     function paramCheck() {
         if [ -z \$parameter ];
         then {
-            echo "Please Provide A Parameter Or A Search Query"
-            echo "Ex: \"searchit --help\" Or \"searchit john wick\""
+            echo "Please Provide A Option Or A Search Query"
+            echo "Ex: \" searchit --help \" Or \" searchit john wick \""
         }
         else {
             if [ "\$parameter" == '--help' ]  || [ "\$parameter" == '-h' ] || [ "\$parameter" == '-?' ]
@@ -760,7 +758,7 @@ CONFIGEND
     fi
     }
 
-    # Calling Parameter Check Functin For Initialization
+    # Calling Parameter Check Function For Initialization
 
     paramCheck
 
@@ -784,10 +782,10 @@ function dataGen() {
         cp Release-Note ~/.searchit/
         cd ~/.searchit
         cat  >> searchit.cfg <<CONFIGEND
-Searchit Configuration File
-Please Do Not Edit This File
-Use Command "searchit -cfg "
-To Change Any Settings
+Searchit Configuration File.
+Please Do Not Make Any Change To This File.
+Use Command "searchit -cfg" To Make Any Changes
+----------------------------------
 
 Default Browser: Firefox
 Default Search Engine: DuckDuckGo
@@ -801,10 +799,10 @@ function installCheck() {
     then {
         echo "
             Instalation Complete!!
-            If You Like This Tool. You Can Help Me To Improve This.
+
+            If You Like This Software. You Can Help Me To Improve This.
             Report Any Issue On Github Or Directly Contact Me Via Twitter.
-            Or You Can Just Let Me Know If You Liked It.
-            It Will Also Helps A lot
+            Or You Can Just Let Me Know If You Liked It. That Also Helps A lot.
             Thank You. :D
                 Github:     https://github.com/xCommunicado
                 Twitter:    https://twitter.com/xCommunicado
