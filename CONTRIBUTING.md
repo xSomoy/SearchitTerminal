@@ -35,3 +35,32 @@ Explain the problem and include additional details to help maintainers reproduce
 * **Include Your Operating System Information.** Which distribution of linux you are using. Version of that distribution.
 
 ### Providing Suggestion And Ideas
+
+You can provide new ideas and suggestion for future versions of Searchit.
+Your ideas and suggestions are always valuable to the community. And via contributing you became a member of this community too.
+
+* ** Suggest new web sites.** As you know Searchit brings support for many web sites. Alot of the web sites have search features and many of them are pretty useful. If you think that a web site should be included, then let us know. we will review the website and probably will include supports for the site in our next update. Just make sure two things:
+ * The website is **Not An Adult Website**
+ * People use the website often.
+
+
+* ** Suggest New Features**. If you think there is a feature we could add in this software feel free to share with us. Maybe your brilliant idea will be the next goal for us.
+ * Make sure your idea is related to this software
+ * And let us know how your idea/feature can help you and others
+
+### Developing
+
+If you understand how this software works, you can contribute as a developer. Hence I'm single-handedly developing this software you skills of developing will help me a lot.
+ * You can provide solutions for open issues.
+ * Or you can pick a issue and contribute the changes needed to solve the issue.
+
+Either way you are doing a great job and I appreciate that.
+
+### Promoting
+
+As you already know I'm the only one behind the whole thing and I am a regular teenage college student. For me promoting Searchit is quit a bit heavy for me. I don't even know that much people. So if you let your friends know about this software or post it about in social media or any other work what can help this software to reach more will help a lot. A lot means **Actually A lot.**
+
+
+Last but not least thanks a lot again for doing you part. Even if you are unable to any of this contribution that's ok. Even if you just use this software I will consider my self successful. Which very helpful for my mental health. Thank you again.
+
+                                    - Mushphyque Tanveer (Author)
