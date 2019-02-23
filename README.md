@@ -5,6 +5,8 @@ Terminal Based Search Customizer
 Searchit is a software what allows to make customized internet search from your terminal.Currently It provides supports for 9 browsers and 24 websites.
 
 ### Why We Need Searchit?
+![Searchit](https://i.ibb.co/CwYVshJ/gifout.gif"Searchit")
+
 If you are a linux user, you may find yourself working in terminal quit a lot of time (and it is very good). Now imagine how many times you had to search something you have to leave your terminal, open your browser, go to a specific site, search whatever you what to search. But with Searchit you dont even have to leave your terminal. Just type a command and searchit will automatically open your browser, go to the site and search it for you.
 Some Examples:
 
@@ -53,3 +55,6 @@ There are 4 small steps to follow:
 ./Searchit_Installer.sh
 ```
 1. Then Just Simply Follow The Process
+
+`Note: For installation process you need to provide root permission.
+`
