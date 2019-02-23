@@ -652,7 +652,7 @@ CONFIGEND
                 }
             elif [ "\$parameter" == '--version' ] || [ "\$parameter" == '-v' ]
                 then {
-                    echo "Seachit Version:\$version"
+                    echo "Searchit Version:\$version"
                 }
             elif [ "\$parameter" == '-duckduckgo' ] || [ "\$parameter" == '-ddg' ]
                 then {
