@@ -500,7 +500,7 @@ function createSearchit() {
     function config() {
         cat ~/.searchit/searchit.cfg | grep "Default"
         echo ""
-        echo "Do You Want To Change This? (Y/N):"
+        echo "Do You Want To Change This Configuration? (Y/N):"
         read decision;
         if [ "\$decision" == "Y" ] || [ "\$decision" == "y" ]
         then {
@@ -932,8 +932,11 @@ function checkPermission() {
         then {
             dataGen
             installer
-            installCheck
+            echo "Searchit Installation Process..."
+            echo "Select You Default Configuration:"
+            echo ""
             searchit --config
+            installCheck
         }
     else {
         sudo ./Searchit_Installer.sh
