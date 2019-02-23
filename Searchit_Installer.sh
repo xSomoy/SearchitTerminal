@@ -504,7 +504,7 @@ function createSearchit() {
         read decision;
         if [ "\$decision" == "Y" ] || [ "\$decision" == "y" ]
         then {
-            cd ~/.searchit
+            cd ~/.searchit/
             sudo rm searchit.cfg
             browserCheck
             defaultEngine
@@ -779,6 +779,7 @@ function installer() {
 
 function dataGen() {
         mkdir ~/.searchit/
+        chmod 777 ~/.searchit/
         cp Release-Note ~/.searchit/
         cd ~/.searchit
         cat  >> searchit.cfg <<CONFIGEND
