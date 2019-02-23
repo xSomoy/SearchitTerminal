@@ -64,13 +64,13 @@ There are 4 small steps to follow:
 
 ### Report And Feedback
 
-For report any issue visit our [github repository](httpd://github.com/xCommunicado/Searchit). Please read [Contributing Guide Line](https://github.com/xCommunicado/Searchit/blob/master/CONTRIBUTING.md) , It will guide you to submit a report or issue properly.
+For report any issue visit Searchit's [github repository](https://github.com/xCommunicado/Searchit). Please read [Contributing Guide Line](https://github.com/xCommunicado/Searchit/blob/maintain/CONTRIBUTING.md) , It will guide you to submit a report or issue properly.
 
 
 ### Contact
 
 For personal and business purpose you can contact me directly.
 
-[Twitter](https://twitter.com/xCommunicado) [Github](https://github.com/xCommunicado) [Email](xCommunicado@protonmail.com)
+[Twitter](https://twitter.com/xCommunicado) - [Github](https://github.com/xCommunicado) - [Email](xCommunicado@protonmail.com)
 
 ## Thank You !!
