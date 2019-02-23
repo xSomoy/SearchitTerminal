@@ -1,6 +1,8 @@
 # Searchit  
 Terminal Based Search Customizer
-[Why?](#what-is-searchit?)
+
+[What?](#what-is-searchit?) [Why?](#why-we-need-searchit?)
+[install](#how-to-install-searchit?)
 ### What Is Searchit?
 Searchit is a software what allows to make customized internet search from your terminal.Currently It provides supports for 9 browsers and 24 websites.
 
@@ -56,5 +58,18 @@ There are 4 small steps to follow:
 ```
 1. Then Just Simply Follow The Process
 
-`Note: For installation process you need to provide root permission.
+`Note: For installation process you need to provide Searchit root permission.
 `
+
+### Report And Feedback
+
+For report any issue visit Github repository. Please read [Contributing Guide Line](https://github.com/xCommunicado/Searchit/master/CONTRIBUTING.md) , It will guide you to submit a report or issue properly.
+
+
+### Contact
+
+For personal and business purpose you can contact me directly.
+
+[Twitter](https://twitter.com/xCommunicado) [Github](https://github.com/xCommunicado) [Email](xCommunicado@protonmail.com)
+
+## Thank You !!
