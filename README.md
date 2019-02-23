@@ -1,15 +1,15 @@
 # Searchit  
 Terminal Based Search Customizer
 
-[What?](#what-is-searchit?) [Why?](#why-we-need-searchit?)
-[install](#how-to-install-searchit?)
+[What?](#what-is-Searchit?) - [Why?](#why-we-need-Searchit?) -
+[Install](#how-to-install-Searchit?) - [Report And Feedback](#report-and-feedback) - [Contact](#contact)
 ### What Is Searchit?
-Searchit is a software what allows to make customized internet search from your terminal.Currently It provides supports for 9 browsers and 24 websites.
+Searchit is a software what allows you to make customized internet searches from your terminal.Currently Searchit provides support for 9 browsers and 24 websites.
 
 ### Why We Need Searchit?
 ![Searchit](https://i.ibb.co/CwYVshJ/gifout.gif"Searchit")
 
-If you are a linux user, you may find yourself working in terminal quit a lot of time (and it is very good). Now imagine how many times you had to search something you have to leave your terminal, open your browser, go to a specific site, search whatever you what to search. But with Searchit you dont even have to leave your terminal. Just type a command and searchit will automatically open your browser, go to the site and search it for you.
+If you are a linux user, you might find yourself working in terminal quit a lot (and its very good). Now imagine how many times you had to search something and you had to leave your terminal, open your browser, go to a specific site, search whatever you wanted to search. But with Searchit you don't even have to leave your terminal for a quick internet search. Just type a command and Searchit will automatically open your browser, go to the specific site and search it for you.
 Some Examples:
 
 ```bash
@@ -24,9 +24,9 @@ searchit -ytb hunger Games
 # search "ip camera" in shodan
 searchit -sdn ip camera
 ```
-Also you can select a default search site. And then you can just type "searchit then your search query and searchit will automatically search it in your default search site
+Also you can select a default search site. And then you can just type "searchit" then your search query and Searchit will automatically search it in your default search site
 
-Example: If You selecte your default search site "google"
+Example: If you selected your default search site "google", then you can just type this.
 
 ```Bash
 searchit bangladesh
@@ -34,8 +34,9 @@ searchit bangladesh
 searchit iron man
 # it will automatically search "iron man" in google
 ```
+For **terminal only situations** like server or workstation.You can combine Searchit with terminal based text browsers like [W3m](http://w3m.sourceforge.net/), [Links](http://www.jikos.cz/~mikulas/links//), [Lynx](https://lynx.browser.org/) and browse the internet inside your terminal. Searchit provides supports for these 3 text based web browsers. Just set your desire one as default browser and you are good to go.
 
-Last but not least for **too much shortcut lovers** searchit also has two predefined commands for search anything in google and duckduckgo
+Last but not least for **too much shortcut lovers** Searchit also has two predefined custom commands for instant search in Google and DuckDuckGo
 
 ```Bash
 duckit burger
@@ -44,8 +45,8 @@ googleit pizza
 # it will search pizza in google
 ```
 
-In near future searchit will provide more **search options for individual sites** for better and more accurate search customization and also support for more and more websites.
-Now you know why you need searchit
+In near future Searchit will provide more **search options for individual sites** for better and more accurate search customization and also support for more and more websites.
+Now you know why you need Searchit
 
 ### How To Install Searchit?
 
@@ -63,7 +64,7 @@ There are 4 small steps to follow:
 
 ### Report And Feedback
 
-For report any issue visit Github repository. Please read [Contributing Guide Line](https://github.com/xCommunicado/Searchit/master/CONTRIBUTING.md) , It will guide you to submit a report or issue properly.
+For report any issue visit our [github repository](httpd://github.com/xCommunicado/Searchit). Please read [Contributing Guide Line](https://github.com/xCommunicado/Searchit/blob/master/CONTRIBUTING.md) , It will guide you to submit a report or issue properly.
 
 
 ### Contact
