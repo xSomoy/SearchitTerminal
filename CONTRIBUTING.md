@@ -18,6 +18,8 @@ The following is a set of guidelines for contributing to Searchit, which are hos
 
 This section guides you through submitting a bug report for Searchit. Following these guidelines helps maintainers and the community understand your report :pencil:, reproduce the behavior :computer: :computer:, and find related reports :mag_right:.
 
+> **Please make sure you copy of the software is up-to-date.**
+
 When you are creating a bug report, please [include as many details as possible](#how-do-i-submit-a-good-bug-report).
 
 > **Note:** If you find a **Closed** issue that seems like it is the same thing that you're experiencing, open a new issue and include a link to the original issue in the body of your new one.
