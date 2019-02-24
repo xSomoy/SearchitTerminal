@@ -10,7 +10,7 @@
 #                                                    #
 ######################################################
 
-version=1.0-rc.1
+version=1.0.0
 
 #   Creating Searchit Command
 
@@ -517,6 +517,7 @@ Use Command "searchit -cfg" To Make Any Changes
 Default Browser: \$var1
 Default Search Engine: \$var2
 CONFIGEND
+        echo "Default Configuration Has Been Changed!"
             }
             else {
                 echo "No Change Has Been Made For Default Configuration"
