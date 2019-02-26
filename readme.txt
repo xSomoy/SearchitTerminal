@@ -61,25 +61,22 @@ Now you know why you need Searchit
 
 There are 4 small steps to follow:
 1. Download Searchit From Github
-1. Go To Your Downloaded Directory
-1. Open Terminal And Type
-```Bash
-./Searchit_Installer.sh
-```
-1. Then Just Simply Follow The Process
+2. Go To Your Downloaded Directory
+3. Open Terminal And Type
 
-`Note: For installation process you need to provide Searchit root permission.
-`
+" ./Searchit_Installer.sh "
 
-### Report And Feedback
+4. Then Just Simply Follow The Process
+
+Note: For installation process you need to provide Searchit root permission.
 
 For report any issue visit Searchit's [github repository](https://github.com/xCommunicado/Searchit). Please read [Contributing Guide Line](https://github.com/xCommunicado/Searchit/blob/maintain/CONTRIBUTING.md) , It will guide you to submit a report or issue properly.
 
-
-### Contact
+Contact:
 
 For personal and business purpose you can contact me directly.
+Twitter: https://www.twitter.com/xCommunicado
+Github: https://www.github.com/xCommunicado
+Email: xCommunicado@protonmail.com
 
-[Twitter](https://twitter.com/xCommunicado) - [Github](https://github.com/xCommunicado) - Email: xCommunicado@protonmail.com
-
-## Thank You !!
+Thank You !!
