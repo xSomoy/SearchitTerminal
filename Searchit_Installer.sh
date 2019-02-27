@@ -646,6 +646,11 @@ CONFIGEND
                 then {
                     config
                 }
+            elif [ "\$parameter" == '--readme' ] || [ "\$parameter" == '-rdm' ]
+                then {
+                    clear
+                    cat ~/.searchit/README.txt
+                }
             elif [ "\$parameter" == '--release' ] || [ "\$parameter" == '-rn' ]
                 then {
                     clear
@@ -782,6 +787,7 @@ function dataGen() {
         mkdir ~/.searchit/
         chmod 777 ~/.searchit/
         cp Release-Note ~/.searchit/
+        cp README.txt ~/.searchit/
         cd ~/.searchit
         cat  >> searchit.cfg <<CONFIGEND
 Searchit Configuration File.
