@@ -10,7 +10,7 @@
 #                                                    #
 ######################################################
 
-version=1.0.0
+version=1.1.0
 
 #   Creating Searchit Command
 
@@ -394,6 +394,7 @@ function createSearchit() {
                 --Version   -v          For Version
                 --config    -cfg        For Configuration
                 --release   -rn         For Release Note
+                --readme    -rdm        For README
 
                                     Ex: \"searchit --help\"
 

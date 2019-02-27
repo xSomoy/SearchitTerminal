@@ -1,51 +1,9 @@
-Searchit Release Note (v1.0.0)
+Searchit Release Note (v1.1.0)
 
-Version 1.0.0 Brings You:
+Version 1.1.0 Brings You:
 
-Support For 9 Browsers
-    * Firefox
-    * Google Chrome
-    * Chromium
-    * Opera
-    * Brave
-    * Vivaldi
-    * Links (Text Based)
-    * W3m   (Text Based)
-    * Lynx  (Text Based)
-
-Support For 9 Search Engines
-    * Google
-    * DuckDuckGo
-    * Yahoo
-    * Bing
-    * Yandex
-    * Baidu
-    * Startpage
-    * SearX
-    * Shodan
-
-Alongside Support For 15 More Social Network & Other Sites
-    * Facebook
-    * Twitter
-    * Reddit
-    * LinkedIn
-    * Youtube
-    * Google +
-    * Pinterest
-    * Tumblr
-    * Quora
-    * Wikipedia
-    * Amazon
-    * Ebay
-    * Github
-    * Gitlab
-
-Last But Not Least
-    * Default Configuration Support
-    * Automatic Update Support
-    * 2 Shortcut Commands For Super Lazy People
-        * duckit    - For DuckDuckGo Search
-        * googleit  - For Google Search
+* Added Plain Text README
+* Added README Option
 
 Hope You Like This Features,
 And Stay With Me For Future Updates.
