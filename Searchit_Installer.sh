@@ -10,7 +10,7 @@
 #                                                    #
 ######################################################
 
-version=1.0.0
+version=1.1.0
 
 #   Creating Searchit Command
 
@@ -394,6 +394,7 @@ function createSearchit() {
                 --Version   -v          For Version
                 --config    -cfg        For Configuration
                 --release   -rn         For Release Note
+                --readme    -rdm        For README
 
                                     Ex: \"searchit --help\"
 
@@ -646,6 +647,11 @@ CONFIGEND
                 then {
                     config
                 }
+            elif [ "\$parameter" == '--readme' ] || [ "\$parameter" == '-rdm' ]
+                then {
+                    clear
+                    cat ~/.searchit/README.txt
+                }
             elif [ "\$parameter" == '--release' ] || [ "\$parameter" == '-rn' ]
                 then {
                     clear
@@ -782,6 +788,7 @@ function dataGen() {
         mkdir ~/.searchit/
         chmod 777 ~/.searchit/
         cp Release-Note ~/.searchit/
+        cp README.txt ~/.searchit/
         cd ~/.searchit
         cat  >> searchit.cfg <<CONFIGEND
 Searchit Configuration File.
