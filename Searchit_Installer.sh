@@ -4,7 +4,7 @@
 #       Searchit                                     #
 #       Terminal Based Search Customizer             #             #
 #                                                    #
-#       Author:     Mushphyque Tanveer               #
+#       Author:     Somoy ( xCommunicado )           #
 #       Twitter:    www.twitter.com/0xTanveer        #
 #       License:    GNU General Public License v3.0  #
 #                                                    #
@@ -22,7 +22,7 @@ function createSearchit() {
     #       Searchit                                     #
     #       Terminal Based Search Customizer             #
     #                                                    #
-    #       Author:     Mushphyque Tanveer               #
+    #       Author:     Somoy ( xCommunicado )           #
     #       Twitter:    www.twitter.com/0xTanveer        #
     #       License:    GNU General Public License v3.0  #
     #                                                    #
@@ -575,7 +575,7 @@ CONFIGEND
                Searchit
                Terminal Based Search Customizer
 
-               Author:  Mushphyque Tanveer
+               Author:  Somoy (xCommunicado)
                Twitter: https://twitter.com/xCommunicado
                Github:  https://github.com/xCommunicado/Searchit
                License: GNU General Public License v3.0

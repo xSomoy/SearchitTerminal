@@ -65,4 +65,4 @@ As you already know I'm the only one behind the whole thing and I am a regular t
 
 Last but not least thanks a lot again for doing your part. Even if you are unable to do any of this contribution that's ok. Even if you just use this software I will consider my self successful. Which is very helpful for my mental health. Thank you again.
 
-                                    - Mushphyque Tanveer (Author)
+                                    - Somoy (Author)
