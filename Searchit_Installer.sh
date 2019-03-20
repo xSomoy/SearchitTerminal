@@ -4,13 +4,13 @@
 #       Searchit                                     #
 #       Terminal Based Search Customizer             #             #
 #                                                    #
-#       Author:     Somoy ( xCommunicado )           #
-#       Twitter:    www.twitter.com/0xTanveer        #
+#       Author:     xCommunicado                     #
+#       Twitter:    www.twitter.com/xCommunicado     #
 #       License:    GNU General Public License v3.0  #
 #                                                    #
 ######################################################
 
-version=1.1.1
+version=1.1.2
 
 #   Creating Searchit Command
 
@@ -22,8 +22,8 @@ function createSearchit() {
     #       Searchit                                     #
     #       Terminal Based Search Customizer             #
     #                                                    #
-    #       Author:     Somoy ( xCommunicado )           #
-    #       Twitter:    www.twitter.com/0xTanveer        #
+    #       Author:     xCommunicado                     #
+    #       Twitter:    www.twitter.com/xCommunicado     #
     #       License:    GNU General Public License v3.0  #
     #                                                    #
     ######################################################
@@ -575,7 +575,7 @@ CONFIGEND
                Searchit
                Terminal Based Search Customizer
 
-               Author:  Somoy (xCommunicado)
+               Author:  xCommunicado (xCommunicado)
                Twitter: https://twitter.com/xCommunicado
                Github:  https://github.com/xCommunicado/Searchit
                License: GNU General Public License v3.0
