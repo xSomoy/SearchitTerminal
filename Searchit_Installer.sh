@@ -575,7 +575,7 @@ CONFIGEND
                Searchit
                Terminal Based Search Customizer
 
-               Author:  xCommunicado (xCommunicado)
+               Author:  xCommunicado
                Twitter: https://twitter.com/xCommunicado
                Github:  https://github.com/xCommunicado/Searchit
                License: GNU General Public License v3.0
