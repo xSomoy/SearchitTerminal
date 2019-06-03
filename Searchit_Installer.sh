@@ -33,6 +33,7 @@ function createSearchit() {
     #   Assigning Parameter And Search Query
 
     parameter="\$1"
+    opParam="\$2"
     tmpquery="\$@"
 
     #   Default Browser Check
@@ -144,9 +145,43 @@ function createSearchit() {
     function duckduckgo() {
         dbCheck
         query=\${tmpquery//\ /+}
-        query=\${query/-ddg+}
-        query=\${query/-duckduckgo+}
-        \$browser www.duckduckgo.com/?q=\$query
+        if [ "\$opParam" == '-images' ]  || [ "\$opParam" == '-img' ]
+            then {
+              query=\${query/-img+}
+              query=\${query/-images+}
+              option="&iax=images&ia=images"
+            }
+        elif [ "\$opParam" == '-videos' ] || [ "\$opParam" == '-vid' ]
+            then {
+              query=\${query/-vid+}
+              query=\${query/-videos+}
+              option="&iax=videos&ia=videos"
+            }
+        elif [ "\$opParam" == '-news' ] || [ "\$opParam" == '-nws' ]
+            then {
+              query=\${query/-nws+}
+              query=\${query/-news+}
+              option="&iar=news&ia=news"
+            }
+        elif [ "\$opParam" == '-meanings' ] || [ "\$opParam" == '-mng' ]
+            then {
+              query=\${query/-mng+}
+              query=\${query/-meanings+}
+              option="&ia=meanings"
+            }
+        elif [ "\$opParam" == '-definition' ] || [ "\$opParam" == '-def' ]
+            then {
+              query=\${query/-def+}
+              query=\${query/-definition+}
+              option="&ia=definition"
+            }
+        else {
+              option=""
+        }
+      fi
+      query=\${query/-ddg+}
+      query=\${query/-duckduckgo+}
+      \$browser www.duckduckgo.com/?q=\$query\$option
     }
 
     #   Google Search Fucntion
