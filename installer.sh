@@ -1100,7 +1100,7 @@ function checkPermission() {
             installCheck
         }
     else {
-        sudo ./Searchit_Installer.sh
+        sudo ./installer.sh
         var0=root
     }
     fi
