@@ -279,9 +279,47 @@ function createSearchit() {
     function yahoo() {
         dbCheck
         query=\${tmpquery//\ /+}
+        if [ "\$opParam" == '-images' ]  || [ "\$opParam" == '-img' ]
+            then {
+              query=\${query/-img+}
+              query=\${query/-images+}
+              query="images/search?q="
+            }
+        elif [ "\$opParam" == '-videos' ] || [ "\$opParam" == '-vid' ]
+            then {
+              query=\${query/-vid+}
+              query=\${query/-videos+}
+              option="videos/search?q="
+        }
+        elif [ "\$opParam" == '-news' ] || [ "\$opParam" == '-nws' ]
+            then {
+              query=\${query/-nws+}
+              query=\${query/-news+}
+              option="news/search?q="
+        }
+      elif [ "\$opParam" == '-maps' ] || [ "\$opParam" == '-map' ]
+              then {
+                query=\${query/-map+}
+                query=\${query/-maps+}
+                option="maps/search?q="
+        }
+      elif [ "\$opParam" == '-help' ] || [ "\$opParam" == '-h' ] || [ "\$opParam" == '-?' ]
+          then {
+            echo " Yahoo Search Filters:
+                    For Images     -image       -img
+                    For Videos     -Videos      -vid
+                    For News       -news        -nws
+                    For Maps       -maps        -map
+            "
+            exit
+      }
+        else {
+              option="search?q="
+        }
+      fi
         query=\${query/-yah+}
         query=\${query/-yahoo+}
-        \$browser search.yahoo.com/search?p=\$query
+        \$browser search.yahoo.com/\$moption\$query
     }
 
     #   Bing Search Function
