@@ -283,13 +283,13 @@ function createSearchit() {
             then {
               query=\${query/-img+}
               query=\${query/-images+}
-              query="images/search?q="
+              option="images/search?q="
             }
         elif [ "\$opParam" == '-videos' ] || [ "\$opParam" == '-vid' ]
             then {
               query=\${query/-vid+}
               query=\${query/-videos+}
-              option="videos/search?q="
+              option="/search/videos?q="
         }
         elif [ "\$opParam" == '-news' ] || [ "\$opParam" == '-nws' ]
             then {
@@ -297,19 +297,12 @@ function createSearchit() {
               query=\${query/-news+}
               option="news/search?q="
         }
-      elif [ "\$opParam" == '-maps' ] || [ "\$opParam" == '-map' ]
-              then {
-                query=\${query/-map+}
-                query=\${query/-maps+}
-                option="maps/search?q="
-        }
       elif [ "\$opParam" == '-help' ] || [ "\$opParam" == '-h' ] || [ "\$opParam" == '-?' ]
           then {
             echo " Yahoo Search Filters:
                     For Images     -image       -img
                     For Videos     -Videos      -vid
                     For News       -news        -nws
-                    For Maps       -maps        -map
             "
             exit
       }
@@ -319,7 +312,7 @@ function createSearchit() {
       fi
         query=\${query/-yah+}
         query=\${query/-yahoo+}
-        \$browser search.yahoo.com/\$moption\$query
+        \$browser search.yahoo.com/\$option\$query
     }
 
     #   Bing Search Function
