@@ -2,7 +2,7 @@
 ######################################################
 #                                                    #
 #       Searchit                                     #
-#       Terminal Based Search Customizer             #             #
+#       Terminal Based Search Customizer             #
 #                                                    #
 #       Author:     xCommunicado                     #
 #       Twitter:    www.twitter.com/xCommunicado     #
