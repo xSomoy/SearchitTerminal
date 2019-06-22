@@ -521,7 +521,7 @@ function createSearchit() {
     function shodan() {
         dbCheck
         query=\${tmpquery//\ /+}
-      elif [ "\$opParam" == '-exploit ] || [ "\$opParam" == '-exp' ]
+      if [ "\$opParam" == '-exploit ] || [ "\$opParam" == '-exp' ]
               then {
                 query=\${query/-exp+}
                 query=\${query/-exploit+}
