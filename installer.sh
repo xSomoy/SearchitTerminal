@@ -521,12 +521,29 @@ function createSearchit() {
     function shodan() {
         dbCheck
         query=\${tmpquery//\ /+}
-        query=\${query/-sdn+}
-        query=\${query/-shodan+}
-        query=\${query/-sdn+}
-        query=\${query/-shodan+}
-        \$browser www.shodan.io/search?query=\$query
+      if [ "\$opParam" == '-exploit' ] || [ "\$opParam" == '-exp' ]
+              then {
+                query=\${query/-exp+}
+                query=\${query/-exploit+}
+                query=\${query/-sdn+}
+                query=\${query/-shodan+}
+                \$browser https://exploits.shodan.io/?q=\$query
+        }
+      elif [ "\$opParam" == '-help' ] || [ "\$opParam" == '-h' ] || [ "\$opParam" == '-?' ]
+          then {
+            echo " Baidu Search Filters:
+                    For Images     -exploit       -exp
+                "
+            exit
+      }
+        else {
+          query=\${query/-sdn+}
+          query=\${query/-shodan+}
+          \$browser www.shodan.io/search?query=\$query
           exit
+        }
+      fi
+
     }
 
     #   Startpage Search Function
