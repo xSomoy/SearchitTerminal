@@ -521,29 +521,12 @@ function createSearchit() {
     function shodan() {
         dbCheck
         query=\${tmpquery//\ /+}
-      if [ "\$opParam" == '-exploit ] || [ "\$opParam" == '-exp' ]
-              then {
-                query=\${query/-exp+}
-                query=\${query/-exploit+}
-                query=\${query/-sdn+}
-                query=\${query/-shodan+}
-                \$browser exploits.shodan.io/?q=\$query
-                exit
-        }
-        elif [ "\$opParam" == '-help' ] || [ "\$opParam" == '-h' ] || [ "\$opParam" == '-?' ]
-          then {
-            echo " Shodan Search Filters:
-                    For Exploit     -exploit       -exp
-            "
-            exit
-          }
-          else {
-          query=\${query/-sdn+}
-          query=\${query/-shodan+}
-          \$browser www.shodan.io/search?query=\$query
+        query=\${query/-sdn+}
+        query=\${query/-shodan+}
+        query=\${query/-sdn+}
+        query=\${query/-shodan+}
+        \$browser www.shodan.io/search?query=\$query
           exit
-          }
-        fi
     }
 
     #   Startpage Search Function
