@@ -533,7 +533,7 @@ function createSearchit() {
           then {
             echo " Baidu Search Filters:
                     For Images     -exploit       -exp
-                "
+                 "
             exit
       }
         else {
