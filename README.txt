@@ -13,7 +13,7 @@ There are 4 small steps to follow:
 2. Go To Your Downloaded Directory
 3. Open Terminal And Type
 
-" ./Searchit_Installer.sh "
+" ./installer.sh "
 
 4. Then Just Simply Follow The Process
 

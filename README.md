@@ -55,7 +55,7 @@ There are 4 small steps to follow:
 1. Go To Your Downloaded Directory
 1. Open Terminal And Type
 ```Bash
-./Searchit_Installer.sh
+./installer.sh
 ```
 1. Then Just Simply Follow The Process
 
