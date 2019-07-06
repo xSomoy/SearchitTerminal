@@ -212,7 +212,7 @@ function createSearchit() {
     #   Google Search Fucntion
 
     function google() {
-        dbCheck 
+        dbCheck
         query=\${tmpquery//\ /+}
         if [ "\$opParam" == '-images' ]  || [ "\$opParam" == '-img' ]
             then {
@@ -603,8 +603,8 @@ function createSearchit() {
         }
       elif [ "\$opParam" == '-help' ] || [ "\$opParam" == '-h' ] || [ "\$opParam" == '-?' ]
           then {
-            echo " Baidu Search Filters:
-                    For Images     -exploit       -exp
+            echo " Shodan Search Filters:
+                    For Exploits     -exploit       -exp
                  "
             exit
       }
@@ -623,6 +623,28 @@ function createSearchit() {
     function startpage() {
         dbCheck
         query=\${tmpquery//\ /+}
+      if [ "\$opParam" == '-exploit' ] || [ "\$opParam" == '-exp' ]
+              then {
+                query=\${query/-exp+}
+                query=\${query/-exploit+}
+                query=\${query/-sdn+}
+                query=\${query/-shodan+}
+                \$browser https://exploits.shodan.io/?q=\$query
+        }
+      elif [ "\$opParam" == '-help' ] || [ "\$opParam" == '-h' ] || [ "\$opParam" == '-?' ]
+          then {
+            echo " Baidu Search Filters:
+                    For Images     -exploit       -exp
+                 "
+            exit
+      }
+        else {
+          query=\${query/-sdn+}
+          query=\${query/-shodan+}
+          \$browser www.shodan.io/search?query=\$query
+          exit
+        }
+      fi
         query=\${query/-spg+}
         query=\${query/-startpage+}
         \$browser www.startpage.com/do/search?q=\$query
