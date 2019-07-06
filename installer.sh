@@ -623,31 +623,33 @@ function createSearchit() {
     function startpage() {
         dbCheck
         query=\${tmpquery//\ /+}
-      if [ "\$opParam" == '-exploit' ] || [ "\$opParam" == '-exp' ]
+      if [ "\$opParam" == '-image' ] || [ "\$opParam" == '-img' ]
               then {
-                query=\${query/-exp+}
-                query=\${query/-exploit+}
-                query=\${query/-sdn+}
-                query=\${query/-shodan+}
-                \$browser https://exploits.shodan.io/?q=\$query
+                query=\${query/-img+}
+                query=\${query/-image+}
+                option="pics"
         }
+      elif [ "\$opParam" == '-video' ] || [ "\$opParam" == '-vid' ]
+              then {
+                query=\${query/-vid+}
+                query=\${query/-video+}
+                option="video"
+          }
       elif [ "\$opParam" == '-help' ] || [ "\$opParam" == '-h' ] || [ "\$opParam" == '-?' ]
           then {
-            echo " Baidu Search Filters:
-                    For Images     -exploit       -exp
+            echo " Startpage Search Filters:
+                    For Images     -image       -img
+                    For Videos     -videos      -vid
                  "
             exit
       }
         else {
-          query=\${query/-sdn+}
-          query=\${query/-shodan+}
-          \$browser www.shodan.io/search?query=\$query
-          exit
+          option=""
         }
       fi
         query=\${query/-spg+}
         query=\${query/-startpage+}
-        \$browser www.startpage.com/do/search?q=\$query
+        \$browser www.startpage.com/do/search?q=\$query\&cat=\$option
     }
 
     #   Facebook Search Function
