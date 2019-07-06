@@ -33,7 +33,6 @@ function createSearchit() {
     #   Assigning Parameter And Search Query
 
     parameter="\$1"
-    opParam="\$2"
     tmpquery="\$@"
 
     #   Default Browser Check
@@ -145,68 +144,9 @@ function createSearchit() {
     function duckduckgo() {
         dbCheck
         query=\${tmpquery//\ /+}
-        if [ "\$opParam" == '-images' ]  || [ "\$opParam" == '-img' ]
-            then {
-              query=\${query/-img+}
-              query=\${query/-images+}
-              option="&iax=images&ia=images"
-            }
-        elif [ "\$opParam" == '-videos' ] || [ "\$opParam" == '-vid' ]
-            then {
-              query=\${query/-vid+}
-              query=\${query/-videos+}
-              option="&iax=videos&ia=videos"
-        }
-        elif [ "\$opParam" == '-news' ] || [ "\$opParam" == '-nws' ]
-            then {
-              query=\${query/-nws+}
-              query=\${query/-news+}
-              option="&iar=news&ia=news"
-        }
-      elif [ "\$opParam" == '-meanings' ] || [ "\$opParam" == '-mns' ]
-            then {
-              query=\${query/-mns+}
-              query=\${query/-meanings+}
-              option="&ia=meanings"
-        }
-      elif [ "\$opParam" == '-answer' ] || [ "\$opParam" == '-ans' ]
-            then {
-              query=\${query/-ans+}
-              query=\${query/-answer+}
-              option="&ia=answer"
-        }
-      elif [ "\$opParam" == '-nutrition' ] || [ "\$opParam" == '-ntr' ]
-              then {
-                query=\${query/-ntr+}
-                query=\${query/-nutrition+}
-                option="&ia=nutrition"
-        }
-      elif [ "\$opParam" == '-recipes' ] || [ "\$opParam" == '-rcp' ]
-              then {
-                query=\${query/-rcp+}
-                query=\${query/-recipes+}
-                option="&ia=recipes"
-        }
-      elif [ "\$opParam" == '-help' ] || [ "\$opParam" == '-h' ] || [ "\$opParam" == '-?' ]
-          then {
-            echo " DuckDuckGo Search Filters:
-                    For Images     -image       -img
-                    For Videos     -Videos      -vid
-                    For News       -news        -nws
-                    For Meanings   -meanings    -mns
-                    For Answer     -answer      -ans
-                    For Nutrition  -nutrition   -ntr
-                    For Recipes    -recipes     -rcp
-            "
-            exit
-      }
-        else {
-              option=""
-        }
-      fi
-      query=\${query/-ddg+}
-      query=\${query/-duckduckgo+}
-      \$browser www.duckduckgo.com/?q=\$query\$option
+        query=\${query/-ddg+}
+        query=\${query/-duckduckgo+}
+        \$browser www.duckduckgo.com/?q=\$query
     }
 
     #   Google Search Fucntion
@@ -214,64 +154,9 @@ function createSearchit() {
     function google() {
         dbCheck
         query=\${tmpquery//\ /+}
-        if [ "\$opParam" == '-images' ]  || [ "\$opParam" == '-img' ]
-            then {
-              query=\${query/-img+}
-              query=\${query/-images+}
-              option="&tbm=isch"
-            }
-        elif [ "\$opParam" == '-videos' ] || [ "\$opParam" == '-vid' ]
-            then {
-              query=\${query/-vid+}
-              query=\${query/-videos+}
-              option="&tbm=vid"
-        }
-        elif [ "\$opParam" == '-news' ] || [ "\$opParam" == '-nws' ]
-            then {
-              query=\${query/-nws+}
-              query=\${query/-news+}
-              option="&tbm=nws"
-        }
-      elif [ "\$opParam" == '-books' ] || [ "\$opParam" == '-bks' ]
-            then {
-              query=\${query/-bks+}
-              query=\${query/-books+}
-              option="&tbm=bks"
-        }
-      elif [ "\$opParam" == '-finance' ] || [ "\$opParam" == '-fnc' ]
-            then {
-              query=\${query/-fnc+}
-              query=\${query/-finance+}
-              option="&tbm=fin"
-        }
-      elif [ "\$opParam" == '-maps' ] || [ "\$opParam" == '-map' ]
-              then {
-                query=\${query/-map+}
-                query=\${query/-maps+}
-                query=\${query/-ggl+}
-                query=\${query/-google+}
-                \$browser www.google.com/maps?q=\$query
-              exit
-        }
-      elif [ "\$opParam" == '-help' ] || [ "\$opParam" == '-h' ] || [ "\$opParam" == '-?' ]
-          then {
-            echo " Google Search Filters:
-                    For Images     -image       -img
-                    For Videos     -Videos      -vid
-                    For News       -news        -nws
-                    For Books      -books       -bks
-                    For Finance    -finance     -fnc
-                    For Maps       -maps        -map
-            "
-            exit
-      }
-        else {
-              option=""
-        }
-      fi
         query=\${query/-ggl+}
         query=\${query/-google+}
-        \$browser www.google.com/search?q=\$query\$option
+        \$browser www.google.com/search?q=\$query
     }
 
     #   Yahoo Search Function
