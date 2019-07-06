@@ -10,7 +10,7 @@
 #                                                    #
 ######################################################
 
-version=1.1.3
+version=2.0a-1
 
 #   Creating Searchit Command
 
