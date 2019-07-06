@@ -1,10 +1,21 @@
-Searchit Release Note (v1.1.2)
+Searchit Release Note (v2.0a-1)
 
-Version 1.1.3 Brings You:
+Version 2.0a-1 Brings You:
 
 Data Update:
 
-* Data Update
+* Addisional Search Filters For
+    Google
+    DuckDuckGo
+    Yahoo
+    Bing
+    Yandex
+    Baidu
+    Startpage
+    SearX
+    Shodan
+
+NOTE: This is a pre-release version. 
 
 You Can See Previous Release Notes Here :
 https://github.com/xCommunicado/Searchit/wiki/Release-Notes
