@@ -212,7 +212,7 @@ function createSearchit() {
     #   Google Search Fucntion
 
     function google() {
-        dbCheck
+        dbCheck 
         query=\${tmpquery//\ /+}
         if [ "\$opParam" == '-images' ]  || [ "\$opParam" == '-img' ]
             then {
@@ -564,7 +564,6 @@ function createSearchit() {
                 query=\${query/-social+}
                 option="social+media"
         }
-
       elif [ "\$opParam" == '-help' ] || [ "\$opParam" == '-h' ] || [ "\$opParam" == '-?' ]
           then {
             echo " Searx Search Filters:
