@@ -2,7 +2,7 @@
 ######################################################
 #                                                    #
 #       Searchit                                     #
-#       Terminal Based Search Customizer             #             #
+#       Terminal Based Search Customizer             #
 #                                                    #
 #       Author:     xCommunicado                     #
 #       Twitter:    www.twitter.com/xCommunicado     #
@@ -164,9 +164,40 @@ function createSearchit() {
     function yahoo() {
         dbCheck
         query=\${tmpquery//\ /+}
+        if [ "\$opParam" == '-images' ]  || [ "\$opParam" == '-img' ]
+            then {
+              query=\${query/-img+}
+              query=\${query/-images+}
+              option="images/search?q="
+            }
+        elif [ "\$opParam" == '-videos' ] || [ "\$opParam" == '-vid' ]
+            then {
+              query=\${query/-vid+}
+              query=\${query/-videos+}
+              option="/search/videos?q="
+        }
+        elif [ "\$opParam" == '-news' ] || [ "\$opParam" == '-nws' ]
+            then {
+              query=\${query/-nws+}
+              query=\${query/-news+}
+              option="news/search?q="
+        }
+      elif [ "\$opParam" == '-help' ] || [ "\$opParam" == '-h' ] || [ "\$opParam" == '-?' ]
+          then {
+            echo " Yahoo Search Filters:
+                    For Images     -image       -img
+                    For Videos     -Videos      -vid
+                    For News       -news        -nws
+            "
+            exit
+      }
+        else {
+              option="search?q="
+        }
+      fi
         query=\${query/-yah+}
         query=\${query/-yahoo+}
-        \$browser search.yahoo.com/search?p=\$query
+        \$browser search.yahoo.com/\$option\$query
     }
 
     #   Bing Search Function
@@ -174,9 +205,47 @@ function createSearchit() {
     function bing() {
         dbCheck
         query=\${tmpquery//\ /+}
+        if [ "\$opParam" == '-images' ]  || [ "\$opParam" == '-img' ]
+            then {
+              query=\${query/-img+}
+              query=\${query/-images+}
+              option="images/search?q="
+            }
+        elif [ "\$opParam" == '-videos' ] || [ "\$opParam" == '-vid' ]
+            then {
+              query=\${query/-vid+}
+              query=\${query/-videos+}
+              option="videos/search?q="
+        }
+        elif [ "\$opParam" == '-news' ] || [ "\$opParam" == '-nws' ]
+            then {
+              query=\${query/-nws+}
+              query=\${query/-news+}
+              option="news/search?q="
+        }
+      elif [ "\$opParam" == '-maps' ] || [ "\$opParam" == '-map' ]
+              then {
+                query=\${query/-map+}
+                query=\${query/-maps+}
+                option="maps/search?q="
+        }
+      elif [ "\$opParam" == '-help' ] || [ "\$opParam" == '-h' ] || [ "\$opParam" == '-?' ]
+          then {
+            echo " Bing Search Filters:
+                    For Images     -image       -img
+                    For Videos     -Videos      -vid
+                    For News       -news        -nws
+                    For Maps       -maps        -map
+            "
+            exit
+      }
+        else {
+              option="search?q="
+        }
+      fi
         query=\${query/-bng+}
         query=\${query/-bing+}
-        \$browser www.bing.com/search?q=\$query
+        \$browser www.bing.com/\$option\$query
     }
 
     #   Yandex Search Function
@@ -184,9 +253,51 @@ function createSearchit() {
     function yandex() {
         dbCheck
         query=\${tmpquery//\ /+}
+        if [ "\$opParam" == '-images' ]  || [ "\$opParam" == '-img' ]
+            then {
+              query=\${query/-img+}
+              query=\${query/-images+}
+              option="images/search?text="
+            }
+        elif [ "\$opParam" == '-videos' ] || [ "\$opParam" == '-vid' ]
+            then {
+              query=\${query/-vid+}
+              query=\${query/-videos+}
+              option="video/search?text="
+        }
+        elif [ "\$opParam" == '-news' ] || [ "\$opParam" == '-nws' ]
+            then {
+              query=\${query/-nws+}
+              query=\${query/-news+}
+              query=\${query/-ydx+}
+              query=\${query/-yandex+}
+              \$browser news.yandex.com/yandsearch?rpt=news\&text=\$query
+              exit
+
+        }
+      elif [ "\$opParam" == '-maps' ] || [ "\$opParam" == '-map' ]
+              then {
+                query=\${query/-map+}
+                query=\${query/-maps+}
+                option="maps/?text="
+        }
+      elif [ "\$opParam" == '-help' ] || [ "\$opParam" == '-h' ] || [ "\$opParam" == '-?' ]
+          then {
+            echo " Yandex Search Filters:
+                    For Images     -image       -img
+                    For Videos     -Videos      -vid
+                    For News       -news        -nws
+                    For Maps       -maps        -map
+            "
+            exit
+      }
+        else {
+              option="search/?text="
+        }
+      fi
         query=\${query/-ydx+}
         query=\${query/-yandex+}
-        \$browser yandex.com/search/?text=\$query
+        \$browser yandex.com/\$option\$query
     }
 
     #   Baidu Search Function
@@ -194,9 +305,90 @@ function createSearchit() {
     function baidu() {
         dbCheck
         query=\${tmpquery//\ /+}
-        query=\${query/-bdu+}
-        query=\${query/-baidu+}
-        \$browser www.baidu.com/s?wd=\$query
+        if [ "\$opParam" == '-images' ]  || [ "\$opParam" == '-img' ]
+            then {
+              query=\${query/-img+}
+              query=\${query/-images+}
+              query=\${query/-bdu+}
+              query=\${query/-baidu+}
+              \$browser image.baidu.com/search/index?tn=baiduimage\&word=\$query
+              exit
+            }
+        elif [ "\$opParam" == '-videos' ] || [ "\$opParam" == '-vid' ]
+            then {
+              query=\${query/-vid+}
+              query=\${query/-videos+}
+              query=\${query/-bdu+}
+              query=\${query/-baidu+}
+              \$browser www.baidu.com/sf/vsearch?pd=video\&wd=\$query
+              exit
+        }
+        elif [ "\$opParam" == '-news' ] || [ "\$opParam" == '-nws' ]
+            then {
+              query=\${query/-nws+}
+              query=\${query/-news+}
+              query=\${query/-bdu+}
+              query=\${query/-baidu+}
+              \$browser baidu.com/s?rtt=1\&word=\$query
+              exit
+
+        }
+      elif [ "\$opParam" == '-maps' ] || [ "\$opParam" == '-map' ]
+              then {
+                query=\${query/-map+}
+                query=\${query/-maps+}
+                query=\${query/-bdu+}
+                query=\${query/-baidu+}
+                \$browser map.baidu.com/search/?querytype=s\&wd=\$query
+                exit
+        }
+      elif [ "\$opParam" == '-academic' ] || [ "\$opParam" == '-aca' ]
+              then {
+                query=\${query/-aca+}
+                query=\${query/-academic+}
+                query=\${query/-bdu+}
+                query=\${query/-baidu+}
+                \$browser xueshu.baidu.com/s?wd=\$query
+                exit
+        }
+      elif [ "\$opParam" == '-music' ] || [ "\$opParam" == '-msc' ]
+              then {
+                query=\${query/-msc+}
+                query=\${query/-music+}
+                query=\${query/-bdu+}
+                query=\${query/-baidu+}
+                \$browser music.taihe.com/search?key=\$query
+                exit
+        }
+      elif [ "\$opParam" == '-know' ] || [ "\$opParam" == '-knw' ]
+              then {
+                query=\${query/-knw+}
+                query=\${query/-know+}
+                query=\${query/-bdu+}
+                query=\${query/-baidu+}
+                \$browser zhidao.baidu.com/search?word=\$query
+                exit
+        }
+      elif [ "\$opParam" == '-help' ] || [ "\$opParam" == '-h' ] || [ "\$opParam" == '-?' ]
+          then {
+            echo " Baidu Search Filters:
+                    For Images     -image       -img
+                    For Videos     -Videos      -vid
+                    For News       -news        -nws
+                    For Maps       -maps        -map
+                    For Music      -music       -msc
+                    For Academic   -academic    -aca
+                    For Know       -know        -knw
+            "
+            exit
+      }
+        else {
+          query=\${query/-bdu+}
+          query=\${query/-baidu+}
+          \$browser www.baidu.com/s?wd=\$query
+          exit
+        }
+      fi
     }
 
     #   Searx Search Function
@@ -204,9 +396,81 @@ function createSearchit() {
     function searx() {
         dbCheck
         query=\${tmpquery//\ /+}
+        if [ "\$opParam" == '-images' ]  || [ "\$opParam" == '-img' ]
+            then {
+              query=\${query/-img+}
+              query=\${query/-images+}
+              option="images"
+            }
+        elif [ "\$opParam" == '-videos' ] || [ "\$opParam" == '-vid' ]
+            then {
+              query=\${query/-vid+}
+              query=\${query/-videos+}
+              option="videos"
+        }
+      elif [ "\$opParam" == '-news' ] || [ "\$opParam" == '-nws' ]
+            then {
+              query=\${query/-nws+}
+              query=\${query/-news+}
+              option="news"
+        }
+      elif [ "\$opParam" == '-files' ] || [ "\$opParam" == '-fls' ]
+            then {
+              query=\${query/-fls+}
+              query=\${query/-files+}
+              option="files"
+        }
+      elif [ "\$opParam" == '-it' ]
+            then {
+              query=\${query/-it+}
+              option="it"
+        }
+      elif [ "\$opParam" == '-maps' ] || [ "\$opParam" == '-map' ]
+              then {
+                query=\${query/-map+}
+                query=\${query/-maps+}
+                option="map"
+        }
+      elif [ "\$opParam" == '-music' ] || [ "\$opParam" == '-msc' ]
+              then {
+                query=\${query/-msc+}
+                query=\${query/-music+}
+                option="music"
+        }
+      elif [ "\$opParam" == '-science' ] || [ "\$opParam" == '-sci' ]
+              then {
+                query=\${query/-sci+}
+                query=\${query/-science+}
+                option="science"
+        }
+      elif [ "\$opParam" == '-social' ] || [ "\$opParam" == '-scl' ]
+              then {
+                query=\${query/-scl+}
+                query=\${query/-social+}
+                option="social+media"
+        }
+      elif [ "\$opParam" == '-help' ] || [ "\$opParam" == '-h' ] || [ "\$opParam" == '-?' ]
+          then {
+            echo " Searx Search Filters:
+                    For Images        -image       -img
+                    For Videos        -Videos      -vid
+                    For News          -news        -nws
+                    For Files         -files       -fls
+                    For It            -it
+                    For Maps          -maps        -map
+                    For Music         -music       -msc
+                    For Science       -science     -sci
+                    For Social Media  -social      -scl
+            "
+            exit
+      }
+        else {
+              option="general"
+        }
+      fi
         query=\${query/-srx+}
         query=\${query/-searx+}
-        \$browser searx.me/?q=\$query
+        \$browser searx.me/?q=\$query\&categories=\$option
     }
 
     #   Shodan Search Function
@@ -214,9 +478,29 @@ function createSearchit() {
     function shodan() {
         dbCheck
         query=\${tmpquery//\ /+}
-        query=\${query/-sdn+}
-        query=\${query/-shodan+}
-        \$browser www.shodan.io/search?query=\$query
+      if [ "\$opParam" == '-exploit' ] || [ "\$opParam" == '-exp' ]
+              then {
+                query=\${query/-exp+}
+                query=\${query/-exploit+}
+                query=\${query/-sdn+}
+                query=\${query/-shodan+}
+                \$browser https://exploits.shodan.io/?q=\$query
+        }
+      elif [ "\$opParam" == '-help' ] || [ "\$opParam" == '-h' ] || [ "\$opParam" == '-?' ]
+          then {
+            echo " Shodan Search Filters:
+                    For Exploits     -exploit       -exp
+                 "
+            exit
+      }
+        else {
+          query=\${query/-sdn+}
+          query=\${query/-shodan+}
+          \$browser www.shodan.io/search?query=\$query
+          exit
+        }
+      fi
+
     }
 
     #   Startpage Search Function
@@ -224,9 +508,33 @@ function createSearchit() {
     function startpage() {
         dbCheck
         query=\${tmpquery//\ /+}
+      if [ "\$opParam" == '-image' ] || [ "\$opParam" == '-img' ]
+              then {
+                query=\${query/-img+}
+                query=\${query/-image+}
+                option="pics"
+        }
+      elif [ "\$opParam" == '-video' ] || [ "\$opParam" == '-vid' ]
+              then {
+                query=\${query/-vid+}
+                query=\${query/-video+}
+                option="video"
+          }
+      elif [ "\$opParam" == '-help' ] || [ "\$opParam" == '-h' ] || [ "\$opParam" == '-?' ]
+          then {
+            echo " Startpage Search Filters:
+                    For Images     -image       -img
+                    For Videos     -videos      -vid
+                 "
+            exit
+      }
+        else {
+          option=""
+        }
+      fi
         query=\${query/-spg+}
         query=\${query/-startpage+}
-        \$browser www.startpage.com/do/search?q=\$query
+        \$browser www.startpage.com/do/search?q=\$query\&cat=\$option
     }
 
     #   Facebook Search Function
@@ -947,7 +1255,7 @@ function checkPermission() {
             installCheck
         }
     else {
-        sudo ./Searchit_Installer.sh
+        sudo ./installer.sh
         var0=root
     }
     fi
