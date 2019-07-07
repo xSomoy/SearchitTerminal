@@ -639,7 +639,7 @@ function createSearchit() {
           then {
             echo " Startpage Search Filters:
                     For Images     -image       -img
-                    For Videos     -videos      -vid
+                    For Videos     -video      -vid
                  "
             exit
       }
@@ -657,9 +657,35 @@ function createSearchit() {
     function facebook() {
         dbCheck
         query=\${tmpquery//\ /+}
+        query=\${tmpquery//\ /+}
+      if [ "\$opParam" == '-image' ] || [ "\$opParam" == '-img' ]
+              then {
+                query=\${query/-img+}
+                query=\${query/-image+}
+                option="pics"
+        }
+      elif [ "\$opParam" == '-video' ] || [ "\$opParam" == '-vid' ]
+              then {
+                query=\${query/-vid+}
+                query=\${query/-video+}
+                option="video"
+          }
+      elif [ "\$opParam" == '-help' ] || [ "\$opParam" == '-h' ] || [ "\$opParam" == '-?' ]
+          then {
+            echo " Facebook Search Filters:
+                    For Post        -post
+                    For Images     -image       -img
+                    For Videos     -video      -vid
+                 "
+            exit
+      }
+        else {
+          option="top"
+        }
+      fi
         query=\${query/-fb+}
         query=\${query/-facebook+}
-        \$browser www.facebook.com/search?q=\$query
+        \$browser www.facebook.com/search/\$option/?q=\$query
     }
 
     #   Twitter Search Function
