@@ -659,16 +659,16 @@ function createSearchit() {
         query=\${tmpquery//\ /+}
         query=\${tmpquery//\ /+}
       if [ "\$opParam" == '-post' ] || [ "\$opParam" == '-pst' ]
-                then {
-                  query=\${query/-pst+}
-                  query=\${query/-post+}
-                  option="posts"
+              then {
+                query=\${query/-pst+}
+                query=\${query/-post+}
+                option="posts"
           }
       elif [ "\$opParam" == '-people' ] || [ "\$opParam" == '-ppl' ]
-                then {
-                  query=\${query/-ppl+}
-                  query=\${query/-people+}
-                  option="people"
+              then {
+                query=\${query/-ppl+}
+                query=\${query/-people+}
+                option="people"
         }
       elif [ "\$opParam" == '-image' ] || [ "\$opParam" == '-img' ]
               then {
