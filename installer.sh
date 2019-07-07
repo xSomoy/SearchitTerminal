@@ -639,7 +639,7 @@ function createSearchit() {
           then {
             echo " Startpage Search Filters:
                     For Images     -image       -img
-                    For Videos     -video      -vid
+                    For Videos     -video       -vid
                  "
             exit
       }
@@ -658,24 +658,79 @@ function createSearchit() {
         dbCheck
         query=\${tmpquery//\ /+}
         query=\${tmpquery//\ /+}
-      if [ "\$opParam" == '-image' ] || [ "\$opParam" == '-img' ]
+      if [ "\$opParam" == '-post' ] || [ "\$opParam" == '-pst' ]
+              then {
+                query=\${query/-pst+}
+                query=\${query/-post+}
+                option="posts"
+          }
+      elif [ "\$opParam" == '-people' ] || [ "\$opParam" == '-ppl' ]
+              then {
+                query=\${query/-ppl+}
+                query=\${query/-people+}
+                option="people"
+        }
+      elif [ "\$opParam" == '-image' ] || [ "\$opParam" == '-img' ]
               then {
                 query=\${query/-img+}
                 query=\${query/-image+}
-                option="pics"
+                option="photos"
         }
       elif [ "\$opParam" == '-video' ] || [ "\$opParam" == '-vid' ]
               then {
                 query=\${query/-vid+}
                 query=\${query/-video+}
-                option="video"
+                option="videos"
+          }
+      elif [ "\$opParam" == '-page' ] || [ "\$opParam" == '-pge' ]
+                  then {
+                    query=\${query/-pge+}
+                    query=\${query/-page+}
+                    option="pages"
+          }
+      elif [ "\$opParam" == '-place' ] || [ "\$opParam" == '-plc' ]
+                  then {
+                    query=\${query/-plc+}
+                    query=\${query/-place+}
+                    option="places"
+          }
+      elif [ "\$opParam" == '-group' ] || [ "\$opParam" == '-grp' ]
+                  then {
+                    query=\${query/-grp+}
+                    query=\${query/-group+}
+                    option="groups"
+          }
+      elif [ "\$opParam" == '-apps' ] || [ "\$opParam" == '-app' ]
+                  then {
+                    query=\${query/-app+}
+                    query=\${query/-apps+}
+                    option="apps"
+          }
+      elif [ "\$opParam" == '-event' ] || [ "\$opParam" == '-evt' ]
+                  then {
+                    query=\${query/-evt+}
+                    query=\${query/-event+}
+                    option="events"
+          }
+      elif [ "\$opParam" == '-link' ] || [ "\$opParam" == '-lnk' ]
+                  then {
+                    query=\${query/-lnk+}
+                    query=\${query/-link+}
+                    option="links"
           }
       elif [ "\$opParam" == '-help' ] || [ "\$opParam" == '-h' ] || [ "\$opParam" == '-?' ]
           then {
             echo " Facebook Search Filters:
-                    For Post        -post
+                    For Post       -post        -pst
+                    For People     -people      -ppl
                     For Images     -image       -img
-                    For Videos     -video      -vid
+                    For Videos     -video       -vid
+                    For Pages      -page        -pge
+                    For Places     -place       -plc
+                    For Groups     -group       -grp
+                    For Apps       -apps        -app
+                    For Events     -event       -evt
+                    For Links      -link        -lnk
                  "
             exit
       }
@@ -693,9 +748,61 @@ function createSearchit() {
     function twitter() {
         dbCheck
         query=\${tmpquery//\ /+}
+        if [ "\$opParam" == '-latest' ] || [ "\$opParam" == '-lst' ]
+                then {
+                  query=\${query/-lst+}
+                  query=\${query/-latest+}
+                  option="&f=tweets"
+            }
+        elif [ "\$opParam" == '-people' ] || [ "\$opParam" == '-ppl' ]
+                then {
+                  query=\${query/-ppl+}
+                  query=\${query/-people+}
+                  option="&f=users"
+          }
+        elif [ "\$opParam" == '-image' ] || [ "\$opParam" == '-img' ]
+                then {
+                  query=\${query/-img+}
+                  query=\${query/-image+}
+                  option="&f=images"
+          }
+        elif [ "\$opParam" == '-video' ] || [ "\$opParam" == '-vid' ]
+                then {
+                  query=\${query/-vid+}
+                  query=\${query/-video+}
+                  option="&f=videos"
+            }
+        elif [ "\$opParam" == '-news' ] || [ "\$opParam" == '-nws' ]
+                    then {
+                      query=\${query/-nws+}
+                      query=\${query/-news+}
+                      option="&f=news"
+            }
+        elif [ "\$opParam" == '-broadcast' ] || [ "\$opParam" == '-brd' ]
+                    then {
+                      query=\${query/-brd+}
+                      query=\${query/-broadcast+}
+                      option="&f=broadcasts"
+            }
+        elif [ "\$opParam" == '-help' ] || [ "\$opParam" == '-h' ] || [ "\$opParam" == '-?' ]
+              then {
+                echo " Twitter Search Filters:
+                        For Latest     -latest      -lst
+                        For People     -people      -ppl
+                        For Images     -image       -img
+                        For Videos     -video       -vid
+                        For News       -news        -nws
+                        For Broadcast  -broadcast   -brd
+                     "
+                exit
+          }
+            else {
+              option=""
+            }
+          fi
         query=\${query/-ttr+}
         query=\${query/-twitter+}
-        \$browser www.twitter.com/search?q=\$query
+        \$browser www.twitter.com/search?q=\$query\$option
     }
 
     #   Reddit Search Function
