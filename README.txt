@@ -6,7 +6,7 @@ Searchit is a software what allows you to make customized internet searches from
 Currently Searchit provides support for 9 browsers and 24 websites
 
 
-Instalation Process -------------------------------------------------------------------------------
+Installation Process -------------------------------------------------------------------------------
 
 There are 4 small steps to follow:
 1. Download Searchit From Github
