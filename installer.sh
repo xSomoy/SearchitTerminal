@@ -1124,16 +1124,6 @@ function createSearchit() {
         \$browser www.youtube.com/results?search_query=\$query\&sp=\$option
     }
 
-    #   Google+ Search Function
-
-    function googleplus() {
-        dbCheck
-        query=\${tmpquery//\ /%20}
-        query=\${query/-ggl+%20}
-        query=\${query/-googleplus%20}
-        \$browser plus.google.com/s/\$query
-    }
-
     #   Pinterest Search Function
 
     function pinterest() {
@@ -1262,7 +1252,6 @@ function createSearchit() {
                         -rddt   -reddit         For Reddit
                         -lkndn  -linkedin       For LinkedIn
                         -ytb    -youtube        For Youtube
-                        -ggl+   -googleplus     For Google+
                         -pntr   -pinterest      For Pinterest
                         -tmblr  -tumblr         For Tumblr
                         -qra    -quora          For Quora
@@ -1561,10 +1550,6 @@ CONFIGEND
             elif [ "\$parameter" == '-youtube' ] || [ "\$parameter" == '-ytb' ]
                 then {
                     youtube
-                }
-            elif [ "\$parameter" == '-googleplus' ] || [ "\$parameter" == '-ggl+' ]
-                then {
-                    googleplus
                 }
             elif [ "\$parameter" == '-pinterest' ] || [ "\$parameter" == '-pntr' ]
                 then {
