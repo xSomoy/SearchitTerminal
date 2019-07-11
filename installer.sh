@@ -1169,7 +1169,7 @@ function createSearchit() {
         fi
         query=\${query/-pntr+}
         query=\${query/-pinterest+}
-        \$browser www.pinterest.com/search/\$option?q=\$query
+        \$browser www.pinterest.com/search/\$option/?q=\$query
     }
 
     #   Tumblr Search Function
