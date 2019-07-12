@@ -1371,7 +1371,7 @@ function createSearchit() {
         fi
         query=\${query/-gthb+}
         query=\${query/-github+}
-        \$browser www.github.com/search/?q=\$query\$type=\$option
+        \$browser www.github.com/search/?q=\$query\&type=\$option
     }
 
     #   Gitlab Search Fucntion
