@@ -1256,9 +1256,17 @@ function createSearchit() {
     function wikipedia() {
         dbCheck
         query=\${tmpquery//\ /+}
+      if [ "\$opParam" == '-help' ] || [ "\$opParam" == '-h' ] || [ "\$opParam" == '-?' ]
+            then {
+              echo "NOTE: Wikipedia doesn't have any search filters."
+              exit
+        }
+      else {
         query=\${query/-wiki+}
         query=\${query/-wikipedia+}
         \$browser www.wikipedia.org/wiki/?search=\$query
+          }
+      fi
     }
 
     #   Stack Overflow Search Function
