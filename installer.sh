@@ -1177,9 +1177,17 @@ function createSearchit() {
     function tumblr() {
         dbCheck
         query=\${tmpquery//\ /+}
-        query=\${query/-tmblr+}
-        query=\${query/-tumblr+}
-        \$browser www.tumblr.com/search/\$query
+        if [ "\$opParam" == '-help' ] || [ "\$opParam" == '-h' ] || [ "\$opParam" == '-?' ]
+              then {
+                echo "NOTE: Tumblr doesn't have any search filters."
+                exit
+          }
+        else {
+          query=\${query/-tmblr+}
+          query=\${query/-tumblr+}
+          \$browser www.tumblr.com/search/\$query
+            }
+        fi
     }
 
     #   Quora Search Function
