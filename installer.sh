@@ -1549,6 +1549,29 @@ function createSearchit() {
     function ebay() {
         dbCheck
         query=\${tmpquery//\ /+}
+        if [ "\$opParam" == '-' ] || [ "\$opParam" == '-' ]
+                then {
+                  query=\${query/-+}
+                  query=\${query/-+}
+                  option=""
+            }
+        elif [ "\$opParam" == '-' ] || [ "\$opParam" == '-' ]
+                then {
+                  query=\${query/-+}
+                  query=\${query/-+}
+                  option=""
+          }
+        elif [ "\$opParam" == '-help' ] || [ "\$opParam" == '-h' ] || [ "\$opParam" == '-?' ]
+              then {
+                echo "  Search Filters:
+                        For           -      -
+                     "
+                exit
+          }
+        else {
+              option=""
+            }
+        fi
         query=\${query/-eby+}
         query=\${query/-ebay+}
         \$browser www.ebay.com/sch/i.html?_nkw=\$query
