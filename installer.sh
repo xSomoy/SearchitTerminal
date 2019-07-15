@@ -2040,6 +2040,8 @@ DUCKITEND
 function createGoogleit() {
         cat >> googleit <<GOOGLEITEND
         #!/usr/bin/env bash
+        opParam="\$1"
+        tmpQuery="\$@"
         tmpBrowser=\$(cat ~/.searchit/searchit.cfg | grep "Browser")
         tmpBrowser=\${tmpBrowser/Default\ Browser:\ }
         tmpBrowser=\${tmpBrowser//\ /+}
@@ -2083,9 +2085,65 @@ function createGoogleit() {
             echo "ERROR: Unable to read configuration file"
         }
         fi
-        input="\$@"
-        query=\${input//\ /+}
-        \$browser www.google.com/search?q=\$query
+        query=\${tmpQuery//\ /+}
+        if [ "\$opParam" == '-images' ]  || [ "\$opParam" == '-img' ]
+            then {
+              query=\${query/-img+}
+              query=\${query/-images+}
+              option="&tbm=isch"
+            }
+        elif [ "\$opParam" == '-videos' ] || [ "\$opParam" == '-vid' ]
+            then {
+              query=\${query/-vid+}
+              query=\${query/-videos+}
+              option="&tbm=vid"
+        }
+        elif [ "\$opParam" == '-news' ] || [ "\$opParam" == '-nws' ]
+            then {
+              query=\${query/-nws+}
+              query=\${query/-news+}
+              option="&tbm=nws"
+        }
+      elif [ "\$opParam" == '-books' ] || [ "\$opParam" == '-bks' ]
+            then {
+              query=\${query/-bks+}
+              query=\${query/-books+}
+              option="&tbm=bks"
+        }
+      elif [ "\$opParam" == '-finance' ] || [ "\$opParam" == '-fnc' ]
+            then {
+              query=\${query/-fnc+}
+              query=\${query/-finance+}
+              option="&tbm=fin"
+        }
+      elif [ "\$opParam" == '-maps' ] || [ "\$opParam" == '-map' ]
+              then {
+                query=\${query/-map+}
+                query=\${query/-maps+}
+                query=\${query/-ggl+}
+                query=\${query/-google+}
+                \$browser www.google.com/maps?q=\$query
+              exit
+        }
+      elif [ "\$opParam" == '-help' ] || [ "\$opParam" == '-h' ] || [ "\$opParam" == '-?' ]
+          then {
+            echo " Google Search Filters:
+                    For Images     -image       -img
+                    For Videos     -Videos      -vid
+                    For News       -news        -nws
+                    For Books      -books       -bks
+                    For Finance    -finance     -fnc
+                    For Maps       -maps        -map
+            "
+            exit
+      }
+        else {
+              option=""
+        }
+      fi
+        query=\${query/-ggl+}
+        query=\${query/-google+}
+        \$browser www.google.com/search?q=\$query\$option
 GOOGLEITEND
 }
 
