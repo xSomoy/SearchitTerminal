@@ -2146,7 +2146,6 @@ function createGoogleit() {
         \$browser www.google.com/search?q=\$query\$option
 GOOGLEITEND
 }
-
 #   Checking Root Permission & Intializing
 
 function checkPermission() {
