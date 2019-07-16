@@ -1,0 +1,23 @@
+if [ "\$opParam" == '-' ] || [ "\$opParam" == '-' ]
+        then {
+          query=\${query/-+}
+          query=\${query/-+}
+          option=""
+    }
+elif [ "\$opParam" == '-' ] || [ "\$opParam" == '-' ]
+        then {
+          query=\${query/-+}
+          query=\${query/-+}
+          option=""
+  }
+elif [ "\$opParam" == '-help' ] || [ "\$opParam" == '-h' ] || [ "\$opParam" == '-?' ]
+      then {
+        echo "  Search Filters:
+                For           -      -
+             "
+        exit
+  }
+else {
+      option=""
+    }
+fi
