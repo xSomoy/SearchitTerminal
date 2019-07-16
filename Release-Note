@@ -1,21 +1,42 @@
-Searchit Release Note (v2.0a-1)
+Searchit Release Note (v2.0.0)
 
-Version 2.0a-1 Brings You:
+Version 2.0.0 Brings You
 
-Data Update:
+* Search Filters For
+    Google            ( Filters Available )
+    DuckDuckGo        ( Filters Available )
+    Yahoo             ( Filters Available )
+    Bing              ( Filters Available )
+    Yandex            ( Filters Available )
+    Baidu             ( Filters Available )
+    Startpage         ( Filters Available )
+    SearX             ( Filters Available )
+    Shodan            ( Filters Available )
+    Facebook          ( Filters Available )
+    Twitter           ( Filters Available )
+    Reddit            ( Filters Available )
+    LinkedIn          ( Filters Available )
+    Youtube           ( Filters Available )
+    Pinterest         ( Filters Available )
+    Tumblr            ( Basic Search )
+    Quora             ( Filters Available )
+    Wikipedia         ( Basic Search )
+    Amazon            ( Filters Available )
+    Ebay              ( Filters Available )
+    Github            ( Filters Available )
+    Gitlab            ( Filters Available )
+    Stack Overflow    ( Filters Available )
 
-* Addisional Search Filters For
-    Google
-    DuckDuckGo
-    Yahoo
-    Bing
-    Yandex
-    Baidu
-    Startpage
-    SearX
-    Shodan
+Now you can use search filters for this sites from you terminal.
+" Example:~$ searchit -google -image dog"
+Searchit Will Automatically Search In Google For Images Of Dogs"
+Ues "-h" "-?" or "-help" to see available search filters for that site
+" Example: ~$ searchit -gooogle -help"
+This will show available search filters for google search.
+A lot is waiting for you. Enjoy.
 
-NOTE: This is a pre-release version. 
+Note: Hence Google+ Is no Longer Available. I Removed Google+ Support From Searchit.
+
 
 You Can See Previous Release Notes Here :
 https://github.com/xCommunicado/Searchit/wiki/Release-Notes
