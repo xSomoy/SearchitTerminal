@@ -48,7 +48,12 @@ googleit -vid pizza
 
 I Will add more website support for Searchit in near future.
 And I will publish changes as rolling release.
+<<<<<<< HEAD
 Now you know why you need Searchit.
+=======
+Now you know why you need Searchit..
+Now you know why you need Searchit
+>>>>>>> e11d4f3da5dce8db59291d1b236f0afca0ab0719
 
 ### How To Install Searchit?
 

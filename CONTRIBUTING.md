@@ -46,7 +46,7 @@ Your ideas and suggestions are always valuable to the community. And via contrib
  * General/Group of People use the website often.
 
 
-* ** Suggest New Features**. If you think there is a feature we could add in this software feel free to share with us. Maybe your brilliant idea will be the next goal for us.
+* ** Suggest New Features**. If you think there is a feature I could add in this software feel free to share with us. Maybe your brilliant idea will be the next goal for us.
  * Make sure your idea is related to this software
  * And let us know how your idea/feature can help you and others
 
