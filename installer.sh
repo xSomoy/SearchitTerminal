@@ -1549,6 +1549,63 @@ function createSearchit() {
     function ebay() {
         dbCheck
         query=\${tmpquery//\ /+}
+        if [ "\$opParam" == '-' ] || [ "\$opParam" == '-' ]
+                then {
+                  query=\${query/-+}
+                  query=\${query/-+}
+                  option=""
+            }
+        elif [ "\$opParam" == '-' ] || [ "\$opParam" == '-' ]
+                then {
+                  query=\${query/-+}
+                  query=\${query/-+}
+                  option=""
+          }
+        elif [ "\$opParam" == '-help' ] || [ "\$opParam" == '-h' ] || [ "\$opParam" == '-?' ]
+              then {
+                echo "  Ebay Search Filters:
+                        For Antique                           -antique        -atq
+                        For Art                               -art
+                        For Baby                              -baby           -bby
+                        For Book                              -book           -bks
+                        For Business & Industrial             -business       -industrial      -bsn     -ids
+                        For Camera & Photo                    -camera         -cmr             -photo   -pht
+                        For Cell Phone & Accessories          -phone          -phn
+                        For Clothes, Shoes & Accessories      -clothe         -shoe            -clt     -sho
+                        For Coin & Paper Money                -coin           -money           -cin     -mny
+                        For Collectibles                      -collectibles   -clt
+                        For Computers                         -computer       -com
+                        For Consumer Electronics              -electronic     -elc
+                        For Crafts                            -craft          -cft
+                        For Dolls & Bears                     -doll           -dll             -bear    -ber
+                        For DVD's & Movies                    -movie          -mve             -dvd
+                        For eBay Motors                       -motor          -mtr
+                        For Entertainment                     -entertainment  -ent
+                        For Everything Else                   -everything     -evr
+                        For Gift Cards & Coupo                -coupon         -cpn
+                        For Health & Beauty                   -health         -beauty           -hlt     -bty
+                        For Home & Garden                     -home           -garden           -hme     -grd
+                        For Jewelry & Watches                 -Jewelry        -jwl
+                        For Music                             -music          -msc
+                        For Musical Instrument                -instrument     -ins
+                        For Pet Supplies                      -petsupply      -pet
+                        For Pottery & Glass                   -pottery        -pot
+                        For Real States                       -realstate      -rst
+                        For Specialty Service                 -service        -svc
+                        For Sporting Good                     -sportinggood   -sgd
+                        For Sports                            -sport          -spt
+                        For Stamps                            -stamp          -stm
+                        For Tickets & Experience              -ticket         -tkt
+                        For Toys And Hobbies                  -toy            -hobby            -hby
+                        For Travel                            -travel         -tvl
+                        For Video Games                       -game           -gme
+                   "
+                exit
+          }
+        else {
+              option=""
+            }
+        fi
         query=\${query/-eby+}
         query=\${query/-ebay+}
         \$browser www.ebay.com/sch/i.html?_nkw=\$query
