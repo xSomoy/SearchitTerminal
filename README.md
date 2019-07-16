@@ -9,43 +9,46 @@ Searchit is a software what allows you to make customized internet searches from
 ### Why We Need Searchit?
 ![Searchit](https://i.ibb.co/CwYVshJ/gifout.gif"Searchit")
 
-If you are a linux user, you might find yourself working in terminal quit a lot (and its very good). Now imagine how many times you had to search something and you had to leave your terminal, open your browser, go to a specific site, search whatever you wanted to search. But with Searchit you don't even have to leave your terminal for a quick internet search. Just type a command and Searchit will automatically open your browser, go to the specific site and search it for you.
+If you are a linux user, you might find yourself working in terminal quit a lot (and its very good). Now imagine how many times you had to search something and you had to leave your terminal, open your browser, go to a specific site, search whatever you wanted to search.
+Also You may use various search filters to narrow down your search result.
+But with Searchit you don't even have to leave your terminal for a quick internet search. Just type a command and Searchit will automatically open your browser, go to the specific site, apply filters, and search it for you.
 Some Examples:
 
 ```bash
-# search "python" in google
-searchit -ggl python
-# search "apple" in duckduckgo
-searchit -ddg apple
-# search "eiffel tower" in wikipedia
-searchit -wiki eiffel tower
-# search "hunger games" in youtube
-searchit -ytb hunger Games
-# search "ip camera" in shodan
-searchit -sdn ip camera
+# search for "python" images in google
+searchit -ggl -img python
+# search for "apple" videos in duckduckgo
+searchit -ddg -vid apple
+# search for "pewdiepie" channels in youtube
+searchit -ytb -cnl pewdiepie
+# search for "ip camera" exploits in shodan
+searchit -sdn -exp ip camera
 ```
 Also you can select a default search site. And then you can just type "searchit" then your search query and Searchit will automatically search it in your default search site
 
 Example: If you selected your default search site "google", then you can just type this.
 
 ```Bash
-searchit bangladesh
-# it will automatically search "bangladesh" in google
+searchit xCommunicado
+# it will automatically search "xCommunicado" in google
 searchit iron man
 # it will automatically search "iron man" in google
 ```
 For **terminal only situations** like server or workstation.You can combine Searchit with terminal based text browsers like [W3m](http://w3m.sourceforge.net/), [Links](http://www.jikos.cz/~mikulas/links//), [Lynx](https://lynx.browser.org/) and browse the internet inside your terminal. Searchit provides supports for these 3 text based web browsers. Just set your desire one as default browser and you are good to go.
 
-Last but not least for **too much shortcut lovers** Searchit also has two predefined custom commands for instant search in Google and DuckDuckGo
+Last but not least for **too much shortcut lovers** Searchit also has two predefined custom commands for instant search in Google and DuckDuckGo.
+And Yes "duckit" and "googleit" has filters too.
 
 ```Bash
-duckit burger
-# it will search burger in duckduckgo
-googleit pizza
-# it will search pizza in google
+duckit -img burger
+# it will search burger images in duckduckgo
+googleit -vid pizza
+# it will search pizza videos in google
 ```
 
-In near future Searchit will provide more **search options for individual sites** for better and more accurate search customization and also support for more and more websites.
+I Will add more website support for Searchit in near future.
+And I will publish changes as rolling release.
+Now you know why you need Searchit..
 Now you know why you need Searchit
 
 ### How To Install Searchit?
