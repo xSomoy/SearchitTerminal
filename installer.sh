@@ -1,16 +1,16 @@
 #!/usr/bin/env bash
 ######################################################
 #                                                    #
-#       Searchit                                     #
-#       Terminal Based Search Customizer             #
+#     Searchit                                       #
+#     Terminal Based Search Customizer               #
 #                                                    #
-#       Author:     xCommunicado                     #
-#       Twitter:    www.twitter.com/xCommunicado     #
-#       License:    GNU General Public License v3.0  #
+#     Author:     xCommunicado                       #
+#     Twitter:    www.twitter.com/xCommunicado       #
+#     License:    GNU General Public License v3.0    #
 #                                                    #
 ######################################################
 
-version=2.0a-1
+version=2.0.0
 
 #   Creating Searchit Command
 
@@ -19,18 +19,18 @@ function createSearchit() {
     #!/usr/bin/env bash
     ######################################################
     #                                                    #
-    #       Searchit                                     #
-    #       Terminal Based Search Customizer             #
+    #     Searchit                                        #
+    #     Terminal Based Search Customizer               #
     #                                                    #
-    #       Author:     xCommunicado                     #
-    #       Twitter:    www.twitter.com/xCommunicado     #
-    #       License:    GNU General Public License v3.0  #
+    #     Author:     xCommunicado                       #
+    #     Twitter:    www.twitter.com/xCommunicado       #
+    #     License:    GNU General Public License v3.0    #
     #                                                    #
     ######################################################
 
     version=$version
 
-    #   Assigning Parameter And Search Query
+    #   Assigning Parameter, Search Query And Search Filter
 
     parameter="\$1"
     opParam="\$2"
