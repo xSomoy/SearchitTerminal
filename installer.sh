@@ -8,6 +8,8 @@
 #     Twitter:    www.twitter.com/xCommunicado       #
 #     License:    GNU General Public License v3.0    #
 #                                                    #
+#     Copyright © 2019 Mushphyqur Rahman Tanveer     #
+#                                                    #
 ######################################################
 
 version=2.0.0
@@ -25,6 +27,8 @@ function createSearchit() {
     #     Author:     xCommunicado                       #
     #     Twitter:    www.twitter.com/xCommunicado       #
     #     License:    GNU General Public License v3.0    #
+    #                                                    #
+    #     Copyright © 2019 Mushphyqur Rahman Tanveer     #
     #                                                    #
     ######################################################
 
