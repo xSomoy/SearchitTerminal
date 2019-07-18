@@ -2183,7 +2183,7 @@ CONFIGEND
                 wget https://github.com/xCommunicado/Searchit/archive/master.zip
                 unzip master.zip
                 cd Searchit-master
-                ./Searchit_Installer.sh
+                ./installer.sh
                 rm ~/master.zip
                 rm -r ~/Searchit-master
                 echo "Update Complete !!"
