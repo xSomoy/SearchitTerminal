@@ -4,8 +4,10 @@
 #     Searchit                                       #
 #     Terminal Based Search Customizer               #
 #                                                    #
-#     Author:     xCommunicado                       #
-#     Twitter:    www.twitter.com/xCommunicado       #
+#     Author:     xSomoy                             #
+#     Twitter:    www.twitter.com/xSomoy             #
+#                                                    #
+#     Facebook:   www.facebook.com/SearchitApp       #
 #     License:    GNU General Public License v3.0    #
 #                                                    #
 #     Copyright © 2019 Mushphyqur Rahman Tanveer     #
