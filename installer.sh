@@ -17,7 +17,30 @@
 
 version=2.1.5
 
+function dataLoad() {
 
+#  loading Core DAT Files
+
+  about=$(cat core/about.dat)
+  browserSelect=$(cat core/browserSelect.dat)
+  config=$(cat core/config.dat)
+  defaultBrowserCheck=$(cat core/defaultBrowserCheck.dat)
+  defaultSearch=$(cat core/defaultSearch.dat)
+  defaultSearchEngineCheck=$(cat core/defaultSearchEngineCheck.dat)
+  duckit=$(cat core/duckit.dat)
+  globalVariable=$(cat core/globalVariable.dat)
+  googleit=$(cat core/googleit.dat)
+  help=$(cat core/help.dat)
+  init=$(cat core/init.dat)
+  intro=$(cat core/intro.dat)
+  parameterCheck=$(cat core/parameterCheck.dat)
+  searchengineSelect=$(cat core/searchengineSelect.dat)
+  uninstall=$(cat core/uninstall.dat)
+  uninstallCheck=$(cat core/uninstallCheck.dat)
+  update=$(cat core/update.dat)
+
+# Loading Search Engine DAT Files
+}
 # /core
 
 # Intro.dat
@@ -134,9 +157,10 @@ DUCKITEND
 #   Creating Command File For Google
 
 function createGoogleit() {
-        cat >> googleit <<GOOGLEITEND
+
 #/core/googleit.dat
-GOOGLEITEND
+touch googleit
+
 }
 #   Checking Root Permission & Intializing
 
