@@ -1,0 +1,18 @@
+#   Uninstaller function
+
+function uninstaller(){
+    echo " Do You Really Want To Uninstall Seachit? (Y/N):"
+    read decision;
+    if [ "$decision" == "Y" ] || [ "$decision" == "y" ]
+    then {
+        cd /usr/bin
+        sudo rm duckit googleit searchit
+        cd ~
+        sudo rm -r .searchit
+        uninstallCheck
+    }
+    else {
+            echo " Good Decision :) "
+    }
+    fi
+}

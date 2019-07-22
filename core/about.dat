@@ -1,0 +1,15 @@
+#   About Function
+
+function about(){
+    echo "
+           Searchit
+           Terminal Based Search Customizer
+
+           Author:    xSomoy
+           Twitter:   www.twitter.com/xSomoy
+           Facebook:  www.facebook.com/SearchitApp
+           Github:    www.github.com/xSomoy/Searchit
+           License:   GNU General Public License v3.0
+
+    "
+}

@@ -1,0 +1,57 @@
+#   Help Function
+
+function help() {
+    echo "
+                \"Searchit Help Section\"
+
+        Options For Seachit's Functionality
+
+            --about     -a          For About Section
+            --help      -h    -?    For Help section
+            --uninstall -un         For Uninstall
+            --update    -u          For Update
+            --Version   -v          For Version
+            --config    -cfg        For Configuration
+            --release   -rn         For Release Note
+            --readme    -rdm        For README
+
+                                Ex: \"searchit --help\"
+
+        Search Options:
+
+            Search Engine
+                    -ddg    -duckduckgo     For DuckDuckGo
+                    -ggl    -google         For Google
+                    -yah    -Yahoo          For Yahoo
+                    -bng    -bing           For Bing
+                    -ydx    -yandex         For Yandex
+                    -bdu    -baidu          For Baidu
+                    -spg    -startpage      For Startpage
+                    -srx    -searx          For Searx
+                    -sdn    -shodan         For Shodan
+
+            Social Media & Others
+                    -fb     -facebook       For Facebook
+                    -ttr    -twitter        For Twitter
+                    -rddt   -reddit         For Reddit
+                    -lkndn  -linkedin       For LinkedIn
+                    -ytb    -youtube        For Youtube
+                    -pntr   -pinterest      For Pinterest
+                    -tmblr  -tumblr         For Tumblr
+                    -qra    -quora          For Quora
+                    -wiki   -wikipedia      For Wikipedia
+                    -stkof  -stackoverflow  For Stack Overflow
+                    -amzn   -amazon         For Amazon
+                    -eby    -ebay           For Ebay
+                    -gthb   -github         For Github
+                    -gtlb   -gitlb          For Gitlab
+
+                                Ex: \"searchit -ddg casino royal\"
+
+        Shortcuts For Instant Search
+            duckit      For DuckDuckGo
+            googleit    For Google
+
+                                Ex: \"duckit thug life\"
+    "
+}

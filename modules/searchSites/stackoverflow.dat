@@ -1,0 +1,50 @@
+#   Stack Overflow Search Function
+
+function stackoverflow() {
+    dbCheck
+    query=${tmpquery//\ /+}
+    if [ "$opParam" == '-newest' ] || [ "$opParam" == '-new' ]
+            then {
+              query=${query/-new+}
+              query=${query/-newest+}
+              option="newest"
+        }
+    elif [ "$opParam" == '-active' ] || [ "$opParam" == '-act' ]
+            then {
+              query=${query/-act+}
+              query=${query/-active+}
+              option="active"
+      }
+    elif [ "$opParam" == '-vote' ] || [ "$opParam" == '-vot' ]
+            then {
+              query=${query/-vot+}
+              query=${query/-vote+}
+              option="votes"
+      }
+    elif [ "$opParam" == '-jobs' ] || [ "$opParam" == '-job' ]
+            then {
+              query=${query/-job+}
+              query=${query/-jobs+}
+              query=${query/-stkof+}
+              query=${query/-stackoverflow+}
+              $browser www.stackoverflow.com/jobs?q=$query
+              exit
+      }
+    elif [ "$opParam" == '-help' ] || [ "$opParam" == '-h' ] || [ "$opParam" == '-?' ]
+          then {
+            echo "  StackOverflow Search Filters:
+                    For Newst          -newest     -new
+                    For Active         -active     -act
+                    For Votes          -votes      -vot
+                    For Jobs           -jobs       -job
+                 "
+            exit
+      }
+    else {
+          option="releveace"
+        }
+    fi
+    query=${query/-stkof+}
+    query=${query/-stackoverflow+}
+    $browser www.stackoverflow.com/search?q=$query&tab=$option
+}
