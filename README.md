@@ -72,6 +72,6 @@ For report any issue visit Searchit's [github repository](https://github.com/xCo
 
 For personal and business purpose you can contact me directly.
 
-[Twitter](https://twitter.com/xCommunicado) - [Github](https://github.com/xCommunicado) - Email: xCommunicado@protonmail.com
+[Twitter](https://twitter.com/xSomoy) - [Github](https://github.com/xSomoy) - [Faceboook](https://www.facebook.com/SearchitApp) - Email: xCommunicado@protonmail.com
 
 ## Thank You !!

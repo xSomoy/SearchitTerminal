@@ -1,8 +1,10 @@
-Searchit Release Note (v2.0.5)
+Searchit Release Note (v2.1.5)
 
-Version 2.0.5 Brings You
+Version 2.1.5 Brings You
 
-* Release Note Update
+* Improved Update Functionality.
+  Now Update Function Handles Internet Connection Lost
+  During Update.
 
 You Can See Previous Release Notes Here :
 https://github.com/xSomoy/Searchit/wiki/Release-Notes

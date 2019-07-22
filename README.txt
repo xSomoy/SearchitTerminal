@@ -76,9 +76,10 @@ It will guide you to submit a report or issue properly.
 Contact ------------------------------------------------------------------------------------------------------
 
 For personal and business purpose you can contact me directly.
-Twitter: https://www.twitter.com/xCommunicado
-Github: https://www.github.com/xCommunicado
-Email: xCommunicado@protonmail.com
+Twitter:  https://www.twitter.com/xSomoy
+Facebook: https://www.facebook.com/SearchitApp
+Github:   https://www.github.com/xSomoy
+Email:    xCommunicado@protonmail.com
 
 
 Thank You !!
