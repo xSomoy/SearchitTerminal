@@ -2174,35 +2174,51 @@ CONFIGEND
     function update(){
         cd ~
         wget https://raw.githubusercontent.com/xSomoy/Searchit/master/Version
-        AvailableVersion=\$(cat Version)
-        if [ "\$AvailableVersion" == "\$version" ]
+        if [ -f ~/Version ]
         then {
-            echo "You Are Up-To-Date"
-        }
-        else
-            {
-            echo "Version \$AvailableVersion Is Available. Do You Want To Update?"
-            read decision;
-            if [ "\$decision" == "Y" ] || [ "\$decision" == "y" ]
+            AvailableVersion=\$(cat Version)
+            if [ "\$AvailableVersion" == "\$version" ]
             then {
-                sudo rm /usr/bin/searchit /usr/bin/googleit /usr/bin/duckit
-                sudo rm -r ~/.searchit
-                wget https://github.com/xSomoy/Searchit/archive/master.zip
-                unzip master.zip
-                cd Searchit-master
-                ./installer.sh
-                rm ~/master.zip
-                rm -r ~/Searchit-master
-                echo "Update Complete !!"
-            }
-            else {
-                    echo " Maybe Later -_- "
-            }
+                  echo "You Are Up-To-Date"
+                  }
+            else
+                  {
+                   echo "Version \$AvailableVersion Is Available. Do You Want To Update?"
+                   read decision;
+                   if [ "\$decision" == "Y" ] || [ "\$decision" == "y" ]
+                   then {
+                     wget https://github.com/xSomoy/Searchit/archive/master.zip
+                     if [ -f ~/master.zip ]
+                     then {
+                          sudo rm /usr/bin/searchit /usr/bin/googleit /usr/bin/duckit
+                          sudo rm -r ~/.searchit
+                          unzip master.zip
+                          cd Searchit-master
+                          ./installer.sh
+                          rm ~/master.zip
+                          rm -r ~/Searchit-master
+                          echo "Update Complete !!"
+                        }
+                      else {
+                        echo "Unable to download updates. Check your internet connection.
+                              Or Try again later."
+                      }
+                      fi
+                   }
+                   else {
+                      echo " Maybe Later -_- "
+                    }
+                   fi
+                  }
             fi
+            rm ~/Version
             }
+        else
+          {
+            echo  "Unable to check update. Check your internet connection.
+                  Or Try again later."
+          }
         fi
-    rm ~/Version
-    }
 
     # Parameter Checking Function
 
