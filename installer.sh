@@ -4,11 +4,12 @@
 #     Searchit                                       #
 #     Terminal Based Search Customizer               #
 #                                                    #
-#     Author:     xSomoy                             #
-#     Twitter:    www.twitter.com/xSomoy             #
-#                                                    #
 #     Facebook:   www.facebook.com/SearchitApp       #
 #     License:    GNU General Public License v3.0    #
+#                                                    #
+#     Author:     xSomoy                             #
+#     Twitter:    www.twitter.com/xSomoy             #
+#     Github:     www.github.com/xSomoy              #
 #                                                    #
 #     Copyright © 2019 Mushphyqur Rahman Tanveer     #
 #                                                    #
@@ -2168,7 +2169,7 @@ CONFIGEND
 
     function update(){
         cd ~
-        wget https://raw.githubusercontent.com/xCommunicado/Searchit/master/Version
+        wget https://raw.githubusercontent.com/xSomoy/Searchit/master/Version
         AvailableVersion=\$(cat Version)
         if [ "\$AvailableVersion" == "\$version" ]
         then {
