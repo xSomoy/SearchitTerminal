@@ -24,12 +24,15 @@ function createSearchit() {
     #!/usr/bin/env bash
     ######################################################
     #                                                    #
-    #     Searchit                                        #
+    #     Searchit                                       #
     #     Terminal Based Search Customizer               #
     #                                                    #
-    #     Author:     xCommunicado                       #
-    #     Twitter:    www.twitter.com/xCommunicado       #
+    #     Facebook:   www.facebook.com/SearchitApp       #
     #     License:    GNU General Public License v3.0    #
+    #                                                    #
+    #     Author:     xSomoy                             #
+    #     Twitter:    www.twitter.com/xSomoy             #
+    #     Github:     www.github.com/xSomoy              #
     #                                                    #
     #     Copyright © 2019 Mushphyqur Rahman Tanveer     #
     #                                                    #
@@ -2133,7 +2136,7 @@ CONFIGEND
         if [ -f /usr/bin/searchit ] && [ -f /usr/bin/googleit ] && [ -f /usr/bin/duckit ] && [ -f ~/.searchit/searchit.cfg ] && [ -f ~/.searchit/Release-Note ];
         then {
             echo "Uninstalation Failed"
-            echo "Report Problem : https://github.com/xCommunicado/Searchit/issues "
+            echo "Report Problem : https://github.com/xSomoy/Searchit/issues "
         }
         else {
             echo "
@@ -2143,8 +2146,8 @@ CONFIGEND
             You Can Report Any Issue On Github
             Or Directly Contact Me Via Twitter
 
-            Github:  https://github.com/xCommunicado/Searchit
-            Twitter: https://twitter.com/xCommunicado
+            Github:  https://github.com/xSomoy/Searchit
+            Twitter: https://twitter.com/xSomoy
             "
             }
         fi
@@ -2157,9 +2160,10 @@ CONFIGEND
                Searchit
                Terminal Based Search Customizer
 
-               Author:  xCommunicado
-               Twitter: https://twitter.com/xCommunicado
-               Github:  https://github.com/xCommunicado/Searchit
+               Author:  xSomoy
+               Twitter: https://twitter.com/xSomoy
+               Facebook:   Https://facebook.com/SearchitApp
+               Github:  https://github.com/xSomoy/Searchit
                License: GNU General Public License v3.0
 
         "
@@ -2183,7 +2187,7 @@ CONFIGEND
             then {
                 sudo rm /usr/bin/searchit /usr/bin/googleit /usr/bin/duckit
                 sudo rm -r ~/.searchit
-                wget https://github.com/xCommunicado/Searchit/archive/master.zip
+                wget https://github.com/xSomoy/Searchit/archive/master.zip
                 unzip master.zip
                 cd Searchit-master
                 ./installer.sh
@@ -2391,13 +2395,14 @@ function installCheck() {
             Report Any Issue On Github Or Directly Contact Me Via Twitter.
             Or You Can Just Let Me Know If You Liked It. That Also Helps A lot.
             Thank You. :D
-                Github:     https://github.com/xCommunicado
-                Twitter:    https://twitter.com/xCommunicado
+                Facebook:   Https://facebook.com/SearchitApp
+                Github:     https://github.com/xSomoy
+                Twitter:    https://twitter.com/xSomoy
             "
     }
     else {
         echo "Instalation Failed"
-        echo "Report Problem : https://github.com/xCommunicado/Searchit/issues "
+        echo "Report Problem : https://github.com/xSomoy/Searchit/issues "
         }
     fi
 }
