@@ -15,7 +15,7 @@
 #                                                    #
 ######################################################
 
-version=2.0.5
+version=2.1.5
 
 #   Creating Searchit Command
 
@@ -2146,8 +2146,9 @@ CONFIGEND
             You Can Report Any Issue On Github
             Or Directly Contact Me Via Twitter
 
-            Github:  https://github.com/xSomoy/Searchit
-            Twitter: https://twitter.com/xSomoy
+            Github:   https://github.com/xSomoy/Searchit
+            Twitter:  https://twitter.com/xSomoy
+            Facebook: https://facebook.com/SearchitApp
             "
             }
         fi
