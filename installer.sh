@@ -2160,11 +2160,11 @@ CONFIGEND
                Searchit
                Terminal Based Search Customizer
 
-               Author:  xSomoy
-               Twitter: https://twitter.com/xSomoy
-               Facebook:   Https://facebook.com/SearchitApp
-               Github:  https://github.com/xSomoy/Searchit
-               License: GNU General Public License v3.0
+               Author:    xSomoy
+               Twitter:   www.twitter.com/xSomoy
+               Facebook:  www.facebook.com/SearchitApp
+               Github:    www.github.com/xSomoy/Searchit
+               License:   GNU General Public License v3.0
 
         "
     }
@@ -2181,8 +2181,7 @@ CONFIGEND
             then {
                   echo "You Are Up-To-Date"
                   }
-            else
-                  {
+            else {
                    echo "Version \$AvailableVersion Is Available. Do You Want To Update?"
                    read decision;
                    if [ "\$decision" == "Y" ] || [ "\$decision" == "y" ]
@@ -2199,14 +2198,13 @@ CONFIGEND
                           rm -r ~/Searchit-master
                           echo "Update Complete !!"
                         }
-                      else {
-                        echo "Unable to download updates. Check your internet connection.
-                              Or Try again later."
+                     else {
+                        echo "ERROR: Unable to download updates. Check your internet connection. Or Tty again later"
                       }
-                      fi
+                     fi
                    }
                    else {
-                      echo " Maybe Later -_- "
+                      echo " Maybe Later. -_- "
                     }
                    fi
                   }
@@ -2215,10 +2213,11 @@ CONFIGEND
             }
         else
           {
-            echo  "Unable to check update. Check your internet connection.
-                  Or Try again later."
+            echo "ERROR: Unable to check update. Check your internet connection.Or Try again later
+                  "
           }
         fi
+      }
 
     # Parameter Checking Function
 
