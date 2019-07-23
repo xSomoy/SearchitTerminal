@@ -1,0 +1,40 @@
+# Yahoo Search Function
+
+function yahoo() {
+    dbCheck
+    query=${tmpquery//\ /+}
+    if [ "$opParam" == '-images' ]  || [ "$opParam" == '-img' ]
+        then {
+          query=${query/-img+}
+          query=${query/-images+}
+          option="images/search?q="
+        }
+    elif [ "$opParam" == '-videos' ] || [ "$opParam" == '-vid' ]
+        then {
+          query=${query/-vid+}
+          query=${query/-videos+}
+          option="/search/videos?q="
+    }
+    elif [ "$opParam" == '-news' ] || [ "$opParam" == '-nws' ]
+        then {
+          query=${query/-nws+}
+          query=${query/-news+}
+          option="news/search?q="
+    }
+  elif [ "$opParam" == '-help' ] || [ "$opParam" == '-h' ] || [ "$opParam" == '-?' ]
+      then {
+        echo " Yahoo Search Filters:
+                For Images     -image       -img
+                For Videos     -Videos      -vid
+                For News       -news        -nws
+        "
+        exit
+  }
+    else {
+          option="search?q="
+    }
+  fi
+    query=${query/-yah+}
+    query=${query/-yahoo+}
+    $browser search.yahoo.com/$option$query
+}
