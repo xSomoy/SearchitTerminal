@@ -15,7 +15,7 @@
 #                                                    #
 ######################################################
 
-version=2.1.5
+version=2.2.5
 
 function dataLoad() {
 
@@ -61,7 +61,7 @@ function dataLoad() {
     github=$(cat searchModules/searchSites/github.dat)
     gitlab=$(cat searchModules/searchSites/gitlab.dat)
     linkedin=$(cat searchModules/searchSites/linkedin.dat)
-    pinterest=$(cat searchModules/searchSites/pinterest.dat)
+    pinterest=$(cat searchModules/searchSites/pinterest.dat)Module Design
     quora=$(cat searchModules/searchSites/quora.dat)
     reddit=$(cat searchModules/searchSites/reddit.dat)
     stackoverflow=$(cat searchModules/searchSites/stackoverflow.dat)

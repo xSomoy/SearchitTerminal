@@ -4,7 +4,7 @@ Terminal Based Search Customizer
 [What?](#what-is-Searchit) - [Why?](#why-we-need-Searchit) -
 [Install](#how-to-install-Searchit) - [Report And Feedback](#report-and-feedback) - [Contact](#contact)
 ### What Is Searchit?
-Searchit is a software what allows you to make customized internet searches from your terminal.Currently Searchit provides support for 9 browsers and 24 websites.
+Searchit is a software what allows you to make customized internet searches from your terminal.Currently Searchit provides support for 9 browsers and 23 websites.
 
 ### Why We Need Searchit?
 ![Searchit](https://i.ibb.co/CwYVshJ/gifout.gif"Searchit")
