@@ -1,4 +1,4 @@
-#   Bing Search Function
+# Bing Search Function
 
 function bing() {
     dbCheck

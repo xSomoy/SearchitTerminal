@@ -1,4 +1,4 @@
-#   Reddit Search Function
+# Reddit Search Function
 
 function reddit() {
     dbCheck

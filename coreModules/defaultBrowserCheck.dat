@@ -1,4 +1,4 @@
-#   Default Browser Check
+# Default Browser Check
 
 function dbCheck() {
     tmpBrowser=$(cat ~/.searchit/searchit.cfg | grep "Browser")

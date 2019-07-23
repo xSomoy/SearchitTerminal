@@ -1,4 +1,4 @@
-#   LinkedIn Search Function
+# LinkedIn Search Function
 
 function linkedin() {
     dbCheck

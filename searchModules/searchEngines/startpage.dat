@@ -1,4 +1,4 @@
-#   Startpage Search Function
+# Startpage Search Function
 
 function startpage() {
     dbCheck

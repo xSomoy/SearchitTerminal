@@ -1,4 +1,3 @@
-#!/usr/bin/env bash
 opParam="$1"
 tmpQuery="$@"
 tmpBrowser=$(cat ~/.searchit/searchit.cfg | grep "Browser")

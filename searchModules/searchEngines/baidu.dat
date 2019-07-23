@@ -1,4 +1,4 @@
-#   Baidu Search Function
+# Baidu Search Function
 
 function baidu() {
     dbCheck

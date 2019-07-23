@@ -1,4 +1,4 @@
-#   Shodan Search Function
+# Shodan Search Function
 
 function shodan() {
     dbCheck

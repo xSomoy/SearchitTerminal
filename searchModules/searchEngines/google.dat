@@ -1,4 +1,4 @@
-#   Google Search Fucntion
+# Google Search Fucntion
 
 function google() {
     dbCheck

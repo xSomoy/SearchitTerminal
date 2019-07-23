@@ -1,4 +1,4 @@
-#   Youtube Search Function
+# Youtube Search Function
 
 function youtube() {
     dbCheck

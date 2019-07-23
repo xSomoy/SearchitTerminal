@@ -76,12 +76,17 @@ function dataLoad() {
 
 function createSearchit() {
     touch searchit
-# /core
+
+# Core Modules Need To Execute In Right Order.
+# Do Not Change Their Order.
+#
+#               [ /coreModules ]
+#
 # Intro.dat
 # write version
-#globalVariable.dat
-#defaultBrowserCheck.dat
-#defaultSearch.dat
+# globalVariable.dat
+# defaultBrowserCheck.dat
+# defaultSearch.dat
 
     echo "$intro" >> searchit   t
     echo "version=$version" >> searchit
@@ -90,7 +95,11 @@ function createSearchit() {
     echo "$defaultSearch" >> searchit
 
 
-# /modules/searchEngines
+# Search Engies Modules Are Sorted Alphanumerically
+# No Specific Order Necessary For Working Properly
+#
+#         [ /searchModules/searchEngines ]
+#
 
     echo "$baidu" >> searchit
     echo "$bing" >> searchit
@@ -103,7 +112,11 @@ function createSearchit() {
     echo "$yandex" >> searchit
 
 
-# /modules/searchSites
+# Search Site Modules Are Sorted Alphanumerically
+# No Specific Order Necessary For Working Properly
+#
+#         [ /searchModules/searchEngines ]
+#
 
     echo "$amazon" >> searchit
     echo "$ebay" >> searchit
@@ -121,17 +134,21 @@ function createSearchit() {
     echo "$youtube" >> searchit
 
 
-# /core
-#help.dat
-#browserSelect.dat
-#searchengineSelect.dat
-#config.dat
-#uninstall.dat
-#uninstallCheck.dat
-#about.dat
-#update.dat
-#parameterCheck.dat
-#init.dat
+# Core Modules Need To Execute In Right Order.
+# Do Not Change Their Order.
+#
+#               [ /coreModules ]
+#
+# help.dat
+# browserSelect.dat
+# searchengineSelect.dat
+# config.dat
+# uninstall.dat
+# uninstallCheck.dat
+# about.dat
+# update.dat
+# parameterCheck.dat
+# init.dat
 
     echo "$help" >> searchit
     echo "$browserSelect" >> searchit
@@ -145,7 +162,7 @@ function createSearchit() {
     echo "$init" >> searchit
 
 }
-#   Installer Function
+# Installer Function
 
 function installer() {
     cd /usr/bin
@@ -155,7 +172,7 @@ function installer() {
     chmod 755 duckit googleit searchit
 }
 
-#   Searchit Folder And Files Genrator
+# Searchit Folder And Files Genrator
 
 function dataGen() {
         mkdir ~/.searchit/
@@ -174,7 +191,7 @@ Default Search Engine: DuckDuckGo
 CONFIGEND
     }
 
-#   Double Check Install
+# Double Check Install
 
 function installCheck() {
     if [ -f /usr/bin/searchit ] && [ -f /usr/bin/googleit ] && [ -f /usr/bin/duckit ] && [ -f ~/.searchit/searchit.cfg ] && [ -f ~/.searchit/Release-Note ];
@@ -198,12 +215,13 @@ function installCheck() {
     fi
 }
 
-#   Creating Command File For DuckDuckGo
+# Creating Command File For DuckDuckGo
 
 function createDuckit() {
     touch duckit
 
-#/coreModules/duckit.dat
+# /coreModules/duckit.dat
+    echo "$intro"  >> duckit
     echo "$duckit" >> duckit
 }
 
@@ -212,11 +230,12 @@ function createDuckit() {
 function createGoogleit() {
       touch googleit
 
-#/coreModules/googleit.dat
+# /coreModules/googleit.dat
+      echo "$intro"  >> duckit
       echo "$googleit" >>googleit
 }
 
-#   Checking Root Permission & Intializing
+# Checking Root Permission & Intializing
 
 function checkPermission() {
     var0=$(whoami)
@@ -237,8 +256,8 @@ function checkPermission() {
     fi
 }
 
-#   Calling dataLoad Fucntion For Loading Essential Data
+# Calling dataLoad Fucntion For Loading Essential Data
 
   dataLoad
 
-#   The End
+# The End

@@ -1,4 +1,4 @@
-#   Wikipedia Search Function
+# Wikipedia Search Function
 
 function wikipedia() {
     dbCheck

@@ -1,4 +1,4 @@
-#   Facebook Search Function
+# Facebook Search Function
 
 function facebook() {
     dbCheck

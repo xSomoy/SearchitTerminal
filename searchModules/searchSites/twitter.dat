@@ -1,4 +1,4 @@
-#   Twitter Search Function
+# Twitter Search Function
 
 function twitter() {
     dbCheck

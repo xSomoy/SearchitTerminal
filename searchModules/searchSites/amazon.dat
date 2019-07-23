@@ -1,4 +1,4 @@
-#   Amazon Search Function
+# Amazon Search Function
 
 function amazon() {
     dbCheck

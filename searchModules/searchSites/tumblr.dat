@@ -1,4 +1,4 @@
-#   Tumblr Search Function
+# Tumblr Search Function
 
 function tumblr() {
     dbCheck

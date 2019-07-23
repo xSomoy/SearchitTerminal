@@ -1,4 +1,4 @@
-#   Ebay Search Function
+# Ebay Search Function
 
 function ebay() {
     dbCheck

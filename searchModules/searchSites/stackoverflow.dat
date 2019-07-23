@@ -1,4 +1,4 @@
-#   Stack Overflow Search Function
+# Stack Overflow Search Function
 
 function stackoverflow() {
     dbCheck

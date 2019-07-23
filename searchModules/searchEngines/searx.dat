@@ -1,4 +1,4 @@
-#   Searx Search Function
+# Searx Search Function
 
 function searx() {
     dbCheck

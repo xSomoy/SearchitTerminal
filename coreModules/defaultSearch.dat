@@ -1,4 +1,4 @@
-#   Default Search Function
+# Default Search Function
 
 function defaultSearch() {
     dbCheck

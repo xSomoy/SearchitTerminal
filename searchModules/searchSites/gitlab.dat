@@ -1,4 +1,4 @@
-#   Gitlab Search Fucntion
+# Gitlab Search Fucntion
 
 function gitlab() {
     dbCheck

@@ -1,4 +1,4 @@
-#   Yahoo Search Function
+# Yahoo Search Function
 
 function yahoo() {
     dbCheck

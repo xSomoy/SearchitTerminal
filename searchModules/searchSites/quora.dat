@@ -1,4 +1,4 @@
-#   Quora Search Function
+# Quora Search Function
 
 function quora() {
     dbCheck

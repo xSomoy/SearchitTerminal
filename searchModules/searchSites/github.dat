@@ -1,4 +1,4 @@
-#   Github Search Function
+# Github Search Function
 
 function github() {
     dbCheck
