@@ -21,65 +21,107 @@ function dataLoad() {
 
 #  loading Core DAT Files
 
-  about=$(cat core/about.dat)
-  browserSelect=$(cat core/browserSelect.dat)
-  config=$(cat core/config.dat)
-  defaultBrowserCheck=$(cat core/defaultBrowserCheck.dat)
-  defaultSearch=$(cat core/defaultSearch.dat)
-  defaultSearchEngineCheck=$(cat core/defaultSearchEngineCheck.dat)
-  duckit=$(cat core/duckit.dat)
-  globalVariable=$(cat core/globalVariable.dat)
-  googleit=$(cat core/googleit.dat)
-  help=$(cat core/help.dat)
-  init=$(cat core/init.dat)
-  intro=$(cat core/intro.dat)
-  parameterCheck=$(cat core/parameterCheck.dat)
-  searchengineSelect=$(cat core/searchengineSelect.dat)
-  uninstall=$(cat core/uninstall.dat)
-  uninstallCheck=$(cat core/uninstallCheck.dat)
-  update=$(cat core/update.dat)
+    about=$(cat coreModules/about.dat)
+    browserSelect=$(cat coreModules/browserSelect.dat)
+    config=$(cat coreModules/config.dat)
+    defaultBrowserCheck=$(cat coreModules/defaultBrowserCheck.dat)
+    defaultSearch=$(cat coreModules/defaultSearch.dat)
+    defaultSearchEngineCheck=$(cat coreModules/defaultSearchEngineCheck.dat)
+    duckit=$(cat coreModules/duckit.dat)
+    globalVariable=$(cat coreModules/globalVariable.dat)
+    googleit=$(cat coreModules/googleit.dat)
+    help=$(cat coreModules/help.dat)
+    init=$(cat coreModules/init.dat)
+    intro=$(cat coreModules/intro.dat)
+    parameterCheck=$(cat coreModules/parameterCheck.dat)
+    searchengineSelect=$(cat coreModules/searchengineSelect.dat)
+    uninstall=$(cat coreModules/uninstall.dat)
+    uninstallCheck=$(cat coreModules/uninstallCheck.dat)
+    update=$(cat coreModules/update.dat)
+
 
 # Loading Search Engine DAT Files
-}
-# /core
 
+    baidu=$(cat searchModules/searchEngines/baidu.dat)
+    bing=$(cat searchModules/searchEngines/bing.dat)
+    duckduckgo=$(cat searchModules/searchEngines/duckduckgo.dat)
+    google=$(cat searchModules/searchEngines/google.dat)
+    searx=$(cat searchModules/searchEngines/searx.dat)
+    shodan=$(cat searchModules/searchEngines/shodan.dat)
+    startpage=$(cat searchModules/searchEngines/startpage.dat)
+    yahoo=$(cat searchModules/searchEngines/yahoo.dat)
+    yandex=$(cat searchModules/searchEngines/yandex.dat)
+
+
+# Loading Search Site DAT Files
+
+    amazon=$(cat searchModules/searchSites/amazon.dat)
+    ebay=$(cat searchModules/searchSites/ebay.dat)
+    facebook=$(cat searchModules/searchSites/facebook.dat)
+    github=$(cat searchModules/searchSites/github.dat)
+    gitlab=$(cat searchModules/searchSites/gitlab.dat)
+    linkedin=$(cat searchModules/searchSites/linkedin.dat)
+    pinterest=$(cat searchModules/searchSites/pinterest.dat)
+    quora=$(cat searchModules/searchSites/quora.dat)
+    reddit=$(cat searchModules/searchSites/reddit.dat)
+    stackoverflow=$(cat searchModules/searchSites/stackoverflow.dat)
+    tumblr=$(cat searchModules/searchSites/tumblr.dat)
+    twitter=$(cat searchModules/searchSites/twitter.dat)
+    wikipedia=$(cat searchModules/searchSites/wikipedia.dat)
+    youtube=$(cat searchModules/searchSites/youtube.dat)
+
+        checkPermission
+
+}
+
+function createSearchit() {
+    touch searchit
+# /core
 # Intro.dat
-    version=$version
+# write version
 #globalVariable.dat
 #defaultBrowserCheck.dat
 #defaultSearch.dat
 
+    echo "$intro" >> searchit   t
+    echo "version=$version" >> searchit
+    echo "$globalVariable" >> searchit
+    echo "$defaultBrowserCheck" >> searchit
+    echo "$defaultSearch" >> searchit
+
+
 # /modules/searchEngines
 
-#duckduckgo.dat
-#google.dat
-#yahoo.dat
-#yandex.dat
-#bing.dat
-#searx.dat
-#baidu.dat
-#shodan.dat
-#startpage.dat
+    echo "$baidu" >> searchit
+    echo "$bing" >> searchit
+    echo "$duckduckgo" >> searchit
+    echo "$google" >> searchit
+    echo "$searx" >> searchit
+    echo "$shodan" >> searchit
+    echo "$startpage" >> searchit
+    echo "$yahoo" >> searchit
+    echo "$yandex" >> searchit
+
 
 # /modules/searchSites
 
-#facebook.dat
-#twitter.dat
-#reddit.dat
-#linkedin.dat
-#youtube.dat
-#pinterest.dat
-#tumblr.dat
-#quora.dat
-#wikipedia.dat
-#stackoverflow.dat
-#amazon.dat
-#ebay.dat
-#github.dat
-#gitlab.dat
+    echo "$amazon" >> searchit
+    echo "$ebay" >> searchit
+    echo "$facebook" >> searchit
+    echo "$github" >> searchit
+    echo "$gitlab" >> searchit
+    echo "$linkedin" >> searchit
+    echo "$pinterest" >> searchit
+    echo "$quora" >> searchit
+    echo "$reddit" >> searchit
+    echo "$stackoverflow" >> searchit
+    echo "$tumblr" >> searchit
+    echo "$twitter" >> searchit
+    echo "$wikipedia" >> searchit
+    echo "$youtube" >> searchit
+
 
 # /core
-
 #help.dat
 #browserSelect.dat
 #searchengineSelect.dat
@@ -91,7 +133,18 @@ function dataLoad() {
 #parameterCheck.dat
 #init.dat
 
+    echo "$help" >> searchit
+    echo "$browserSelect" >> searchit
+    echo "$searchengineSelect" >> searchit
+    echo "$config" >> searchit
+    echo "$uninstall" >> searchit
+    echo "$uninstallCheck" >> searchit
+    echo "$about" >> searchit
+    echo "$update" >> searchit
+    echo "$parameterCheck" >> searchit
+    echo "$init" >> searchit
 
+}
 #   Installer Function
 
 function installer() {
@@ -148,20 +201,21 @@ function installCheck() {
 #   Creating Command File For DuckDuckGo
 
 function createDuckit() {
-        cat  >> duckit <<DUCKITEND
-# /core/duckit.dat
+    touch duckit
 
-DUCKITEND
+#/coreModules/duckit.dat
+    echo "$duckit" >> duckit
 }
 
 #   Creating Command File For Google
 
 function createGoogleit() {
+      touch googleit
 
-#/core/googleit.dat
-touch googleit
-
+#/coreModules/googleit.dat
+      echo "$googleit" >>googleit
 }
+
 #   Checking Root Permission & Intializing
 
 function checkPermission() {
@@ -183,8 +237,8 @@ function checkPermission() {
     fi
 }
 
-#   Calling checkPermission Function For Intializing
+#   Calling dataLoad Fucntion For Loading Essential Data
 
-checkPermission
+  dataLoad
 
 #   The End
