@@ -3,20 +3,22 @@
     function uninstallCheck() {
         if [ -f /usr/bin/searchit ] && [ -f /usr/bin/googleit ] && [ -f /usr/bin/duckit ] && [ -f ~/.searchit/searchit.cfg ] && [ -f ~/.searchit/Release-Note ];
         then {
-            echo "Uninstalation Failed"
-            echo "Report Problem : https://github.com/xSomoy/Searchit/issues "
+            echo "Uninstallation Failed"
+            echo "Report Problem : https://github.com/SearchitOfficial/SearchitTerminal/issues "
         }
         else {
             echo "
             Uninstallation Complete!! :(
 
             Sorry To See You Go. You Can Help Me To Improve Searchit.
-            You Can Report Any Issue On Github
-            Or Directly Contact Me Via Twitter
+            You Can Report Any Issue On Github.
+            Or Directly Contact Me Via Twitters
 
-            Github:   https://github.com/xSomoy/Searchit
+            Github:   https://github.com/SearchitOfficial/SearchitTerminal/issues
+            Facebook: https://facebook.com/SearchitOfficial
+            Email:    mailtoSearchit@gmail.com
             Twitter:  https://twitter.com/xSomoy
-            Facebook: https://facebook.com/SearchitApp
+
             "
             }
         fi
