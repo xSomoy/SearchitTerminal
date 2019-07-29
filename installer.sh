@@ -4,12 +4,13 @@
 #     Searchit                                       #
 #     Terminal Based Search Customizer               #
 #                                                    #
-#     Facebook:   www.facebook.com/SearchitApp       #
+#     Facebook:   www.facebook.com/SearchitOfficial  #
+#     Github:     www.github.com/SearchitOfficial    #
+#     Email:      mailtoSearchit@gmail.com           #
 #     License:    GNU General Public License v3.0    #
 #                                                    #
-#     Author:     xSomoy                             #
+#     Author:     Somoy                              #
 #     Twitter:    www.twitter.com/xSomoy             #
-#     Github:     www.github.com/xSomoy              #
 #                                                    #
 #     Copyright © 2019 Mushphyqur Rahman Tanveer     #
 #                                                    #
@@ -203,14 +204,14 @@ function installCheck() {
             Report Any Issue On Github Or Directly Contact Me Via Twitter.
             Or You Can Just Let Me Know If You Liked It. That Also Helps A lot.
             Thank You. :D
-                Facebook:   Https://facebook.com/SearchitApp
-                Github:     https://github.com/xSomoy
+                Facebook:   Https://facebook.com/SearchitOfficial
+                Github:     https://github.com/SearchitOfficial
                 Twitter:    https://twitter.com/xSomoy
             "
     }
     else {
         echo "Instalation Failed"
-        echo "Report Problem : https://github.com/xSomoy/Searchit/issues "
+        echo "Report Problem : https://github.com/searchitofficial/SearchitTerminal/issues"
         }
     fi
 }
