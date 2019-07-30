@@ -4,7 +4,7 @@ Terminal Based Search Customizer
 [What?](#what-is-Searchit) - [Why?](#why-we-need-Searchit) -
 [Install](#how-to-install-Searchit) - [Report And Feedback](#report-and-feedback) - [Contact](#contact)
 ### What Is Searchit?
-Searchit is a software what allows you to make customized internet searches from your terminal.Currently Searchit provides support for 9 browsers and 23 websites.
+Searchit is a software what allows you to make customized internet searches from your terminal. Currently Searchit provides support for 9 browsers and 23 websites.
 
 ### Why We Need Searchit?
 ![Searchit](https://i.ibb.co/CwYVshJ/gifout.gif"Searchit")
@@ -65,13 +65,13 @@ There are 4 small steps to follow:
 
 ### Report And Feedback
 
-For report any issue visit Searchit's [github repository](https://github.com/xCommunicado/Searchit). Please read [Contributing Guide Line](https://github.com/xCommunicado/Searchit/blob/maintain/CONTRIBUTING.md) , It will guide you to submit a report or issue properly.
+For report any issue visit Searchit's on [github](https://github.com/SearchitOfficial/SearchitTerminal). Please read [Contributing Guide Line](https://github.com/searchitofficial/SearchitTerminal/blob/master/CONTRIBUTING.md) , It will guide you to submit a report or issue properly.
 
 
 ### Contact
 
 For personal and business purpose you can contact me directly.
 
-[Twitter](https://twitter.com/xSomoy) - [Github](https://github.com/xSomoy) - [Faceboook](https://www.facebook.com/SearchitApp) - Email: xCommunicado@protonmail.com
+[Twitter](https://twitter.com/xSomoy) - [Github](https://github.com/SearchitOfficial) - [Faceboook](https://www.facebook.com/SearchitOfficial) - Email: mailtoSearchit@gmail.com
 
 ## Thank You !!
