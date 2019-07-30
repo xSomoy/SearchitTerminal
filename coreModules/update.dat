@@ -2,7 +2,7 @@
 
 function update(){
     cd ~
-    wget https://raw.githubusercontent.com/xSomoy/Searchit/master/Version
+    wget https://raw.githubusercontent.com/searchitofficial/SearchitTerminal/master/Version
     if [ -f ~/Version ]
     then {
         AvailableVersion=$(cat Version)
@@ -15,7 +15,7 @@ function update(){
                read decision;
                if [ "$decision" == "Y" ] || [ "$decision" == "y" ]
                then {
-                 wget https://github.com/xSomoy/Searchit/archive/master.zip
+                 wget https://github.com/searchitofficial/archive/master.zip
                  if [ -f ~/master.zip ]
                  then {
                       sudo rm /usr/bin/searchit /usr/bin/googleit /usr/bin/duckit
@@ -42,7 +42,7 @@ function update(){
         }
     else
       {
-        echo "ERROR: Unable to check update. Check your internet connection.Or Try again later
+        echo "ERROR: Unable to check update. Check your internet connection. Or Try again later
               "
       }
     fi

@@ -42,7 +42,7 @@ You can provide new ideas and suggestions for future update.
 Your ideas and suggestions are always valuable to the community. And via contributing you became a member of this community too.
 
 * ** Suggest new web sites.** As you know Searchit brings support for many web sites. A lot of the web sites have search features and many of them are pretty useful. If you think that a web site should be included, then let me know. I will review the website and probably will include supports for the site in our next update. Just make sure two things:
- * The website is **Not An Adult Website**
+ * The website is **Not An Adult Only Website**
  * General/Group of People use the website often.
 
 
@@ -65,4 +65,4 @@ As you already know I'm the only one behind the whole thing and I am a regular t
 
 Last but not least thanks a lot again for doing your part. Even if you are unable to do any of this contribution that's ok. Even if you just use this software I will consider my self successful. Which is very helpful for my mental health. Thank you again.
 
-                                    - xCommunicado (Author)
+                                    - Somoy (Author)

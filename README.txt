@@ -68,18 +68,19 @@ Now you know why you need Searchit.
 
 Report And Feedback ------------------------------------------------------------------------------------------
 
-For report any issue visit Searchit's github repository (https://github.com/xCommunicado/Searchit).
-Please read the contributing guide line (https://github.com/xCommunicado/Searchit/blob/maintain/CONTRIBUTING.md),
+For report any issue visit Searchit's github repository (https://github.com/SearchitOfficial/SearchitTerminal).
+Please read the contributing guide line (https://github.com/searchitofficial/SearchitTerminal/blob/master/CONTRIBUTING.md),
 It will guide you to submit a report or issue properly.
 
 
 Contact ------------------------------------------------------------------------------------------------------
 
 For personal and business purpose you can contact me directly.
+
 Twitter:  https://www.twitter.com/xSomoy
-Facebook: https://www.facebook.com/SearchitApp
-Github:   https://www.github.com/xSomoy
-Email:    xCommunicado@protonmail.com
+Facebook: https://www.facebook.com/SearchitOfficial
+Github:   https://www.github.com/SearchitOfficial
+Email:    mailtoSearchit@gmail.com
 
 
 Thank You !!
