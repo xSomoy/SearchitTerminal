@@ -15,7 +15,7 @@ function update(){
                read decision;
                if [ "$decision" == "Y" ] || [ "$decision" == "y" ]
                then {
-                 wget https://github.com/searchitofficial/SearchitTerminalarchive/master.zip
+                 wget https://github.com/searchitofficial/SearchitTerminal/archive/master.zip
                  if [ -f ~/master.zip ]
                  then {
                       sudo rm /usr/bin/searchit /usr/bin/googleit /usr/bin/duckit
