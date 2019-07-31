@@ -62,7 +62,7 @@ function dataLoad() {
     github=$(cat searchModules/searchSites/github.dat)
     gitlab=$(cat searchModules/searchSites/gitlab.dat)
     linkedin=$(cat searchModules/searchSites/linkedin.dat)
-    pinterest=$(cat searchModules/searchSites/pinterest.dat)Module Design
+    pinterest=$(cat searchModules/searchSites/pinterest.dat)
     quora=$(cat searchModules/searchSites/quora.dat)
     reddit=$(cat searchModules/searchSites/reddit.dat)
     stackoverflow=$(cat searchModules/searchSites/stackoverflow.dat)
@@ -232,7 +232,7 @@ function createGoogleit() {
       touch googleit
 
 # /coreModules/googleit.dat
-      echo "$intro"  >> duckit
+      echo "$intro"  >> googleit
       echo "$googleit" >>googleit
 }
 
