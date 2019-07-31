@@ -16,7 +16,7 @@
 #                                                    #
 ######################################################
 
-$version=2.2.6
+version=2.2.6
 
 function dataLoad() {
 
@@ -62,7 +62,7 @@ function dataLoad() {
     github=$(cat searchModules/searchSites/github.dat)
     gitlab=$(cat searchModules/searchSites/gitlab.dat)
     linkedin=$(cat searchModules/searchSites/linkedin.dat)
-    pinterest=$(cat searchModules/searchSites/pinterest.dat)Module Design
+    pinterest=$(cat searchModules/searchSites/pinterest.dat)
     quora=$(cat searchModules/searchSites/quora.dat)
     reddit=$(cat searchModules/searchSites/reddit.dat)
     stackoverflow=$(cat searchModules/searchSites/stackoverflow.dat)
@@ -93,6 +93,7 @@ function createSearchit() {
     echo "version=$version" >> searchit
     echo "$globalVariable" >> searchit
     echo "$defaultBrowserCheck" >> searchit
+    echo "$defaultSearchEngineCheck" >> searchit
     echo "$defaultSearch" >> searchit
 
 
@@ -232,7 +233,7 @@ function createGoogleit() {
       touch googleit
 
 # /coreModules/googleit.dat
-      echo "$intro"  >> duckit
+      echo "$intro"  >> googleit
       echo "$googleit" >>googleit
 }
 
