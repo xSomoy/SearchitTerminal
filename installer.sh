@@ -16,7 +16,7 @@
 #                                                    #
 ######################################################
 
-$version=2.2.6
+version=2.2.6
 
 function dataLoad() {
 
@@ -93,6 +93,7 @@ function createSearchit() {
     echo "version=$version" >> searchit
     echo "$globalVariable" >> searchit
     echo "$defaultBrowserCheck" >> searchit
+    echo "$defaultSearchEngineCheck" >> searchit
     echo "$defaultSearch" >> searchit
 
 
