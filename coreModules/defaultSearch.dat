@@ -3,6 +3,6 @@
 function defaultSearch() {
     dbCheck
     deCheck
-    query=\${tmpquery//\ /+}
+    query=${tmpquery//\ /+}
     $browser $SEngine$query
 }
