@@ -134,6 +134,10 @@
                 then {
                     gitlab
                 }
+             elif [ "$parameter" == '-qwant' ] || [ "$parameter" == '-qwnt' ]
+                then {
+                    qwant
+                }
             else {
                 defaultSearch
             }
