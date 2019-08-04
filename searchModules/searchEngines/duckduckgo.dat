@@ -1,4 +1,4 @@
-# DuckDuckGo Search Fucntion
+# DuckDuckGo Search Function
 
     function duckduckgo() {
         dbCheck
