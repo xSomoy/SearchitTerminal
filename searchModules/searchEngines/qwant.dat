@@ -102,7 +102,7 @@ function qwant() {
           query=${query/-qwnt+}
           query=${query/-qwant+}
           $browser www.qwant.com/causes/en-gb/association?q=$query
-          exit"
+          exit
     }
     elif [ "$opParam" == '-help' ] || [ "$opParam" == '-h' ] || [ "$opParam" == '-?' ]
           then {

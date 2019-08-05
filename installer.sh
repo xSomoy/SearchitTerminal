@@ -183,7 +183,7 @@ function dataGen() {
         mkdir ~/.searchit/
         chmod 777 ~/.searchit/
         cp Release-Note ~/.searchit/
-        cp README.txt ~/.searchit/
+        cp README ~/.searchit/
         cd ~/.searchit
         cat  >> searchit.cfg <<CONFIGEND
 Searchit Configuration File.
@@ -208,7 +208,7 @@ function installCheck() {
             Report Any Issue On Github Or Directly Contact Me Via Twitter.
             Or You Can Just Let Me Know If You Liked It. That Also Helps A lot.
             Thank You. :D
-                Facebook:   Https://facebook.com/SearchitOfficial
+                Facebook:   https://facebook.com/SearchitOfficial
                 Github:     https://github.com/SearchitOfficial
                 Twitter:    https://twitter.com/xSomoy
             "
