@@ -18,24 +18,28 @@ function qwant() {
         then {
           query=${query/-vid+}
           query=${query/-videos+}
-          option="&iax=videos&ia=videos"
+          option="videos"
     }
-    elif [ "$opParam" == '-news' ] || [ "$opParam" == '-nws' ]
+    elif [ "$opParam" == '-social' ] || [ "$opParam" == '-scl' ]
         then {
-          query=${query/-nws+}
-          query=${query/-news+}
-          option="&iar=news&ia=news"
+          query=${query/-scl+}
+          query=${query/-social+}
+          option="social"
     }
-    elif [ "$opParam" == '-meanings' ] || [ "$opParam" == '-mns' ]         then {
-          query=${query/-mns+}
-          query=${query/-meanings+}
-          option="&ia=meanings"
+    elif [ "$opParam" == '-shopping' ] || [ "$opParam" == '-spg' ]
+       then {
+          query=${query/-spg+}
+          query=${query/-shopping+}
+          option="shopping"
     }
-    elif [ "$opParam" == '-answer' ] || [ "$opParam" == '-ans' ]
+    elif [ "$opParam" == '-maps' ] || [ "$opParam" == '-map' ]
         then {
-          query=${query/-ans+}
-          query=${query/-answer+}
-          option="&ia=answer"
+          query=${query/-map+}
+          query=${query/-maps+}
+          query=${query/-qwnt+}
+          query=${query/-qwant+}
+          $browser www.qwant.com/maps/?q=$query
+          exit
     }
     elif [ "$opParam" == '-nutrition' ] || [ "$opParam" == '-ntr' ]
           then {
@@ -80,7 +84,7 @@ function qwant() {
                     For Images           -image            -img
                     For Videos           -video            -vid
                     For Social           -social           -scl
-                    For Shopping         -shopping         -spn
+                    For Shopping         -shopping         -spg
                     For Maps             -maps             -map
                     For Music            -music            -msc
                     For Albums           -album            -abm
@@ -93,7 +97,7 @@ function qwant() {
             exit
       }
     else {
-          option=""
+          option="web"
         }
     fi
   query=${query/-qwnt+}
