@@ -2,35 +2,35 @@
 function qwant() {
     dbCheck
     query=${tmpquery//\ /+}
-    if [ "\$opParam" == '-news' ] || [ "\$opParam" == '-nws' ]
+    if [ "$opParam" == '-news' ] || [ "$opParam" == '-nws' ]
             then {
               query=${query/-nws+}
               query=${query/-news+}
-              option="news"
+              option="&t=news"
         }
-    elif [ "\$opParam" == '-image' ] || [ "\$opParam" == '-img' ]
+    elif [ "$opParam" == '-image' ] || [ "$opParam" == '-img' ]
             then {
               query=${query/-img+}
               query=${query/-image+}
-              option="images"
+              option="&t=images"
       }
     elif [ "$opParam" == '-videos' ] || [ "$opParam" == '-vid' ]
         then {
           query=${query/-vid+}
           query=${query/-videos+}
-          option="videos"
+          option="&t=videos"
     }
     elif [ "$opParam" == '-social' ] || [ "$opParam" == '-scl' ]
         then {
           query=${query/-scl+}
           query=${query/-social+}
-          option="social"
+          option="&t=social"
     }
     elif [ "$opParam" == '-shopping' ] || [ "$opParam" == '-spg' ]
        then {
           query=${query/-spg+}
           query=${query/-shopping+}
-          option="shopping"
+          option="&t=shopping"
     }
     elif [ "$opParam" == '-maps' ] || [ "$opParam" == '-map' ]
         then {
@@ -56,7 +56,8 @@ function qwant() {
             query=${query/-album+}
             query=${query/-qwnt+}
             query=${query/-qwant+}
-            $browser www.qwant.com/music/search?q=$query&t=Albums
+            option="&t=albums"
+            $browser www.qwant.com/music/search?q=$query$option
             exit
     }
     elif [ "$opParam" == '-artist' ] || [ "$opParam" == '-art' ]
@@ -65,7 +66,8 @@ function qwant() {
           query=${query/-artis+}
           query=${query/-qwnt+}
           query=${query/-qwant+}
-          $browser www.qwant.com/music/search?q=$query&t=artist
+          option="&t=artist"
+          $browser www.qwant.com/music/search?q=$query$option
           exit
     }
     elif [ "$opParam" == '-song' ] || [ "$opParam" == '-sng' ]
@@ -74,7 +76,8 @@ function qwant() {
           query=${query/-song+}
           query=${query/-qwnt+}
           query=${query/-qwant+}
-          $browser www.qwant.com/music/search?q=$query&t=songs
+          option="&t=songs"
+          $browser www.qwant.com/music/search?q=$query$option
           exit
     }
     elif [ "$opParam" == '-cause' ] || [ "$opParam" == '-cas' ]
@@ -129,5 +132,5 @@ function qwant() {
     fi
   query=${query/-qwnt+}
   query=${query/-qwant+}
-  $browser www.qwant.com/?q=$query&t=$option
+  $browser www.qwant.com/?q=$query$option
 }
