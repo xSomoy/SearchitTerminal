@@ -48,6 +48,7 @@ function dataLoad() {
     bing=$(cat searchModules/searchEngines/bing.dat)
     duckduckgo=$(cat searchModules/searchEngines/duckduckgo.dat)
     google=$(cat searchModules/searchEngines/google.dat)
+    qwant=$(cat searchModules/searchEngines/qwant.dat)
     searx=$(cat searchModules/searchEngines/searx.dat)
     shodan=$(cat searchModules/searchEngines/shodan.dat)
     startpage=$(cat searchModules/searchEngines/startpage.dat)
@@ -108,6 +109,7 @@ function createSearchit() {
     echo "$bing" >> searchit
     echo "$duckduckgo" >> searchit
     echo "$google" >> searchit
+    echo "$qwant" >> searchit
     echo "$searx" >> searchit
     echo "$shodan" >> searchit
     echo "$startpage" >> searchit
