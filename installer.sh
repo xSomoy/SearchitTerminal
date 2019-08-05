@@ -48,6 +48,7 @@ function dataLoad() {
     bing=$(cat searchModules/searchEngines/bing.dat)
     duckduckgo=$(cat searchModules/searchEngines/duckduckgo.dat)
     google=$(cat searchModules/searchEngines/google.dat)
+    qwant=$(cat searchModules/searchEngines/qwant.dat)
     searx=$(cat searchModules/searchEngines/searx.dat)
     shodan=$(cat searchModules/searchEngines/shodan.dat)
     startpage=$(cat searchModules/searchEngines/startpage.dat)
@@ -108,6 +109,7 @@ function createSearchit() {
     echo "$bing" >> searchit
     echo "$duckduckgo" >> searchit
     echo "$google" >> searchit
+    echo "$qwant" >> searchit
     echo "$searx" >> searchit
     echo "$shodan" >> searchit
     echo "$startpage" >> searchit
@@ -181,7 +183,7 @@ function dataGen() {
         mkdir ~/.searchit/
         chmod 777 ~/.searchit/
         cp Release-Note ~/.searchit/
-        cp README.txt ~/.searchit/
+        cp README ~/.searchit/
         cd ~/.searchit
         cat  >> searchit.cfg <<CONFIGEND
 Searchit Configuration File.
@@ -206,7 +208,7 @@ function installCheck() {
             Report Any Issue On Github Or Directly Contact Me Via Twitter.
             Or You Can Just Let Me Know If You Liked It. That Also Helps A lot.
             Thank You. :D
-                Facebook:   Https://facebook.com/SearchitOfficial
+                Facebook:   https://facebook.com/SearchitOfficial
                 Github:     https://github.com/SearchitOfficial
                 Twitter:    https://twitter.com/xSomoy
             "
