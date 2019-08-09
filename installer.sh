@@ -2,8 +2,9 @@
 ######################################################
 #                                                    #
 #     Searchit                                       #
-#     Terminal Based Search Customizer               #
+#     Search The Hell Out Of Internet..              #
 #                                                    #
+#     Twitter:    www.twitter.com/Tweet2Searchit     #
 #     Facebook:   www.facebook.com/SearchitOfficial  #
 #     Github:     www.github.com/SearchitOfficial    #
 #     Email:      mailtoSearchit@gmail.com           #
@@ -208,9 +209,10 @@ function installCheck() {
             Report Any Issue On Github Or Directly Contact Me Via Twitter.
             Or You Can Just Let Me Know If You Liked It. That Also Helps A lot.
             Thank You. :D
+                Twitter:    https://twitter.com/Tweet2Searchit
                 Facebook:   https://facebook.com/SearchitOfficial
                 Github:     https://github.com/SearchitOfficial
-                Twitter:    https://twitter.com/xSomoy
+                Email:      mailtoSearchit@gmail.com
             "
     }
     else {
