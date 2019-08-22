@@ -67,7 +67,6 @@ There are 4 small steps to follow:
 
 Searchit is a "Rolling Release" Software. It means Searchit will recive updates as soon as it has new updates or bugfix or any other minor changes.
 Searchit's version system work like this
-
 `v(Major Changes).(Bugfix/NewFeature).(Minor Changes)`
 `Ex: v2.3.1`
 
