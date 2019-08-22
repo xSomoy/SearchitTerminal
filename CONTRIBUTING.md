@@ -9,6 +9,7 @@ The following is a set of guidelines for contributing to Searchit, which are hos
   * [Reporting Bugs](#reporting-bugs)
   * [Providing Suggestion And Ideas](#providing-suggestion-and-ideas)
   * [Developing](#developing)
+  * [Rolling Release](#rolling-release)
   * [Promoting](#promoting)
 
 
@@ -41,14 +42,14 @@ Explain the problem and include additional details to help maintainers reproduce
 You can provide new ideas and suggestions for future update.
 Your ideas and suggestions are always valuable to the community. And via contributing you became a member of this community too.
 
-* ** Suggest new web sites.** As you know Searchit brings support for many web sites. A lot of the web sites have search features and many of them are pretty useful. If you think that a web site should be included, then let me know. I will review the website and probably will include supports for the site in our next update. Just make sure two things:
- * The website is **Not An Adult Only Website**
- * General/Group of People use the website often.
+* **Suggest new web sites.** As you know Searchit brings support for many web sites. A lot of the web sites have search features and many of them are pretty useful. If you think that a web site should be included, then let me know. I will review the website and probably will include supports for the site in our next update. Just make sure two things:
+  * The website is **Not An Adult Only Website**
+  * General/Group of People use the website often.
 
 
-* ** Suggest New Features**. If you think there is a feature I could add in this software feel free to share with us. Maybe your brilliant idea will be the next goal for us.
- * Make sure your idea is related to this software
- * And let us know how your idea/feature can help you and others
+* **Suggest New Features**. If you think there is a feature I could add in this software feel free to share with us. Maybe your brilliant idea will be the next goal for us.
+  * Make sure your idea is related to this software
+  * And let us know how your idea/feature can help you and others
 
 ### Developing
 
@@ -57,6 +58,14 @@ If you understand how this software works, you can contribute as a developer. He
  * Or you can pick a issue and contribute the changes needed to solve the issue.
 
 Either way you are doing a great job and I appreciate that.
+
+### Rolling Release
+
+Searchit is a "Rolling Release" Software. It means Searchit will recive updates as soon as it has new updates or bugfix or any other minor changes.
+Searchit's version system work like this
+`v(Major Changes).(Bugfix/NewFeature).(Minor Changes)` `Ex: v2.3.1`
+
+**Minor Changes** counts as usual. But everything time a **Bugfix/Feature** update comes **Minor Changes** number gets a refresh. Similarly When a **Major Change** comes both **Bugfix/Feature** and **Minor Changes** number gets a refresh.
 
 ### Promoting
 
