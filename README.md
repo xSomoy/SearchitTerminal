@@ -60,8 +60,17 @@ There are 4 small steps to follow:
 ```
 1. Then Just Simply Follow The Process
 
-`Note: For installation process you need to provide Searchit root permission.
+`Note: For instalation Searchit required superuser previlages.
 `
+
+### Rolling Release
+
+Searchit is a "Rolling Release" Software. It means Searchit will recive updates as soon as it has new updates or bugfix or any other minor changes.
+Searchit's version system work like this
+`v(Major Changes).(Bugfix/NewFeature).(Minor Changes)` `Ex: v2.3.1`
+
+**Minor Changes** counts as usual. But everything time a **Bugfix/Feature** update comes **Minor Changes** number gets a refresh. Similarly When a **Major Change** comes both **Bugfix/Feature** and **Minor Changes** number gets a refresh.
+
 
 ### Report And Feedback
 
@@ -72,6 +81,6 @@ For report any issue visit Searchit's on [github](https://github.com/SearchitOff
 
 For personal and business purpose you can contact me directly.
 
-[Twitter](https://twitter.com/xSomoy) - [Github](https://github.com/SearchitOfficial) - [Faceboook](https://www.facebook.com/SearchitOfficial) - Email: mailtoSearchit@gmail.com
+[Twitter](https://twitter.com/xSomoy) - [Github](https://github.com/SearchitOfficial) - [Faceboook](https://www.facebook.com/SearchitOfficial) - [Email](mailto:mailtoSearchit@gmail.com)
 
 ## Thank You !!
