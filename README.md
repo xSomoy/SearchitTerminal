@@ -67,7 +67,8 @@ There are 4 small steps to follow:
 
 Searchit is a "Rolling Release" Software. It means Searchit will recive updates as soon as it has new updates or bugfix or any other minor changes.
 Searchit's version system work like this
-`v(Major Changes).(Bugfix/NewFeature).(Minor Changes)` `Ex: v2.3.1`
+`v(Major Changes).(Bugfix/NewFeature).(Minor Changes)`
+`Ex: v2.3.1`
 
 **Minor Changes** counts as usual. But everything time a **Bugfix/Feature** update comes **Minor Changes** number gets a refresh. Similarly When a **Major Change** comes both **Bugfix/Feature** and **Minor Changes** number gets a refresh.
 
