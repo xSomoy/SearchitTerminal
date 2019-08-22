@@ -63,7 +63,8 @@ Either way you are doing a great job and I appreciate that.
 
 Searchit is a "Rolling Release" Software. It means Searchit will recive updates as soon as it has new updates or bugfix or any other minor changes.
 Searchit's version system work like this
-`v(Major Changes).(Bugfix/NewFeature).(Minor Changes)` `Ex: v2.3.1`
+`v(Major Changes).(Bugfix/NewFeature).(Minor Changes)`
+`Ex: v2.3.1`
 
 **Minor Changes** counts as usual. But everything time a **Bugfix/Feature** update comes **Minor Changes** number gets a refresh. Similarly When a **Major Change** comes both **Bugfix/Feature** and **Minor Changes** number gets a refresvh. And from now all issues and pull request goest to the project board [Heads Will Roll](https://github.com/searchitofficial/SearchitTerminal/projects/3)
 
