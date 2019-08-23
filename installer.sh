@@ -36,7 +36,7 @@ function dataLoad() {
     help=$(cat coreModules/help.dat)
     init=$(cat coreModules/init.dat)
     intro=$(cat coreModules/intro.dat)
-    parameterCheck=$(cat coreModules/parameterCheck.dat)
+    engineCheck=$(cat coreModules/engineCheck.dat)
     searchengineSelect=$(cat coreModules/searchengineSelect.dat)
     uninstall=$(cat coreModules/uninstall.dat)
     uninstallCheck=$(cat coreModules/uninstallCheck.dat)
@@ -50,6 +50,7 @@ function dataLoad() {
     duckduckgo=$(cat searchModules/searchEngines/duckduckgo.dat)
     google=$(cat searchModules/searchEngines/google.dat)
     qwant=$(cat searchModules/searchEngines/qwant.dat)
+    qwantjr=$(cat searchModules/searchEngines/qwantjr.dat)
     searx=$(cat searchModules/searchEngines/searx.dat)
     shodan=$(cat searchModules/searchEngines/shodan.dat)
     startpage=$(cat searchModules/searchEngines/startpage.dat)
@@ -111,6 +112,7 @@ function createSearchit() {
     echo "$duckduckgo" >> searchit
     echo "$google" >> searchit
     echo "$qwant" >> searchit
+    echo "$qwantjr" >> searchit
     echo "$searx" >> searchit
     echo "$shodan" >> searchit
     echo "$startpage" >> searchit
@@ -153,7 +155,7 @@ function createSearchit() {
 # uninstallCheck.dat
 # about.dat
 # update.dat
-# parameterCheck.dat
+# engineCheck.dat
 # init.dat
 
     echo "$help" >> searchit
@@ -164,7 +166,7 @@ function createSearchit() {
     echo "$uninstallCheck" >> searchit
     echo "$about" >> searchit
     echo "$update" >> searchit
-    echo "$parameterCheck" >> searchit
+    echo "$engineCheck" >> searchit
     echo "$init" >> searchit
 
 }
