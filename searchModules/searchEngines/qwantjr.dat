@@ -36,9 +36,9 @@ function qwantjr() {
           $browser www.qwantjunior.com/carnets/?q=$query
           exit
     }
-    elif [ "$opParam" == '-note' ] || [ "$opParam" == '-not' ]
+    elif [ "$opParam" == '-note' ] || [ "$opParam" == '-nte' ]
         then {
-          query=${query/-not+}
+          query=${query/-nte+}
           query=${query/-note+}
           query=${query/-qwntjr+}
           query=${query/-qwantjunior+}
