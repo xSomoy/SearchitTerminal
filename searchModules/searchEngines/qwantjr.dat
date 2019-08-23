@@ -58,7 +58,7 @@ function qwantjr() {
             exit
       }
     else {
-          option="web"
+          option="&t=web"
         }
     fi
   query=${query/-qwntjr+}
