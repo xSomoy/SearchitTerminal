@@ -1,7 +1,7 @@
 
     # Parameter Checking Function
 
-    function paramCheck() {
+    function engineCheck() {
         if [ -z $parameter ];
         then {
             echo "Please Provide A Option Or A Search Query"
@@ -137,6 +137,10 @@
              elif [ "$parameter" == '-qwant' ] || [ "$parameter" == '-qwnt' ]
                 then {
                     qwant
+                }
+             elif [ "$parameter" == '-qwantjunior' ] || [ "$parameter" == '-qwntjr' ]
+                then {
+                    qwantjr
                 }
             else {
                 defaultSearch
