@@ -35,7 +35,7 @@ function yandex() {
       then {
         echo " Yandex Search Filters:
                 For Images     -image       -img
-                For Videos     -video      -vid
+                For Videos     -video       -vid
                 For News       -news        -nws
                 For Maps       -maps        -map
         "
