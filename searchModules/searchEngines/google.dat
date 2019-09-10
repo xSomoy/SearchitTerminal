@@ -3,13 +3,13 @@
 function google() {
     dbCheck
     query=${tmpquery//\ /+}
-    if [ "$opParam" == '-images' ]  || [ "$opParam" == '-img' ]
+    if [ "$opParam" == '-image' ]  || [ "$opParam" == '-img' ]
         then {
           query=${query/-img+}
           query=${query/-images+}
           option="&tbm=isch"
         }
-    elif [ "$opParam" == '-videos' ] || [ "$opParam" == '-vid' ]
+    elif [ "$opParam" == '-video' ] || [ "$opParam" == '-vid' ]
         then {
           query=${query/-vid+}
           query=${query/-videos+}
@@ -46,7 +46,7 @@ function google() {
       then {
         echo " Google Search Filters:
                 For Images     -image       -img
-                For Videos     -Videos      -vid
+                For Videos     -video      -vid
                 For News       -news        -nws
                 For Books      -books       -bks
                 For Finance    -finance     -fnc
