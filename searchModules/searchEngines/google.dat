@@ -6,13 +6,13 @@ function google() {
     if [ "$opParam" == '-image' ]  || [ "$opParam" == '-img' ]
         then {
           query=${query/-img+}
-          query=${query/-images+}
+          query=${query/-image+}
           option="&tbm=isch"
         }
     elif [ "$opParam" == '-video' ] || [ "$opParam" == '-vid' ]
         then {
           query=${query/-vid+}
-          query=${query/-videos+}
+          query=${query/-video+}
           option="&tbm=vid"
     }
     elif [ "$opParam" == '-news' ] || [ "$opParam" == '-nws' ]
