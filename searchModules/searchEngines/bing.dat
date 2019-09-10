@@ -3,16 +3,16 @@
 function bing() {
     dbCheck
     query=${tmpquery//\ /+}
-    if [ "$opParam" == '-images' ]  || [ "$opParam" == '-img' ]
+    if [ "$opParam" == '-image' ]  || [ "$opParam" == '-img' ]
         then {
           query=${query/-img+}
-          query=${query/-images+}
+          query=${query/-image+}
           option="images/search?q="
         }
-    elif [ "$opParam" == '-videos' ] || [ "$opParam" == '-vid' ]
+    elif [ "$opParam" == '-video' ] || [ "$opParam" == '-vid' ]
         then {
           query=${query/-vid+}
-          query=${query/-videos+}
+          query=${query/-video+}
           option="videos/search?q="
     }
     elif [ "$opParam" == '-news' ] || [ "$opParam" == '-nws' ]
@@ -31,7 +31,7 @@ function bing() {
       then {
         echo " Bing Search Filters:
                 For Images     -image       -img
-                For Videos     -Videos      -vid
+                For Videos     -video      -vid
                 For News       -news        -nws
                 For Maps       -maps        -map
         "
