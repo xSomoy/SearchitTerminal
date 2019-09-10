@@ -2,10 +2,10 @@
 
 function update(){
     cd ~
-    wget https://raw.githubusercontent.com/xSomoy/SearchitTerminal/develop/coreModules/version.dat
-    if [ -f ~/Version ]
+    wget https://raw.githubusercontent.com/searchitofficial/SearchitTerminal/master/coreModules/version.dat
+    if [ -f ~/version.dat ]
     then {
-        AvailableVersion=$(cat Version)
+        AvailableVersion=$(cat version.dat)
         if [ "$AvailableVersion" == "$version" ]
         then {
               echo "You Are Up-To-Date"
@@ -38,7 +38,7 @@ function update(){
                fi
               }
         fi
-        rm ~/Version
+        rm ~/version.dat
         }
     else
       {
