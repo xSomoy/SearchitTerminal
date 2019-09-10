@@ -3,13 +3,13 @@
     function duckduckgo() {
         dbCheck
         query=${tmpquery//\ /+}
-        if [ "$opParam" == '-images' ]  || [ "$opParam" == '-img' ]
+        if [ "$opParam" == '-image' ]  || [ "$opParam" == '-img' ]
             then {
               query=${query/-img+}
               query=${query/-images+}
               option="&iax=images&ia=images"
             }
-        elif [ "$opParam" == '-videos' ] || [ "$opParam" == '-vid' ]
+        elif [ "$opParam" == '-video' ] || [ "$opParam" == '-vid' ]
             then {
               query=${query/-vid+}
               query=${query/-videos+}
@@ -49,7 +49,7 @@
           then {
             echo " DuckDuckGo Search Filters:
                     For Images     -image       -img
-                    For Videos     -Videos      -vid
+                    For Videos     -Video      -vid
                     For News       -news        -nws
                     For Meanings   -meanings    -mns
                     For Answer     -answer      -ans
