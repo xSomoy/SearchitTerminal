@@ -6,13 +6,13 @@
         if [ "$opParam" == '-image' ]  || [ "$opParam" == '-img' ]
             then {
               query=${query/-img+}
-              query=${query/-images+}
+              query=${query/-image+}
               option="&iax=images&ia=images"
             }
         elif [ "$opParam" == '-video' ] || [ "$opParam" == '-vid' ]
             then {
               query=${query/-vid+}
-              query=${query/-videos+}
+              query=${query/-video+}
               option="&iax=videos&ia=videos"
         }
         elif [ "$opParam" == '-news' ] || [ "$opParam" == '-nws' ]
