@@ -14,10 +14,10 @@ function qwant() {
               query=${query/-image+}
               option="&t=images"
       }
-    elif [ "$opParam" == '-videos' ] || [ "$opParam" == '-vid' ]
+    elif [ "$opParam" == '-video' ] || [ "$opParam" == '-vid' ]
         then {
           query=${query/-vid+}
-          query=${query/-videos+}
+          query=${query/-video+}
           option="&t=videos"
     }
     elif [ "$opParam" == '-social' ] || [ "$opParam" == '-scl' ]
@@ -63,7 +63,7 @@ function qwant() {
     elif [ "$opParam" == '-artist' ] || [ "$opParam" == '-art' ]
         then {
           query=${query/-art+}
-          query=${query/-artis+}
+          query=${query/-artist+}
           query=${query/-qwnt+}
           query=${query/-qwant+}
           option="&t=artist"
@@ -86,7 +86,7 @@ function qwant() {
           query=${query/-cause+}
           query=${query/-qwnt+}
           query=${query/-qwant+}
-          $browser www.qwant.com/causes/en-gb/causes?q=$query
+          $browser www.qwant.com/causes/en_gb?q=$query
           exit
     }
     elif [ "$opParam" == '-causesoverview' ] || [ "$opParam" == '-cvw' ]
@@ -95,7 +95,7 @@ function qwant() {
           query=${query/-causesoverview+}
           query=${query/-qwnt+}
           query=${query/-qwant+}
-          $browser www.qwant.com/causes/en-gb/?q=$query
+          $browser www.qwant.com/causes/en_gb/?q=$query
           exit
     }
     elif [ "$opParam" == '-association' ] || [ "$opParam" == '-asn' ]
@@ -104,7 +104,7 @@ function qwant() {
           query=${query/-association+}
           query=${query/-qwnt+}
           query=${query/-qwant+}
-          $browser www.qwant.com/causes/en-gb/association?q=$query
+          $browser www.qwant.com/causes/en_gb/associations?q=$query
           exit
     }
     elif [ "$opParam" == '-help' ] || [ "$opParam" == '-h' ] || [ "$opParam" == '-?' ]
@@ -127,7 +127,7 @@ function qwant() {
             exit
       }
     else {
-          option="web"
+          option="&t=web"
         }
     fi
   query=${query/-qwnt+}
