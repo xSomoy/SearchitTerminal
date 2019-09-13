@@ -15,10 +15,10 @@ function qwantjr() {
               query=${query/-image+}
               option="&t=images"
       }
-    elif [ "$opParam" == '-videos' ] || [ "$opParam" == '-vid' ]
+    elif [ "$opParam" == '-video' ] || [ "$opParam" == '-vid' ]
         then {
           query=${query/-vid+}
-          query=${query/-videos+}
+          query=${query/-video+}
           option="&t=videos"
     }
     elif [ "$opParam" == '-education' ] || [ "$opParam" == '-edu' ]
@@ -62,6 +62,6 @@ function qwantjr() {
         }
     fi
   query=${query/-qwntjr+}
-  query=${query/-qwantjuniorr+}
+  query=${query/-qwantjunior+}
   $browser www.qwantjunior.com/?q=$query$option
 }
