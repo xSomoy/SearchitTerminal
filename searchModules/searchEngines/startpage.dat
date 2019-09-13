@@ -29,5 +29,5 @@ function startpage() {
   fi
     query=${query/-spg+}
     query=${query/-startpage+}
-    $browser www.startpage.com/do/search?q=$query&cat=$option
+    $browser www.startpage.com/do/search?q=$query\&cat=$option
 }

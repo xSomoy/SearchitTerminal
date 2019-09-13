@@ -3,22 +3,22 @@
 function baidu() {
     dbCheck
     query=${tmpquery//\ /+}
-    if [ "$opParam" == '-images' ]  || [ "$opParam" == '-img' ]
+    if [ "$opParam" == '-image' ]  || [ "$opParam" == '-img' ]
         then {
           query=${query/-img+}
-          query=${query/-images+}
+          query=${query/-image+}
           query=${query/-bdu+}
           query=${query/-baidu+}
-          $browser image.baidu.com/search/index?tn=baiduimage&word=$query
+          $browser image.baidu.com/search/index?tn=baiduimage\&word=$query
           exit
-        }
-    elif [ "$opParam" == '-videos' ] || [ "$opParam" == '-vid' ]
+       }
+    elif [ "$opParam" == '-video' ] || [ "$opParam" == '-vid' ]
         then {
           query=${query/-vid+}
-          query=${query/-videos+}
+          query=${query/-video+}
           query=${query/-bdu+}
           query=${query/-baidu+}
-          $browser www.baidu.com/sf/vsearch?pd=video&wd=$query
+          $browser www.baidu.com/sf/vsearch?pd=video\&wd=$query
           exit
     }
     elif [ "$opParam" == '-news' ] || [ "$opParam" == '-nws' ]
@@ -27,7 +27,7 @@ function baidu() {
           query=${query/-news+}
           query=${query/-bdu+}
           query=${query/-baidu+}
-          $browser baidu.com/s?rtt=1$word=&query
+          $browser www.baidu.com/s?tn=news\&word=$query
           exit
 
     }
@@ -37,7 +37,7 @@ function baidu() {
             query=${query/-maps+}
             query=${query/-bdu+}
             query=${query/-baidu+}
-            $browser map.baidu.com/search/?querytype=s&wd=$query
+            $browser map.baidu.com/search/?querytype=s\&wd=$query 
             exit
     }
   elif [ "$opParam" == '-academic' ] || [ "$opParam" == '-aca' ]
@@ -71,7 +71,7 @@ function baidu() {
       then {
         echo " Baidu Search Filters:
                 For Images     -image       -img
-                For Videos     -Videos      -vid
+                For Videos     -video       -vid
                 For News       -news        -nws
                 For Maps       -maps        -map
                 For Music      -music       -msc
