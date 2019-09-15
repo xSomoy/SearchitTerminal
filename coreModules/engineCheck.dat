@@ -36,11 +36,11 @@
             elif [ "$parameter" == '--release' ] || [ "$parameter" == '-rn' ]
                 then {
                     clear
-                    cat ~/.searchit/Release-Note
+                    cat ~/.searchit/releaseNote
                 }
             elif [ "$parameter" == '--version' ] || [ "$parameter" == '-v' ]
                 then {
-                    echo "Searchit Version:$version"
+                    echo "Searchit Version: $version"
                 }
             elif [ "$parameter" == '-duckduckgo' ] || [ "$parameter" == '-ddg' ]
                 then {
