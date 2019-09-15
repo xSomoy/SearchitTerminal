@@ -64,5 +64,5 @@ function quora() {
     fi
     query=${query/-qra+}
     query=${query/-quora+}
-    $browser www.quora.com/search?q=$query&type=$option
+    $browser www.quora.com/search?q=$query\&type=$option
 }
