@@ -25,7 +25,7 @@ function yahoo() {
       then {
         echo " Yahoo Search Filters:
                 For Images     -image       -img
-                For Videos     -video      -vid
+                For Videos     -video       -vid
                 For News       -news        -nws
         "
         exit
