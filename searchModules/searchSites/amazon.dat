@@ -211,5 +211,5 @@ function amazon() {
     fi
     query=${query/-amzn+}
     query=${query/-amazon+}
-    $browser www.amazon.com/s/?k=$query&i=$option
+    $browser www.amazon.com/s/?k=$query\&i=$option
 }
