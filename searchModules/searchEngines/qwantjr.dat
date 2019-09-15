@@ -47,7 +47,7 @@ function qwantjr() {
     }
     elif [ "$opParam" == '-help' ] || [ "$opParam" == '-h' ] || [ "$opParam" == '-?' ]
           then {
-            echo "  Qwant Search Filters:
+            echo "  Qwant Junior Search Filters:
                     For News             -news             -nws
                     For Images           -image            -img
                     For Videos           -video            -vid
