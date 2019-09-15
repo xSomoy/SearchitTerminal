@@ -29,8 +29,10 @@ function help() {
                     -spg    -startpage      For Startpage
                     -srx    -searx          For Searx
                     -sdn    -shodan         For Shodan
+                    -qwnt   -qwant          For Qwant
+                    -qwntjr -qwantjunior    For Qwant Jr.
 
-            Social Media & Others
+            Search Sites:
                     -fb     -facebook       For Facebook
                     -ttr    -twitter        For Twitter
                     -rddt   -reddit         For Reddit
@@ -46,12 +48,20 @@ function help() {
                     -gthb   -github         For Github
                     -gtlb   -gitlb          For Gitlab
 
-                                Ex: \"searchit -ddg casino royal\"
+                 Ex: \"searchit -ddg casino royal\"
 
-        Shortcuts For Instant Search
+
+        Shortcuts For Instant Search:
             duckit      For DuckDuckGo
             googleit    For Google
 
-                                Ex: \"duckit thug life\"
+        Ex: \"duckit thug life\"
+
+
+        Search Filters:
+            Use " -h " " -? " or "-help " for individual Search Filters
+            Ex: \"searchit -ddg -h \"
+            Will display Search Filters Availavle For DuckDuckGo.
+            \"duckit\" and \"googleit\" Also Support Search Filters.
     "
 }

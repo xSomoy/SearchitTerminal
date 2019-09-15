@@ -2,8 +2,8 @@
 
 function update(){
     cd ~
-    wget https://raw.githubusercontent.com/xSomoy/SearchitTerminal/master/docs/version
-    if [ -f ~/version ]
+    wget https://raw.githubusercontent.com/searchitofficial/SearchitTerminal/master/docs/version
+    if [ -f ~/version.dat ]
     then {
         AvailableVersion=$(cat version)
         if [ "$AvailableVersion" == "$version" ]
