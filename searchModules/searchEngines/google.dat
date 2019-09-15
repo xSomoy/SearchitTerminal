@@ -46,7 +46,7 @@ function google() {
       then {
         echo " Google Search Filters:
                 For Images     -image       -img
-                For Videos     -video      -vid
+                For Videos     -video       -vid
                 For News       -news        -nws
                 For Books      -books       -bks
                 For Finance    -finance     -fnc
