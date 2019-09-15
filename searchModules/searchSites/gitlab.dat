@@ -43,5 +43,5 @@ function gitlab() {
     fi
     query=${query/-gtlb+}
     query=${query/-gitlab+}
-    $browser www.gitlab.com/search?search=$query&scope=$option
+    $browser www.gitlab.com/search?search=$query\&scope=$option
 }

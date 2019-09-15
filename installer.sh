@@ -185,8 +185,8 @@ function installer() {
 function dataGen() {
         mkdir ~/.searchit/
         chmod 777 ~/.searchit/
-        cp Release-Note ~/.searchit/
-        cp README ~/.searchit/
+        cp docs/releaseNote ~/.searchit/
+        cp docs/README.txt ~/.searchit/
         cd ~/.searchit
         cat  >> searchit.cfg <<CONFIGEND
 Searchit Configuration File.
