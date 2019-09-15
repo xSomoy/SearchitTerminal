@@ -40,7 +40,7 @@
                 }
             elif [ "$parameter" == '--version' ] || [ "$parameter" == '-v' ]
                 then {
-                    echo "Searchit Version:$version"
+                    echo "Searchit Version: $version"
                 }
             elif [ "$parameter" == '-duckduckgo' ] || [ "$parameter" == '-ddg' ]
                 then {
