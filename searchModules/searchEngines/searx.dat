@@ -60,7 +60,7 @@ function searx() {
       then {
         echo " Searx Search Filters:
                 For Images        -image       -img
-                For Videos        -video      -vid
+                For Videos        -video       -vid
                 For News          -news        -nws
                 For Files         -files       -fls
                 For It            -it

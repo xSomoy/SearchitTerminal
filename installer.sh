@@ -259,6 +259,7 @@ function checkPermission() {
             installCheck
         }
     else {
+        sudo chmod +x installer.sh
         sudo ./installer.sh
         var0=root
     }
