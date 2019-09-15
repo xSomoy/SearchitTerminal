@@ -76,7 +76,7 @@ function linkedin() {
             exit
       }
     else {
-          option="search/results/all"
+          option="all"
         }
     fi
     query=${query/-lnkdn+}

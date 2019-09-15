@@ -185,8 +185,8 @@ function installer() {
 function dataGen() {
         mkdir ~/.searchit/
         chmod 777 ~/.searchit/
-        cp Release-Note ~/.searchit/
-        cp README ~/.searchit/
+        cp docs/releaseNote ~/.searchit/
+        cp docs/README.txt ~/.searchit/
         cd ~/.searchit
         cat  >> searchit.cfg <<CONFIGEND
 Searchit Configuration File.
@@ -202,7 +202,7 @@ CONFIGEND
 # Double Check Install
 
 function installCheck() {
-    if [ -f /usr/bin/searchit ] && [ -f /usr/bin/googleit ] && [ -f /usr/bin/duckit ] && [ -f ~/.searchit/searchit.cfg ] && [ -f ~/.searchit/Release-Note ];
+    if [ -f /usr/bin/searchit ] && [ -f /usr/bin/googleit ] && [ -f /usr/bin/duckit ] && [ -f ~/.searchit/searchit.cfg ] && [ -f ~/.searchit/releaseNote ];
     then {
         echo "
             Instalation Complete!!

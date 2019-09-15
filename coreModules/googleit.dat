@@ -44,16 +44,16 @@ else {
 }
 fi
 query=${tmpQuery//\ /+}
-if [ "$opParam" == '-images' ]  || [ "$opParam" == '-img' ]
+if [ "$opParam" == '-image' ]  || [ "$opParam" == '-img' ]
     then {
       query=${query/-img+}
-      query=${query/-images+}
+      query=${query/-image+}
       option="&tbm=isch"
     }
-elif [ "$opParam" == '-videos' ] || [ "$opParam" == '-vid' ]
+elif [ "$opParam" == '-video' ] || [ "$opParam" == '-vid' ]
     then {
       query=${query/-vid+}
-      query=${query/-videos+}
+      query=${query/-video+}
       option="&tbm=vid"
 }
 elif [ "$opParam" == '-news' ] || [ "$opParam" == '-nws' ]
@@ -87,7 +87,7 @@ elif [ "$opParam" == '-help' ] || [ "$opParam" == '-h' ] || [ "$opParam" == '-?'
   then {
     echo " Google Search Filters:
             For Images     -image       -img
-            For Videos     -Videos      -vid
+            For Videos     -video       -vid
             For News       -news        -nws
             For Books      -books       -bks
             For Finance    -finance     -fnc

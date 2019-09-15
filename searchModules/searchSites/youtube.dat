@@ -194,5 +194,5 @@ function youtube() {
 
     query=${query/-ytb+}
     query=${query/-youtube+}
-    $browser www.youtube.com/results?search_query=$query&sp=$option
+    $browser www.youtube.com/results?search_query=$query\&sp=$option
 }

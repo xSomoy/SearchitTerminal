@@ -46,5 +46,5 @@ function stackoverflow() {
     fi
     query=${query/-stkof+}
     query=${query/-stackoverflow+}
-    $browser www.stackoverflow.com/search?q=$query&tab=$option
+    $browser www.stackoverflow.com/search?q=$query\&tab=$option
 }
