@@ -90,7 +90,7 @@ elif [ "$opParam" == '-help' ] || [ "$opParam" == '-h' ] || [ "$opParam" == '-?'
   then {
     echo " DuckDuckGo Search Filters:
             For Images     -image       -img
-            For Videos     -video      -vid
+            For Videos     -video       -vid
             For News       -news        -nws
             For Meanings   -meanings    -mns
             For Answer     -answer      -ans
