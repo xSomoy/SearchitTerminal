@@ -29,5 +29,5 @@ function reddit() {
     fi
     query=${query/-rddt+}
     query=${query/-reddit+}
-    $browser www.reddit.com/search?q=$query&type=$option
+    $browser www.reddit.com/search?q=$query\&type=$option
 }

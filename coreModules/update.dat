@@ -5,10 +5,10 @@ function update(){
     wget https://raw.githubusercontent.com/searchitofficial/SearchitTerminal/master/docs/version
     if [ -f ~/version.dat ]
     then {
-        AvailableVersion=$(cat version.dat)
+        AvailableVersion=$(cat version)
         if [ "$AvailableVersion" == "$version" ]
         then {
-              echo "You Are Up-To-Date"
+              echo "You Are UP-TO-DATE"
               }
         else {
                echo "Version $AvailableVersion Is Available. Do You Want To Update?(Y/y = yes)"

@@ -36,7 +36,7 @@ function help() {
                     -fb     -facebook       For Facebook
                     -ttr    -twitter        For Twitter
                     -rddt   -reddit         For Reddit
-                    -lkndn  -linkedin       For LinkedIn
+                    -lnkdn  -linkedin       For LinkedIn
                     -ytb    -youtube        For Youtube
                     -pntr   -pinterest      For Pinterest
                     -tmblr  -tumblr         For Tumblr

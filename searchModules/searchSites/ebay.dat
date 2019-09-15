@@ -275,5 +275,5 @@ function ebay() {
     fi
     query=${query/-eby+}
     query=${query/-ebay+}
-    $browser www.ebay.com/sch/i.html?_nkw=$query
+    $browser www.ebay.com/sch/i.html?_nkw=$query\&_sacat=$option
 }
