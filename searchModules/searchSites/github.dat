@@ -31,7 +31,7 @@ function github() {
             then {
               query=${query/-pac+}
               query=${query/-package+}
-              option="RegistryPackage"
+              option="RegistryPackages"
       }
     elif [ "$opParam" == '-market' ] || [ "$opParam" == '-mkt' ]
             then {
