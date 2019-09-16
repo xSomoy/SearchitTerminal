@@ -157,13 +157,13 @@ function amazon() {
             then {
               query=${query/-tls+}
               query=${query/-tool+}
-              option="tools-intl-shi"
+              option="tools-intl-ship"
       }
     elif [ "$opParam" == '-toy' ] || [ "$opParam" == '-toys' ]
             then {
               query=${query/-toy+}
               query=${query/-toys+}
-              option="toys-and-games-intl-shi"
+              option="toys-and-games-intl-ship"
       }
     elif [ "$opParam" == '-game' ] || [ "$opParam" == '-gme' ]
             then {
