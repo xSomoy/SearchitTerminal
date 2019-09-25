@@ -126,7 +126,7 @@ function ebay() {
     elif [ "$opParam" == '-home' ] || [ "$opParam" == '-garden' ] || [ "$opParam" == '-hme' ] || [ "$opParam" == '-grd' ]
             then {
               query=${query/-home+}
-              query=${query/-graden+}
+              query=${query/-garden+}
               query=${query/-hme+}
               query=${query/-grd+}
               option="11700"
