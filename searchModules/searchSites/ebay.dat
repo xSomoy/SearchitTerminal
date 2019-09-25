@@ -26,7 +26,7 @@ function ebay() {
               query=${query/-industrial+}
               query=${query/-bsn+}
               query=${query/-ids+}
-              option="1257"
+              option="12576"
       }
     elif [ "$opParam" == '-camera' ] || [ "$opParam" == '-cmr' ] || [ "$opParam" == '-photo' ] || [ "$opParam" == '-pht' ]
             then {
