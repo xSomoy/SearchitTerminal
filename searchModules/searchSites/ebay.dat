@@ -50,7 +50,7 @@ function ebay() {
               query=${query/-money+}
               query=${query/-cin+}
               query=${query/-mny+}
-              option="1111"
+              option="11116"
       }
     elif [ "$opParam" == '-collectibles' ] || [ "$opParam" == '-clt' ]
             then {
