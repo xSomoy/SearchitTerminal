@@ -26,7 +26,7 @@ function ebay() {
               query=${query/-industrial+}
               query=${query/-bsn+}
               query=${query/-ids+}
-              option="1257"
+              option="12576"
       }
     elif [ "$opParam" == '-camera' ] || [ "$opParam" == '-cmr' ] || [ "$opParam" == '-photo' ] || [ "$opParam" == '-pht' ]
             then {
@@ -50,7 +50,7 @@ function ebay() {
               query=${query/-money+}
               query=${query/-cin+}
               query=${query/-mny+}
-              option="1111"
+              option="11116"
       }
     elif [ "$opParam" == '-collectibles' ] || [ "$opParam" == '-clt' ]
             then {
@@ -126,7 +126,7 @@ function ebay() {
     elif [ "$opParam" == '-home' ] || [ "$opParam" == '-garden' ] || [ "$opParam" == '-hme' ] || [ "$opParam" == '-grd' ]
             then {
               query=${query/-home+}
-              query=${query/-graden+}
+              query=${query/-garden+}
               query=${query/-hme+}
               query=${query/-grd+}
               option="11700"
