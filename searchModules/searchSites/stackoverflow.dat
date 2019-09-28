@@ -35,7 +35,7 @@ function stackoverflow() {
             echo "  StackOverflow Search Filters:
                     For Newst          -newest     -new
                     For Active         -active     -act
-                    For Votes          -votes      -vot
+                    For Votes          -vote       -vot
                     For Jobs           -jobs       -job
                  "
             exit
