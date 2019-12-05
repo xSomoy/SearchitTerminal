@@ -31,6 +31,7 @@ function dataLoad() {
     defaultSearch=$(cat coreModules/defaultSearch.dat)
     defaultSearchEngineCheck=$(cat coreModules/defaultSearchEngineCheck.dat)
     duckit=$(cat coreModules/duckit.dat)
+    dogpile=$(cat coreModules/dogpile.dat)
     globalVariable=$(cat coreModules/globalVariable.dat)
     googleit=$(cat coreModules/googleit.dat)
     help=$(cat coreModules/help.dat)
@@ -111,6 +112,7 @@ function createSearchit() {
     echo "$baidu" >> searchit
     echo "$bing" >> searchit
     echo "$duckduckgo" >> searchit
+    echo "$dogpile" >> searchit
     echo "$google" >> searchit
     echo "$ecosia" >> searchit
     echo "$qwant" >> searchit
