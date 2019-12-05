@@ -46,6 +46,10 @@
                 then {
                     duckduckgo
                 }
+            elif [ "$parameter" == '-dogpile' ] || [ "$parameter" == '-dpl' ]
+                then {
+                    dogpile
+                }
             elif [ "$parameter" == '-google' ] || [ "$parameter" == '-ggl' ]
                 then {
                     google
