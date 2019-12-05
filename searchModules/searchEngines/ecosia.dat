@@ -7,19 +7,19 @@ function ecosia() {
         then {
           query=${query/-img+}
           query=${query/-image+}
-          option="images/search?q="
+          option="images?q="
         }
     elif [ "$opParam" == '-video' ] || [ "$opParam" == '-vid' ]
         then {
           query=${query/-vid+}
           query=${query/-video+}
-          option="videos/search?q="
+          option="videos?q="
     }
     elif [ "$opParam" == '-news' ] || [ "$opParam" == '-nws' ]
         then {
           query=${query/-nws+}
           query=${query/-news+}
-          option="news/search?q="
+          option="news?q="
     }
   elif [ "$opParam" == '-help' ] || [ "$opParam" == '-h' ] || [ "$opParam" == '-?' ]
       then {
