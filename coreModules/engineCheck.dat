@@ -150,6 +150,10 @@
                 then {
                     qwantjr
                 }
+            elif [ "$parameter" == '-yippy' ] || [ "$parameter" == '-ypy' ]
+                then {
+                    yippy
+                }
             else {
                 defaultSearch
             }

@@ -33,6 +33,7 @@ function help() {
                     -sdn    -shodan         For Shodan
                     -qwnt   -qwant          For Qwant
                     -qwntjr -qwantjunior    For Qwant Jr.
+                    -ypy    -yippy          For Yippy
 
             Search Sites:
                     -fb     -facebook       For Facebook
