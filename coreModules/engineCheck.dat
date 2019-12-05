@@ -50,6 +50,10 @@
                 then {
                     google
                 }
+            elif [ "$parameter" == '-ecosia' ] || [ "$parameter" == '-eco' ]
+                then {
+                    ecosia
+                }
             elif [ "$parameter" == '-yahoo' ] || [ "$parameter" == '-yah' ]
                 then {
                     yahoo

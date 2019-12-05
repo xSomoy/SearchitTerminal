@@ -22,6 +22,7 @@ function help() {
             Search Engine
                     -ddg    -duckduckgo     For DuckDuckGo
                     -ggl    -google         For Google
+                    -eco    -ecosia         For Ecosia
                     -yah    -Yahoo          For Yahoo
                     -bng    -bing           For Bing
                     -ydx    -yandex         For Yandex
