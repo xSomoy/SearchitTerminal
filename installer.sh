@@ -59,7 +59,7 @@ function dataLoad() {
     yahoo=$(cat searchModules/searchEngines/yahoo.dat)
     yandex=$(cat searchModules/searchEngines/yandex.dat)
     yippy=$(cat searchModules/searchEngines/yippy.dat)
-    yippy=$(cat searchModules/searchEngines/wolphramalpha.dat)
+    yippy=$(cat searchModules/searchEngines/wolfgitramalpha.dat)
 
 
 # Loading Search Site DAT Files
