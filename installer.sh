@@ -59,8 +59,7 @@ function dataLoad() {
     yahoo=$(cat searchModules/searchEngines/yahoo.dat)
     yandex=$(cat searchModules/searchEngines/yandex.dat)
     yippy=$(cat searchModules/searchEngines/yippy.dat)
-    yippy=$(cat searchModules/searchEngines/wolfgitramalpha.dat)
-
+    wolframalpha=$(cat searchModules/searchEngines/wolframalpha.dat)
 
 # Loading Search Site DAT Files
 
@@ -78,6 +77,7 @@ function dataLoad() {
     twitter=$(cat searchModules/searchSites/twitter.dat)
     wikipedia=$(cat searchModules/searchSites/wikipedia.dat)
     youtube=$(cat searchModules/searchSites/youtube.dat)
+    drugs=$(cat searchModules/searchSites/drugs.dat)
 
         checkPermission
 
@@ -126,6 +126,7 @@ function createSearchit() {
     echo "$yandex" >> searchit
     echo "$yippy" >> searchit
     echo "$wolframpalha" >> searchit
+    echo "$drugs" >> searchit
 
 
 # Search Site Modules Are Sorted Alphanumerically
