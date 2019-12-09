@@ -158,6 +158,10 @@
                 then {
                     wolframalpha
                 }
+            elif [ "$parameter" == '-drugs' ] || [ "$parameter" == '-drug' ]
+                then {
+                    drugs
+                }
             else {
                 defaultSearch
             }
