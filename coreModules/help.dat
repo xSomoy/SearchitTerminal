@@ -35,6 +35,7 @@ function help() {
                     -qwntjr -qwantjunior    For Qwant Jr.
                     -ypy    -yippy          For Yippy
                     -wfa    -wolframalpha   For WolframpAlpha
+                    -drug   -drugs          For Drugs
 
             Search Sites:
                     -fb     -facebook       For Facebook
