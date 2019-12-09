@@ -59,6 +59,7 @@ function dataLoad() {
     yahoo=$(cat searchModules/searchEngines/yahoo.dat)
     yandex=$(cat searchModules/searchEngines/yandex.dat)
     yippy=$(cat searchModules/searchEngines/yippy.dat)
+    yippy=$(cat searchModules/searchEngines/wolphramalpha.dat)
 
 
 # Loading Search Site DAT Files
@@ -124,6 +125,7 @@ function createSearchit() {
     echo "$yahoo" >> searchit
     echo "$yandex" >> searchit
     echo "$yippy" >> searchit
+    echo "$wolframpalha" >> searchit
 
 
 # Search Site Modules Are Sorted Alphanumerically
