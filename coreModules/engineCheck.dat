@@ -154,6 +154,10 @@
                 then {
                     yippy
                 }
+            elif [ "$parameter" == '-wolframalpha' ] || [ "$parameter" == '-wfa' ]
+                then {
+                    wolframalpha
+                }
             else {
                 defaultSearch
             }
