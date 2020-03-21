@@ -1,6 +1,7 @@
 #   About Function
 
 function about(){
+    cat ~/.searchit/logo
     echo "
            Searchit
            Terminal Based Search Customizer
