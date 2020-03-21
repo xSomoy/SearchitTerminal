@@ -1,19 +1,19 @@
 #   About Function
 
 function about(){
+    cat ~/.searchit/logo
     echo "
-           `:+syyso/.           Searchit
-      :sddhhhhhys/--:---.
-     .shdysso+++++++++++/       Terminal Based Search Customizer
-    `:oo++++++///////+/-`
-  .:/++++/////////:--.`         Twitter:   www.twitter.com/Tweet2Searchit
-./++++//:/++oms/-.`             Facebook:  www.facebook.com/SearchitOfficial
-://///:--:-.oMMd+.              Github:    www.github.com/SearchitOfficial
- ``````     mMMMMNy-            Email:     mailto:mailtoSearchit@gmail.com
-           :MMMMMMMNh/`         License:   GNU General Public License v3.0
-           hMMMMMMMNdy:  
-          -MMMMdy+-``           Author:    Somoy
-          +y+-`                 Twitter:   www.twitter.com/xSomoy
+           Searchit
+           Terminal Based Search Customizer
+
+           Twitter:   www.twitter.com/Tweet2Searchit
+           Facebook:  www.facebook.com/SearchitOfficial
+           Github:    www.github.com/SearchitOfficial
+           Email:     mailto:mailtoSearchit@gmail.com
+           License:   GNU General Public License v3.0
+
+           Author:    Somoy
+           Twitter:   www.twitter.com/xSomoy
 
     "
 }

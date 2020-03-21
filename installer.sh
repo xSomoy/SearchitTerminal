@@ -196,6 +196,7 @@ function dataGen() {
         chmod 777 ~/.searchit/
         cp docs/releaseNote ~/.searchit/
         cp docs/README.txt ~/.searchit/
+        cp docs/logo ~/.searchit/
         cd ~/.searchit
         cat  >> searchit.cfg <<CONFIGEND
 Searchit Configuration File.
