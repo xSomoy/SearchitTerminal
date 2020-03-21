@@ -7,7 +7,6 @@
             echo "Report Problem : https://github.com/SearchitOfficial/SearchitTerminal/issues "
         }
         else {
-            cat ~/.searchit/logo
             echo "
             Uninstallation Complete!! :(
 
