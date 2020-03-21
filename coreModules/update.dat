@@ -2,7 +2,7 @@
 
 function update(){
     cd ~
-    wget https://raw.githubusercontent.com/searchitofficial/SearchitTerminal/master/docs/version
+    wget https://raw.githubusercontent.com/BlackPearlTech/SearchitTerminal/master/docs/version
     if [ -f ~/version ]
     then {
         AvailableVersion=$(cat version)
@@ -15,7 +15,7 @@ function update(){
                read decision;
                if [ "$decision" == "Y" ] || [ "$decision" == "y" ]
                then {
-                 wget https://github.com/searchitofficial/SearchitTerminal/archive/master.zip
+                 wget https://github.com/BlackPearlTech//SearchitTerminal/archive/master.zip
                  if [ -f ~/master.zip ]
                  then {
                       sudo rm /usr/bin/searchit /usr/bin/googleit /usr/bin/duckit

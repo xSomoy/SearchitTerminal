@@ -214,6 +214,7 @@ CONFIGEND
 function installCheck() {
     if [ -f /usr/bin/searchit ] && [ -f /usr/bin/googleit ] && [ -f /usr/bin/duckit ] && [ -f ~/.searchit/searchit.cfg ] && [ -f ~/.searchit/releaseNote ];
     then {
+        cat ~/.searchit/logo
         echo "
             Instalation Complete!!
 
