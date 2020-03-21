@@ -4,6 +4,7 @@
     function engineCheck() {
         if [ -z $parameter ];
         then {
+            cat ~/.searchit/logo
             echo "Please Provide A Option Or A Search Query"
             echo "Ex: \" searchit --help \" Or \" searchit john wick \""
         }
