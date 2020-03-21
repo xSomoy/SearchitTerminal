@@ -1,21 +1,21 @@
 #!/usr/bin/env bash
-######################################################
-#                                                    #
-#     Searchit                                       #
-#     Search The Hell Out Of Internet..              #
-#                                                    #
-#     Twitter:    www.twitter.com/Tweet2Searchit     #
-#     Facebook:   www.facebook.com/SearchitOfficial  #
-#     Github:     www.github.com/SearchitOfficial    #
-#     Email:      mailtoSearchit@gmail.com           #
-#     License:    GNU General Public License v3.0    #
-#                                                    #
-#     Author:     Somoy                              #
-#     Twitter:    www.twitter.com/xSomoy             #
-#                                                    #
-#     Copyright © 2019 Mushphyqur Rahman Tanveer     #
-#                                                    #
-######################################################
+#############################################################
+#                                                           #
+#     Searchit                                              #
+#     Search The Hell Out Of Internet..                     #
+#                                                           #
+#     Twitter:    www.twitter.com/Tweet2Searchit            #
+#     Facebook:   www.facebook.com/SearchitOfficial         #
+#     Github:     www.github.com/BlackPearlTech             #
+#     Email:      mailtoSearchit@gmail.com                  #
+#     License:    GNU General Public License v3.0           #
+#                                                           #
+#     Author:     Somoy                                     #
+#     Twitter:    www.twitter.com/xSomoy                    #
+#                                                           #
+#     Copyright © 2020 Black Pearl Tech                     #
+#                                                           #
+#############################################################
 
 version=2.8.1
 
@@ -223,14 +223,14 @@ function installCheck() {
             Or You Can Just Let Me Know If You Liked It. That Also Helps A lot.
             Thank You. :D
                 Twitter:    https://twitter.com/Tweet2Searchit
-                Facebook:   https://facebook.com/SearchitOfficial
-                Github:     https://github.com/SearchitOfficial
+                Facebook:   https://facebook.com/BlackPearlTechOfficial
+                Github:     https://github.com/BlackPearlTech
                 Email:      mailtoSearchit@gmail.com
             "
     }
     else {
         echo "Instalation Failed"
-        echo "Report Problem : https://github.com/searchitofficial/SearchitTerminal/issues"
+        echo "Report Problem : https://github.com/BlackPearlTecg/SearchitTerminal/issues"
         }
     fi
 }

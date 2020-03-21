@@ -75,13 +75,16 @@ Searchit's version system work like this
 
 ### Report And Feedback
 
-For report any issue visit Searchit's on [github](https://github.com/SearchitOfficial/SearchitTerminal). Please read [Contributing Guide Line](https://github.com/searchitofficial/SearchitTerminal/blob/master/CONTRIBUTING.md). It will guide you to submit a report or issue properly.
+For report any issue visit Searchit's on [github](https://github.com/BlackPearlTech/SearchitTerminal). Please read [Contributing Guide Line](https://github.com/BlackPearlTech/SearchitTerminal/blob/master/CONTRIBUTING.md). It will guide you to submit a report or issue properly.
 
 
 ### Contact
 
 For personal and business purpose you can contact me directly.
 
-[Twitter](https://twitter.com/xSomoy) - [Github](https://github.com/SearchitOfficial) - [Faceboook](https://www.facebook.com/SearchitOfficial) - [Email](mailto:mailtoSearchit@gmail.com)
+[Twitter](https://twitter.com/xSomoy) - [Github](https://github.com/BlackPearlTech) - [Faceboook](https://www.facebook.com/BlackPearlTechOfficial) - [Email](mailto:mailtoSearchit@gmail.com)
+
+
+## Copyright © 2020 Black Pearl Tech 
 
 ## Thank You !!
