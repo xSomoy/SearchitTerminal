@@ -66,7 +66,7 @@ Searchit's version system work like this
 `v(Major Changes).(Bugfix/NewFeature).(Minor Changes)`
 `Ex: v2.3.1`
 
-**Minor Changes** counts as usual. But everything time a **Bugfix/Feature** update comes **Minor Changes** number gets a refresh. Similarly When a **Major Change** comes both **Bugfix/Feature** and **Minor Changes** number gets a refresvh. And from now all issues and pull request goest to the project board [Heads Will Roll](https://github.com/searchitofficial/SearchitTerminal/projects/3)
+**Minor Changes** counts as usual. But everything time a **Bugfix/Feature** update comes **Minor Changes** number gets a refresh. Similarly When a **Major Change** comes both **Bugfix/Feature** and **Minor Changes** number gets a refresvh. And from now all issues and pull request goest to the project board [Heads Will Roll](https://github.com/searchitofficial/BlackPearlTech/projects/3)
 
 ### Promoting
 
@@ -76,3 +76,5 @@ As you already know I'm the only one behind the whole thing and I am a regular t
 Last but not least thanks a lot again for doing your part. Even if you are unable to do any of this contribution that's ok. Even if you just use this software I will consider my self successful. Which is very helpful for my mental health. Thank you again.
 
                                     - Somoy (Author)
+                                    
+                                    Copyright © 2020 Black Pearl Tech 
