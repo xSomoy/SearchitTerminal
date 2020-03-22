@@ -2,20 +2,26 @@
 
 function update(){
     cd ~
-    wget https://raw.githubusercontent.com/BlackPearlTech/SearchitTerminal/master/docs/version
+    wget -q https://raw.githubusercontent.com/BlackPearlTech/SearchitTerminal/master/docs/version |
+    echo "Checking For Update..."
     if [ -f ~/version ]
     then {
         AvailableVersion=$(cat version)
         if [ "$AvailableVersion" == "$version" ]
         then {
-              echo "You Are UP-TO-DATE"
+              echo "Your Version: $version"
+              echo "Latest Version: $AvailableVersion"
+              echo "You Are UpToDate"
               }
         else {
+               echo "Your Version: $version"
+               echo "AvailableVersion: $AvailableVersion"
                echo "Version $AvailableVersion Is Available. Do You Want To Update?(Y/y = yes)"
                read decision;
                if [ "$decision" == "Y" ] || [ "$decision" == "y" ]
                then {
-                 wget https://github.com/BlackPearlTech//SearchitTerminal/archive/master.zip
+                 wget -q https://github.com/BlackPearlTech//SearchitTerminal/archive/master.zip |
+                 echo "Downloading Latest Version..."
                  if [ -f ~/master.zip ]
                  then {
                       sudo rm /usr/bin/searchit /usr/bin/googleit /usr/bin/duckit

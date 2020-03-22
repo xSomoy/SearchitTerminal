@@ -27,6 +27,7 @@ function dataLoad() {
     about=$(cat coreModules/about.dat)
     browserSelect=$(cat coreModules/browserSelect.dat)
     config=$(cat coreModules/config.dat)
+    connectionTest=$(cat coreModules/connectionTest.dat)
     defaultBrowserCheck=$(cat coreModules/defaultBrowserCheck.dat)
     defaultSearch=$(cat coreModules/defaultSearch.dat)
     defaultSearchEngineCheck=$(cat coreModules/defaultSearchEngineCheck.dat)
@@ -164,6 +165,7 @@ function createSearchit() {
 # uninstallCheck.dat
 # about.dat
 # update.dat
+# connectionTest.dat
 # engineCheck.dat
 # init.dat
 
@@ -175,6 +177,7 @@ function createSearchit() {
     echo "$uninstallCheck" >> searchit
     echo "$about" >> searchit
     echo "$update" >> searchit
+    echo "$connectionTest" >> searchit
     echo "$engineCheck" >> searchit
     echo "$init" >> searchit
 
