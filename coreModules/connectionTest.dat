@@ -1,0 +1,11 @@
+# Testing Connection To Internet
+
+function connectionTest () {
+    wget --spider -q google.com
+    if [ "$?" != 0 ]; then {
+    echo "Error: You Are Not Connected To The Internet!!"
+    exit
+    }
+    fi
+}
+
