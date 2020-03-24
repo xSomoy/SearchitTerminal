@@ -37,7 +37,6 @@ function dataLoad() {
     help=$(cat coreModules/help.dat)
     init=$(cat coreModules/init.dat)
     intro=$(cat coreModules/intro.dat)
-    sysOption=$(cat coreModules/sysOption.dat)
     engineCheck=$(cat coreModules/engineCheck.dat)
     searchengineSelect=$(cat coreModules/searchengineSelect.dat)
     uninstall=$(cat coreModules/uninstall.dat)
@@ -168,7 +167,6 @@ function createSearchit() {
 # update.dat
 # connectionTest.dat
 # engineCheck.dat
-# sysOption.dat
 # init.dat
 
     echo "$help" >> searchit
@@ -181,7 +179,6 @@ function createSearchit() {
     echo "$update" >> searchit
     echo "$connectionTest" >> searchit
     echo "$engineCheck" >> searchit
-    echo "$sysOption" >> searchit
     echo "$init" >> searchit
 
 }
