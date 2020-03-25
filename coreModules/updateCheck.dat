@@ -9,12 +9,14 @@ function updateCheck (){
         if [ "$AvailableVersion" == "$version" ]
         then {
                 echo""
+                rm ~/version
               }
         else {
             echo " Version $AvailableVersion is availavle. Use \"searchit -u\" to update."
+                rm ~/version
             }
         fi
         }
     fi
-    rm ~/version
+
 }

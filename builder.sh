@@ -247,6 +247,7 @@ function createDuckit() {
 
 # /coreModules/duckit.dat
     echo "$intro"  >> duckit
+    echo "$connectionTest" >> duckit
     echo "$duckit" >> duckit
 }
 
@@ -257,6 +258,7 @@ function createGoogleit() {
 
 # /coreModules/googleit.dat
       echo "$intro"  >> googleit
+      echo "$connectionTest" >> googleit
       echo "$googleit" >>googleit
 }
 
