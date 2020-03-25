@@ -68,5 +68,7 @@ function help() {
             Ex: \"searchit -ddg -h \"
             Will display Search Filters Availavle For DuckDuckGo.
             \"duckit\" and \"googleit\" Also Support Search Filters.
+
+        
     "
 }

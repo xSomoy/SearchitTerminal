@@ -42,6 +42,7 @@ function dataLoad() {
     uninstall=$(cat coreModules/uninstall.dat)
     uninstallCheck=$(cat coreModules/uninstallCheck.dat)
     update=$(cat coreModules/update.dat)
+    updateCheck=$(cat coreModules/updateCheck.dat)
 
 
 # Loading Search Engine DAT Files
@@ -95,12 +96,14 @@ function createSearchit() {
 # Intro.dat
 # write version
 # globalVariable.dat
+# updateCheck.dat
 # defaultBrowserCheck.dat
 # defaultSearch.dat
 
     echo "$intro" >> searchit   t
     echo "version=$version" >> searchit
     echo "$globalVariable" >> searchit
+    echo "$updateCheck" >> searchit
     echo "$defaultBrowserCheck" >> searchit
     echo "$defaultSearchEngineCheck" >> searchit
     echo "$defaultSearch" >> searchit
