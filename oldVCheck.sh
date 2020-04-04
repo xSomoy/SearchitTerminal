@@ -4,13 +4,14 @@
 
 echo "Checking If Older Version Of Searchit Exist..."
 sleep 1s
-if [ -f /usr/bin/searchit ] || [ -f /usr/bin/googleit ] || [ -f /usr/bin/duckit ] || [ -d ~/.searchit ]
+if [ -f /usr/bin/searchit ] || [ -f /usr/bin/googleit ] || [ -f /usr/bin/duckit ] || [ -f /usr/share/applications/st.desktop ] || [ -d ~/.searchit ]
     then {
             echo "Older Version Of Searchit Terminal Is Found"
             sleep 1s
             echo "Removing Old Version Files..."
             sleep 1s
             sudo rm /usr/bin/searchit /usr/bin/googleit /usr/bin/duckit
+            sudo rm /usr/share/applications/st.desktop
             sudo rm -r ~/.searchit
             echo "Old Version Of Searchit Terminal Removed"
             sleep 1s

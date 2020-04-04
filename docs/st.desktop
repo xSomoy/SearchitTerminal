@@ -1,0 +1,7 @@
+[Desktop Entry]
+Version=1.0
+Name=Searchit Terminal
+Type=Application
+Exec=searchit
+Terminal=true
+Icon=~/.searchit/st.ico
