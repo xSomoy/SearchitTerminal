@@ -198,11 +198,13 @@ function installer() {
 
 function dataGen() {
         user=$(whoami)
-        sudo cp docs/st.desktop /usr/share/applications/
-        sudo chown $user  /usr/share/applications/st.desktop
+        echo "$user"
+        read
+        sudo cp docs/SearchitTerminal.desktop /usr/share/applications/
+        sudo chown $user  /usr/share/applications/SearchitTerminal.desktop
         mkdir ~/.searchit/
         chmod 777 ~/.searchit/
-        cp docs/st.ico ~/.searchit/
+        cp docs/logo.png ~/.searchit/
         cp docs/releaseNote ~/.searchit/
         cp docs/README.txt ~/.searchit/
         cp docs/logo ~/.searchit/
