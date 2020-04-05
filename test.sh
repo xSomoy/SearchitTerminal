@@ -1,2 +1,0 @@
-read aloha;
-echo "$aloha"
