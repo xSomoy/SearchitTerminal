@@ -2,6 +2,6 @@
 Version=1.0
 Name=Searchit Terminal
 Type=Application
-Exec=searchit
+Exec=/usr/bin/searchit
 Terminal=true
-Icon=~/.searchit/logo.png
+Icon=/home/johndeadman/.searchit/logo.png
