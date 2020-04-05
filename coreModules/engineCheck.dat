@@ -9,6 +9,7 @@
             echo "Ex: \" searchit --help \" Or \" searchit john wick \""
             echo ""
             connectionTest
+            read
         }
         else {
             if [ "$parameter" == '--help' ]  || [ "$parameter" == '-h' ] || [ "$parameter" == '-?' ]
