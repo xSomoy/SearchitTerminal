@@ -2,6 +2,7 @@
 Version=1.0
 Name=Searchit Terminal
 Type=Application
+Category=Internet
 Exec=/usr/bin/searchit
 Terminal=true
-Icon=/home/johndeadman/.searchit/logo.png
+Icon=/usr/share/icons/SearchitTerminal/SearchitTerminal.png
