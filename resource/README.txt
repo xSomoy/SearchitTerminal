@@ -3,7 +3,7 @@ Searchit -----------------------------------------------------------------------
 Terminal Based Search Customizer
 
 Searchit is a software what allows you to make customized internet searches from your terminal.
-Currently Searchit provides support for 9 browsers and 25 websites
+Currently Searchit provides support for 9 browsers and 30 websites
 
 
 Installation Process -------------------------------------------------------------------------------
@@ -91,6 +91,6 @@ Facebook: https://www.facebook.com/SearchitOfficial
 Github:   https://www.github.com/BlackPearlTech
 Email:    mailtoSearchit@gmail.com
 
-Copyright © 2020 Black Pearl Tech 
+Copyright © 2020 Black Pearl Tech
 
 Thank You !!
