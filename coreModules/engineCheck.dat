@@ -11,11 +11,17 @@
             echo ""
             echo "--------------------------------------------------------"
             connectionTest
+            updateCheck
             function searchLoop(){
               echo -e "Search Query >>> \c"
               read query;
               if [ "$query" == "-e" ] || [ "$query" == "-exit" ]
               then {
+                if [ -f ~/.wget-hsts ]
+                then {
+                  rm ~/.wget-hsts
+                }
+               fi
                 exit
               }
               else {

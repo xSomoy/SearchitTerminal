@@ -1,15 +1,14 @@
-# Update Check Function 
+# Update Check Function
 
 function updateCheck (){
     cd ~
-    wget -q https://raw.githubusercontent.com/BlackPearlTech/SearchitTerminal/master/docs/version |
+    wget -q https://raw.githubusercontent.com/BlackPearlTech/SearchitTerminal/master/resource/version |
     if [ -f ~/version ]
     then {
         AvailableVersion=$(cat version)
         if [ "$AvailableVersion" == "$version" ]
         then {
                 echo""
-                rm ~/version
               }
         else {
             echo " Version $AvailableVersion is availavle. Use \"searchit -u\" to update."
@@ -17,6 +16,11 @@ function updateCheck (){
             }
         fi
         }
+    fi
+    if [ -f ~/version ]
+    then {
+       rm ~/version
+    }
     fi
 
 }

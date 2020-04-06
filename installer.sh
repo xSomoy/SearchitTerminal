@@ -80,8 +80,6 @@ function dataLoad() {
     youtube=$(cat searchModules/searchSites/youtube.dat)
     drugs=$(cat searchModules/searchSites/drugs.dat)
 
-        checkPermission
-
 }
 
 function createSearchit() {
@@ -242,6 +240,17 @@ function installCheck() {
         echo "Report Problem : https://github.com/BlackPearlTech/SearchitTerminal/issues"
         }
     fi
+
+    if [ -f ~/.sudo_as_admin_successful ]
+    then {
+       rm ~/.sudo_as_admin_successful
+    }
+    fi
+    if [ -f ~/.wget-hsts ]
+    then {
+       rm ~/.wget-hsts
+    }
+    fi
 }
 
 # Creating Command File For DuckDuckGo
@@ -264,28 +273,6 @@ function createGoogleit() {
       echo "$intro"  >> googleit
       echo "$connectionTest" >> googleit
       echo "$googleit" >>googleit
-}
-
-# Checking Root Permission & Intializing
-
-function checkPermission() {
-    var0=$(whoami)
-    if [  "root" == "$var0"  ]
-        then {
-            dataGen
-            installer
-            echo "Searchit Installation Process..."
-            echo "Select You Default Configuration:"
-            echo ""
-            searchit --config
-            installCheck
-        }
-    else {
-        sudo chmod +x installer.sh
-        sudo ./installer.sh
-        var0=root
-    }
-    fi
 }
 
 #   Uninstalling If Older Version of Searchit Terminal is already installed
@@ -317,9 +304,29 @@ function oldversionCheck() {
           }
       fi
 }
+# Checking Root Permission & Intializing
 
-# Calling oldversionCheck Fucntion To Initiate
+function checkPermission() {
+    var0=$(whoami)
+    if [  "root" == "$var0"  ]
+        then {
+            oldversionCheck
+            dataGen
+            installer
+            echo "Searchit Installation Process..."
+            echo "Select You Default Configuration:"
+            echo ""
+            searchit --config
+            installCheck
+        }
+    else {
+        sudo chmod +x installer.sh
+        sudo ./installer.sh
+        var0=root
+    }
+    fi
+}
 
-  oldversionCheck
+checkPermission
 
 # The End
