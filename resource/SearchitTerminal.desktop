@@ -1,0 +1,8 @@
+[Desktop Entry]
+Version=1.0
+Name=Searchit Terminal
+Type=Application
+Category=Internet
+Exec=/usr/bin/searchit
+Terminal=true
+Icon=/usr/share/icons/SearchitTerminal/SearchitTerminal.png
