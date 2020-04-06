@@ -9,15 +9,21 @@
             echo "Use Directly"
             echo "Ex: \" searchit --help \" Or \" searchit john wick \""
             echo ""
+            echo "--------------------------------------------------------"
             connectionTest
             function searchLoop(){
-              echo -e ">>>\c"
+              echo -e "Search Query >>> \c"
               read query;
-              searchit $query
-
+              if [ "$query" == "-e" ] || [ "$query" == "-exit" ]
+              then {
+                exit
+              }
+              else {
+                searchit $query
+              }
+              fi
               searchLoop
             }
-            rm ~/Version
             searchLoop
         }
         else {
