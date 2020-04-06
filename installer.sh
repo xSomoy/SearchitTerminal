@@ -221,7 +221,7 @@ CONFIGEND
 # Double Check Install
 
 function installCheck() {
-    if [ -f /usr/bin/searchit ] && [ -f /usr/bin/googleit ] && [ -f /usr/bin/duckit ] && [ -f ~/.searchit/searchit.cfg ] && [ -f ~/.searchit/releaseNote ] && [ -f /usr/share/applications/SearchitTerminal.desktop ] && [ -f /usr/share/icons/SearchitTerminal/SearchitTerminal.png ];
+    if [ -f /usr/bin/searchit ] && [ -f /usr/bin/googleit ] && [ -f /usr/bin/duckit ] && [ -f ~/.searchit/searchit.cfg ] && [ -f ~/.searchit/releaseNote ] && [ -f /usr/share/applications/SearchitTerminal.desktop ] && [ -f /usr/share/icons/SearchitTerminal/SearchitTerminal.png ]
     then {
         cat ~/.searchit/logo
         echo "
@@ -281,8 +281,8 @@ function checkPermission() {
             installCheck
         }
     else {
-        sudo chmod +x builder.sh
-        sudo ./builder.sh
+        sudo chmod +x installer.sh
+        sudo ./installer.sh
         var0=root
     }
     fi
@@ -292,7 +292,7 @@ function checkPermission() {
 function oldversionCheck() {
   echo "Checking If Older Version Of Searchit Exist..."
   sleep 1s
-  if [ -f /usr/bin/searchit ] || [ -f /usr/bin/googleit ] || [ -f /usr/bin/duckit ] || [ -f /usr/share/applications/st.desktop ] || [ -d ~/.searchit ] || [-d /usr/share/icons/SearchitTerminal] || [-f /usr/share/applications/SearchitTerminal.desktop];
+  if [ -f /usr/bin/searchit ] || [ -f /usr/bin/googleit ] || [ -f /usr/bin/duckit ] || [ -f /usr/share/applications/st.desktop ] || [ -d ~/.searchit ] || [ -d /usr/share/icons/SearchitTerminal ] || [ -f /usr/share/applications/SearchitTerminal.desktop ]
       then {
               echo "Older Version Of Searchit Terminal Is Found"
               sleep 1s
