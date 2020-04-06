@@ -4,7 +4,7 @@ Terminal Based Search Customizer
 [What?](#what-is-Searchit) - [Why?](#why-we-need-Searchit) -
 [Install](#how-to-install-Searchit) - [Report And Feedback](#report-and-feedback) - [Contact](#contact)
 ### What Is Searchit?
-Searchit is a software what allows you to make customized internet searches from your terminal. Currently Searchit provides support for 9 browsers and 25 websites.
+Searchit is a software what allows you to make customized internet searches from your terminal. Currently Searchit provides support for 9 browsers and 30 websites.
 
 ### Why We Need Searchit?
 ![Searchit](https://i.ibb.co/CwYVshJ/gifout.gif"Searchit")
@@ -60,12 +60,12 @@ There are 4 small steps to follow:
 ```
 1. Then Just Simply Follow The Process
 
-`Note: For instalation Searchit required superuser previlages.
+`Note: For installation Searchit required superuser privileges.
 `
 
 ### Rolling Release
 
-Searchit is a "Rolling Release" Software. It means Searchit will recive updates as soon as it has new updates or bugfix or any other minor changes.
+Searchit is a "Rolling Release" Software. It means Searchit will receive updates as soon as it has new updates or bugfix or any other minor changes.
 Searchit's version system work like this
 `v(Major Changes).(Bugfix/NewFeature).(Minor Changes)`
 `Ex: v2.3.1`
@@ -82,9 +82,9 @@ For report any issue visit Searchit's on [github](https://github.com/BlackPearlT
 
 For personal and business purpose you can contact me directly.
 
-[Twitter](https://twitter.com/xSomoy) - [Github](https://github.com/BlackPearlTech) - [Faceboook](https://www.facebook.com/BlackPearlTechOfficial) - [Email](mailto:mailtoSearchit@gmail.com)
+[Twitter](https://twitter.com/xSomoy) - [Github](https://github.com/BlackPearlTech) - [Faceboook](https://www.facebook.com/SearchitOfficial) - [Email](mailto:mailtoSearchit@gmail.com)
 
 
-## Copyright © 2020 Black Pearl Tech 
+## Copyright © 2020 [Black Peal Tech](https://blackpearltech.github.io/web)
 
 ## Thank You !!
