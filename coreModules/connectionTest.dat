@@ -5,7 +5,17 @@ function connectionTest () {
     if [ "$?" != 0 ]
     then {
     echo "Error: You Are Not Connected To The Internet!!"
+        if [ -f ~/.wget-hsts ]
+        then {
+           rm ~/.wget-hsts
+        }
+        fi
     exit
+    }
+    fi
+    if [ -f ~/.wget-hsts ]
+    then {
+       rm ~/.wget-hsts
     }
     fi
 }

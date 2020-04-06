@@ -2,7 +2,7 @@
 
 function update(){
     cd ~
-    wget -q https://raw.githubusercontent.com/BlackPearlTech/SearchitTerminal/master/docs/version |
+    wget -q https://raw.githubusercontent.com/BlackPearlTech/SearchitTerminal/master/resource/version |
     echo "Checking For Update..."
     if [ -f ~/version ]
     then {
@@ -53,5 +53,10 @@ function update(){
         echo "ERROR: Unable to check update. Check your internet connection. Or Try again later
               "
       }
+    fi
+    if [ -f ~/.wget-hsts ]
+    then {
+       rm ~/.wget-hsts
+    }
     fi
   }
