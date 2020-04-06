@@ -2,13 +2,35 @@
     # Parameter Checking Function
 
     function engineCheck() {
-        if [ -z $parameter ];
+        if [ -z $parameter ]
         then {
             cat ~/.searchit/logo
             echo "Please Provide A Option Or A Search Query"
+            echo "Use Directly"
             echo "Ex: \" searchit --help \" Or \" searchit john wick \""
             echo ""
+            echo "--------------------------------------------------------"
             connectionTest
+            updateCheck
+            function searchLoop(){
+              echo -e "Search Query >>> \c"
+              read query;
+              if [ "$query" == "-e" ] || [ "$query" == "-exit" ]
+              then {
+                if [ -f ~/.wget-hsts ]
+                then {
+                  rm ~/.wget-hsts
+                }
+               fi
+                exit
+              }
+              else {
+                searchit $query
+              }
+              fi
+              searchLoop
+            }
+            searchLoop
         }
         else {
             if [ "$parameter" == '--help' ]  || [ "$parameter" == '-h' ] || [ "$parameter" == '-?' ]

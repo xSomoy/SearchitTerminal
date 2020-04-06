@@ -17,8 +17,7 @@
 #                                                           #
 #############################################################
 
-version=2.8.1
-
+version=$(cat coreModules/version.dat)
 
 function dataLoad() {
 
@@ -42,6 +41,7 @@ function dataLoad() {
     uninstall=$(cat coreModules/uninstall.dat)
     uninstallCheck=$(cat coreModules/uninstallCheck.dat)
     update=$(cat coreModules/update.dat)
+    updateCheck=$(cat coreModules/updateCheck.dat)
 
 
 # Loading Search Engine DAT Files
@@ -80,8 +80,6 @@ function dataLoad() {
     youtube=$(cat searchModules/searchSites/youtube.dat)
     drugs=$(cat searchModules/searchSites/drugs.dat)
 
-        checkPermission
-
 }
 
 function createSearchit() {
@@ -95,12 +93,14 @@ function createSearchit() {
 # Intro.dat
 # write version
 # globalVariable.dat
+# updateCheck.dat
 # defaultBrowserCheck.dat
 # defaultSearch.dat
 
     echo "$intro" >> searchit   t
     echo "version=$version" >> searchit
     echo "$globalVariable" >> searchit
+    echo "$updateCheck" >> searchit
     echo "$defaultBrowserCheck" >> searchit
     echo "$defaultSearchEngineCheck" >> searchit
     echo "$defaultSearch" >> searchit
@@ -195,11 +195,15 @@ function installer() {
 # Searchit Folder And Files Genrator
 
 function dataGen() {
+        sudo cp resource/SearchitTerminal.desktop /usr/share/applications/
+        sudo chmod 777 /usr/share/applications/SearchitTerminal.desktop
+        sudo mkdir /usr/share/icons/SearchitTerminal/
+        cp resource/SearchitTerminal.png /usr/share/icons/SearchitTerminal/
         mkdir ~/.searchit/
         chmod 777 ~/.searchit/
-        cp docs/releaseNote ~/.searchit/
-        cp docs/README.txt ~/.searchit/
-        cp docs/logo ~/.searchit/
+        cp resource/logo ~/.searchit/
+        cp resource/releaseNote ~/.searchit/
+        cp resource/README.txt ~/.searchit/
         cd ~/.searchit
         cat  >> searchit.cfg <<CONFIGEND
 Searchit Configuration File.
@@ -215,7 +219,7 @@ CONFIGEND
 # Double Check Install
 
 function installCheck() {
-    if [ -f /usr/bin/searchit ] && [ -f /usr/bin/googleit ] && [ -f /usr/bin/duckit ] && [ -f ~/.searchit/searchit.cfg ] && [ -f ~/.searchit/releaseNote ];
+    if [ -f /usr/bin/searchit ] && [ -f /usr/bin/googleit ] && [ -f /usr/bin/duckit ] && [ -f ~/.searchit/searchit.cfg ] && [ -f ~/.searchit/releaseNote ] && [ -f /usr/share/applications/SearchitTerminal.desktop ] && [ -f /usr/share/icons/SearchitTerminal/SearchitTerminal.png ]
     then {
         cat ~/.searchit/logo
         echo "
@@ -233,8 +237,19 @@ function installCheck() {
     }
     else {
         echo "Instalation Failed"
-        echo "Report Problem : https://github.com/BlackPearlTecg/SearchitTerminal/issues"
+        echo "Report Problem : https://github.com/BlackPearlTech/SearchitTerminal/issues"
         }
+    fi
+
+    if [ -f ~/.sudo_as_admin_successful ]
+    then {
+       rm ~/.sudo_as_admin_successful
+    }
+    fi
+    if [ -f ~/.wget-hsts ]
+    then {
+       rm ~/.wget-hsts
+    }
     fi
 }
 
@@ -245,6 +260,7 @@ function createDuckit() {
 
 # /coreModules/duckit.dat
     echo "$intro"  >> duckit
+    echo "$connectionTest" >> duckit
     echo "$duckit" >> duckit
 }
 
@@ -255,15 +271,46 @@ function createGoogleit() {
 
 # /coreModules/googleit.dat
       echo "$intro"  >> googleit
+      echo "$connectionTest" >> googleit
       echo "$googleit" >>googleit
 }
 
+#   Uninstalling If Older Version of Searchit Terminal is already installed
+function oldversionCheck() {
+  echo "Checking If Older Version Of Searchit Exist..."
+  sleep 1s
+  if [ -f /usr/bin/searchit ] || [ -f /usr/bin/googleit ] || [ -f /usr/bin/duckit ] || [ -f /usr/share/applications/st.desktop ] || [ -d ~/.searchit ] || [ -d /usr/share/icons/SearchitTerminal ] || [ -f /usr/share/applications/SearchitTerminal.desktop ]
+      then {
+              echo "Older Version Of Searchit Terminal Is Found"
+              sleep 1s
+              echo "Removing Old Version Files..."
+              sleep 1s
+              sudo rm /usr/bin/searchit /usr/bin/googleit /usr/bin/duckit
+              sudo rm /usr/share/applications/SearchitTerminal.desktop
+              sudo rm -r /usr/share/icons/SearchitTerminal
+              sudo rm -r ~/.searchit
+              echo "Old Version Of Searchit Terminal Removed"
+              sleep 1s
+              echo "Installing Newer Version Of Searchit Terminal"
+              sleep 1s
+              dataLoad
+          }
+      else {
+              echo "No Older Version of Searchit Terminal Found"
+              sleep 1s
+              clear
+              echo "Installing Newer Version Of Searchit Terminal"
+                dataLoad
+          }
+      fi
+}
 # Checking Root Permission & Intializing
 
 function checkPermission() {
     var0=$(whoami)
     if [  "root" == "$var0"  ]
         then {
+            oldversionCheck
             dataGen
             installer
             echo "Searchit Installation Process..."
@@ -280,8 +327,6 @@ function checkPermission() {
     fi
 }
 
-# Calling dataLoad Fucntion For Loading Essential Data
-
-  dataLoad
+checkPermission
 
 # The End

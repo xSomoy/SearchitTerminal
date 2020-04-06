@@ -2,10 +2,20 @@
 
 function connectionTest () {
     wget --spider -q google.com
-    if [ "$?" != 0 ]; then {
+    if [ "$?" != 0 ]
+    then {
     echo "Error: You Are Not Connected To The Internet!!"
+        if [ -f ~/.wget-hsts ]
+        then {
+           rm ~/.wget-hsts
+        }
+        fi
     exit
     }
     fi
+    if [ -f ~/.wget-hsts ]
+    then {
+       rm ~/.wget-hsts
+    }
+    fi
 }
-
