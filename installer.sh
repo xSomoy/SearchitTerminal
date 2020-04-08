@@ -18,15 +18,67 @@
 #############################################################
 
 version=$(cat coreModules/version.dat)
+# colorLibrary Start
+
+# Color Library Start
+
+ bold=`echo -en "\e[1m"`
+ underline=`echo -en "\e[4m"`
+ dim=`echo -en "\e[2m"`
+ strickthrough=`echo -en "\e[9m"`
+ blink=`echo -en "\e[5m"`
+ reverse=`echo -en "\e[7m"`
+ hidden=`echo -en "\e[8m"`
+ normal=`echo -en "\e[0m"`
+ black=`echo -en "\e[30m"`
+ red=`echo -en "\e[31m"`
+ green=`echo -en "\e[32m"`
+ orange=`echo -en "\e[33m"`
+ blue=`echo -en "\e[34m"`
+ purple=`echo -en "\e[35m"`
+ aqua=`echo -en "\e[36m"`
+ gray=`echo -en "\e[37m"`
+ darkgray=`echo -en "\e[90m"`
+ lightred=`echo -en "\e[91m"`
+ lightgreen=`echo -en "\e[92m"`
+ lightyellow=`echo -en "\e[93m"`
+ lightblue=`echo -en "\e[94m"`
+ lightpurple=`echo -en "\e[95m"`
+ lightaqua=`echo -en "\e[96m"`
+ white=`echo -en "\e[97m"`
+ default=`echo -en "\e[39m"`
+ BLACK=`echo -en "\e[40m"`
+ RED=`echo -en "\e[41m"`
+ GREEN=`echo -en "\e[42m"`
+ ORANGE=`echo -en "\e[43m"`
+ BLUE=`echo -en "\e[44m"`
+ PURPLE=`echo -en "\e[45m"`
+ AQUA=`echo -en "\e[46m"`
+ GRAY=`echo -en "\e[47m"`
+ DARKGRAY=`echo -en "\e[100m"`
+ LIGHTRED=`echo -en "\e[101m"`
+ LIGHTGREEN=`echo -en "\e[102m"`
+ LIGHTYELLOW=`echo -en "\e[103m"`
+ LIGHTBLUE=`echo -en "\e[104m"`
+ LIGHTPURPLE=`echo -en "\e[105m"`
+ LIGHTAQUA=`echo -en "\e[106m"`
+ WHITE=`echo -en "\e[107m"`
+ DEFAULT=`echo -en "\e[49m"`
+
+# Color Library End
+
+
+# colorLibrary End
 
 function dataLoad() {
 
 #  loading Core DAT Files
-
+    echo "${green}Loading coreModules... ${normal}"
     about=$(cat coreModules/about.dat)
     browserSelect=$(cat coreModules/browserSelect.dat)
     config=$(cat coreModules/config.dat)
     connectionTest=$(cat coreModules/connectionTest.dat)
+    colorLibrary=$(cat coreModules/colorLibrary.dat)
     defaultBrowserCheck=$(cat coreModules/defaultBrowserCheck.dat)
     defaultSearch=$(cat coreModules/defaultSearch.dat)
     defaultSearchEngineCheck=$(cat coreModules/defaultSearchEngineCheck.dat)
@@ -45,7 +97,7 @@ function dataLoad() {
 
 
 # Loading Search Engine DAT Files
-
+    echo "${green}Loading searchModules... ${normal}"
     baidu=$(cat searchModules/searchEngines/baidu.dat)
     bing=$(cat searchModules/searchEngines/bing.dat)
     duckduckgo=$(cat searchModules/searchEngines/duckduckgo.dat)
@@ -96,10 +148,11 @@ function createSearchit() {
 # updateCheck.dat
 # defaultBrowserCheck.dat
 # defaultSearch.dat
-
+    echo "${green}Creating Searchit Terminal Core...${normal}"
     echo "$intro" >> searchit   t
     echo "version=$version" >> searchit
     echo "$globalVariable" >> searchit
+    echo "$colorLibrary" >> searchit
     echo "$updateCheck" >> searchit
     echo "$defaultBrowserCheck" >> searchit
     echo "$defaultSearchEngineCheck" >> searchit
@@ -195,6 +248,7 @@ function installer() {
 # Searchit Folder And Files Genrator
 
 function dataGen() {
+      echo "${green}Generating resource.. ${normal}"
         sudo cp resource/SearchitTerminal.desktop /usr/share/applications/
         sudo chmod 777 /usr/share/applications/SearchitTerminal.desktop
         sudo mkdir /usr/share/icons/SearchitTerminal/
@@ -223,21 +277,21 @@ function installCheck() {
     then {
         cat ~/.searchit/logo
         echo "
-            Instalation Complete!!
+            ${green}${blink}${bold}Instalation Complete!!!${normal}${default}
 
-            If You Like This Software. You Can Help Me To Improve This.
+            ${aqua}If You Like This Software. You Can Help Me To Improve This.
             Report Any Issue On Github Or Directly Contact Me Via Twitter.
             Or You Can Just Let Me Know If You Liked It. That Also Helps A lot.
-            Thank You. :D
+            Thank You. :D ${normal} ${blue}
                 Twitter:    https://twitter.com/Tweet2Searchit
                 Facebook:   https://facebook.com/BlackPearlTechOfficial
                 Github:     https://github.com/BlackPearlTech
-                Email:      mailtoSearchit@gmail.com
+                Email:      mailtoSearchit@gmail.com ${normal}
             "
     }
     else {
-        echo "Instalation Failed"
-        echo "Report Problem : https://github.com/BlackPearlTech/SearchitTerminal/issues"
+        echo "${red}${bold}Instalation Failed"
+        echo "Report Problem : https://github.com/BlackPearlTech/SearchitTerminal/issues${normal}${default}"
         }
     fi
 
@@ -277,11 +331,11 @@ function createGoogleit() {
 
 #   Uninstalling If Older Version of Searchit Terminal is already installed
 function oldversionCheck() {
-  echo "Checking If Older Version Of Searchit Exist..."
+  echo "${blue}Checking If Older Version Of Searchit Exist...${normal}"
   sleep 1s
   if [ -f /usr/bin/searchit ] || [ -f /usr/bin/googleit ] || [ -f /usr/bin/duckit ] || [ -f /usr/share/applications/st.desktop ] || [ -d ~/.searchit ] || [ -d /usr/share/icons/SearchitTerminal ] || [ -f /usr/share/applications/SearchitTerminal.desktop ]
       then {
-              echo "Older Version Of Searchit Terminal Is Found"
+              echo "${orange}Older Version Of Searchit Terminal Is Found"
               sleep 1s
               echo "Removing Old Version Files..."
               sleep 1s
@@ -289,17 +343,17 @@ function oldversionCheck() {
               sudo rm /usr/share/applications/SearchitTerminal.desktop
               sudo rm -r /usr/share/icons/SearchitTerminal
               sudo rm -r ~/.searchit
-              echo "Old Version Of Searchit Terminal Removed"
+              echo "Old Version Of Searchit Terminal Removed${normal}"
               sleep 1s
-              echo "Installing Newer Version Of Searchit Terminal"
+              echo "${green}Installing Newer Version Of Searchit Terminal${normal}"
               sleep 1s
               dataLoad
           }
       else {
-              echo "No Older Version of Searchit Terminal Found"
+              echo "${green}No Older Version of Searchit Terminal Found"
               sleep 1s
               clear
-              echo "Installing Newer Version Of Searchit Terminal"
+              echo "Installing Newer Version Of Searchit Terminal${normal}"
                 dataLoad
           }
       fi
@@ -313,8 +367,9 @@ function checkPermission() {
             oldversionCheck
             dataGen
             installer
-            echo "Searchit Installation Process..."
-            echo "Select You Default Configuration:"
+            echo "${green}Searchit Terminal Configuration Process..."
+            echo "${normal}"
+            echo "${bold}${green}Select Your Default Browser and Search Engine:${normal}${default}"
             echo ""
             searchit --config
             installCheck

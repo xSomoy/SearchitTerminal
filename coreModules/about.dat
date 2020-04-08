@@ -4,18 +4,18 @@
 function about(){
     cat ~/.searchit/logo
     echo "
-           Searchit
-           Terminal Based Search Customizer
-
+           ${green}${bold}Searchit Terminal${normal}
+           ${green}Terminal Based Search Customizer
+           ${aqua}
            Twitter:   www.twitter.com/Tweet2Searchit
            Facebook:  www.facebook.com/SearchitOfficial
            Github:    www.github.com/BlackPearlTech
            Email:     mailto:mailtoSearchit@gmail.com
            License:   GNU General Public License v3.0
-
+           ${normal}
            Author:    Somoy
            Twitter:   www.twitter.com/xSomoy
 
-           Copyright © 2020 Black Pearl Tech 
+           ${bold}${BLACK}${white}Copyright © 2020 Black Pearl Tech${normal}${default}
     "
 }

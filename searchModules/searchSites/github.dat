@@ -59,7 +59,7 @@ function github() {
       }
     elif [ "$opParam" == '-help' ] || [ "$opParam" == '-h' ] || [ "$opParam" == '-?' ]
           then {
-            echo "  Github Search Filters:
+            echo "  ${aqua}${bold}Github Search Filters: ${normal}
                     For Repositories        -repository      -rep
                     For Code                -code            -cde
                     For Commits             -commit          -cmt

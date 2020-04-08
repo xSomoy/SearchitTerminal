@@ -1,7 +1,7 @@
 #   Default Search Engine Specifier
 
 function defaultEngine() {
-    echo "Please Select Your Default Search Engine:"
+    echo "${blue}${bold}Please Select Your Default Search Engine:${normal}"
     echo " 1 - DuckDuckGo"
     echo " 2 - Google"
     echo " 3 - Yahoo"

@@ -33,7 +33,7 @@ function yandex() {
     }
   elif [ "$opParam" == '-help' ] || [ "$opParam" == '-h' ] || [ "$opParam" == '-?' ]
       then {
-        echo " Yandex Search Filters:
+        echo " ${aqua}${bold}Yandex Search Filters: ${normal}
                 For Images     -image       -img
                 For Videos     -video       -vid
                 For News       -news        -nws

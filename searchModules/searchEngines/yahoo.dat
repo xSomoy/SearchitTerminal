@@ -23,7 +23,7 @@ function yahoo() {
     }
   elif [ "$opParam" == '-help' ] || [ "$opParam" == '-h' ] || [ "$opParam" == '-?' ]
       then {
-        echo " Yahoo Search Filters:
+        echo "${aqua}${bold}Yahoo Search Filters: ${normal}
                 For Images     -image       -img
                 For Videos     -video       -vid
                 For News       -news        -nws

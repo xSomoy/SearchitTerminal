@@ -3,23 +3,23 @@
     function uninstallCheck() {
         if [ -f /usr/bin/searchit ] && [ -f /usr/bin/googleit ] && [ -f /usr/bin/duckit ] && [ -f ~/.searchit/searchit.cfg ] && [ -f ~/.searchit/Release-Note ] && [ -f /usr/share/applications/SearchitTerminal.desktop ] && [ -f /usr/share/icons/SearchitTerminal/SearchitTerminal.png ]
         then {
-            echo "Uninstallation Failed"
-            echo "Report Problem : https://github.com/BlackPearlTecg/SearchitTerminal/issues "
+            echo "${red}${bold}Uninstallation Failed"
+            echo "Report Problem : https://github.com/BlackPearlTech/SearchitTerminal/issues ${normal}"
         }
         else {
-            echo "
+            echo "${orange}
             Uninstallation Complete!! :(
 
             Sorry To See You Go. You Can Help Me To Improve Searchit.
             You Can Report Any Issue On Github.
             Or Directly Contact Me Via Twitters
-
+            ${blue}
             Github:   https://github.com/BlackPearlTech/SearchitTerminal/issues
             Facebook: https://facebook.com/SearchitOfficial
             Email:    mailtoSearchit@gmail.com
             Twitter:  https://twitter.com/xSomoy
 
-            Copyright © 2020 Black Pearl Tech
+            ${bold}${WHITE}${black}Copyright © 2020 Black Pearl Tech${normal}
 
             "
             }

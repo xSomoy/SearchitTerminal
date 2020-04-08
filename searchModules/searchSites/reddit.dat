@@ -17,7 +17,7 @@ function reddit() {
       }
     elif [ "$opParam" == '-help' ] || [ "$opParam" == '-h' ] || [ "$opParam" == '-?' ]
           then {
-            echo " Reddit Search Filters:
+            echo " ${aqua}${bold}Reddit Search Filters: ${normal}
                     For Posts                  -post      -pst
                     For Communities and users  -user      -usr
                  "

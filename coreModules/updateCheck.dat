@@ -11,7 +11,7 @@ function updateCheck (){
                 echo""
               }
         else {
-            echo " Version $AvailableVersion is availavle. Use \"searchit -u\" to update."
+            echo "${green}Version $AvailableVersion is availavle. Use ${bold}\"searchit -u\"${normal}${green} to update.${normal}"
                 rm ~/version
             }
         fi

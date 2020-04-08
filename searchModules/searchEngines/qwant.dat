@@ -109,7 +109,7 @@ function qwant() {
     }
     elif [ "$opParam" == '-help' ] || [ "$opParam" == '-h' ] || [ "$opParam" == '-?' ]
           then {
-            echo "  Qwant Search Filters:
+            echo "  ${aqua}${bold}Qwant Search Filters: ${normal}
                     For News             -news             -nws
                     For Images           -image            -img
                     For Videos           -video            -vid
