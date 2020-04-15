@@ -255,7 +255,7 @@ function dataGen() {
         cp resource/SearchitTerminal.png /usr/share/icons/SearchitTerminal/
         mkdir ~/.searchit/
         chmod 777 ~/.searchit/
-        cp resource/logo.sh ~/.searchit/
+        cp resource/logo ~/.searchit/
         cp resource/releaseNote ~/.searchit/
         cp resource/README.txt ~/.searchit/
         cd ~/.searchit
@@ -273,10 +273,10 @@ CONFIGEND
 # Double Check Install
 
 function installCheck() {
-    if [ -f /usr/bin/searchit ] && [ -f /usr/bin/googleit ] && [ -f /usr/bin/duckit ] && [ -f ~/.searchit/searchit.cfg ] && [ -f ~/.searchit/releaseNote ] && [ -f /usr/share/applications/SearchitTerminal.desktop ] && [ -f /usr/share/icons/SearchitTerminal/SearchitTerminal.png ] && [ -f ~/.searchit/logo.sh ]
+    if [ -f /usr/bin/searchit ] && [ -f /usr/bin/googleit ] && [ -f /usr/bin/duckit ] && [ -f ~/.searchit/searchit.cfg ] && [ -f ~/.searchit/releaseNote ] && [ -f /usr/share/applications/SearchitTerminal.desktop ] && [ -f /usr/share/icons/SearchitTerminal/SearchitTerminal.png ] && [ -f ~/.searchit/logo ]
     then {
         cd ~
-        ./.searchit/logo.sh
+        ./.searchit/logo
         echo "
     ${green}${bold}Instalation Complete!!!${normal}${default}
 
@@ -367,7 +367,7 @@ function checkPermission() {
     var0=$(whoami)
     if [  "root" == "$var0"  ]
         then {
-            ./resource/logo.sh
+            ./resource/logo
             oldversionCheck
             dataGen
             installer
