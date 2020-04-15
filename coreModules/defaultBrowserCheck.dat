@@ -41,7 +41,7 @@ function dbCheck() {
             browser=lynx
         }
     else {
-        echo "ERROR: Unable to read configuration file"
+        echo "${orange}${blink}ERROR: Unable to read configuration file${normal}"
     }
     fi
 }

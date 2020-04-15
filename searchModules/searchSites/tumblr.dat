@@ -5,7 +5,7 @@ function tumblr() {
     query=${tmpquery//\ /+}
     if [ "$opParam" == '-help' ] || [ "$opParam" == '-h' ] || [ "$opParam" == '-?' ]
           then {
-            echo "NOTE: Tumblr doesn't have any search filters."
+            echo "${aqua}${bold}NOTE: Tumblr doesn't have any search filters.${normal}"
             exit
       }
     else {

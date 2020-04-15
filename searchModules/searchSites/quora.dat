@@ -47,7 +47,7 @@ function quora() {
       }
     elif [ "$opParam" == '-help' ] || [ "$opParam" == '-h' ] || [ "$opParam" == '-?' ]
           then {
-            echo "  Quora Search Filters:
+            echo "  ${aqua}${bold}Quora Search Filters: ${normal}
                     For Question          -question      -qsn
                     For Answer            -answer        -ans
                     For Posts             -post          -pst

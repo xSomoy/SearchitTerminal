@@ -41,7 +41,7 @@ function twitter() {
         }
     elif [ "$opParam" == '-help' ] || [ "$opParam" == '-h' ] || [ "$opParam" == '-?' ]
           then {
-            echo " Twitter Search Filters:
+            echo " ${aqua}${bold}Twitter Search Filters: ${normal}
                     For Latest     -latest      -lst
                     For People     -people      -ppl
                     For Images     -image       -img

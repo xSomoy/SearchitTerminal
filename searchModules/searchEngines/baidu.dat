@@ -37,7 +37,7 @@ function baidu() {
             query=${query/-maps+}
             query=${query/-bdu+}
             query=${query/-baidu+}
-            $browser map.baidu.com/search/?querytype=s\&wd=$query 
+            $browser map.baidu.com/search/?querytype=s\&wd=$query
             exit
     }
   elif [ "$opParam" == '-academic' ] || [ "$opParam" == '-aca' ]
@@ -69,7 +69,7 @@ function baidu() {
     }
   elif [ "$opParam" == '-help' ] || [ "$opParam" == '-h' ] || [ "$opParam" == '-?' ]
       then {
-        echo " Baidu Search Filters:
+        echo " ${aqua}${bold}Baidu Search Filters: ${normal}
                 For Images     -image       -img
                 For Videos     -video       -vid
                 For News       -news        -nws

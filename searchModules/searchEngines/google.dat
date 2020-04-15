@@ -44,7 +44,7 @@ function google() {
     }
   elif [ "$opParam" == '-help' ] || [ "$opParam" == '-h' ] || [ "$opParam" == '-?' ]
       then {
-        echo " Google Search Filters:
+        echo " ${aqua}${bold}Google Search Filters: ${normal}
                 For Images     -image       -img
                 For Videos     -video       -vid
                 For News       -news        -nws

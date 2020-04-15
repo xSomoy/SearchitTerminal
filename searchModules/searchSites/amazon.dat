@@ -174,7 +174,7 @@ function amazon() {
 
     elif [ "$opParam" == '-help' ] || [ "$opParam" == '-h' ] || [ "$opParam" == '-?' ]
           then {
-            echo "  Amazon Search Filters:
+            echo "  ${aqua}${bold}Amazon Search Filters: ${normal}
                     For Arts & Crafts             -craft        -art
                     For Automotive                -automotive   -auto
                     For Baby                      -baby         -bby

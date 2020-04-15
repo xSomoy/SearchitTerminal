@@ -62,7 +62,7 @@ function linkedin() {
       }
     elif [ "$opParam" == '-help' ] || [ "$opParam" == '-h' ] || [ "$opParam" == '-?' ]
           then {
-            echo "  LinkedIn Search Filters:
+            echo "  ${aqua}${bold}LinkedIn Search Filters: ${normal}
                     For People        -people    -ppl
                     For Jobs          -jobs      -job
                     For Content       -content   -cnt

@@ -58,7 +58,7 @@ function searx() {
     }
   elif [ "$opParam" == '-help' ] || [ "$opParam" == '-h' ] || [ "$opParam" == '-?' ]
       then {
-        echo " Searx Search Filters:
+        echo " S${aqua}${bold}Searx Search Filters: ${normal}
                 For Images        -image       -img
                 For Videos        -video       -vid
                 For News          -news        -nws
