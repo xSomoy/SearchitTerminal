@@ -1,25 +1,25 @@
 #   Double Check Uninstall
 
     function uninstallCheck() {
-        if [ -f /usr/bin/searchit ] && [ -f /usr/bin/googleit ] && [ -f /usr/bin/duckit ] && [ -f ~/.searchit/searchit.cfg ] && [ -f ~/.searchit/Release-Note ] && [ -f /usr/share/applications/SearchitTerminal.desktop ] && [ -f /usr/share/icons/SearchitTerminal/SearchitTerminal.png ]
+        cd ~
+        if [ -f /usr/bin/searchit ] && [ -f /usr/bin/googleit ] && [ -f /usr/bin/duckit ] && [ -f ~/.searchit/searchit.cfg ] && [ -f ~/.searchit/Release-Note ] && [ -f /usr/share/applications/SearchitTerminal.desktop ] && [ -f /usr/share/icons/SearchitTerminal/SearchitTerminal.png ] && [ -f ~/.searchit/logo.sh ]
         then {
             echo "${red}${bold}Uninstallation Failed"
             echo "Report Problem : https://github.com/BlackPearlTech/SearchitTerminal/issues ${normal}"
         }
         else {
             echo "${orange}
-            Uninstallation Complete!! :(
+    Uninstallation Complete!! :(
+    Sorry To See You Go. You Can Help Me To Improve Searchit.
+    You Can Report Any Issue On Github.
+    Or Directly Contact Me Via Twitters
+    ${blue}
+       Github:   https://github.com/BlackPearlTech/SearchitTerminal/issues
+       Facebook: https://facebook.com/SearchitOfficial
+       Email:    mailtoSearchit@gmail.com
+       Twitter:  https://twitter.com/Tweet2Searchit
 
-            Sorry To See You Go. You Can Help Me To Improve Searchit.
-            You Can Report Any Issue On Github.
-            Or Directly Contact Me Via Twitters
-            ${blue}
-            Github:   https://github.com/BlackPearlTech/SearchitTerminal/issues
-            Facebook: https://facebook.com/SearchitOfficial
-            Email:    mailtoSearchit@gmail.com
-            Twitter:  https://twitter.com/xSomoy
-
-            ${bold}${WHITE}${black}Copyright © 2020 Black Pearl Tech${normal}
+       ${bold}${WHITE}${black}Copyright © 2020 Black Pearl Tech${normal}
 
             "
             }

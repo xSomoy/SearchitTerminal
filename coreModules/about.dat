@@ -2,7 +2,8 @@
 #   About Function
 
 function about(){
-    cat ~/.searchit/logo
+    cd ~
+   ./.searchit/logo.sh
     echo "
            ${green}${bold}Searchit Terminal${normal}
            ${green}Terminal Based Search Customizer
@@ -13,7 +14,7 @@ function about(){
            Email:     mailto:mailtoSearchit@gmail.com
            License:   GNU General Public License v3.0
            ${normal}
-           Author:    Somoy
+           Author:    John Deadman
            Twitter:   www.twitter.com/xSomoy
 
            ${bold}${BLACK}${white}Copyright © 2020 Black Pearl Tech${normal}${default}

@@ -4,7 +4,8 @@
     function engineCheck() {
         if [ -z $parameter ]
         then {
-            cat ~/.searchit/logo
+            cd ~
+            ./.searchit/logo.sh
             echo "${aqua}${bold}Please Provide A Option Or A Search Query"
             echo "Use Directly"
             echo "Ex: \" searchit --help \" Or \" searchit john wick \""
@@ -13,15 +14,21 @@
             connectionTest
             updateCheck
             function searchLoop(){
-              echo -e "Search Query ${blink}${orange}>>>${normal} \c"
+              echo -e "${aqua}${bold}Search Query ${blink}${orange}>>>${normal} ${lightgreen} \c"
               read query;
               if [ "$query" == "-e" ] || [ "$query" == "-exit" ]
               then {
+                echo "${normal}"
                 if [ -f ~/.wget-hsts ]
                 then {
                   rm ~/.wget-hsts
                 }
                fi
+                exit
+              }
+              elif [ "$query" == "-un" ] || [ "$query" == "-uninstall" ]
+              then {
+                uninstaller
                 exit
               }
               else {

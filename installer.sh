@@ -10,7 +10,7 @@
 #     Email:      mailtoSearchit@gmail.com                  #
 #     License:    GNU General Public License v3.0           #
 #                                                           #
-#     Author:     Somoy                                     #
+#     Author:     John Deadman                                     #
 #     Twitter:    www.twitter.com/xSomoy                    #
 #                                                           #
 #     Copyright © 2020 Black Pearl Tech                     #
@@ -18,7 +18,7 @@
 #############################################################
 
 version=$(cat coreModules/version.dat)
-# colorLibrary Start
+
 
 # Color Library Start
 
@@ -88,7 +88,7 @@ function dataLoad() {
     help=$(cat coreModules/help.dat)
     init=$(cat coreModules/init.dat)
     intro=$(cat coreModules/intro.dat)
-    engineCheck=$(cat coreModules/engineCheck.dat)
+    paramCheck=$(cat coreModules/paramCheck.dat)
     searchengineSelect=$(cat coreModules/searchengineSelect.dat)
     uninstall=$(cat coreModules/uninstall.dat)
     uninstallCheck=$(cat coreModules/uninstallCheck.dat)
@@ -219,7 +219,7 @@ function createSearchit() {
 # about.dat
 # update.dat
 # connectionTest.dat
-# engineCheck.dat
+# paramCheck.dat
 # init.dat
 
     echo "$help" >> searchit
@@ -231,7 +231,7 @@ function createSearchit() {
     echo "$about" >> searchit
     echo "$update" >> searchit
     echo "$connectionTest" >> searchit
-    echo "$engineCheck" >> searchit
+    echo "$paramCheck" >> searchit
     echo "$init" >> searchit
 
 }
@@ -255,7 +255,7 @@ function dataGen() {
         cp resource/SearchitTerminal.png /usr/share/icons/SearchitTerminal/
         mkdir ~/.searchit/
         chmod 777 ~/.searchit/
-        cp resource/logo ~/.searchit/
+        cp resource/logo.sh ~/.searchit/
         cp resource/releaseNote ~/.searchit/
         cp resource/README.txt ~/.searchit/
         cd ~/.searchit
@@ -273,20 +273,23 @@ CONFIGEND
 # Double Check Install
 
 function installCheck() {
-    if [ -f /usr/bin/searchit ] && [ -f /usr/bin/googleit ] && [ -f /usr/bin/duckit ] && [ -f ~/.searchit/searchit.cfg ] && [ -f ~/.searchit/releaseNote ] && [ -f /usr/share/applications/SearchitTerminal.desktop ] && [ -f /usr/share/icons/SearchitTerminal/SearchitTerminal.png ]
+    if [ -f /usr/bin/searchit ] && [ -f /usr/bin/googleit ] && [ -f /usr/bin/duckit ] && [ -f ~/.searchit/searchit.cfg ] && [ -f ~/.searchit/releaseNote ] && [ -f /usr/share/applications/SearchitTerminal.desktop ] && [ -f /usr/share/icons/SearchitTerminal/SearchitTerminal.png ] && [ -f ~/.searchit/logo.sh ]
     then {
-        cat ~/.searchit/logo
+        cd ~
+        ./.searchit/logo.sh
         echo "
-            ${green}${blink}${bold}Instalation Complete!!!${normal}${default}
+    ${green}${bold}Instalation Complete!!!${normal}${default}
 
-            ${aqua}If You Like This Software. You Can Help Me To Improve This.
-            Report Any Issue On Github Or Directly Contact Me Via Twitter.
-            Or You Can Just Let Me Know If You Liked It. That Also Helps A lot.
-            Thank You. :D ${normal} ${blue}
-                Twitter:    https://twitter.com/Tweet2Searchit
-                Facebook:   https://facebook.com/BlackPearlTechOfficial
-                Github:     https://github.com/BlackPearlTech
-                Email:      mailtoSearchit@gmail.com ${normal}
+    ${aqua}If You Like This Software. You Can Help Me To Improve This.
+    Report Any Issue On Github Or Directly Contact Me Via Twitter.
+    Or You Can Just Let Me Know If You Liked It. That Also Helps A lot.
+    Thank You. :D ${normal} ${blue}
+        Twitter:    https://twitter.com/Tweet2Searchit
+        Facebook:   https://facebook.com/BlackPearlTechOfficial
+        Github:     https://github.com/BlackPearlTech
+        Email:      mailtoSearchit@gmail.com ${normal}
+
+           ${bold}${WHITE}${black}Copyright © 2020 Black Pearl Tech${normal}
             "
     }
     else {
@@ -364,6 +367,7 @@ function checkPermission() {
     var0=$(whoami)
     if [  "root" == "$var0"  ]
         then {
+            ./resource/logo.sh
             oldversionCheck
             dataGen
             installer
