@@ -230,7 +230,7 @@ function ebay() {
       }
     elif [ "$opParam" == '-help' ] || [ "$opParam" == '-h' ] || [ "$opParam" == '-?' ]
           then {
-            echo "  Ebay Search Filters:
+            echo "  ${aqua}${bold}Ebay Search Filters: ${normal}
                     For Antique                           -antique        -atq
                     For Art                               -art
                     For Baby                              -baby           -bby

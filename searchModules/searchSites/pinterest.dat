@@ -29,7 +29,7 @@ function pinterest() {
       }
     elif [ "$opParam" == '-help' ] || [ "$opParam" == '-h' ] || [ "$opParam" == '-?' ]
           then {
-            echo "  Pinterest Search Filters:
+            echo "  ${aqua}${bold}Pinterest Search Filters: ${normal}
                     For Your Pins           -mypin       -my
                     For Product Pins        -product     -pdt
                     For People              -people      -ppl

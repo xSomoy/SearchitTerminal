@@ -1,7 +1,7 @@
 #   Default Browser Specifier
 
 function browserCheck() {
-    echo "Please Select Your Default Browser:"
+    echo "${blue}${bold}Please Select Your Default Browser:${normal}"
     echo " 1 - Firefox"
     echo " 2 - Chrome "
     echo " 3 - Chromium"

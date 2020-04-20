@@ -5,7 +5,7 @@ function wolframalpha() {
     query=${tmpquery//\ /+}
     if [ "$opParam" == '-help' ] || [ "$opParam" == '-h' ] || [ "$opParam" == '-?' ]
           then {
-            echo "NOTE: Wolfram|Alpha doesn't have any search filters."
+            echo "${aqua}${bold}NOTE: Wolfram|Alpha doesn't have any search filters.${normal}"
             exit
       }
     else {

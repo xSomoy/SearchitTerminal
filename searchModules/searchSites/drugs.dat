@@ -72,7 +72,7 @@ function drugs() {
       }
     elif [ "$opParam" == '-help' ] || [ "$opParam" == '-h' ] || [ "$opParam" == '-?' ]
           then {
-            echo "  Drugs Search Filters:
+            echo "  ${aqua}${bold}Drugs Search Filters: ${normal}
                     For Consumer         -csr    -consumer
                     For Professional     -pro    -professional
                     For Pill Id          -pid    -pillid
@@ -83,7 +83,7 @@ function drugs() {
                     For Pipeline         -pln    -pipeline
                     For Clinical Trials  -ctl    -clinicaltrial
                     For Care Notes       -cnt    -carenote
-                    For Natural Products -ntl    -natural  
+                    For Natural Products -ntl    -natural
                  "
             exit
       }

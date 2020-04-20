@@ -13,7 +13,7 @@ function shodan() {
     }
   elif [ "$opParam" == '-help' ] || [ "$opParam" == '-h' ] || [ "$opParam" == '-?' ]
       then {
-        echo " Shodan Search Filters:
+        echo " ${aqua}${bold}Shodan Search Filters: ${normal}
                 For Exploits     -exploit       -exp
              "
         exit

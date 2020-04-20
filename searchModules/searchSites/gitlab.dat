@@ -29,7 +29,7 @@ function gitlab() {
       }
     elif [ "$opParam" == '-help' ] || [ "$opParam" == '-h' ] || [ "$opParam" == '-?' ]
           then {
-            echo "  Gitlab Search Filters:
+            echo "  ${aqua}${bold}Gitlab Search Filters: ${normal}
                     For Issues          -issue      -isu
                     For Merge Request   -merge      -mrg
                     For Milestones      -milestone  -stn

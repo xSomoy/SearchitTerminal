@@ -1,7 +1,7 @@
 #   Uninstaller function
 
 function uninstaller(){
-    echo " Do You Really Want To Uninstall Seachit? (Y/N):"
+    echo "${red}${bold}Do You Really Want To Uninstall Seachit? (Y/N):${normal}"
     read decision;
     if [ "$decision" == "Y" ] || [ "$decision" == "y" ]
     then {
@@ -14,7 +14,7 @@ function uninstaller(){
         uninstallCheck
     }
     else {
-            echo " Good Decision :) "
+            echo "${lightgreen}Good Decision :) ${normal}"
     }
     fi
 }

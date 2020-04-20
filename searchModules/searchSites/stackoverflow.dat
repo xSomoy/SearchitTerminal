@@ -32,7 +32,7 @@ function stackoverflow() {
       }
     elif [ "$opParam" == '-help' ] || [ "$opParam" == '-h' ] || [ "$opParam" == '-?' ]
           then {
-            echo "  StackOverflow Search Filters:
+            echo "  ${aqua}${bold}StackOverflow Search Filters: ${normal}
                     For Newst          -newest     -new
                     For Active         -active     -act
                     For Votes          -vote       -vot
