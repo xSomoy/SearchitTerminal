@@ -1,0 +1,16 @@
+Source: searchit-terminal
+Section: net
+Priority: optional
+Maintainer: Black Pearl Tech 
+Build-Depends: debhelper (>= 10)
+Standards-Version: 4.1.2
+Homepage: www.blackpearltech.github.io/web
+Vcs-Git: https://github.com/BlackPearlTech/SearchitTerminal.git
+
+
+Package: searchit-terminal
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Search The Hell Out Of Internet
+ Use various search engines and sites and their search filters
+ without even leaving your terminal
