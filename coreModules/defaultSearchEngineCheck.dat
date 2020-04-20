@@ -40,7 +40,7 @@ function deCheck() {
             SEngine="www.shodan.io/search?query="
         }
     else {
-        echo " Can't Read Default Settings"
+        echo "${orange}${blink}ERROR:Unable To Read Default Settings${normal}"
     }
     fi
 }

@@ -47,7 +47,7 @@
         }
       elif [ "$opParam" == '-help' ] || [ "$opParam" == '-h' ] || [ "$opParam" == '-?' ]
           then {
-            echo " DuckDuckGo Search Filters:
+            echo " ${aqua}${bold}DuckDuckGo Search Filters: ${normal}
                     For Images     -image       -img
                     For Videos     -video       -vid
                     For News       -news        -nws

@@ -1,10 +1,10 @@
 #   Help Function
 
 function help() {
-    echo "
+    echo "${aqua}${bold}
                 \"Searchit Help Section\"
 
-        Options For Seachit's Functionality
+        Options For Seachit's Functionality${normal}
 
             --about     -a          For About Section
             --help      -h    -?    For Help section
@@ -15,11 +15,11 @@ function help() {
             --release   -rn         For Release Note
             --readme    -rdm        For README
 
-                                Ex: \"searchit --help\"
+                        ${aqua}${bold}  Ex: \"searchit --help\"
 
         Search Options:
 
-            Search Engine
+            Search Engine: ${normal}
                     -ddg    -duckduckgo     For DuckDuckGo
                     -ggl    -google         For Google
                     -eco    -ecosia         For Ecosia
@@ -37,7 +37,7 @@ function help() {
                     -wfa    -wolframalpha   For WolframpAlpha
                     -drug   -drugs          For Drugs
 
-            Search Sites:
+            ${aqua}${bold}Search Sites:${normal}
                     -fb     -facebook       For Facebook
                     -ttr    -twitter        For Twitter
                     -rddt   -reddit         For Reddit
@@ -56,7 +56,7 @@ function help() {
                  Ex: \"searchit -ddg casino royal\"
 
 
-        Shortcuts For Instant Search:
+      ${aqua}${bold}  Shortcuts For Instant Search:
             duckit      For DuckDuckGo
             googleit    For Google
 
@@ -68,5 +68,7 @@ function help() {
             Ex: \"searchit -ddg -h \"
             Will display Search Filters Availavle For DuckDuckGo.
             \"duckit\" and \"googleit\" Also Support Search Filters.
+            ${normal}
+
     "
 }

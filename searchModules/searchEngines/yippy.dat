@@ -23,7 +23,7 @@ function yippy() {
     }
   elif [ "$opParam" == '-help' ] || [ "$opParam" == '-h' ] || [ "$opParam" == '-?' ]
       then {
-        echo " Yippy Search Filters:
+        echo " ${aqua}${bold}Yippy Search Filters: ${normal}
                 For Images     -image       -img
                 For Videos     -video       -vid
                 For News       -news        -nws

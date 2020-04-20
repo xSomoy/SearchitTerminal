@@ -17,7 +17,7 @@ function startpage() {
       }
   elif [ "$opParam" == '-help' ] || [ "$opParam" == '-h' ] || [ "$opParam" == '-?' ]
       then {
-        echo " Startpage Search Filters:
+        echo " ${aqua}${bold}Startpage Search Filters: ${normal}
                 For Images     -image       -img
                 For Videos     -video       -vid
              "

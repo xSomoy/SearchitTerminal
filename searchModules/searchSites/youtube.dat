@@ -157,7 +157,7 @@ function youtube() {
 
     elif [ "$opParam" == '-help' ] || [ "$opParam" == '-h' ] || [ "$opParam" == '-?' ]
           then {
-            echo "  Youtube Search Filters:
+            echo "  ${aqua}${bold}Youtube Search Filters: ${normal}
                     For Videos            -video     -vid
                     For Channel           -Channel   -cnl
                     For Playlist          -playlist  -plt

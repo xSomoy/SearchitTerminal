@@ -3,7 +3,7 @@
 function config() {
     cat ~/.searchit/searchit.cfg | grep "Default"
     echo ""
-    echo "Do You Want To Change This Configuration? (Y/N):"
+    echo "${blue}Do You Want To Change This Configuration? (Y/N):${normal}"
     read decision;
     if [ "$decision" == "Y" ] || [ "$decision" == "y" ]
     then {

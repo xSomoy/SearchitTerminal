@@ -2,26 +2,26 @@
 
 function update(){
     cd ~
-    wget -q https://raw.githubusercontent.com/BlackPearlTech/SearchitTerminal/master/docs/version |
+    wget -q https://raw.githubusercontent.com/BlackPearlTech/SearchitTerminal/master/resource/version |
     echo "Checking For Update..."
     if [ -f ~/version ]
     then {
         AvailableVersion=$(cat version)
         if [ "$AvailableVersion" == "$version" ]
         then {
-              echo "Your Version: $version"
-              echo "Latest Version: $AvailableVersion"
-              echo "You Are UpToDate"
+              echo "${blue}Your Version: $version"
+              echo "${aqua}Latest Version: $AvailableVersion"
+              echo "${green}You Are UpToDate${normal}"
               }
         else {
-               echo "Your Version: $version"
-               echo "AvailableVersion: $AvailableVersion"
-               echo "Version $AvailableVersion Is Available. Do You Want To Update?(Y/y = yes)"
+              echo "${blue}Your Version: $version"
+              echo "${aqua}Latest Version: $AvailableVersion"
+               echo "${green}${bold}Version $AvailableVersion Is Available. Do You Want To Update?(Y/y = yes)${normal}"
                read decision;
                if [ "$decision" == "Y" ] || [ "$decision" == "y" ]
                then {
                  wget -q https://github.com/BlackPearlTech//SearchitTerminal/archive/master.zip |
-                 echo "Downloading Latest Version..."
+                 echo "${aqua}${blink}Downloading Latest Version...${normal}"
                  if [ -f ~/master.zip ]
                  then {
                       sudo rm /usr/bin/searchit /usr/bin/googleit /usr/bin/duckit
@@ -33,15 +33,15 @@ function update(){
                       ./installer.sh
                       rm ~/master.zip
                       rm -r ~/SearchitTerminal-master
-                      echo "Update Complete !!"
+                      echo "${green}Update Complete !!{normal}"
                     }
                  else {
-                    echo "ERROR: Unable to download updates. Check your internet connection. Or Try again later"
+                    echo "${red}ERROR: Unable to download updates. Check your internet connection. Or Try again later${normal}"
                   }
                  fi
                }
                else {
-                  echo " Maybe Later. -_- "
+                  echo "${gray}Maybe Later. -_-${normal}"
                 }
                fi
               }
@@ -53,5 +53,10 @@ function update(){
         echo "ERROR: Unable to check update. Check your internet connection. Or Try again later
               "
       }
+    fi
+    if [ -f ~/.wget-hsts ]
+    then {
+       rm ~/.wget-hsts
+    }
     fi
   }

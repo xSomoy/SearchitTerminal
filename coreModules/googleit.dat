@@ -1,3 +1,4 @@
+connectionTest
 opParam="$1"
 tmpQuery="$@"
 tmpBrowser=$(cat ~/.searchit/searchit.cfg | grep "Browser")
@@ -40,7 +41,7 @@ elif [ "$tmpBrowser" == "Lynx" ]
         browser=lynx
     }
 else {
-    echo "ERROR: Unable to read configuration file"
+    echo "${orange}${blink}ERROR: Unable to read configuration file${normal}"
 }
 fi
 query=${tmpQuery//\ /+}
@@ -85,7 +86,7 @@ elif [ "$opParam" == '-maps' ] || [ "$opParam" == '-map' ]
 }
 elif [ "$opParam" == '-help' ] || [ "$opParam" == '-h' ] || [ "$opParam" == '-?' ]
   then {
-    echo " Google Search Filters:
+    echo "${aqua}${bold}Google Search Filters:${normal}
             For Images     -image       -img
             For Videos     -video       -vid
             For News       -news        -nws
