@@ -1,73 +1,25 @@
 #!/usr/bin/make -f
-
-icon = $(CURDIR)/SearchitTerminal.png
-launcher = $(CURDIR)/SearchitTerminal.desktop
-searchit = $(CURDIR)/searchit
-googleit = $(CURDIR)/googleit
-duckit = $(CURDIR)/duckit
-config = $(CURDIR)/searchit.cfg
-logo = $(CURDIR)/logo
-readme = $(CURDIR)/README.txt
-releaseNote = $(CURDIR)/releaseNote
-version = $(CURDIR)/version
-
-DEST1 = $(CURDIR)/debian/searchit-terminal/usr/bin
-DEST2 = $(CURDIR)/debian/searchit-terminal/usr/share/applications
-DEST3 = $(CURDIR)/debian/searchit-terminal~/.searchit
-DEST4 = $(CURDIR)/debian/searchit-terminal//usr/share/icons/SearchitTerminal
-
-build: build-stamp
-
-build-stamp:
-	dh_testdir
-	touch build-stamp
-
-clean:
-	dh_testdir
-	dh_testroot
-	rm -f build-stamp
-	dh_clean
-
-install: build clean $(icon) $(searchit) $(launcher) $(googleit) $(duckit) $(logo) $(readme) $(releaseNote) $(version)
-	dh_testdir
-	dh_testroot
-	dh_prep
-	dh_installdirs
-
-	mkdir -m (777) -p $(DEST1)
-	mkdir -m (777) -p $(DEST2)
-	mkdir -m (777) -p $(DEST3)
-	mkdir -m (777) -p $(DEST4)
-
-	install -m 666 $(icon) $(DEST4)
-	install -m 777 $(searchit) $(DEST1)
-	install -m 777 $(duckit) $(DEST1)
-	install -m 777 $(googleit) $(DEST1)
-	install -m 777 $(launcher) $(DEST2)
-	install -m 777 $(logo) $(DEST3)
-	install -m 777 $(config) $(DEST3)
-	install -m 666 $(README) $(DEST3)
-	install -m 666 $(releaseNote) $(DEST3)
-	install -m 666 $(version) $(DEST3)
+# See debhelper(7) (uncomment to enable)
+# output every command that modifies files on the build system.
+#export DH_VERBOSE = 1
 
 
+# see FEATURE AREAS in dpkg-buildflags(1)
+#export DEB_BUILD_MAINT_OPTIONS = hardening=+all
 
-binary-indep: build install
-	dh_testdir
-	dh_testroot
-	dh_installchangelogs
-	dh_installdocs
-	dh_installexamples
-	dh_installman
-	dh_link
-	dh_compress
-	dh_fixperms
-	dh_installdeb
-	dh_gencontrol
-	dh_md5sums
-	dh_builddeb
+# see ENVIRONMENT in dpkg-buildflags(1)
+# package maintainers to append CFLAGS
+#export DEB_CFLAGS_MAINT_APPEND  = -Wall -pedantic
+# package maintainers to append LDFLAGS
+#export DEB_LDFLAGS_MAINT_APPEND = -Wl,--as-needed
 
-binary-arch: build install
 
-binary: binary-indep binary-arch
-.PHONY: build clean binary-indep binary-arch binary install 
+%:
+	dh $@
+
+
+# dh_make generated override targets
+# This is example for Cmake (See https://bugs.debian.org/641051 )
+#override_dh_auto_configure:
+#	dh_auto_configure -- #	-DCMAKE_LIBRARY_PATH=$(DEB_HOST_MULTIARCH)
+
