@@ -1,0 +1,5 @@
+searchit-terminal (4.0.0-1) unstable; urgency=medium
+
+  * Initial release (Closes: #nnnn)  <nnnn is the bug number of your ITP>
+
+ -- johndeadman <xsomoy@tutanota.com>  Mon, 20 Apr 2020 01:02:22 +0600

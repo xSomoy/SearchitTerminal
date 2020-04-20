@@ -1,6 +1,0 @@
-
-# Calling engineCheck Function For Initialization
-engineCheck
-
-# Checking For Available Updates After Every Action
-    updateCheck
