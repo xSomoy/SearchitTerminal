@@ -1,14 +1,14 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: searchit-terminal
-Source: <url://example.com>
+Source: <https://blackpearltech.github.io/web>
 
 Files: *
-Copyright: <years> <put author's name and email here>
-           <years> <likewise for another author>
+Copyright: <2020> <John Deadman somoy@tutanota.com>
+           <2020> <Black Pearl Tech>
 License: GPL-3.0+
 
 Files: debian/*
-Copyright: 2020 johndeadman <xsomoy@tutanota.com>
+Copyright: 2020 John Deadman <somoy@tutanota.com>
 License: GPL-3.0+
 
 License: GPL-3.0+
