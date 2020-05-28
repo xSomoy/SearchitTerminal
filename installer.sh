@@ -10,7 +10,7 @@
 #     Email:      mailtoSearchit@gmail.com                  #
 #     License:    GNU General Public License v3.0           #
 #                                                           #
-#     Author:     John Deadman                                     #
+#     Author:     John Deadman                              #
 #     Twitter:    www.twitter.com/xSomoy                    #
 #                                                           #
 #     Copyright © 2020 Black Pearl Tech                     #
@@ -77,6 +77,7 @@ function dataLoad() {
     about=$(cat coreModules/about.dat)
     browserSelect=$(cat coreModules/browserSelect.dat)
     config=$(cat coreModules/config.dat)
+    configCheck=$(cat coreModules/configCheck.dat)
     connectionTest=$(cat coreModules/connectionTest.dat)
     colorLibrary=$(cat coreModules/colorLibrary.dat)
     defaultBrowserCheck=$(cat coreModules/defaultBrowserCheck.dat)
@@ -145,6 +146,7 @@ function createSearchit() {
 # Intro.dat
 # write version
 # globalVariable.dat
+# configCheck.dat
 # updateCheck.dat
 # defaultBrowserCheck.dat
 # defaultSearch.dat
@@ -153,6 +155,7 @@ function createSearchit() {
     echo "version=$version" >> searchit
     echo "$globalVariable" >> searchit
     echo "$colorLibrary" >> searchit
+    echo "$configCheck" >> searchit
     echo "$updateCheck" >> searchit
     echo "$defaultBrowserCheck" >> searchit
     echo "$defaultSearchEngineCheck" >> searchit
@@ -256,24 +259,23 @@ function dataGen() {
         cp resource/logo /usr/share/SearchitTerminal/
         cp resource/releaseNote /usr/share/SearchitTerminal/
         cp resource/README.txt /usr/share/SearchitTerminal/
-        mkdir ~/.searchit/
-        chmod 777 ~/.searchit/
-        cd ~/.searchit
-        cat  >> searchit.cfg <<CONFIGEND
-Searchit Configuration File.
-Please Do Not Make Any Change To This File.
-Use Command "searchit -cfg" To Make Any Changes
-----------------------------------
-
-Default Browser: Firefox
-Default Search Engine: DuckDuckGo
-CONFIGEND
+        if [ -d ~/.config ]
+          then {
+            mkdir ~/.config/SearchitTerminal
+            chmod 777 ~/.config/SearchitTerminal/
+          }
+          else {
+          mkdir ~/.config
+          mkdir ~/.config/SearchitTerminal
+          chmod 777 ~/.config/SearchitTerminal/
+         }
+       fi
     }
 
 # Double Check Install
 
 function installCheck() {
-    if [ -f /usr/bin/searchit ] && [ -f /usr/bin/googleit ] && [ -f /usr/bin/duckit ] && [ -f ~/.searchit/searchit.cfg ] && [ -f /usr/share/SearchitTerminal/releaseNote ] && [ -f /usr/share/applications/SearchitTerminal.desktop ] && [ -f /usr/share/SearchitTerminal/SearchitTerminal.png ] && [ -f /usr/share/SearchitTerminal/logo ]
+    if [ -f /usr/bin/searchit ] && [ -f /usr/bin/googleit ] && [ -f /usr/bin/duckit ] && [ -f /usr/share/SearchitTerminal/releaseNote ] && [ -f /usr/share/applications/SearchitTerminal.desktop ] && [ -f /usr/share/SearchitTerminal/SearchitTerminal.png ] && [ -f /usr/share/SearchitTerminal/logo ]
     then {
         cd /usr/share/SearchitTerminal/
         ./logo
@@ -336,7 +338,7 @@ function createGoogleit() {
 function oldversionCheck() {
   echo "${blue}Checking If Older Version Of Searchit Exist...${normal}"
   sleep 1s
-  if [ -f /usr/bin/searchit ] || [ -f /usr/bin/googleit ] || [ -f /usr/bin/duckit ] || [ -f /usr/share/applications/st.desktop ] || [ -d ~/.searchit ] || [ -d /usr/share/icons/SearchitTerminal ] || [ -f /usr/share/applications/SearchitTerminal.desktop ]
+  if [ -f /usr/bin/searchit ] || [ -f /usr/bin/googleit ] || [ -f /usr/bin/duckit ] || [ -f /usr/share/applications/st.desktop ] || [ -d ~/.config/SearchitTerminal ] || [ -d /usr/share/icons/SearchitTerminal ] || [ -f /usr/share/applications/SearchitTerminal.desktop ]
       then {
               echo "${orange}Older Version Of Searchit Terminal Is Found"
               sleep 1s
@@ -345,7 +347,7 @@ function oldversionCheck() {
               sudo rm /usr/bin/searchit /usr/bin/googleit /usr/bin/duckit
               sudo rm /usr/share/applications/SearchitTerminal.desktop
               sudo rm -r /usr/share/icons/SearchitTerminal
-              sudo rm -r ~/.searchit
+              sudo rm -r ~/.config/SearchitTerminal
               echo "Old Version Of Searchit Terminal Removed${normal}"
               sleep 1s
               echo "${green}Installing Newer Version Of Searchit Terminal${normal}"
@@ -375,7 +377,6 @@ function checkPermission() {
             echo "${normal}"
             echo "${bold}${green}Select Your Default Browser and Search Engine:${normal}${default}"
             echo ""
-            searchit --config
             installCheck
         }
     else {

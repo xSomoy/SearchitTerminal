@@ -1,14 +1,14 @@
 #   Config File Generator
 
 function config() {
-    cat ~/.searchit/searchit.cfg | grep "Default"
+    cat ~/.config/SearchitTerminal/searchit.cfg | grep "Default"
     echo ""
     echo "${blue}Do You Want To Change This Configuration? (Y/N):${normal}"
     read decision;
     if [ "$decision" == "Y" ] || [ "$decision" == "y" ]
     then {
-        cd ~/.searchit/
-        sudo rm searchit.cfg
+        cd ~/.config/SearchitTerminal/
+        rm searchit.cfg
         browserCheck
         defaultEngine
         cat  >> searchit.cfg <<CONFIGEND
