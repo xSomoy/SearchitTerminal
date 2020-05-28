@@ -3,7 +3,7 @@
 
 function about(){
     cd ~
-   ./.searchit/logo
+   ./usr/share/SearchitTerminal/logo
     echo "
            ${green}${bold}Searchit Terminal${normal}
            ${green}Terminal Based Search Customizer

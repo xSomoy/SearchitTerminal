@@ -251,13 +251,13 @@ function dataGen() {
       echo "${green}Generating resource.. ${normal}"
         sudo cp resource/SearchitTerminal.desktop /usr/share/applications/
         sudo chmod 777 /usr/share/applications/SearchitTerminal.desktop
-        sudo mkdir /usr/share/icons/SearchitTerminal/
-        cp resource/SearchitTerminal.png /usr/share/icons/SearchitTerminal/
+        sudo mkdir /usr/share/SearchitTerminal/
+        cp resource/SearchitTerminal.png /usr/share/SearchitTerminal/
+        cp resource/logo /usr/share/SearchitTerminal/
+        cp resource/releaseNote /usr/share/SearchitTerminal/
+        cp resource/README.txt /usr/share/SearchitTerminal/
         mkdir ~/.searchit/
         chmod 777 ~/.searchit/
-        cp resource/logo ~/.searchit/
-        cp resource/releaseNote ~/.searchit/
-        cp resource/README.txt ~/.searchit/
         cd ~/.searchit
         cat  >> searchit.cfg <<CONFIGEND
 Searchit Configuration File.
@@ -273,10 +273,9 @@ CONFIGEND
 # Double Check Install
 
 function installCheck() {
-    if [ -f /usr/bin/searchit ] && [ -f /usr/bin/googleit ] && [ -f /usr/bin/duckit ] && [ -f ~/.searchit/searchit.cfg ] && [ -f ~/.searchit/releaseNote ] && [ -f /usr/share/applications/SearchitTerminal.desktop ] && [ -f /usr/share/icons/SearchitTerminal/SearchitTerminal.png ] && [ -f ~/.searchit/logo ]
+    if [ -f /usr/bin/searchit ] && [ -f /usr/bin/googleit ] && [ -f /usr/bin/duckit ] && [ -f ~/.searchit/searchit.cfg ] && [ -f /usr/share/SearchitTerminal/releaseNote ] && [ -f /usr/share/applications/SearchitTerminal.desktop ] && [ -f /usr/share/icons/SearchitTerminal/SearchitTerminal.png ] && [ -f /usr/share/SearchitTerminal/logo ]
     then {
-        cd ~
-        ./.searchit/logo
+        ./usr/share/SearchitTerminal/logo
         echo "
     ${green}${bold}Instalation Complete!!!${normal}${default}
 
