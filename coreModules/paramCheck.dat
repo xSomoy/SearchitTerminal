@@ -64,12 +64,12 @@
             elif [ "$parameter" == '--readme' ] || [ "$parameter" == '-rdm' ]
                 then {
                     clear
-                    cat ~/.searchit/README.txt
+                    cat /usr/share/SearchitTerminal/README.txt
                 }
             elif [ "$parameter" == '--release' ] || [ "$parameter" == '-rn' ]
                 then {
                     clear
-                    cat ~/.searchit/releaseNote
+                    cat /usr/share/SearchitTerminal/releaseNote
                 }
             elif [ "$parameter" == '--version' ] || [ "$parameter" == '-v' ]
                 then {
