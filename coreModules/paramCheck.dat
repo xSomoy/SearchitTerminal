@@ -4,8 +4,8 @@
     function engineCheck() {
         if [ -z $parameter ]
         then {
-            cd ~
-            ./.searchit/logo
+            cd /usr/share/SearchitTerminal
+            ./logo
             echo "${aqua}${bold}Please Provide A Option Or A Search Query"
             echo "Use Directly"
             echo "Ex: \" searchit --help \" Or \" searchit john wick \""
@@ -64,12 +64,12 @@
             elif [ "$parameter" == '--readme' ] || [ "$parameter" == '-rdm' ]
                 then {
                     clear
-                    cat ~/.searchit/README.txt
+                    cat /usr/share/SearchitTerminal/README.txt
                 }
             elif [ "$parameter" == '--release' ] || [ "$parameter" == '-rn' ]
                 then {
                     clear
-                    cat ~/.searchit/releaseNote
+                    cat /usr/share/SearchitTerminal/releaseNote
                 }
             elif [ "$parameter" == '--version' ] || [ "$parameter" == '-v' ]
                 then {

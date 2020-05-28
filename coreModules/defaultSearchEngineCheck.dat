@@ -1,7 +1,7 @@
 #   Default Search Engine Check
 
 function deCheck() {
-    tmpSEngine=$(cat ~/.searchit/searchit.cfg | grep "Default Search")
+    tmpSEngine=$(cat ~/.config/SearchitTerminal/searchit.cfg | grep "Default Search")
     tmpSEngine=${tmpSEngine/Default\ Search\ Engine:\ }
     if [ "$tmpSEngine" == "DuckDuckGo" ]
         then {
