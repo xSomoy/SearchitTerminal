@@ -3,12 +3,12 @@ Upstream-Name: searchit-terminal
 Source: <https://blackpearltech.github.io/web>
 
 Files: *
-Copyright: <2020> <John Deadman somoy@tutanota.com>
+Copyright: <2020> <Somoy somoy@tutanota.com>
            <2020> <Black Pearl Tech>
 License: GPL-3.0+
 
 Files: debian/*
-Copyright: 2020 John Deadman <somoy@tutanota.com>
+Copyright: 2020 Somoy <somoy@tutanota.com>
 License: GPL-3.0+
 
 License: GPL-3.0+

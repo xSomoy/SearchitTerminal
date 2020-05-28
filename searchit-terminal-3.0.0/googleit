@@ -1,0 +1,144 @@
+#!/usr/bin/env bash
+######################################################
+#                                                    #
+#     Searchit                                       #
+#     Terminal Based Search Customizer               #
+#                                                    #
+#     Twitter:    www.twitter.com/Tweet2Searchit     #
+#     Facebook:   www.facebook.com/SearchitOfficial  #
+#     Github:     www.github.com/BlackPearlTech      #
+#     Email:      mailtoSearchit@gmail.com           #
+#     License:    GNU General Public License v3.0    #
+#                                                    #
+#     Author:     John Deadman                              #
+#     Twitter:    www.twitter.com/xSomoy             #
+#                                                    #
+#     Copyright © 2020 Black Pearl Tech              #
+#                                                    #
+######################################################
+# Testing Connection To Internet
+
+function connectionTest () {
+    wget --spider -q google.com
+    if [ "$?" != 0 ]
+    then {
+    echo "${red}${blink}${bold}Error: You Are Not Connected To The Internet!!${normal}"
+        if [ -f ~/.wget-hsts ]
+        then {
+           rm ~/.wget-hsts
+        }
+        fi
+    exit
+    }
+    fi
+    if [ -f ~/.wget-hsts ]
+    then {
+       rm ~/.wget-hsts
+    }
+    fi
+}
+connectionTest
+opParam="$1"
+tmpQuery="$@"
+tmpBrowser=$(cat ~/.searchit/searchit.cfg | grep "Browser")
+tmpBrowser=${tmpBrowser/Default\ Browser:\ }
+tmpBrowser=${tmpBrowser//\ /+}
+if [ "$tmpBrowser" == "Firefox" ]
+    then {
+        browser=firefox
+    }
+elif [ "$tmpBrowser" == "Google+Chrome" ]
+    then {
+        browser=google-chrome
+    }
+elif [ "$tmpBrowser" == "Opera" ]
+    then {
+        browser=opera
+    }
+elif [ "$tmpBrowser" == "Chromium" ]
+    then {
+        browser=chromium-browser
+    }
+elif [ "$tmpBrowser" == "Brave" ]
+    then {
+        browser=brave-browser
+    }
+elif [ "$tmpBrowser" == "Vivaldi" ]
+    then {
+        browser=vivaldi
+    }
+elif [ "$tmpBrowser" == "Links" ]
+    then {
+        browser=links
+    }
+elif [ "$tmpBrowser" == "W3m" ]
+    then {
+        browser=w3m
+    }
+elif [ "$tmpBrowser" == "Lynx" ]
+    then {
+        browser=lynx
+    }
+else {
+    echo "${orange}${blink}ERROR: Unable to read configuration file${normal}"
+}
+fi
+query=${tmpQuery//\ /+}
+if [ "$opParam" == '-image' ]  || [ "$opParam" == '-img' ]
+    then {
+      query=${query/-img+}
+      query=${query/-image+}
+      option="&tbm=isch"
+    }
+elif [ "$opParam" == '-video' ] || [ "$opParam" == '-vid' ]
+    then {
+      query=${query/-vid+}
+      query=${query/-video+}
+      option="&tbm=vid"
+}
+elif [ "$opParam" == '-news' ] || [ "$opParam" == '-nws' ]
+    then {
+      query=${query/-nws+}
+      query=${query/-news+}
+      option="&tbm=nws"
+}
+elif [ "$opParam" == '-books' ] || [ "$opParam" == '-bks' ]
+    then {
+      query=${query/-bks+}
+      query=${query/-books+}
+      option="&tbm=bks"
+}
+elif [ "$opParam" == '-finance' ] || [ "$opParam" == '-fnc' ]
+    then {
+      query=${query/-fnc+}
+      query=${query/-finance+}
+      option="&tbm=fin"
+}
+elif [ "$opParam" == '-maps' ] || [ "$opParam" == '-map' ]
+      then {
+        query=${query/-map+}
+        query=${query/-maps+}
+        query=${query/-ggl+}
+        query=${query/-google+}
+        $browser www.google.com/maps?q=$query
+      exit
+}
+elif [ "$opParam" == '-help' ] || [ "$opParam" == '-h' ] || [ "$opParam" == '-?' ]
+  then {
+    echo "${aqua}${bold}Google Search Filters:${normal}
+            For Images     -image       -img
+            For Videos     -video       -vid
+            For News       -news        -nws
+            For Books      -books       -bks
+            For Finance    -finance     -fnc
+            For Maps       -maps        -map
+    "
+    exit
+}
+else {
+      option=""
+}
+fi
+query=${query/-ggl+}
+query=${query/-google+}
+$browser www.google.com/search?q=$query$option
