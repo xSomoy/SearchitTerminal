@@ -149,7 +149,7 @@ function createSearchit() {
 # defaultBrowserCheck.dat
 # defaultSearch.dat
     echo "${green}Creating Searchit Terminal Core...${normal}"
-    echo "$intro" >> searchit   t
+    echo "$intro" >> searchit
     echo "version=$version" >> searchit
     echo "$globalVariable" >> searchit
     echo "$colorLibrary" >> searchit
@@ -273,9 +273,10 @@ CONFIGEND
 # Double Check Install
 
 function installCheck() {
-    if [ -f /usr/bin/searchit ] && [ -f /usr/bin/googleit ] && [ -f /usr/bin/duckit ] && [ -f ~/.searchit/searchit.cfg ] && [ -f /usr/share/SearchitTerminal/releaseNote ] && [ -f /usr/share/applications/SearchitTerminal.desktop ] && [ -f /usr/share/icons/SearchitTerminal/SearchitTerminal.png ] && [ -f /usr/share/SearchitTerminal/logo ]
+    if [ -f /usr/bin/searchit ] && [ -f /usr/bin/googleit ] && [ -f /usr/bin/duckit ] && [ -f ~/.searchit/searchit.cfg ] && [ -f /usr/share/SearchitTerminal/releaseNote ] && [ -f /usr/share/applications/SearchitTerminal.desktop ] && [ -f /usr/share/SearchitTerminal/SearchitTerminal.png ] && [ -f /usr/share/SearchitTerminal/logo ]
     then {
-        ./usr/share/SearchitTerminal/logo
+        cd /usr/share/SearchitTerminal/
+        ./logo
         echo "
     ${green}${bold}Instalation Complete!!!${normal}${default}
 

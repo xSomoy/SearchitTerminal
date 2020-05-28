@@ -4,8 +4,8 @@
     function engineCheck() {
         if [ -z $parameter ]
         then {
-            cd ~
-            ./usr/share/SearchitTerminal/logo
+            cd /usr/share/SearchitTerminal
+            ./logo
             echo "${aqua}${bold}Please Provide A Option Or A Search Query"
             echo "Use Directly"
             echo "Ex: \" searchit --help \" Or \" searchit john wick \""
