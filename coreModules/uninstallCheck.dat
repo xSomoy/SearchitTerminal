@@ -2,7 +2,7 @@
 
     function uninstallCheck() {
         cd ~
-        if [ -f /usr/bin/searchit ] && [ -f /usr/bin/googleit ] && [ -f /usr/bin/duckit ] && [ -f ~/.searchit/searchit.cfg ] && [ -f /usr/share/SearchitTerminal/Release-Note ] && [ -f /usr/share/applications/SearchitTerminal.desktop ] && [ -f /usr/share/SearchitTerminal/SearchitTerminal.png ] && [ -f ~/.searchit/logo ]
+        if [ -f /usr/bin/searchit ] && [ -f /usr/bin/googleit ] && [ -f /usr/bin/duckit ] && [ -f ~/.config/SearchitTerminal/searchit.cfg ] && [ -f /usr/share/SearchitTerminal/Release-Note ] && [ -f /usr/share/applications/SearchitTerminal.desktop ] && [ -f /usr/share/SearchitTerminal/SearchitTerminal.png ] && [ -f ~/usr/share/SearchitTerminal/logo ]
         then {
             echo "${red}${bold}Uninstallation Failed"
             echo "Report Problem : https://github.com/BlackPearlTech/SearchitTerminal/issues ${normal}"

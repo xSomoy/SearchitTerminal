@@ -9,7 +9,7 @@ function uninstaller(){
         sudo rm duckit googleit searchit
         sudo rm /usr/share/applications/SearchitTerminal.desktop
         cd ~
-        sudo rm -r .searchit
+        sudo rm -r .config/SearchitTerminal
         sudo rm -r /usr/share/SearchitTerminal
         uninstallCheck
     }
