@@ -259,17 +259,22 @@ function dataGen() {
         cp resource/logo /usr/share/SearchitTerminal/
         cp resource/releaseNote /usr/share/SearchitTerminal/
         cp resource/README.txt /usr/share/SearchitTerminal/
-        if [ -d ~/.config ]
-          then {
-            mkdir ~/.config/SearchitTerminal
-            chmod 777 ~/.config/SearchitTerminal/
-          }
-          else {
-          mkdir ~/.config
-          mkdir ~/.config/SearchitTerminal
-          chmod 777 ~/.config/SearchitTerminal/
-         }
-       fi
+        if [ -d ~/.config/SearchitTerminal ]
+        then :
+        else {
+          if [ -d ~/.config ]
+            then {
+              mkdir ~/.config/SearchitTerminal
+              chmod 777 ~/.config/SearchitTerminal/
+            }
+            else {
+              mkdir ~/.config
+              mkdir ~/.config/SearchitTerminal
+              chmod 777 ~/.config/SearchitTerminal/
+            }
+          fi
+        }
+      fi
     }
 
 # Double Check Install
@@ -277,15 +282,15 @@ function dataGen() {
 function installCheck() {
     if [ -f /usr/bin/searchit ] && [ -f /usr/bin/googleit ] && [ -f /usr/bin/duckit ] && [ -f /usr/share/SearchitTerminal/releaseNote ] && [ -f /usr/share/applications/SearchitTerminal.desktop ] && [ -f /usr/share/SearchitTerminal/SearchitTerminal.png ] && [ -f /usr/share/SearchitTerminal/logo ]
     then {
-        cd /usr/share/SearchitTerminal/
-        ./logo
+        # cd /usr/share/SearchitTerminal/
+        # ./logo
         echo "
-    ${green}${bold}Instalation Complete!!!${normal}${default}
+${GREEN}${black}Instalation Complete!!!${normal}
 
     ${aqua}If You Like This Software. You Can Help Me To Improve This.
     Report Any Issue On Github Or Directly Contact Me Via Twitter.
     Or You Can Just Let Me Know If You Liked It. That Also Helps A lot.
-    Thank You. :D ${normal} ${blue}
+    Thank You. 😁 ${normal} ${blue}
         Twitter:    https://twitter.com/Tweet2Searchit
         Facebook:   https://facebook.com/BlackPearlTechOfficial
         Github:     https://github.com/BlackPearlTech
@@ -296,7 +301,9 @@ function installCheck() {
     }
     else {
         echo "${red}${bold}Instalation Failed"
-        echo "Report Problem : https://github.com/BlackPearlTech/SearchitTerminal/issues${normal}${default}"
+        echo "Report Problem : https://github.com/BlackPearlTech/Searchit  if [ -d /usr/share/icons/SearchitTerminal ] then
+                sudo rm -r /usr/share/icons/SearchitTerminal
+              fiTerminal/issues${normal}${default}"
         }
     fi
 
@@ -338,7 +345,7 @@ function createGoogleit() {
 function oldversionCheck() {
   echo "${blue}Checking If Older Version Of Searchit Exist...${normal}"
   sleep 1s
-  if [ -f /usr/bin/searchit ] || [ -f /usr/bin/googleit ] || [ -f /usr/bin/duckit ] || [ -f /usr/share/applications/st.desktop ] || [ -d ~/.config/SearchitTerminal ] || [ -d /usr/share/icons/SearchitTerminal ] || [ -f /usr/share/applications/SearchitTerminal.desktop ]
+  if [ -f /usr/bin/searchit ] || [ -f /usr/bin/googleit ] || [ -f /usr/bin/duckit ] || [ -f /usr/share/applications/st.desktop ] || [ -d ~/.searchit ] || [ -d /usr/share/icons/SearchitTerminal ] || [ -f /usr/share/applications/SearchitTerminal.desktop ] || [ -d /usr/share/SearchitTerminal ]
       then {
               echo "${orange}Older Version Of Searchit Terminal Is Found"
               sleep 1s
@@ -346,8 +353,18 @@ function oldversionCheck() {
               sleep 1s
               sudo rm /usr/bin/searchit /usr/bin/googleit /usr/bin/duckit
               sudo rm /usr/share/applications/SearchitTerminal.desktop
-              sudo rm -r /usr/share/icons/SearchitTerminal
-              sudo rm -r ~/.config/SearchitTerminal
+              if [ -d /usr/share/SearchitTerminal ]
+              then
+                sudo rm -r /usr/share/SearchitTerminal
+              fi
+              if [ -d /usr/share/icons/SearchitTerminal ]
+              then
+                sudo rm -r /usr/share/icons/SearchitTerminal
+              fi
+              if [ -d ~/.searchit ]
+              then
+                sudo rm -r ~/.searchit
+              fi
               echo "Old Version Of Searchit Terminal Removed${normal}"
               sleep 1s
               echo "${green}Installing Newer Version Of Searchit Terminal${normal}"
@@ -357,9 +374,8 @@ function oldversionCheck() {
       else {
               echo "${green}No Older Version of Searchit Terminal Found"
               sleep 1s
-              clear
               echo "Installing Newer Version Of Searchit Terminal${normal}"
-                dataLoad
+              dataLoad
           }
       fi
 }
@@ -373,11 +389,9 @@ function checkPermission() {
             oldversionCheck
             dataGen
             installer
-            echo "${green}Searchit Terminal Configuration Process..."
-            echo "${normal}"
-            echo "${bold}${green}Select Your Default Browser and Search Engine:${normal}${default}"
-            echo ""
+            sleep 3s
             installCheck
+
         }
     else {
         sudo chmod +x installer.sh
