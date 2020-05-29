@@ -1,16 +1,29 @@
 #   Uninstaller function
 
 function uninstaller(){
-    echo "${red}${bold}Do You Really Want To Uninstall Seachit? (Y/N):${normal}"
+    echo -n "${red}${bold}Do You Really Want To Uninstall Seachit? (Y/N):${normal}"
     read decision;
     if [ "$decision" == "Y" ] || [ "$decision" == "y" ]
     then {
+        if [ -d ~/.searchit ]
+        then
+          sudo rm ~/.searchit
+        fi
+        if [ -d /usr/share/applications/SearchitTerminal ]
+        then
+          sudo rm /usr/share/applications/SearchitTerminal
+        fi
         cd /usr/bin
         sudo rm duckit googleit searchit
         sudo rm /usr/share/applications/SearchitTerminal.desktop
-        cd ~
-        sudo rm -r .config/SearchitTerminal
         sudo rm -r /usr/share/SearchitTerminal
+        echo -n "${red}Remove Default Configuration? (Y/N): ${normal}"
+        read decision
+        if [ "$decision" == "Y" ] || [ "$decision" == "y" ]
+        then
+            sudo rm -r ~/.config/SearchitTerminal
+        else :
+        fi
         uninstallCheck
     }
     else {
