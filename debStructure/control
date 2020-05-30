@@ -3,7 +3,6 @@ Section: net
 Priority: optional
 Maintainer: Black Pearl Tech
 
-Homepage: https://blackpearltech.github.io/web
 Package: searchit-terminal
 Architecture: any
 Description: Search The Hell Out Of Internet

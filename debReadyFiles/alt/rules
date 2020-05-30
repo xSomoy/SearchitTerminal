@@ -1,20 +1,18 @@
 #!/usr/bin/make -f
 
-icon = $(CURDIR)/SearchitTerminal.png
-launcher = $(CURDIR)/SearchitTerminal.desktop
+
 searchit = $(CURDIR)/searchit
 googleit = $(CURDIR)/googleit
 duckit = $(CURDIR)/duckit
-config = $(CURDIR)/searchit.cfg
-logo = $(CURDIR)/logo
+launcher = $(CURDIR)/SearchitTerminal.desktop
+icon = $(CURDIR)/SearchitTerminal.png
 readme = $(CURDIR)/README.txt
-releaseNote = $(CURDIR)/releaseNote
-version = $(CURDIR)/version
+releasenote = $(CURDIR)/releaseNote
+logo = $(CURDIR)/logo
 
 DEST1 = $(CURDIR)/debian/searchit-terminal/usr/bin
-DEST2 = $(CURDIR)/debian/searchit-terminal/usr/share/applications
-DEST3 = $(CURDIR)/debian/searchit-terminal~/.searchit
-DEST4 = $(CURDIR)/debian/searchit-terminal//usr/share/icons/SearchitTerminal
+DEST2 = $(CURDIR)/debian/searchit-terminal//usr/share/applications/
+DEST3 = $(CURDIR)/debian/searchit-terminal//usr/share/SearchitTerminal/
 
 build: build-stamp
 
@@ -28,29 +26,24 @@ clean:
 	rm -f build-stamp
 	dh_clean
 
-install: build clean $(icon) $(searchit) $(launcher) $(googleit) $(duckit) $(logo) $(readme) $(releaseNote) $(version)
+install: build clean $(searchit) $(googleit) $(duckit) $(launcher) $(icon) $(readme) $(releasenote) $(logo)
 	dh_testdir
 	dh_testroot
 	dh_prep
 	dh_installdirs
 
-	mkdir -m (777) -p $(DEST1)
-	mkdir -m (777) -p $(DEST2)
-	mkdir -m (777) -p $(DEST3)
-	mkdir -m (777) -p $(DEST4)
+	mkdir -m 777 -p $(DEST1)
+	mkdir -m 777 -p $(DEST2)
+	mkdir -m 777 -p $(DEST3)
 
-	install -m 666 $(icon) $(DEST4)
 	install -m 777 $(searchit) $(DEST1)
-	install -m 777 $(duckit) $(DEST1)
 	install -m 777 $(googleit) $(DEST1)
+	install -m 777 $(duckit) $(DEST1)
 	install -m 777 $(launcher) $(DEST2)
+	install -m 777 $(icon) $(DEST3)
+	install -m 777 $(readme) $(DEST3)
+	install -m 777 $(releasenote) $(DEST3)
 	install -m 777 $(logo) $(DEST3)
-	install -m 777 $(config) $(DEST3)
-	install -m 666 $(README) $(DEST3)
-	install -m 666 $(releaseNote) $(DEST3)
-	install -m 666 $(version) $(DEST3)
-
-
 
 binary-indep: build install
 	dh_testdir
@@ -70,4 +63,4 @@ binary-indep: build install
 binary-arch: build install
 
 binary: binary-indep binary-arch
-.PHONY: build clean binary-indep binary-arch binary install 
+.PHONY: build clean binary-indep binary-arch binary install
