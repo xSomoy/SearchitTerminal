@@ -1,10 +1,11 @@
-Package: searchit-terminal
+Source: searchit-terminal
 Section: net
-Version: 3.0.0
 Priority: optional
-Architecture: any
 Maintainer: Black Pearl Tech
+
 Homepage: https://blackpearltech.github.io/web
+Package: searchit-terminal
+Architecture: any
 Description: Search The Hell Out Of Internet
  Use various search engines and search sites with their search filters
  without even leaving your terminal
