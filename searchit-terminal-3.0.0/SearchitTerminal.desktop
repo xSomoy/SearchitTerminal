@@ -8,4 +8,4 @@ Exec=/usr/bin/searchit
 Terminal=true
 Comment=Search The Hell Out Of Internet
 Keywords=Internet;Search;Tool;Web;Search;Customization;
-Icon=/usr/share/icons/SearchitTerminal/SearchitTerminal.png
+Icon=/usr/share/SearchitTerminal/SearchitTerminal.png

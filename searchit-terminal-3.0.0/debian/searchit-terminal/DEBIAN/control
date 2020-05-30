@@ -1,0 +1,11 @@
+Package: searchit-terminal
+Version: 3.0.0-1
+Architecture: amd64
+Maintainer: Black Pearl Tech
+Installed-Size: 141
+Section: net
+Priority: optional
+Homepage: https://blackpearltech.github.io/web
+Description: Search The Hell Out Of Internet
+ Use various search engines and search sites with their search filters
+ without even leaving your terminal

@@ -15,7 +15,7 @@
 #                                                    #
 #     Copyright © 2020 Black Pearl Tech              #
 #                                                    #
-###################################################### t
+######################################################
 version=3.0.0
 # Assigning Parameter, Search Query And Search Filter
 
@@ -68,6 +68,41 @@ tmpquery="$@"
  DEFAULT=`echo -en "\e[49m"`
 
 # Color Library End
+# Config Check Function
+
+function configCheck() {
+  if [ -f ~/.config/SearchitTerminal/searchit.cfg ]
+    then
+      :
+  else {
+    cd /usr/share/SearchitTerminal
+    ./logo
+    echo ""
+    echo "${orange}Please Select Default Configuration For Current User${normal}"
+    echo ""
+    browserCheck
+    defaultEngine
+    if [ -d ~/.config/SearchitTerminal/ ]
+    then
+      :
+    else {
+      mkdir ~/.config/SearchitTerminal
+    }
+    fi
+    cd ~/.config/SearchitTerminal/
+    cat  >> searchit.cfg <<CONFIGEND
+Searchit Configuration File.
+Please Do Not Make Any Change To This File.
+Use Command "searchit -cfg" To Make Any Changes
+----------------------------------
+
+Default Browser: $var1
+Default Search Engine: $var2
+CONFIGEND
+echo "Default Configuration Has Been Set!"
+  }
+fi
+}
 # Update Check Function
 
 function updateCheck (){
@@ -97,7 +132,7 @@ function updateCheck (){
 # Default Browser Check
 
 function dbCheck() {
-    tmpBrowser=$(cat ~/.searchit/searchit.cfg | grep "Browser")
+    tmpBrowser=$(cat ~/.config/SearchitTerminal/searchit.cfg | grep "Browser")
     tmpBrowser=${tmpBrowser/Default\ Browser:\ }
     tmpBrowser=${tmpBrowser//\ /+}
     if [ "$tmpBrowser" == "Firefox" ]
@@ -144,7 +179,7 @@ function dbCheck() {
 #   Default Search Engine Check
 
 function deCheck() {
-    tmpSEngine=$(cat ~/.searchit/searchit.cfg | grep "Default Search")
+    tmpSEngine=$(cat ~/.config/SearchitTerminal/searchit.cfg | grep "Default Search")
     tmpSEngine=${tmpSEngine/Default\ Search\ Engine:\ }
     if [ "$tmpSEngine" == "DuckDuckGo" ]
         then {
@@ -2541,14 +2576,14 @@ function defaultEngine() {
 #   Config File Generator
 
 function config() {
-    cat ~/.searchit/searchit.cfg | grep "Default"
+    cat ~/.config/SearchitTerminal/searchit.cfg | grep "Default"
     echo ""
     echo "${blue}Do You Want To Change This Configuration? (Y/N):${normal}"
     read decision;
     if [ "$decision" == "Y" ] || [ "$decision" == "y" ]
     then {
-        cd ~/.searchit/
-        sudo rm searchit.cfg
+        cd ~/.config/SearchitTerminal/
+        rm searchit.cfg
         browserCheck
         defaultEngine
         cat  >> searchit.cfg <<CONFIGEND
@@ -2570,16 +2605,29 @@ CONFIGEND
 #   Uninstaller function
 
 function uninstaller(){
-    echo "${red}${bold}Do You Really Want To Uninstall Seachit? (Y/N):${normal}"
+    echo -n "${red}${bold}Do You Really Want To Uninstall Seachit? (Y/y as Yes):${normal}"
     read decision;
     if [ "$decision" == "Y" ] || [ "$decision" == "y" ]
     then {
+        if [ -d ~/.searchit ]
+        then
+          sudo rm ~/.searchit
+        fi
+        if [ -d /usr/share/applications/SearchitTerminal ]
+        then
+          sudo rm /usr/share/applications/SearchitTerminal
+        fi
         cd /usr/bin
         sudo rm duckit googleit searchit
         sudo rm /usr/share/applications/SearchitTerminal.desktop
-        cd ~
-        sudo rm -r .searchit
-        sudo rm -r /usr/share/icons/SearchitTerminal
+        sudo rm -r /usr/share/SearchitTerminal
+        echo -n "${orange}Remove Default Configuration? (Y/y as Yes): ${normal}"
+        read decision
+        if [ "$decision" == "Y" ] || [ "$decision" == "y" ]
+        then
+            sudo rm -r ~/.config/SearchitTerminal
+        else :
+        fi
         uninstallCheck
     }
     else {
@@ -2591,7 +2639,7 @@ function uninstaller(){
 
     function uninstallCheck() {
         cd ~
-        if [ -f /usr/bin/searchit ] && [ -f /usr/bin/googleit ] && [ -f /usr/bin/duckit ] && [ -f ~/.searchit/searchit.cfg ] && [ -f ~/.searchit/Release-Note ] && [ -f /usr/share/applications/SearchitTerminal.desktop ] && [ -f /usr/share/icons/SearchitTerminal/SearchitTerminal.png ] && [ -f ~/.searchit/logo ]
+        if [ -f /usr/bin/searchit ] && [ -f /usr/bin/googleit ] && [ -f /usr/bin/duckit ] && [ -f /usr/share/applications/SearchitTerminal.desktop ] && [ -d /usr/share/SearchitTerminal ] && [ -d ~/.searchit ]
         then {
             echo "${red}${bold}Uninstallation Failed"
             echo "Report Problem : https://github.com/BlackPearlTech/SearchitTerminal/issues ${normal}"
@@ -2619,7 +2667,7 @@ function uninstaller(){
 
 function about(){
     cd ~
-   ./.searchit/logo
+   ./usr/share/SearchitTerminal/logo
     echo "
            ${green}${bold}Searchit Terminal${normal}
            ${green}Terminal Based Search Customizer
@@ -2662,8 +2710,8 @@ function update(){
                  echo "${aqua}${blink}Downloading Latest Version...${normal}"
                  if [ -f ~/master.zip ]
                  then {
-                      sudo rm /usr/bin/searchit /usr/bin/googleit /usr/bin/duckit
-                      sudo rm -r ~/.searchit
+                      sudo rm /usr/bin/searchit /usr/bin/googleit /usr/bin/duckit 
+                      sudo rm -r ~/.config/SearchitTerminal /usr/share/SearchitTerminal
                       unzip master.zip
                       clear
                       cd SearchitTerminal-master
@@ -2725,8 +2773,8 @@ function connectionTest () {
     function engineCheck() {
         if [ -z $parameter ]
         then {
-            cd ~
-            ./.searchit/logo
+            cd /usr/share/SearchitTerminal
+            ./logo
             echo "${aqua}${bold}Please Provide A Option Or A Search Query"
             echo "Use Directly"
             echo "Ex: \" searchit --help \" Or \" searchit john wick \""
@@ -2785,12 +2833,12 @@ function connectionTest () {
             elif [ "$parameter" == '--readme' ] || [ "$parameter" == '-rdm' ]
                 then {
                     clear
-                    cat ~/.searchit/README.txt
+                    cat /usr/share/SearchitTerminal/README.txt
                 }
             elif [ "$parameter" == '--release' ] || [ "$parameter" == '-rn' ]
                 then {
                     clear
-                    cat ~/.searchit/releaseNote
+                    cat /usr/share/SearchitTerminal/releaseNote
                 }
             elif [ "$parameter" == '--version' ] || [ "$parameter" == '-v' ]
                 then {
@@ -2955,8 +3003,12 @@ function connectionTest () {
     fi
     }
 
+# Calling Confg Check Fucntion For First Launch
+configCheck
+
 # Calling engineCheck Function For Initialization
 engineCheck
+
 
 # Checking For Available Updates After Every Action
     updateCheck
