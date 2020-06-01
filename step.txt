@@ -1,0 +1,5 @@
+1. Create a folder name structure [ packgename-version ]
+2. Gather All Complied Files / Copy From Pre Source Installed into the folder
+3. Copy The debian folder and its files into the folder
+4. Change directory to the folder
+5. run command "fakeroot dpkg-buildpackage -F"
