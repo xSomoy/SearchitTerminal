@@ -2,7 +2,7 @@ Package: searchit-terminal
 Version: 3.0.0-1
 Architecture: amd64
 Maintainer: Black Pearl Tech
-Installed-Size: 143
+Installed-Size: 144
 Section: net
 Priority: optional
 Description: Search The Hell Out Of Internet
