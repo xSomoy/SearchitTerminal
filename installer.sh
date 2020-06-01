@@ -343,7 +343,7 @@ function createGoogleit() {
 
 #   Uninstalling If Older Version of Searchit Terminal is already installed
 function oldversionCheck() {
-  echo "${blue}Checking If Older Version Of Searchit Exist...${normal}"
+  echo "${blue}Checking If Older Version Of Searchit Terminal Exist...${normal}"
   sleep 1s
   if [ -f /usr/bin/searchit ] || [ -f /usr/bin/googleit ] || [ -f /usr/bin/duckit ] || [ -f /usr/share/applications/st.desktop ] || [ -d ~/.searchit ] || [ -d /usr/share/icons/SearchitTerminal ] || [ -f /usr/share/applications/SearchitTerminal.desktop ] || [ -d /usr/share/SearchitTerminal ]
       then {
