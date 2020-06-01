@@ -1,0 +1,66 @@
+#!/usr/bin/make -f
+
+
+searchit = $(CURDIR)/searchit
+googleit = $(CURDIR)/googleit
+duckit = $(CURDIR)/duckit
+launcher = $(CURDIR)/SearchitTerminal.desktop
+icon = $(CURDIR)/SearchitTerminal.png
+readme = $(CURDIR)/README.txt
+releasenote = $(CURDIR)/releaseNote
+logo = $(CURDIR)/logo
+
+DEST1 = $(CURDIR)/debian/searchit-terminal/usr/bin
+DEST2 = $(CURDIR)/debian/searchit-terminal//usr/share/applications/
+DEST3 = $(CURDIR)/debian/searchit-terminal//usr/share/SearchitTerminal/
+
+build: build-stamp
+
+build-stamp:
+	dh_testdir
+	touch build-stamp
+
+clean:
+	dh_testdir
+	dh_testroot
+	rm -f build-stamp
+	dh_clean
+
+install: build clean $(searchit) $(googleit) $(duckit) $(launcher) $(icon) $(readme) $(releasenote) $(logo)
+	dh_testdir
+	dh_testroot
+	dh_prep
+	dh_installdirs
+
+	mkdir -m 777 -p $(DEST1)
+	mkdir -m 777 -p $(DEST2)
+	mkdir -m 777 -p $(DEST3)
+
+	install -m 777 $(searchit) $(DEST1)
+	install -m 777 $(googleit) $(DEST1)
+	install -m 777 $(duckit) $(DEST1)
+	install -m 777 $(launcher) $(DEST2)
+	install -m 777 $(icon) $(DEST3)
+	install -m 777 $(readme) $(DEST3)
+	install -m 777 $(releasenote) $(DEST3)
+	install -m 777 $(logo) $(DEST3)
+
+binary-indep: build install
+	dh_testdir
+	dh_testroot
+	dh_installchangelogs
+	dh_installdocs
+	dh_installexamples
+	dh_installman
+	dh_link
+	dh_compress
+	dh_fixperms
+	dh_installdeb
+	dh_gencontrol
+	dh_md5sums
+	dh_builddeb
+
+binary-arch: build install
+
+binary: binary-indep binary-arch
+.PHONY: build clean binary-indep binary-arch binary install
