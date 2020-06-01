@@ -301,9 +301,7 @@ ${GREEN}${black}Instalation Complete!!!${normal}
     }
     else {
         echo "${red}${bold}Instalation Failed"
-        echo "Report Problem : https://github.com/BlackPearlTech/Searchit  if [ -d /usr/share/icons/SearchitTerminal ] then
-                sudo rm -r /usr/share/icons/SearchitTerminal
-              fiTerminal/issues${normal}${default}"
+        echo "Report Problem : https://github.com/BlackPearlTech/SearchitTerminal/issues${normal}${default}"
         }
     fi
 
