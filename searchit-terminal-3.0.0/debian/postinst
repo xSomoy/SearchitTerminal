@@ -1,0 +1,24 @@
+#!bin/bash
+
+if [ -f /usr/bin/searchit ] && [ -f /usr/bin/googleit ] && [ -f /usr/bin/duckit ] && [ -f /usr/share/SearchitTerminal/releaseNote ] && [ -f /usr/share/applications/SearchitTerminal.desktop ] && [ -f /usr/share/SearchitTerminal/SearchitTerminal.png ] && [ -f /usr/share/SearchitTerminal/logo ]
+  then {
+      echo "
+Instalation Complete!!!
+
+  If You Like This Software. You Can Help Me To Improve This.
+  Report Any Issue On Github Or Directly Contact Me Via Twitter.
+  Or You Can Just Let Me Know If You Liked It. That Also Helps A lot.
+  Thank You. 😁
+      Twitter:    https://twitter.com/Tweet2Searchit
+      Facebook:   https://facebook.com/BlackPearlTechOfficial
+      Github:     https://github.com/BlackPearlTech
+      Email:      mailtoSearchit@gmail.com ${normal}
+
+         ${bold}${WHITE}${black}Copyright © 2020 Black Pearl Tech${normal}
+          "
+  }
+  else {
+      echo Instalation Failed"
+      echo "Report Problem : https://github.com/BlackPearlTech/SearchitTerminal/issues
+      }
+fi
