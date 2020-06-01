@@ -3,8 +3,12 @@ Section: net
 Priority: optional
 Maintainer: Black Pearl Tech
 
+Build-Depends: debhelper (>= 10)
+Standards-Version: 4.0.0
+Homepage: https://blackpearltech.github.io/web
 Package: searchit-terminal
 Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: Search The Hell Out Of Internet
  Use various search engines and search sites with their search filters
  without even leaving your terminal

@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Name=Searchit Terminal
+Type=Application
+Category=Internet
+TryExec=searchit
+Exec=/usr/bin/searchit
+Terminal=true
+Comment=Search The Hell Out Of Internet
+Keywords=Internet;Search;Tool;Web;Search;Customization;
+Icon=/usr/share/SearchitTerminal/SearchitTerminal.png
