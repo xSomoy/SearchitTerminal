@@ -377,12 +377,32 @@ function oldversionCheck() {
           }
       fi
 }
+
+# Check Dependencies
+
+function deps() {
+  echo "${blue}Checking dependencies..."
+  sleep 1s
+  dep0=$(which wget)
+  if [ -n "$dep0" ]
+  then
+    echo "${green}All dependencies are availavle "
+  else {
+    echo "${orange}Searchit-Terminal dependes on the package 'wget'"
+    echo "Installing dependencies.."
+    sudo apt install wget
+    echo "${green} All dependencies are installed"
+  }
+  fi
+}
+
 # Checking Root Permission & Intializing
 
 function checkPermission() {
     var0=$(whoami)
     if [  "root" == "$var0"  ]
         then {
+            deps
             ./resource/logo
             oldversionCheck
             dataGen
