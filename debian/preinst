@@ -1,5 +1,31 @@
 #!bin/bash
 
+normal=`echo -en "\e[0m"`
+RED=`echo -en "\e[41m"`
+red=`echo -en "\e[31m"`
+BLACK=`echo -en "\e[40m"`
+bold=`echo -en "\e[1m"`
+blink=`echo -en "\e[5m"`
+orange=`echo -en "\e[33m"`
+# Checking For dependencies
+
+echo "Checking dependencies..."
+dep0=$(which wget)
+if [ -n "$dep0" ]
+then
+  echo "All dependencies are availavle "
+else {
+  clear
+  echo "${red}${blink}ERROR: Dependencies are not availavle${normal}"
+  echo "${red}Searchit-Terminal dependes on the package \"wget\"${normal}"
+  echo "Install \"Wget\" Manually Just Run This Command"
+  echo "${BLACK}${orange}\" sudo apt install wget \"${normal}"
+  echo "All dependencies are installed"
+ }
+fi
+
+# Checking for old version
+
 echo "Checking If Older Version Of Searchit Exist..."
 if [ -f /usr/bin/searchit ] || [ -f /usr/bin/googleit ] || [ -f /usr/bin/duckit ] || [ -f /usr/share/applications/st.desktop ] || [ -d ~/.searchit ] || [ -d /usr/share/icons/SearchitTerminal ] || [ -f /usr/share/applications/SearchitTerminal.desktop ] || [ -d /usr/share/SearchitTerminal ]
     then {
