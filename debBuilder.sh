@@ -252,13 +252,15 @@ function checkDep() {
       echo "${red}\"fakeroot is not installed\"${normal}"
       echo "Installing fakeroot"
       sudo apt install fakeroot
+      clear
     }
     fi
     if [ -n "$dep1" ]
     then {
       echo "${red}\"dh_make is not installed\"${normal}"
       echo "Installing dh_make"
-      sudo apt install dh_make
+      sudo apt install dh-make
+      clear
     }
     fi
 
