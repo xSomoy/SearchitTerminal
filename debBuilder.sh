@@ -10,6 +10,17 @@ orange=`echo -en "\e[33m"`
 
 # Checking All Files Are Available
 
+hostFolder=$(pwd)
+
+function packInfo() {
+  echo -n "Version Number:"
+  read ver
+  packageName="searchit-terminal-$ver"
+  mkdir "$packageName"
+  cd $packageName
+  packageFolder=$(pwd)
+}
+
 function fileCheck() {
   echo "Checking if all files are available to create a debian package"
   sleep .5s
@@ -214,15 +225,9 @@ function fileCheck() {
   echo "All files are found"
 }
 
-function packInfo() {
-  echo -n "Version Number:"
-  read ver
-  filename="searchit-terminal-$ver"
-  mkdir "$filename"
-}
 
 function collectFile() {
-  cd searchit-terminal-"$ver"/
+  cd $packageFolder
   dir=$(pwd)
   cp /usr/bin/searchit $dir
   cp /usr/bin/duckit $dir
@@ -262,18 +267,37 @@ fi
 }
 
 function debBuild() {
-  cd ..
-  tar -cf searchit-terminal-"$ver".tar.xz "$filename"
-  sudo chmod 777 searchit-terminal-"$ver".tar.xz
-  mv searchit-terminal-"$ver".tar.xz "$filename"/
-  cd "$filename"
-  dh_make -f searchit-terminal-"$ver".tar.xz
-  rm  searchit-terminal_"$ver".tar.xz
-  rm -r debian
-  cd ..
-  cp -r debian "$filename"/
-  cd "$filenam"
-  fakeroot dpkg-buildpackage -F
+  echo "Ha ha ha now you gotta do a manual step cause i have no fucking idea why the fuck compresseing the folder into tar in shell cause i am a dumb ass"
+  echo "Now go and compress the folder manually make sure to use taz.xz compress methos you looser"
+  sleep 1s
+  echo -n " did you compressed it? (y/n):"
+  read dumbo
+  if [ "$dumbo" == "y" ] || [ "$dumbo" == "Y" ]
+  then {
+    cd $hostFolder
+    if [ -f searchit-terminal-"$ver".tar.xz ]
+    then {
+      mv searchit-terminal-"$ver".tar.xz $packageFolder
+      cd $packageFolder
+      dh_make -i -f searchit-terminal-"$ver".tar.xz
+      rm  searchit-terminal-$ver.tar.xz
+      rm -r debian
+      cd $hostFolder
+      cp -r debian $packageFolder
+      cd $packageFolder
+      fakeroot dpkg-buildpackage -F
+    }
+  else {
+    echo "compress the fucking file you dumb fucking lier. Bye"
+    exit
+  }
+fi
+}
+else {
+  echo "Okay then fuck you lazy asshole"
+  exit
+}
+fi
 }
 
 
