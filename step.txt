@@ -1,7 +1,13 @@
-0. Check if all files is available
-1. Create a folder name structure [ packgename-version ]
-2. Gather All Complied Files / Copy From
-	Pre Source Installed into the folder
-3. Copy The debian folder and its files into the folder
-4. Change directory to the folder
-5. run command "fakeroot dpkg-buildpackage -F"
+#0. Check if all files is available
+#1. Create a folder name structure [ packgename-version ]
+#2. Gather All Complied Files / Copy From Pre Source Installed into the package folder
+#3. Create a tarball file of the package folder ( Manual )
+#4. Move the tarball file into the package folder
+#5. Change directory to the package folder
+#6. run " dh_make -i -f "
+#7. Remove the tarball file
+#8. Remove the debian directory
+#9. Change directory to host folder
+#8. Copy the debian directory to the package folder
+#9. Change directory to the package folder
+#10. run " fakeroot dpkg-buildpackage -F "
