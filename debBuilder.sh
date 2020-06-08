@@ -247,20 +247,18 @@ function checkDep() {
   then
     echo "All dependencies are availavle "
   else {
-    if [ -n "$dep0" ]
+    if [ -z "$dep0" ]
     then {
       echo "${red}\"fakeroot is not installed\"${normal}"
       echo "Installing fakeroot"
       sudo apt install fakeroot
-      clear
     }
     fi
-    if [ -n "$dep1" ]
+    if [ -z "$dep1" ]
     then {
       echo "${red}\"dh_make is not installed\"${normal}"
       echo "Installing dh_make"
       sudo apt install dh-make
-      clear
     }
     fi
 
