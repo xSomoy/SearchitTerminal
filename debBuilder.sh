@@ -285,7 +285,7 @@ function debBuild() {
       cd $hostFolder
       cp -r debian $packageFolder
       cd $packageFolder
-      fakeroot dpkg-buildpackage -F
+      fakeroot dpkg-buildpackage -v $ver -F
     }
   else {
     echo "compress the fucking file you dumb fucking lier. Bye"
