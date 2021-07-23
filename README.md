@@ -88,3 +88,10 @@ For personal and business purpose you can contact me directly.
 ## Copyright © 2020 [Black Peal Tech](https://blackpearltech.github.io/web)
 
 ## Thank You !!
+
+<table aligh="center">
+  <tr>
+    <td>Total Visits</td>
+    <td><img src="https://profile-counter.glitch.me/xsomoy/count.svg" alt="xSomoy" /></td>
+  </tr>
+</table>
