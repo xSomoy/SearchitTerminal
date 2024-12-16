@@ -10,10 +10,10 @@
 #     Email:      mailtoSearchit@gmail.com                  #
 #     License:    GNU General Public License v3.0           #
 #                                                           #
-#     Author:     John Deadman                              #
+#     Author:     TENET [ Mushphyqur Rahman ]                               #
 #     Twitter:    www.twitter.com/xSomoy                    #
 #                                                           #
-#     Copyright © 2020 Black Pearl Tech                     #
+#     Copyright © 2024 Mushphyqur Rahman                     #
 #                                                           #
 #############################################################
 
@@ -66,9 +66,6 @@ version=$(cat coreModules/version.dat)
  DEFAULT=`echo -en "\e[49m"`
 
 # Color Library End
-
-
-# colorLibrary End
 
 function dataLoad() {
 
@@ -296,7 +293,7 @@ ${GREEN}${black}Instalation Complete!!!${normal}
         Github:     https://github.com/BlackPearlTech
         Email:      mailtoSearchit@gmail.com ${normal}
 
-           ${bold}${WHITE}${black}Copyright © 2020 Black Pearl Tech${normal}
+           ${bold}${WHITE}${black}Copyright © 2024 Mushphyqur Rahman${normal}
             "
     }
     else {

@@ -17,6 +17,6 @@ function about(){
            Author:    John Deadman
            Twitter:   www.twitter.com/xSomoy
 
-           ${bold}${BLACK}${white}Copyright © 2020 Black Pearl Tech${normal}${default}
+           ${bold}${BLACK}${white}Copyright © 2024 Mushphyqur Rahman${normal}${default}
     "
 }
