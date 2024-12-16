@@ -5,7 +5,7 @@
         if [ -f /usr/bin/searchit ] && [ -f /usr/bin/googleit ] && [ -f /usr/bin/duckit ] && [ -f /usr/share/applications/SearchitTerminal.desktop ] && [ -d /usr/share/SearchitTerminal ] && [ -d ~/.searchit ]
         then {
             echo "${red}${bold}Uninstallation Failed"
-            echo "Report Problem : https://github.com/BlackPearlTech/SearchitTerminal/issues ${normal}"
+            echo "Report Problem : https://github.com/xSomoy/SearchitTerminal/issues ${normal}"
         }
         else {
             echo "${orange}
@@ -14,7 +14,7 @@
     You Can Report Any Issue On Github.
     Or Directly Contact Me Via Twitters
     ${blue}
-       Github:   https://github.com/BlackPearlTech/SearchitTerminal/issues
+       Github:   https://github.com/xSomoy
        Facebook: https://facebook.com/SearchitOfficial
        Email:    mailtoSearchit@gmail.com
        Twitter:  https://twitter.com/Tweet2Searchit

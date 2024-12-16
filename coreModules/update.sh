@@ -20,7 +20,7 @@ function update(){
                read decision;
                if [ "$decision" == "Y" ] || [ "$decision" == "y" ]
                then {
-                 wget -q https://github.com/BlackPearlTech//SearchitTerminal/archive/master.zip |
+                 wget -q https://github.com/xSomoy/SearchitTerminal/archive/refs/heads/master.zip |
                  echo "${aqua}${blink}Downloading Latest Version...${normal}"
                  if [ -f ~/master.zip ]
                  then {
@@ -33,7 +33,7 @@ function update(){
                       ./installer.sh
                       rm ~/master.zip
                       rm -r ~/SearchitTerminal-master
-                      echo "${green}Update Complete !!{normal}"
+                      echo "${green}Update Complete !!${normal}"
                     }
                  else {
                     echo "${red}ERROR: Unable to download updates. Check your internet connection. Or Try again later${normal}"
