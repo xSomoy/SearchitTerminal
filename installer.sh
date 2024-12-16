@@ -17,7 +17,7 @@
 #                                                                                                                     #
 #############################################################
 
-version=$(cat coreModules/version.dat)
+version=$(cat coreModules/version.sh)
 
 
 # Color Library Start
@@ -69,32 +69,32 @@ version=$(cat coreModules/version.dat)
 
 function dataLoad() {
 
-#  loading Core DAT Files
+#  loading Core  Modules
     echo "${green}Loading coreModules... ${normal}"
-    about=$(cat coreModules/about.dat)
-    browserSelect=$(cat coreModules/browserSelect.dat)
-    config=$(cat coreModules/config.dat)
-    configCheck=$(cat coreModules/configCheck.dat)
-    connectionTest=$(cat coreModules/connectionTest.dat)
-    colorLibrary=$(cat coreModules/colorLibrary.dat)
-    defaultBrowserCheck=$(cat coreModules/defaultBrowserCheck.dat)
-    defaultSearch=$(cat coreModules/defaultSearch.dat)
-    defaultSearchEngineCheck=$(cat coreModules/defaultSearchEngineCheck.dat)
-    duckit=$(cat coreModules/duckit.dat)
-    globalVariable=$(cat coreModules/globalVariable.dat)
-    googleit=$(cat coreModules/googleit.dat)
-    help=$(cat coreModules/help.dat)
-    init=$(cat coreModules/init.dat)
-    intro=$(cat coreModules/intro.dat)
-    paramCheck=$(cat coreModules/paramCheck.dat)
-    searchengineSelect=$(cat coreModules/searchengineSelect.dat)
-    uninstall=$(cat coreModules/uninstall.dat)
-    uninstallCheck=$(cat coreModules/uninstallCheck.dat)
-    update=$(cat coreModules/update.dat)
-    updateCheck=$(cat coreModules/updateCheck.dat)
+    about=$(cat coreModules/about.sh)
+    browserSelect=$(cat coreModules/browserSelect.sh)
+    config=$(cat coreModules/config.sh)
+    configCheck=$(cat coreModules/configCheck.sh)
+    connectionTest=$(cat coreModules/connectionTest.sh)
+    colorLibrary=$(cat coreModules/colorLibrary.sh)
+    defaultBrowserCheck=$(cat coreModules/defaultBrowserCheck.sh)
+    defaultSearch=$(cat coreModules/defaultSearch.sh)
+    defaultSearchEngineCheck=$(cat coreModules/defaultSearchEngineCheck.sh)
+    duckit=$(cat coreModules/duckit.sh)
+    globalVariable=$(cat coreModules/globalVariable.sh)
+    googleit=$(cat coreModules/googleit.sh)
+    help=$(cat coreModules/help.sh)
+    init=$(cat coreModules/init.sh)
+    intro=$(cat coreModules/intro.sh)
+    paramCheck=$(cat coreModules/paramCheck.sh)
+    searchengineSelect=$(cat coreModules/searchengineSelect.sh)
+    uninstall=$(cat coreModules/uninstall.sh)
+    uninstallCheck=$(cat coreModules/uninstallCheck.sh)
+    update=$(cat coreModules/update.sh)
+    updateCheck=$(cat coreModules/updateCheck.sh)
 
 
-# Loading Search Engine DAT Files
+# Loading Search Engine Modules
     echo "${green}Loading searchModules... ${normal}"
     baidu=$(cat searchModules/searchEngines/baidu.dat)
     bing=$(cat searchModules/searchEngines/bing.dat)
