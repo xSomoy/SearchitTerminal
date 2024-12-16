@@ -11,7 +11,7 @@ function update(){
         then {
               echo "${blue}Your Version: $version"
               echo "${aqua}Latest Version: $AvailableVersion"
-              echo "${green}You Are UpToDate${normal}"
+              echo "${green}You Are Updated${normal}"
               }
         else {
               echo "${blue}Your Version: $version"
