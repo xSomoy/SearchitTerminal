@@ -91,6 +91,6 @@ Facebook: https://www.facebook.com/SearchitOfficial
 Github:   https://www.github.com/BlackPearlTech
 Email:    mailtoSearchit@gmail.com
 
-Copyright © 2020 Black Pearl Tech
+Copyright © 2024 Mushphyqur Rahman
 
 Thank You !!
