@@ -25,7 +25,7 @@ function update(){
                  if [ -f ~/master.zip ]
                  then {
                       sudo rm /usr/bin/searchit /usr/bin/googleit /usr/bin/duckit 
-                      sudo rm -r ~/.config/SearchitTerminal /usr/share/SearchitTerminal
+                      sudo rm -r  /usr/share/SearchitTerminal
                       unzip master.zip
                       clear
                       cd SearchitTerminal-master
