@@ -301,9 +301,7 @@ ${GREEN}${black}Instalation Complete!!!${normal}
     }
     else {
         echo "${red}${bold}Instalation Failed"
-        echo "Report Problem : https://github.com/BlackPearlTech/Searchit  if [ -d /usr/share/icons/SearchitTerminal ] then
-                sudo rm -r /usr/share/icons/SearchitTerminal
-              fiTerminal/issues${normal}${default}"
+        echo "Report Problem : https://github.com/BlackPearlTech/SearchitTerminal/issues${normal}${default}"
         }
     fi
 
@@ -343,7 +341,7 @@ function createGoogleit() {
 
 #   Uninstalling If Older Version of Searchit Terminal is already installed
 function oldversionCheck() {
-  echo "${blue}Checking If Older Version Of Searchit Exist...${normal}"
+  echo "${blue}Checking If Older Version Of Searchit Terminal Exist...${normal}"
   sleep 1s
   if [ -f /usr/bin/searchit ] || [ -f /usr/bin/googleit ] || [ -f /usr/bin/duckit ] || [ -f /usr/share/applications/st.desktop ] || [ -d ~/.searchit ] || [ -d /usr/share/icons/SearchitTerminal ] || [ -f /usr/share/applications/SearchitTerminal.desktop ] || [ -d /usr/share/SearchitTerminal ]
       then {
@@ -379,12 +377,32 @@ function oldversionCheck() {
           }
       fi
 }
+
+# Check Dependencies
+
+function deps() {
+  echo "${blue}Checking dependencies..."
+  sleep 1s
+  dep0=$(which wget)
+  if [ -n "$dep0" ]
+  then
+    echo "${green}All dependencies are availavle "
+  else {
+    echo "${orange}Searchit-Terminal dependes on the package 'wget'"
+    echo "Installing dependencies.."
+    sudo apt install wget
+    echo "${green} All dependencies are installed"
+  }
+  fi
+}
+
 # Checking Root Permission & Intializing
 
 function checkPermission() {
     var0=$(whoami)
     if [  "root" == "$var0"  ]
         then {
+            deps
             ./resource/logo
             oldversionCheck
             dataGen
