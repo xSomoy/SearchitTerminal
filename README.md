@@ -85,7 +85,7 @@ For personal and business purpose you can contact me directly.
 [Twitter](https://twitter.com/xSomoy) - [Github](https://github.com/BlackPearlTech) - [Faceboook](https://www.facebook.com/SearchitOfficial) - [Email](mailto:mailtoSearchit@gmail.com)
 
 
-## Copyright © 2020 [Black Peal Tech](https://blackpearltech.github.io/web)
+## Copyright © 2024 [Mushphyqur Rahman](https://xsomoy.github.io/about/)
 
 ## Thank You !!
 
