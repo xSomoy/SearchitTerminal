@@ -25,7 +25,7 @@ function update(){
                  if [ -f ~/master.zip ]
                  then {
                       sudo rm /usr/bin/searchit /usr/bin/googleit /usr/bin/duckit 
-                      sudo rm -r ~/.config/SearchitTerminal /usr/share/SearchitTerminal
+                      sudo rm -r  /usr/share/SearchitTerminal
                       unzip master.zip
                       clear
                       cd SearchitTerminal-master
@@ -33,7 +33,7 @@ function update(){
                       ./installer.sh
                       rm ~/master.zip
                       rm -r ~/SearchitTerminal-master
-                      echo "${green}Update Complete !!${normal}"
+                      echo "${green}Update Complete !! ${normal}"
                     }
                  else {
                     echo "${red}ERROR: Unable to download updates. Check your internet connection. Or Try again later${normal}"
