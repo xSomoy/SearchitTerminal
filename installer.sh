@@ -96,39 +96,39 @@ function dataLoad() {
 
 # Loading Search Engine Modules
     echo "${green}Loading searchModules... ${normal}"
-    baidu=$(cat searchModules/searchEngines/baidu.dat)
-    bing=$(cat searchModules/searchEngines/bing.dat)
-    duckduckgo=$(cat searchModules/searchEngines/duckduckgo.dat)
-    dogpile=$(cat searchModules/searchEngines/dogpile.dat)
-    google=$(cat searchModules/searchEngines/google.dat)
-    ecosia=$(cat searchModules/searchEngines/ecosia.dat)
-    qwant=$(cat searchModules/searchEngines/qwant.dat)
-    qwantjr=$(cat searchModules/searchEngines/qwantjr.dat)
-    searx=$(cat searchModules/searchEngines/searx.dat)
-    shodan=$(cat searchModules/searchEngines/shodan.dat)
-    startpage=$(cat searchModules/searchEngines/startpage.dat)
-    yahoo=$(cat searchModules/searchEngines/yahoo.dat)
-    yandex=$(cat searchModules/searchEngines/yandex.dat)
-    yippy=$(cat searchModules/searchEngines/yippy.dat)
-    wolframalpha=$(cat searchModules/searchEngines/wolframalpha.dat)
+    baidu=$(cat searchModules/searchEngines/baidu.sh)
+    bing=$(cat searchModules/searchEngines/bing.sh)
+    duckduckgo=$(cat searchModules/searchEngines/duckduckgo.sh)
+    dogpile=$(cat searchModules/searchEngines/dogpile.sh)
+    google=$(cat searchModules/searchEngines/google.sh)
+    ecosia=$(cat searchModules/searchEngines/ecosia.sh)
+    qwant=$(cat searchModules/searchEngines/qwant.sh)
+    qwantjr=$(cat searchModules/searchEngines/qwantjr.sh)
+    searx=$(cat searchModules/searchEngines/searx.sh)
+    shodan=$(cat searchModules/searchEngines/shodan.sh)
+    startpage=$(cat searchModules/searchEngines/startpage.sh)
+    yahoo=$(cat searchModules/searchEngines/yahoo.sh)
+    yandex=$(cat searchModules/searchEngines/yandex.sh)
+    yippy=$(cat searchModules/searchEngines/yippy.sh)
+    wolframalpha=$(cat searchModules/searchEngines/wolframalpha.sh)
 
 # Loading Search Site DAT Files
 
-    amazon=$(cat searchModules/searchSites/amazon.dat)
-    ebay=$(cat searchModules/searchSites/ebay.dat)
-    facebook=$(cat searchModules/searchSites/facebook.dat)
-    github=$(cat searchModules/searchSites/github.dat)
-    gitlab=$(cat searchModules/searchSites/gitlab.dat)
-    linkedin=$(cat searchModules/searchSites/linkedin.dat)
-    pinterest=$(cat searchModules/searchSites/pinterest.dat)
-    quora=$(cat searchModules/searchSites/quora.dat)
-    reddit=$(cat searchModules/searchSites/reddit.dat)
-    stackoverflow=$(cat searchModules/searchSites/stackoverflow.dat)
-    tumblr=$(cat searchModules/searchSites/tumblr.dat)
-    twitter=$(cat searchModules/searchSites/twitter.dat)
-    wikipedia=$(cat searchModules/searchSites/wikipedia.dat)
-    youtube=$(cat searchModules/searchSites/youtube.dat)
-    drugs=$(cat searchModules/searchSites/drugs.dat)
+    amazon=$(cat searchModules/searchSites/amazon.sh)
+    ebay=$(cat searchModules/searchSites/ebay.sh)
+    facebook=$(cat searchModules/searchSites/facebook.sh)
+    github=$(cat searchModules/searchSites/github.sh)
+    gitlab=$(cat searchModules/searchSites/gitlab.sh)
+    linkedin=$(cat searchModules/searchSites/linkedin.sh)
+    pinterest=$(cat searchModules/searchSites/pinterest.sh)
+    quora=$(cat searchModules/searchSites/quora.sh)
+    reddit=$(cat searchModules/searchSites/reddit.sh)
+    stackoverflow=$(cat searchModules/searchSites/stackoverflow.sh)
+    tumblr=$(cat searchModules/searchSites/tumblr.sh)
+    twitter=$(cat searchModules/searchSites/twitter.sh)
+    wikipedia=$(cat searchModules/searchSites/wikipedia.sh)
+    youtube=$(cat searchModules/searchSites/youtube.sh)
+    drugs=$(cat searchModules/searchSites/drugs.sh)
 
 }
 
@@ -140,13 +140,13 @@ function createSearchit() {
 #
 #               [ /coreModules ]
 #
-# Intro.dat
+# Intro.sh
 # write version
-# globalVariable.dat
-# configCheck.dat
-# updateCheck.dat
-# defaultBrowserCheck.dat
-# defaultSearch.dat
+# globalVariable.sh
+# configCheck.sh
+# updateCheck.sh
+# defaultBrowserCheck.sh
+# defaultSearch.sh
     echo "${green}Creating Searchit Terminal Core...${normal}"
     echo "$intro" >> searchit
     echo "version=$version" >> searchit
@@ -210,17 +210,17 @@ function createSearchit() {
 #
 #               [ /coreModules ]
 #
-# help.dat
-# browserSelect.dat
-# searchengineSelect.dat
-# config.dat
-# uninstall.dat
-# uninstallCheck.dat
-# about.dat
-# update.dat
-# connectionTest.dat
-# paramCheck.dat
-# init.dat
+# help.sh
+# browserSelect.sh
+# searchengineSelect.sh
+# config.sh
+# uninstall.sh
+# uninstallCheck.sh
+# about.sh
+# update.sh
+# connectionTest.sh
+# paramCheck.sh
+# init.sh
 
     echo "$help" >> searchit
     echo "$browserSelect" >> searchit
@@ -319,7 +319,7 @@ ${GREEN}${black}Instalation Complete!!!${normal}
 function createDuckit() {
     touch duckit
 
-# /coreModules/duckit.dat
+# /coreModules/duckit.sh
     echo "$intro"  >> duckit
     echo "$connectionTest" >> duckit
     echo "$duckit" >> duckit
@@ -330,7 +330,7 @@ function createDuckit() {
 function createGoogleit() {
       touch googleit
 
-# /coreModules/googleit.dat
+# /coreModules/googleit.sh
       echo "$intro"  >> googleit
       echo "$connectionTest" >> googleit
       echo "$googleit" >>googleit
