@@ -33,7 +33,7 @@ function update(){
                       ./installer.sh
                       rm ~/master.zip
                       rm -r ~/SearchitTerminal-master
-                      echo "${green}Update Complete !!${normal}"
+                      echo "${green}Update Complete !! ${normal}"
                     }
                  else {
                     echo "${red}ERROR: Unable to download updates. Check your internet connection. Or Try again later${normal}"
