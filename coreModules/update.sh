@@ -24,7 +24,6 @@ function update(){
                  echo "${aqua}${blink}Downloading Latest Version...${normal}"
                  if [ -f ~/master.zip ]
                  then {
-                      sudo rm /usr/bin/searchit /usr/bin/googleit /usr/bin/duckit 
                       sudo rm -r  /usr/share/SearchitTerminal
                       unzip master.zip
                       clear
