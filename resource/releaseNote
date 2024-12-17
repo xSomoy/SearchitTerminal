@@ -1,8 +1,12 @@
-Searchit Release Note (v4.2.0 )
+Searchit Release Note (v4.3.0 )
 
-Version 4.2.0 Brings You
+Version 4.3.0 Brings You
 
-+ code structure change
++ Update no longer resets the default configuration
++ Old file unable to remove while updating fixed
++ About logo issue fixed
++ Automatic update check functionality issue resolved
++ Minor typos
 
 
 
