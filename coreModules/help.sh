@@ -51,7 +51,7 @@ function help() {
                     -amzn   -amazon         For Amazon
                     -eby    -ebay           For Ebay
                     -gthb   -github         For Github
-                    -gtlb   -gitlb          For Gitlab
+                    -gtlb   -gitlab          For Gitlab
 
                  Ex: \"searchit -ddg casino royal\"
 
