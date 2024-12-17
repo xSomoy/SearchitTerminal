@@ -77,8 +77,8 @@ Similarly When a "Major Change" comes both "Bugfix/Feature" and "Minor Changes" 
 
 Report And Feedback ------------------------------------------------------------------------------------------
 
-For report any issue visit Searchit's github repository (https://github.com/BlackPearlTech/SearchitTerminal).
-Please read the contributing guide line (https://github.com/searchitofficial/BlackPearlTech/blob/master/CONTRIBUTING.md),
+For report any issue visit Searchit's github repository (https://github.com/xSomoy/SearchitTerminal).
+Please read the contributing guide line (https://github.com/xSomoy/SearchitTerminal/blob/master/CONTRIBUTING.md),
 It will guide you to submit a report or issue properly.
 
 
@@ -87,8 +87,8 @@ Contact ------------------------------------------------------------------------
 For personal and business purpose you can contact me directly.
 
 Twitter:  https://www.twitter.com/xSomoy
-Facebook: https://www.facebook.com/SearchitOfficial
-Github:   https://www.github.com/BlackPearlTech
+Facebook: https://www.facebook.com/SearchitOfficial2
+Github:   https://github.com/xSomoy/SearchitTerminal
 Email:    mailtoSearchit@gmail.com
 
 Copyright © 2024 Mushphyqur Rahman

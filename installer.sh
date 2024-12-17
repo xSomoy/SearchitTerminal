@@ -5,8 +5,8 @@
 #     Search The Hell Out Of Internet..                                                             #
 #                                                                                                                       #
 #     Twitter:    www.twitter.com/Tweet2Searchit                                               #
-#     Facebook:   www.facebook.com/SearchitOfficial                                      #
-#     Github:     www.github.com/BlackPearlTech                                             #
+#     Facebook:   https://www.facebook.com/SearchitOfficial2/                         #
+#     Github:     https://github.com/xSomoy/SearchitTerminal                           #
 #     Email:      mailtoSearchit@gmail.com                                                       #
 #     License:    GNU General Public License v3.0                                          #
 #                                                                                                                      #
@@ -289,8 +289,8 @@ ${GREEN}${black}Instalation Complete!!!${normal}
     Or You Can Just Let Me Know If You Liked It. That Also Helps A lot.
     Thank You. 😁 ${normal} ${blue}
         Twitter:    https://twitter.com/Tweet2Searchit
-        Facebook:   https://facebook.com/BlackPearlTechOfficial
-        Github:     https://github.com/BlackPearlTech
+        Facebook:   https://www.facebook.com/SearchitOfficial2/
+        Github:     https://github.com/xSomoy/SearchitTerminal
         Email:      mailtoSearchit@gmail.com ${normal}
 
            ${bold}${WHITE}${black}Copyright © 2024 Mushphyqur Rahman${normal}
@@ -298,7 +298,7 @@ ${GREEN}${black}Instalation Complete!!!${normal}
     }
     else {
         echo "${red}${bold}Instalation Failed"
-        echo "Report Problem : https://github.com/BlackPearlTech/SearchitTerminal/issues${normal}${default}"
+        echo "Report Problem : https://github.com/xSomoy/SearchitTerminal/issues${normal}${default}"
         }
     fi
 
