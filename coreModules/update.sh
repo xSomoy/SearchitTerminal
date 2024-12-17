@@ -2,7 +2,7 @@
 
 function update(){
     cd ~
-    wget -q https://raw.githubusercontent.com/BlackPearlTech/SearchitTerminal/master/resource/version |
+    wget -q https://raw.githubusercontent.com/xSomoy/SearchitTerminal/refs/heads/master/resource/version |
     echo "Checking For Update..."
     if [ -f ~/version ]
     then {
