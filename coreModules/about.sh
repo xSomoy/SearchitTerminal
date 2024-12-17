@@ -10,7 +10,7 @@ function about(){
            ${aqua}
            Twitter:   www.twitter.com/Tweet2Searchit
            Facebook:  www.facebook.com/SearchitOfficial
-           Github:    www.github.com/BlackPearlTech
+           Github:    https://github.com/xSomoy/SearchitTerminal
            Email:     mailto:mailtoSearchit@gmail.com
            License:   GNU General Public License v3.0
            ${normal}
