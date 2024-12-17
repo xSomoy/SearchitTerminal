@@ -2,8 +2,8 @@
 #   About Function
 
 function about(){
-    cd ~
-   ./usr/share/SearchitTerminal/logo
+    cd  /usr/share/SearchitTerminal/
+    ./logo
     echo "
            ${green}${bold}Searchit Terminal${normal}
            ${green}Terminal Based Search Customizer
