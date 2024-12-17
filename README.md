@@ -85,7 +85,7 @@ For personal and business purpose you can contact me directly.
 [Twitter](https://twitter.com/xSomoy) - [Github](https://github.com/xSomoy) - [Faceboook](https://www.facebook.com/somoy666) - [Email](mailto:mailtoSearchit@gmail.com)
 
 
-## Copyright © 2024 [Mushphyqur Rahman](https://xsomoy.github.io/about/)
+## Copyright © 2024 TENET [ [Mushphyqur Rahman](https://xsomoy.github.io/about/) ]
 
 ## Thank You !!
 
