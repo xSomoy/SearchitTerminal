@@ -17,7 +17,7 @@
 #                                                                                                                     #
 #############################################################
 
-version=$(cat coreModules/version.sh)
+version=$(cat coreModules/version.dat)
 
 
 # Color Library Start
