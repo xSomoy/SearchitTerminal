@@ -21,4 +21,4 @@ do
 ((i++))
 done
 
-# nohup parameter  > /dev/null 2>&1 &
+nohup $main_command  > /dev/null 2>&1 &
