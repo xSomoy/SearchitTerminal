@@ -22,6 +22,6 @@
 - [ ] Rename `Searchit` to `Searchit-Core` in codebase
 - [ ] Find a way to that updating does not breaks the software 😆
 
-### Probable Bugs:
+### Probable Bugs: 
  - [ ] Functionality that needs to display something like about or version check
    - [ ]  Need to check main command parameters to determine to execute with wrapper or not. 
