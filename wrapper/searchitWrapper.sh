@@ -1,10 +1,19 @@
 #!/usr/bin/env bash
-parameter="$1"
-opParam="$2"
-tmpquery="$@"
+flags="$2"                              # Catching first flag
+main_command="$@"           # whole command
 
-echo "$parameter"
-echo "$opParam"
-echo "$tmpquery"
+echo "$flags"
+echo "$main_command"
+
+if [ "$flags" == '-'a ] || [ "$flags" == '--about' ] || [ "$flags" == '-h' ] || [ "$flags" == '--help' ] || [ "$flags" == '-?' ] || [ "$flags" == '-un' ] || [ "$flags" == '-'-uninstall ] || [ "$flags" == '-' ] ||
+                then {
+                    connectionTest
+                    drugs
+                }
+            else {
+                connectionTest
+                defaultSearch
+            }
+            fi
 
 #nohup $parameter  > /dev/null 2>&1 &

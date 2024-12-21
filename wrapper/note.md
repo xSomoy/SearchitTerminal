@@ -25,3 +25,15 @@
 ### Probable Bugs: 
  - [ ] Functionality that needs to display something like about or version check
    - [ ]  Need to check main command parameters to determine to execute with wrapper or not. 
+   - [ ]  
+
+    Options For Seachit's Functionality
+
+            --about     -a          For About Section
+            --help      -h    -?    For Help section
+            --uninstall -un         For Uninstall
+            --update    -u          For Update
+            --Version   -v          For Version
+            --config    -cfg        For Configuration
+            --release   -rn         For Release Note
+            --readme    -rdm        For README
