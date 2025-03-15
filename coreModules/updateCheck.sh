@@ -2,7 +2,7 @@
 
 function updateCheck (){
     cd ~
-    wget -q  https://raw.githubusercontent.com/BlackPearlTech/SearchitTerminal/refs/heads/master/coreModules/version.dat
+    wget -q  https://raw.githubusercontent.com/BlackPearlTech/SearchitTerminal/refs/heads/master/resource/version
     if [ -f ~/version ]
     then {
         AvailableVersion=$(cat version)
