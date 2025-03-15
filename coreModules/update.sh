@@ -1,8 +1,8 @@
 #   Update Function
 
-function update(){
+function update(
     cd ~
-    wget -q https://raw.githubusercontent.com/BlackPearlTech/SearchitTerminal/refs/heads/master/coreModules/version.dat |
+    wget -q  https://raw.githubusercontent.com/BlackPearlTech/SearchitTerminal/refs/heads/master/resource/version |
     echo "Checking For Update..."
     if [ -f ~/version ]
     then {
