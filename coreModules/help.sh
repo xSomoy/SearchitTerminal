@@ -14,6 +14,7 @@ function help() {
             --config    -cfg        For Configuration
             --release   -rn         For Release Note
             --readme    -rdm        For README
+            --exit          -e             For Exiting 
 
                         ${aqua}${bold}  Ex: \"searchit --help\"
 
