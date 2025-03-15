@@ -10,7 +10,7 @@ function help() {
             --help      -h    -?    For Help section
             --uninstall -un         For Uninstall
             --update    -u          For Update
-            --Version   -v          For Version
+            --version   -v          For Version
             --config    -cfg        For Configuration
             --release   -rn         For Release Note
             --readme    -rdm        For README
