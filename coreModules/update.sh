@@ -1,6 +1,7 @@
 #   Update Function
 
 function update(
+    cd ~
     wget -q  https://raw.githubusercontent.com/BlackPearlTech/SearchitTerminal/refs/heads/master/resource/version |
     echo "Checking For Update..."
     if [ -f ~/version ]
