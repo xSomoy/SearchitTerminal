@@ -1,10 +1,7 @@
-Searchit Release Note (v4.3.2 )
+Searchit Release Note (v4.3.3 )
 
-Version 4.3.2 Brings You
-+ Update Issue Fixed
-+ Added Exit Method
-+ Adde Exit Information To Help Menu
-+ Minor typos Fixed
+Version 4.3.3 Brings You
++ Fixes the issue that crashed when updating from v4.3.1 < to v4.3.2
 
 
 
