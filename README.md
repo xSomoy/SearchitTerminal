@@ -2,7 +2,7 @@
 Terminal Based Search Customizer
 
 
-[![Download Latest](https://www.svgrepo.com/show/525323/download-square.svg)](https://google.com) 
+[![Download Latest](//SearchitTerminal/resource/download.svg)](https://google.com) 
 
 
 
