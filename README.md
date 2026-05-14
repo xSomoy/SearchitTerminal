@@ -1,6 +1,11 @@
 # Searchit  
 Terminal Based Search Customizer
 
+
+[![Sponsor on GitHub](https://gist.github.com/cxmeel/0dbc95191f239b631c3874f4ccf114e2/raw/github_sponsor-compact.svg)](https://google.com) 
+
+
+
 [What?](#what-is-Searchit) - [Why?](#why-we-need-Searchit) -
 [Install](#how-to-install-Searchit) - [Report And Feedback](#report-and-feedback) - [Contact](#contact)
 ### What Is Searchit?
