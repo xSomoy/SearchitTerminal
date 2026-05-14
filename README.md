@@ -2,7 +2,7 @@
 Terminal Based Search Customizer
 
 
-[![Download Latest](https://gist.github.com/cxmeel/0dbc95191f239b631c3874f4ccf114e2/raw/github_sponsor-compact.svg)](https://google.com) 
+[![Download Latest](https://www.svgrepo.com/show/525323/download-square.svg)](https://google.com) 
 
 
 
