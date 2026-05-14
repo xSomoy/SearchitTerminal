@@ -2,8 +2,10 @@
 Terminal Based Search Customizer
 
 
-[![Download Latest](//SearchitTerminal/resource/download.svg)](https://google.com) 
 
+[![Download Latest](https://raw.githubusercontent.com/xSomoy/SearchitTerminal/refs/heads/maintain/resource/download.svg)](https://github.com/BlackPearlTech/SearchitTerminal/archive/refs/tags/v4.3.3.zip)
+
+[![Download Latest](https://www.citypng.com/public/uploads/preview/flat)](https://github.com/BlackPearlTech/SearchitTerminal/archive/refs/tags/v4.3.3.zip)
 
 
 [What?](#what-is-Searchit) - [Why?](#why-we-need-Searchit) -
